@@ -102,16 +102,16 @@
 		504AEB201AC56F47003832AA /* CrazyDrag */ = {
 			isa = PBXGroup;
 			children = (
-				504AEB471AC5A40A003832AA /* AboutViewController.h */,
 				504AEB251AC56F47003832AA /* AppDelegate.h */,
 				504AEB281AC56F47003832AA /* ViewController.h */,
-				504AEB481AC5A40A003832AA /* AboutViewController.m */,
-				504AEB261AC56F47003832AA /* AppDelegate.m */,
 				504AEB291AC56F47003832AA /* ViewController.m */,
-				504AEB2E1AC56F47003832AA /* Images.xcassets */,
-				504AEB491AC5A40A003832AA /* AboutViewController.xib */,
-				504AEB4C1AC5B0B3003832AA /* Images */,
 				504AEB2B1AC56F47003832AA /* Main.storyboard */,
+				504AEB471AC5A40A003832AA /* AboutViewController.h */,
+				504AEB481AC5A40A003832AA /* AboutViewController.m */,
+				504AEB491AC5A40A003832AA /* AboutViewController.xib */,
+				504AEB261AC56F47003832AA /* AppDelegate.m */,
+				504AEB2E1AC56F47003832AA /* Images.xcassets */,
+				504AEB4C1AC5B0B3003832AA /* Images */,
 				504AEB211AC56F47003832AA /* Supporting Files */,
 			);
 			path = CrazyDrag;
