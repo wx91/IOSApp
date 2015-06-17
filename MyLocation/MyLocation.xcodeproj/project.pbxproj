@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		500D47931AF513220034956A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 500D47921AF513220034956A /* CoreLocation.framework */; };
+		5069B69B1AF50C1500671709 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5069B69A1AF50C1500671709 /* main.m */; };
+		5069B69E1AF50C1500671709 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5069B69D1AF50C1500671709 /* AppDelegate.m */; };
+		5069B6A11AF50C1500671709 /* CurrentLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5069B6A01AF50C1500671709 /* CurrentLocationViewController.m */; };
+		5069B6A41AF50C1500671709 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5069B6A31AF50C1500671709 /* SecondViewController.m */; };
+		5069B6A71AF50C1500671709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5069B6A51AF50C1500671709 /* Main.storyboard */; };
+		5069B6A91AF50C1500671709 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5069B6A81AF50C1500671709 /* Images.xcassets */; };
+		5069B6B81AF50C1500671709 /* MyLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5069B6B71AF50C1500671709 /* MyLocationTests.m */; };
+		508928341AF5CB7B002767AC /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508928331AF5CB7B002767AC /* LocationDetailsViewController.m */; };
+		508928371AF61427002767AC /* CategoryPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508928361AF61427002767AC /* CategoryPickViewController.m */; };
+		5089283A1AF61CFA002767AC /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 508928391AF61CFA002767AC /* HudView.m */; };
+		5089283C1AF62652002767AC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5089283B1AF62652002767AC /* CoreData.framework */; };
+		5089283F1AF62673002767AC /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5089283D1AF62673002767AC /* DataModel.xcdatamodeld */; };
+		508928421AF627CB002767AC /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 508928411AF627CB002767AC /* Location.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5069B6B21AF50C1500671709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5069B68D1AF50C1500671709 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5069B6941AF50C1500671709;
+			remoteInfo = MyLocation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		500D47921AF513220034956A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5069B6951AF50C1500671709 /* MyLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5069B6991AF50C1500671709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5069B69A1AF50C1500671709 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5069B69C1AF50C1500671709 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5069B69D1AF50C1500671709 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5069B69F1AF50C1500671709 /* CurrentLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrentLocationViewController.h; sourceTree = "<group>"; };
+		5069B6A01AF50C1500671709 /* CurrentLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationViewController.m; sourceTree = "<group>"; };
+		5069B6A21AF50C1500671709 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		5069B6A31AF50C1500671709 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		5069B6A61AF50C1500671709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5069B6A81AF50C1500671709 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5069B6B11AF50C1500671709 /* MyLocationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLocationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5069B6B61AF50C1500671709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5069B6B71AF50C1500671709 /* MyLocationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLocationTests.m; sourceTree = "<group>"; };
+		508928321AF5CB7B002767AC /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailsViewController.h; sourceTree = "<group>"; };
+		508928331AF5CB7B002767AC /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailsViewController.m; sourceTree = "<group>"; };
+		508928351AF61427002767AC /* CategoryPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickViewController.h; sourceTree = "<group>"; };
+		508928361AF61427002767AC /* CategoryPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickViewController.m; sourceTree = "<group>"; };
+		508928381AF61CFA002767AC /* HudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudView.h; sourceTree = "<group>"; };
+		508928391AF61CFA002767AC /* HudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudView.m; sourceTree = "<group>"; };
+		5089283B1AF62652002767AC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5089283E1AF62673002767AC /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		508928401AF627CB002767AC /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		508928411AF627CB002767AC /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5069B6921AF50C1500671709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5089283C1AF62652002767AC /* CoreData.framework in Frameworks */,
+				500D47931AF513220034956A /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5069B6AE1AF50C1500671709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5069B68C1AF50C1500671709 = {
+			isa = PBXGroup;
+			children = (
+				5089283D1AF62673002767AC /* DataModel.xcdatamodeld */,
+				508928401AF627CB002767AC /* Location.h */,
+				508928411AF627CB002767AC /* Location.m */,
+				5089283B1AF62652002767AC /* CoreData.framework */,
+				5069B6971AF50C1500671709 /* MyLocation */,
+				5069B6B41AF50C1500671709 /* MyLocationTests */,
+				5069B6961AF50C1500671709 /* Products */,
+				500D47921AF513220034956A /* CoreLocation.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		5069B6961AF50C1500671709 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5069B6951AF50C1500671709 /* MyLocation.app */,
+				5069B6B11AF50C1500671709 /* MyLocationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5069B6971AF50C1500671709 /* MyLocation */ = {
+			isa = PBXGroup;
+			children = (
+				5069B69C1AF50C1500671709 /* AppDelegate.h */,
+				5069B69D1AF50C1500671709 /* AppDelegate.m */,
+				5069B69F1AF50C1500671709 /* CurrentLocationViewController.h */,
+				5069B6A01AF50C1500671709 /* CurrentLocationViewController.m */,
+				508928321AF5CB7B002767AC /* LocationDetailsViewController.h */,
+				508928331AF5CB7B002767AC /* LocationDetailsViewController.m */,
+				508928351AF61427002767AC /* CategoryPickViewController.h */,
+				508928361AF61427002767AC /* CategoryPickViewController.m */,
+				508928381AF61CFA002767AC /* HudView.h */,
+				508928391AF61CFA002767AC /* HudView.m */,
+				5069B6A21AF50C1500671709 /* SecondViewController.h */,
+				5069B6A31AF50C1500671709 /* SecondViewController.m */,
+				5069B6A51AF50C1500671709 /* Main.storyboard */,
+				5069B6A81AF50C1500671709 /* Images.xcassets */,
+				5069B6981AF50C1500671709 /* Supporting Files */,
+			);
+			path = MyLocation;
+			sourceTree = "<group>";
+		};
+		5069B6981AF50C1500671709 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5069B6991AF50C1500671709 /* Info.plist */,
+				5069B69A1AF50C1500671709 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5069B6B41AF50C1500671709 /* MyLocationTests */ = {
+			isa = PBXGroup;
+			children = (
+				5069B6B71AF50C1500671709 /* MyLocationTests.m */,
+				5069B6B51AF50C1500671709 /* Supporting Files */,
+			);
+			path = MyLocationTests;
+			sourceTree = "<group>";
+		};
+		5069B6B51AF50C1500671709 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5069B6B61AF50C1500671709 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5069B6941AF50C1500671709 /* MyLocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5069B6BB1AF50C1500671709 /* Build configuration list for PBXNativeTarget "MyLocation" */;
+			buildPhases = (
+				5069B6911AF50C1500671709 /* Sources */,
+				5069B6921AF50C1500671709 /* Frameworks */,
+				5069B6931AF50C1500671709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyLocation;
+			productName = MyLocation;
+			productReference = 5069B6951AF50C1500671709 /* MyLocation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5069B6B01AF50C1500671709 /* MyLocationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5069B6BE1AF50C1500671709 /* Build configuration list for PBXNativeTarget "MyLocationTests" */;
+			buildPhases = (
+				5069B6AD1AF50C1500671709 /* Sources */,
+				5069B6AE1AF50C1500671709 /* Frameworks */,
+				5069B6AF1AF50C1500671709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5069B6B31AF50C1500671709 /* PBXTargetDependency */,
+			);
+			name = MyLocationTests;
+			productName = MyLocationTests;
+			productReference = 5069B6B11AF50C1500671709 /* MyLocationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5069B68D1AF50C1500671709 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = wxiang1991;
+				TargetAttributes = {
+					5069B6941AF50C1500671709 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					5069B6B01AF50C1500671709 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 5069B6941AF50C1500671709;
+					};
+				};
+			};
+			buildConfigurationList = 5069B6901AF50C1500671709 /* Build configuration list for PBXProject "MyLocation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5069B68C1AF50C1500671709;
+			productRefGroup = 5069B6961AF50C1500671709 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5069B6941AF50C1500671709 /* MyLocation */,
+				5069B6B01AF50C1500671709 /* MyLocationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5069B6931AF50C1500671709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5069B6A71AF50C1500671709 /* Main.storyboard in Resources */,
+				5069B6A91AF50C1500671709 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5069B6AF1AF50C1500671709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5069B6911AF50C1500671709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5069B6A41AF50C1500671709 /* SecondViewController.m in Sources */,
+				5089283F1AF62673002767AC /* DataModel.xcdatamodeld in Sources */,
+				5069B69E1AF50C1500671709 /* AppDelegate.m in Sources */,
+				5069B6A11AF50C1500671709 /* CurrentLocationViewController.m in Sources */,
+				508928421AF627CB002767AC /* Location.m in Sources */,
+				5069B69B1AF50C1500671709 /* main.m in Sources */,
+				5089283A1AF61CFA002767AC /* HudView.m in Sources */,
+				508928341AF5CB7B002767AC /* LocationDetailsViewController.m in Sources */,
+				508928371AF61427002767AC /* CategoryPickViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5069B6AD1AF50C1500671709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5069B6B81AF50C1500671709 /* MyLocationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5069B6B31AF50C1500671709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5069B6941AF50C1500671709 /* MyLocation */;
+			targetProxy = 5069B6B21AF50C1500671709 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5069B6A51AF50C1500671709 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5069B6A61AF50C1500671709 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5069B6B91AF50C1500671709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5069B6BA1AF50C1500671709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5069B6BC1AF50C1500671709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MyLocation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5069B6BD1AF50C1500671709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MyLocation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5069B6BF1AF50C1500671709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyLocationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLocation.app/MyLocation";
+			};
+			name = Debug;
+		};
+		5069B6C01AF50C1500671709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MyLocationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyLocation.app/MyLocation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5069B6901AF50C1500671709 /* Build configuration list for PBXProject "MyLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5069B6B91AF50C1500671709 /* Debug */,
+				5069B6BA1AF50C1500671709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5069B6BB1AF50C1500671709 /* Build configuration list for PBXNativeTarget "MyLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5069B6BC1AF50C1500671709 /* Debug */,
+				5069B6BD1AF50C1500671709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5069B6BE1AF50C1500671709 /* Build configuration list for PBXNativeTarget "MyLocationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5069B6BF1AF50C1500671709 /* Debug */,
+				5069B6C01AF50C1500671709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5089283D1AF62673002767AC /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5089283E1AF62673002767AC /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 5089283E1AF62673002767AC /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5069B68D1AF50C1500671709 /* Project object */;
+}

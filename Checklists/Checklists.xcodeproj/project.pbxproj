@@ -138,8 +138,6 @@
 				7B6CA3D817F967DD00E68B4B /* Main.storyboard */,
 				7B6CA3DB17F967DD00E68B4B /* ChecklistViewController.h */,
 				7B6CA3DC17F967DD00E68B4B /* ChecklistViewController.m */,
-				7B6CA3DE17F967DD00E68B4B /* Images.xcassets */,
-				7B6CA3CD17F967DD00E68B4B /* Supporting Files */,
 				7B6CA3FB17F99B6400E68B4B /* ChecklistItem.h */,
 				7B6CA3FC17F99B6400E68B4B /* ChecklistItem.m */,
 				7B6CA3FE17F9D7C900E68B4B /* ItemDetailViewController.h */,
@@ -154,6 +152,8 @@
 				23F99E93186962EC00657813 /* DataModel.m */,
 				2367A45A187104EA00378542 /* IconPickerViewController.h */,
 				2367A45B187104EA00378542 /* IconPickerViewController.m */,
+				7B6CA3DE17F967DD00E68B4B /* Images.xcassets */,
+				7B6CA3CD17F967DD00E68B4B /* Supporting Files */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";

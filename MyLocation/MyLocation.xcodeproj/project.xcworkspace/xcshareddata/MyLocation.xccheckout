@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E95B9EDB-589A-4682-956C-B28FEDDDEDD4</string>
+	<string>ADE00F9A-0EED-4E7E-99EF-6FE2F07089D7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>CrazyDrag_Code</string>
+	<string>MyLocation</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>77B6C40EFAB42F015153220D250E3961983746E6</key>
-		<string>https://github.com/wx91/IOSApp.git</string>
+		<key>191001AC774C8DBAFAAD8CD27B229EB1423F56A0</key>
+		<string>https://github.com/wx91/IOSStudy.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CrazyDrag_Code/CrazyDrag_Code.xcodeproj</string>
+	<string>MyLocation/MyLocation.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>77B6C40EFAB42F015153220D250E3961983746E6</key>
+		<key>191001AC774C8DBAFAAD8CD27B229EB1423F56A0</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/wx91/IOSApp.git</string>
+	<string>https://github.com/wx91/IOSStudy.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>77B6C40EFAB42F015153220D250E3961983746E6</string>
+	<string>191001AC774C8DBAFAAD8CD27B229EB1423F56A0</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>77B6C40EFAB42F015153220D250E3961983746E6</string>
+			<string>191001AC774C8DBAFAAD8CD27B229EB1423F56A0</string>
 			<key>IDESourceControlWCCName</key>
-			<string>IOSApp</string>
+			<string>IOSStudy</string>
 		</dict>
 	</array>
 </dict>
