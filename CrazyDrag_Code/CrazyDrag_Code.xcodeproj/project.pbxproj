@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50687A471B392E4D004C2E2B /* no.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 50687A461B392E4D004C2E2B /* no.mp3 */; };
 		508E74801B2EF9D200CDACE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 508E747F1B2EF9D200CDACE0 /* main.m */; };
 		508E74831B2EF9D200CDACE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 508E74821B2EF9D200CDACE0 /* AppDelegate.m */; };
 		508E748B1B2EF9D200CDACE0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508E748A1B2EF9D200CDACE0 /* Images.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50687A461B392E4D004C2E2B /* no.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = no.mp3; sourceTree = "<group>"; };
 		508E747A1B2EF9D200CDACE0 /* CrazyDrag_Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyDrag_Code.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508E747E1B2EF9D200CDACE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508E747F1B2EF9D200CDACE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		508E747C1B2EF9D200CDACE0 /* CrazyDrag_Code */ = {
 			isa = PBXGroup;
 			children = (
+				50687A461B392E4D004C2E2B /* no.mp3 */,
 				508E74811B2EF9D200CDACE0 /* AppDelegate.h */,
 				508E74821B2EF9D200CDACE0 /* AppDelegate.m */,
 				508E74B61B2EFAE000CDACE0 /* RootViewController.h */,
@@ -243,6 +246,7 @@
 				508E74B31B2EFACA00CDACE0 /* SliderTrackRight.png in Resources */,
 				508E74B11B2EFACA00CDACE0 /* SliderThumb-Normal.png in Resources */,
 				508E74AD1B2EFACA00CDACE0 /* Background.png in Resources */,
+				50687A471B392E4D004C2E2B /* no.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +445,7 @@
 				508E749F1B2EF9D200CDACE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		508E74A01B2EF9D200CDACE0 /* Build configuration list for PBXNativeTarget "CrazyDrag_CodeTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +454,7 @@
 				508E74A21B2EF9D200CDACE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -55,19 +55,19 @@
     //[self playBackgroundMusic];
 }
 
-//-(void)playBackgroundMusic{
-//    NSString *musicPath=[[NSBundle mainBundle]pathForResource:@"no" ofType:@"mp3"];
-//    NSURL *url=[NSURL fileURLWithPath:musicPath];
-//    NSError *error;
-//    audioPlayer=[[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
-//    audioPlayer.numberOfLoops=-1;
-//    if (audioPlayer==nil) {
-//        NSString *errorInfo=[NSString stringWithFormat:[error description]];
-//        NSLog(@"the error is :%@",errorInfo);
-//    }else{
-//        [audioPlayer play];
-//    }
-//}
+-(void)playBackgroundMusic{
+    NSString *musicPath=[[NSBundle mainBundle]pathForResource:@"no" ofType:@"mp3"];
+    NSURL *url=[NSURL fileURLWithPath:musicPath];
+    NSError *error;
+    audioPlayer=[[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
+    audioPlayer.numberOfLoops=-1;
+    if (audioPlayer==nil) {
+        NSString *errorInfo=[NSString stringWithFormat:[error description]];
+        NSLog(@"the error is :%@",errorInfo);
+    }else{
+        [audioPlayer play];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
@@ -96,8 +96,6 @@
     }else if(difference<10){
         title=@"好吧，勉强算个土豪";
         points+=50;
-    }else if(difference<10){
-        title=@"好吧，勉强算个土豪！";
     }else{
          title=@"不是土豪少来装！";
     }

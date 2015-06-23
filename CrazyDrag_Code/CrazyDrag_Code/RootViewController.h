@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface RootViewController : UIViewController
+
+@property(strong,nonatomic) UISlider *slider;
+
+@property(strong,nonatomic) UILabel *targetLabel;
+
+@property(strong,nonatomic) UILabel *scoreLabel;
+
+@property(strong,nonatomic) UILabel *roundLabel;
+
+@property(strong,nonatomic) AVAudioPlayer *audioPlayer;
+
 
 @end
