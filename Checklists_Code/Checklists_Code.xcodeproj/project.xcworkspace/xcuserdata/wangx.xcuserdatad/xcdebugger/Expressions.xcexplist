@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[AllListsViewController listDetailViewControllerDidCancel:]:AllListsViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AllListsViewController listDetailViewController:didFinishAddingChecklist:]:AllListsViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ListDetailViewController done]:ListDetailViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
