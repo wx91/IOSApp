@@ -16,4 +16,7 @@
 
 @property(nonatomic,strong) NSMutableArray *items;
 
+//计算没有完成的代办事项
+-(int)countUncheckedItems;
+
 @end

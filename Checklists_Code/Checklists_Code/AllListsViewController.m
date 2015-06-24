@@ -48,7 +48,14 @@
     cell.textLabel.text=checklist.name;
     cell.imageView.image=[UIImage imageNamed:checklist.iconName];
     cell.accessoryType=UITableViewCellAccessoryDetailDisclosureButton;
-    cell.detailTextLabel.text=@"No Items";
+    int count=[checklist countUncheckedItems];
+    if([checklist.items count]==0){
+        cell.detailTextLabel.text = @"(No Items)";
+    }else if(count ==0){
+        cell.detailTextLabel.text =@"全部搞定收工！";
+    }else{
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Remaining",count];
+    }
     return cell;
 }
 

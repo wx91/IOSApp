@@ -99,7 +99,6 @@
     
     int count = [checklist countUncheckedItems];
     if([checklist.items count]==0){
-        
         cell.detailTextLabel.text = @"(No Items)";
     }else if(count ==0){
         cell.detailTextLabel.text =@"全部搞定收工！";
