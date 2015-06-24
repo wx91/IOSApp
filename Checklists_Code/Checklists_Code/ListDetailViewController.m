@@ -29,6 +29,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     if (self.checklistToEdit!=nil) {
         self.title=@"Edit CheckList";
         _name=self.checklistToEdit.name;
@@ -57,7 +58,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 2;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier=@"Cell";

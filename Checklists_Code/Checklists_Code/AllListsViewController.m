@@ -9,6 +9,7 @@
 #import "Checklist.h"
 #import "AllListsViewController.h"
 #import "ListDetailViewController.h"
+#import "ChecklistViewController.h"
 @interface AllListsViewController ()
 
 @end
@@ -37,7 +38,6 @@
     return [self.lists count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifer=@"Cell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifer];
@@ -45,18 +45,27 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifer];
     }
     Checklist *checklist=self.lists[indexPath.row];
-    
     cell.textLabel.text=checklist.name;
-    
     cell.imageView.image=[UIImage imageNamed:checklist.iconName];
-    
     cell.accessoryType=UITableViewCellAccessoryDetailDisclosureButton;
-    
     cell.detailTextLabel.text=@"No Items";
-    
     return cell;
 }
 
+//点击加号进入
+-(void)AddChecklist{
+    ListDetailViewController *listDetailVC=[[ListDetailViewController alloc]init];
+    listDetailVC.delegate=self;
+    [self.navigationController pushViewController:listDetailVC animated:YES];
+}
+//点击tableviewcell中的小详细按钮进行描述方法中
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+    ListDetailViewController *controller = [[ListDetailViewController alloc]init];
+    controller.delegate = self;
+    Checklist *checklist=self.lists[indexPath.row];
+    controller.checklistToEdit=checklist;
+    [self.navigationController pushViewController:controller animated:YES];
+}
 //是否可以删除
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
@@ -71,17 +80,10 @@
     }
 }
 
--(void)AddChecklist{
-    ListDetailViewController *listDetailVC=[[ListDetailViewController alloc]init];
-    listDetailVC.delegate=self;
-    [self.navigationController pushViewController:listDetailVC animated:YES];
-}
-//点击tableviewcell中的小详细按钮进行描述方法中
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
-    ListDetailViewController *controller = [[ListDetailViewController alloc]init];
-    controller.delegate = self;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ChecklistViewController *controller=[[ChecklistViewController alloc]init];
     Checklist *checklist=self.lists[indexPath.row];
-    controller.checklistToEdit=checklist;
+    controller.checklist=checklist;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

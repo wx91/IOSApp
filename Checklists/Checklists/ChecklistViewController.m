@@ -16,10 +16,6 @@
 
 @implementation ChecklistViewController
 
-
-
-
-
 - (void)viewDidLoad
 {
   [super viewDidLoad];
@@ -41,14 +37,12 @@
 - (void)configureCheckmarkForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item
 {
   UILabel *label = (UILabel *)[cell viewWithTag:1001];
-
   if (item.checked) {
     label.text = @"√";
   } else {
     label.text = @"";
   }
-    
-    label.textColor = self.view.tintColor;
+label.textColor = self.view.tintColor;
 }
 
 - (void)configureTextForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item
