@@ -8,18 +8,20 @@
 
 #import "Checklist.h"
 #import "ChecklistItem.h"
+#import "AllListsViewController.h"
 #import "ChecklistViewController.h"
 #import "ItemDetailViewController.h"
-
-@interface ChecklistViewController ()
-
-@end
 
 @implementation ChecklistViewController
 
 -(void)loadView{
     [super loadView];
     self.title=self.checklist.name;
+//    self.navigationItem.leftItemsSupplementBackButton=YES;
+    
+    UIBarButtonItem *backBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"Checklist" style:UIBarButtonItemStyleDone target:self action:@selector(BackAlllists)];
+    self.navigationItem.leftBarButtonItem=backBarButtonItem;
+    
     
     UIBarButtonItem *addBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(AddChecklistItem)];
     self.navigationItem.rightBarButtonItem=addBarButtonItem;
@@ -28,7 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.checklist.items=[[NSMutableArray alloc]initWithCapacity:20];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +39,6 @@
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
     return 1;
 }
 
@@ -95,16 +95,20 @@
 }
 
 -(void)AddChecklistItem{
-    ItemDetailViewController *controller=[[ItemDetailViewController alloc]init];
+    ItemDetailViewController *controller=[[ItemDetailViewController alloc]initWithStyle:UITableViewStyleGrouped];
     controller.delegate=self;
     [self.navigationController pushViewController:controller animated:YES];
+}
+-(void)BackAlllists{
+    [self.delegate ChecklistViewControllerDidBack:self];
 }
 
 //点击tableviewcell中的小详细按钮进行描述方法中
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
-    ItemDetailViewController *controller=[[ItemDetailViewController alloc]init];
+    ItemDetailViewController *controller=[[ItemDetailViewController alloc]initWithStyle:UITableViewStyleGrouped];
     controller.delegate=self;
     controller.itemToEdit=self.checklist.items[indexPath.row];
+
     [self.navigationController pushViewController:controller animated:YES];
 }
 

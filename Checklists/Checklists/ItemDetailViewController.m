@@ -126,33 +126,20 @@
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    //1
+
     if(indexPath.section ==1 &&indexPath.row ==2){
-        
-        //2
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DatePickerCell"];
-        
         if(cell == nil){
-            
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DatePickerCell"];
-            
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            
-            //3
-            
             UIDatePicker *datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f,216.0f)];
             datePicker.tag =100;
             [cell.contentView addSubview:datePicker];
             
-            //4
             [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
-    
-            
         }
         return cell;
-        
-        //5
+
     }else{
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];
     }
@@ -198,27 +185,16 @@
 
 
 -(void)showDatePicker{
-    
     _datePickerVisible = YES;
-    
     NSIndexPath *indexPathDateRow = [NSIndexPath indexPathForRow:1 inSection:1];
-    
     NSIndexPath *indexPathDatePicker = [NSIndexPath indexPathForRow:2 inSection:1];
-  
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathDateRow];
     cell.detailTextLabel.textColor = cell.detailTextLabel.tintColor;
-    
     [self.tableView beginUpdates];
-    
     [self.tableView insertRowsAtIndexPaths:@[indexPathDatePicker] withRowAnimation:UITableViewRowAnimationFade];
-    
     [self.tableView reloadRowsAtIndexPaths:@[indexPathDateRow] withRowAnimation:UITableViewRowAnimationNone];
-    
-
     [self.tableView endUpdates];
-    
     UITableViewCell *datePickerCell = [self.tableView cellForRowAtIndexPath:indexPathDatePicker];
-    
     UIDatePicker *datePicker = (UIDatePicker*)[datePickerCell viewWithTag:100];
     [datePicker setDate:_dueDate animated:NO];
 }
@@ -235,13 +211,9 @@
         cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.0f alpha:0.5f];
         
         [self.tableView beginUpdates];
-        
         [self.tableView reloadRowsAtIndexPaths:@[indexPathDateRow] withRowAnimation:UITableViewRowAnimationNone];
-        
         [self.tableView deleteRowsAtIndexPaths:@[indexPathDatePicker] withRowAnimation:UITableViewRowAnimationFade];
-        
         [self.tableView endUpdates];
-        
     }
     
 }

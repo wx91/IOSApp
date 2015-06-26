@@ -93,7 +93,6 @@
   }
 
   Checklist *checklist = self.dataModel.lists[indexPath.row];
-    
   cell.textLabel.text = checklist.name;
   cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
@@ -103,12 +102,9 @@
     }else if(count ==0){
         cell.detailTextLabel.text =@"全部搞定收工！";
     }else{
-  cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Remaining",[checklist countUncheckedItems]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Remaining",[checklist countUncheckedItems]];
     }
-    
     cell.imageView.image = [UIImage imageNamed:checklist.iconName];
-    
-    
   return cell;
 }
 
@@ -166,13 +162,10 @@
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
   UINavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"ListNavigationController"];
-
   ListDetailViewController *controller = (ListDetailViewController *)navigationController.topViewController;
   controller.delegate = self;
-
   Checklist *checklist = self.dataModel.lists[indexPath.row];
   controller.checklistToEdit = checklist;
-
   [self presentViewController:navigationController animated:YES completion:nil];
 }
 

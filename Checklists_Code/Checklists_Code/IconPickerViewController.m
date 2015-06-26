@@ -8,10 +8,6 @@
 
 #import "IconPickerViewController.h"
 
-@interface IconPickerViewController ()
-
-@end
-
 @implementation IconPickerViewController
 
 - (void)viewDidLoad {

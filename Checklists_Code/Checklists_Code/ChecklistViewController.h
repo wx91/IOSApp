@@ -7,11 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ItemDetailViewController.h"
 #import "Checklist.h"
+#import "ItemDetailViewController.h"
+
+@class ChecklistViewController;
+@protocol ChecklistViewControllerDelegate<NSObject>
+
+-(void)ChecklistViewControllerDidBack:(ChecklistViewController *)controller;
+
+@end
 
 @interface ChecklistViewController : UITableViewController<ItemDetailViewControllerDelegate>
 
 @property (nonatomic, strong) Checklist *checklist;
+
+@property(nonatomic,strong) id<ChecklistViewControllerDelegate> delegate;
+
 
 @end

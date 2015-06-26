@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataModel.h"
 #import "ListDetailViewController.h"
+#import "ChecklistViewController.h"
 
-@interface AllListsViewController : UITableViewController<ListDetailViewControllerDelegate>
+@interface AllListsViewController : UITableViewController<ListDetailViewControllerDelegate,ChecklistViewControllerDelegate>
 
-@property(nonatomic,strong) NSMutableArray *lists;
+@property(nonatomic,strong)DataModel *dataModel;
 
 @end

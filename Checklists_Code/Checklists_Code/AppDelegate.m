@@ -8,12 +8,14 @@
 
 #import "AppDelegate.h"
 #import "AllListsViewController.h"
-@interface AppDelegate ()
+#import "DataModel.h"
 
-@end
-
-@implementation AppDelegate
-
+@implementation AppDelegate{
+    DataModel *_dateModel;
+}
+-(void)saveData{
+    [_dateModel saveChecklists];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -21,7 +23,10 @@
     self.window.backgroundColor=[UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    _dateModel=[[DataModel alloc]init];
+    
     AllListsViewController *controller=[[AllListsViewController alloc]init];
+    controller.dataModel=_dateModel;
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:controller];
     [self.window setRootViewController:nav];
     
@@ -36,6 +41,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self saveData];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -48,6 +54,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [self saveData];
 }
 
 @end

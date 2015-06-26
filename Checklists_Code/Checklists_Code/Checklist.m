@@ -10,6 +10,21 @@
 #import "ChecklistItem.h"
 @implementation Checklist
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    if((self =[super init])){
+        self.name = [aDecoder decodeObjectForKey:@"Name"];
+        self.items = [aDecoder decodeObjectForKey:@"Items"];
+        self.iconName = [aDecoder decodeObjectForKey:@"IconName"];
+    }
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:self.name forKey:@"Name"];
+    [aCoder encodeObject:self.items forKey:@"Items"];
+    [aCoder encodeObject:self.iconName forKey:@"IconName"];
+}
+
 //计算没有完成的代办事项
 -(int)countUncheckedItems{
     int count = 0;

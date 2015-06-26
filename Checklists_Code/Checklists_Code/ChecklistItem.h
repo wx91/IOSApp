@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ChecklistItem : NSObject
+@interface ChecklistItem : NSObject<NSCoding>
 
 @property (nonatomic, copy) NSString *text;
 
 @property (nonatomic, assign) BOOL checked;
 
+@property(nonatomic,assign) BOOL shouldRemind;
+
+@property(nonatomic,copy)NSDate *dueDate;
 
 - (void)toggleChecked;
 

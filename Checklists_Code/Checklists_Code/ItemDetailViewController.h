@@ -24,10 +24,13 @@
 
 @interface ItemDetailViewController : UITableViewController
 
-@property(nonatomic,strong)UITextField *textField;
-
 @property(nonatomic,strong)UIBarButtonItem *doneBarButton;
 
+@property(nonatomic,strong)UITextField *textField;
+
+@property(nonatomic,strong) UISwitch *switchControl;
+
+@property(nonatomic,strong) UILabel *dueDateLabel;
 
 @property (nonatomic, strong) ChecklistItem *itemToEdit;
 

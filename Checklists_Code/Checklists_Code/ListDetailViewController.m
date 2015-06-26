@@ -9,15 +9,11 @@
 #import "ListDetailViewController.h"
 #import "IconPickerViewController.h"
 #import "Checklist.h"
-@interface ListDetailViewController (){
+
+@implementation ListDetailViewController{
     NSString *_name;
     NSString *_iconName;
-    
 }
-
-@end
-
-@implementation ListDetailViewController
 
 -(void)loadView{
     [super loadView];
@@ -102,10 +98,19 @@
         [self.delegate listDetailViewController:self didFinishEditingChecklist:self.checklistToEdit];
     }
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section==0&&indexPath.row==3) {
+        return 220.0f;
+    }else{
+        CGFloat height=[super tableView:tableView heightForRowAtIndexPath:indexPath];
+        return height;
+    }
+}
 #pragma mark 点击第二行的时候进入选择icon的功能
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row==1) {
-        IconPickerViewController *controller=[[IconPickerViewController alloc]init];
+        IconPickerViewController *controller=[[IconPickerViewController alloc]initWithStyle:UITableViewStyleGrouped];
         controller.delegate=self;
         [self.navigationController pushViewController:controller animated:YES];
     }
