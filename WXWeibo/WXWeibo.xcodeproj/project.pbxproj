@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500A23C71B6CC02000F5CB4C /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 500A23C01B6CC02000F5CB4C /* 37x-Checkmark.png */; };
+		500A23C81B6CC02000F5CB4C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 500A23C21B6CC02000F5CB4C /* MBProgressHUD.m */; };
+		500A23C91B6CC02000F5CB4C /* RegexKitLite.html in Resources */ = {isa = PBXBuildFile; fileRef = 500A23C51B6CC02000F5CB4C /* RegexKitLite.html */; };
+		500A23CA1B6CC02000F5CB4C /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 500A23C61B6CC02000F5CB4C /* RegexKitLite.m */; };
+		500A23CC1B6CC06500F5CB4C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 500A23CB1B6CC06500F5CB4C /* libicucore.dylib */; };
+		500A23D01B6CCB9300F5CB4C /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 500A23CF1B6CCB9300F5CB4C /* NSString+URLEncoding.m */; };
+		500A23D31B6D0A2A00F5CB4C /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 500A23D21B6D0A2A00F5CB4C /* BaseTableView.m */; };
+		500A23DD1B6D0B5900F5CB4C /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 500A23D51B6D0B5900F5CB4C /* blackArrow.png */; };
+		500A23DE1B6D0B5900F5CB4C /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500A23D61B6D0B5900F5CB4C /* blackArrow@2x.png */; };
+		500A23DF1B6D0B5900F5CB4C /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 500A23D71B6D0B5900F5CB4C /* blueArrow.png */; };
+		500A23E01B6D0B5900F5CB4C /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500A23D81B6D0B5900F5CB4C /* blueArrow@2x.png */; };
+		500A23E11B6D0B5900F5CB4C /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 500A23DA1B6D0B5900F5CB4C /* EGORefreshTableHeaderView.m */; };
+		500A23E21B6D0B5900F5CB4C /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 500A23DB1B6D0B5900F5CB4C /* grayArrow.png */; };
+		500A23E31B6D0B5900F5CB4C /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 500A23DC1B6D0B5900F5CB4C /* grayArrow@2x.png */; };
+		500A23E71B6D0B6100F5CB4C /* AnimatedGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 500A23E61B6D0B6100F5CB4C /* AnimatedGif.m */; };
+		500A23EA1B6D106600F5CB4C /* WeiboTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 500A23E91B6D106600F5CB4C /* WeiboTableView.m */; };
+		5041FED51B6B6AF100419161 /* WeiboCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5041FED41B6B6AF100419161 /* WeiboCell.m */; };
+		5041FED81B6B6B0D00419161 /* WeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5041FED71B6B6B0D00419161 /* WeiboView.m */; };
 		50487AEB1B67D4A100C6A8F4 /* Skins in Resources */ = {isa = PBXBuildFile; fileRef = 50487AEA1B67D4A100C6A8F4 /* Skins */; };
 		50487AEF1B67D5A500C6A8F4 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50487AEE1B67D5A500C6A8F4 /* ThemeManager.m */; };
 		50487AF11B67D5D800C6A8F4 /* theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50487AF01B67D5D800C6A8F4 /* theme.plist */; };
@@ -550,6 +568,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		500A23C01B6CC02000F5CB4C /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		500A23C11B6CC02000F5CB4C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		500A23C21B6CC02000F5CB4C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		500A23C41B6CC02000F5CB4C /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		500A23C51B6CC02000F5CB4C /* RegexKitLite.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RegexKitLite.html; sourceTree = "<group>"; };
+		500A23C61B6CC02000F5CB4C /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		500A23CB1B6CC06500F5CB4C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		500A23CE1B6CCB9300F5CB4C /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		500A23CF1B6CCB9300F5CB4C /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		500A23D11B6D0A2A00F5CB4C /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
+		500A23D21B6D0A2A00F5CB4C /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
+		500A23D51B6D0B5900F5CB4C /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		500A23D61B6D0B5900F5CB4C /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		500A23D71B6D0B5900F5CB4C /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		500A23D81B6D0B5900F5CB4C /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		500A23D91B6D0B5900F5CB4C /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		500A23DA1B6D0B5900F5CB4C /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		500A23DB1B6D0B5900F5CB4C /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		500A23DC1B6D0B5900F5CB4C /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		500A23E51B6D0B6100F5CB4C /* AnimatedGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedGif.h; sourceTree = "<group>"; };
+		500A23E61B6D0B6100F5CB4C /* AnimatedGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedGif.m; sourceTree = "<group>"; };
+		500A23E81B6D106600F5CB4C /* WeiboTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboTableView.h; sourceTree = "<group>"; };
+		500A23E91B6D106600F5CB4C /* WeiboTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboTableView.m; sourceTree = "<group>"; };
+		5041FED31B6B6AF100419161 /* WeiboCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboCell.h; sourceTree = "<group>"; };
+		5041FED41B6B6AF100419161 /* WeiboCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboCell.m; sourceTree = "<group>"; };
+		5041FED61B6B6B0D00419161 /* WeiboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboView.h; sourceTree = "<group>"; };
+		5041FED71B6B6B0D00419161 /* WeiboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboView.m; sourceTree = "<group>"; };
 		50487AEA1B67D4A100C6A8F4 /* Skins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Skins; sourceTree = "<group>"; };
 		50487AED1B67D5A500C6A8F4 /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
 		50487AEE1B67D5A500C6A8F4 /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
@@ -1131,6 +1176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500A23CC1B6CC06500F5CB4C /* libicucore.dylib in Frameworks */,
 				50613A501B67A23000B04E69 /* CoreGraphics.framework in Frameworks */,
 				50613A4E1B67A22A00B04E69 /* Foundation.framework in Frameworks */,
 				50613A4C1B67A21E00B04E69 /* UIKit.framework in Frameworks */,
@@ -1156,6 +1202,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		500A23BF1B6CC02000F5CB4C /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				500A23C01B6CC02000F5CB4C /* 37x-Checkmark.png */,
+				500A23C11B6CC02000F5CB4C /* MBProgressHUD.h */,
+				500A23C21B6CC02000F5CB4C /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		500A23C31B6CC02000F5CB4C /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				500A23C41B6CC02000F5CB4C /* RegexKitLite.h */,
+				500A23C51B6CC02000F5CB4C /* RegexKitLite.html */,
+				500A23C61B6CC02000F5CB4C /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
+			sourceTree = "<group>";
+		};
+		500A23CD1B6CCB9300F5CB4C /* NSString+URLEncoding */ = {
+			isa = PBXGroup;
+			children = (
+				500A23CE1B6CCB9300F5CB4C /* NSString+URLEncoding.h */,
+				500A23CF1B6CCB9300F5CB4C /* NSString+URLEncoding.m */,
+			);
+			path = "NSString+URLEncoding";
+			sourceTree = "<group>";
+		};
+		500A23D41B6D0B5900F5CB4C /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				500A23D51B6D0B5900F5CB4C /* blackArrow.png */,
+				500A23D61B6D0B5900F5CB4C /* blackArrow@2x.png */,
+				500A23D71B6D0B5900F5CB4C /* blueArrow.png */,
+				500A23D81B6D0B5900F5CB4C /* blueArrow@2x.png */,
+				500A23D91B6D0B5900F5CB4C /* EGORefreshTableHeaderView.h */,
+				500A23DA1B6D0B5900F5CB4C /* EGORefreshTableHeaderView.m */,
+				500A23DB1B6D0B5900F5CB4C /* grayArrow.png */,
+				500A23DC1B6D0B5900F5CB4C /* grayArrow@2x.png */,
+			);
+			path = EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		500A23E41B6D0B6100F5CB4C /* AnimatedGif */ = {
+			isa = PBXGroup;
+			children = (
+				500A23E51B6D0B6100F5CB4C /* AnimatedGif.h */,
+				500A23E61B6D0B6100F5CB4C /* AnimatedGif.m */,
+			);
+			path = AnimatedGif;
+			sourceTree = "<group>";
+		};
 		50487AEC1B67D58700C6A8F4 /* ThemeManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1182,6 +1281,7 @@
 				506135DF1B67126C00B04E69 /* Products */,
 				506135E11B67126C00B04E69 /* Supporting Files */,
 				50613A3D1B67A1CE00B04E69 /* libz.dylib */,
+				500A23CB1B6CC06500F5CB4C /* libicucore.dylib */,
 				50613A3F1B67A1D700B04E69 /* libsqlite3.dylib */,
 				50613A411B67A1E000B04E69 /* CoreTelephony.framework */,
 				50613A431B67A1FD00B04E69 /* ImageIO.framework */,
@@ -1288,6 +1388,11 @@
 		5061360F1B6718B700B04E69 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				500A23E41B6D0B6100F5CB4C /* AnimatedGif */,
+				500A23D41B6D0B5900F5CB4C /* EGOTableViewPullRefresh */,
+				500A23CD1B6CCB9300F5CB4C /* NSString+URLEncoding */,
+				500A23BF1B6CC02000F5CB4C /* MBProgressHUD */,
+				500A23C31B6CC02000F5CB4C /* RegexKitLite */,
 				507ADB381B6923020059951A /* SinaWeibo */,
 				50613A381B6796A700B04E69 /* JSONKit */,
 				506136241B6719FD00B04E69 /* DDMenu */,
@@ -1344,6 +1449,8 @@
 				5061364C1B6723A000B04E69 /* BaseViewController.m */,
 				5061364E1B67241B00B04E69 /* BaseNavigationViewController.h */,
 				5061364F1B67241B00B04E69 /* BaseNavigationViewController.m */,
+				500A23D11B6D0A2A00F5CB4C /* BaseTableView.h */,
+				500A23D21B6D0A2A00F5CB4C /* BaseTableView.m */,
 			);
 			name = BaseView;
 			sourceTree = "<group>";
@@ -1360,6 +1467,12 @@
 				50613A241B6779C300B04E69 /* RightViewController.h */,
 				50613A251B6779C300B04E69 /* RightViewController.m */,
 				50613A261B6779C300B04E69 /* RightViewController.xib */,
+				5041FED31B6B6AF100419161 /* WeiboCell.h */,
+				5041FED41B6B6AF100419161 /* WeiboCell.m */,
+				5041FED61B6B6B0D00419161 /* WeiboView.h */,
+				5041FED71B6B6B0D00419161 /* WeiboView.m */,
+				500A23E81B6D106600F5CB4C /* WeiboTableView.h */,
+				500A23E91B6D106600F5CB4C /* WeiboTableView.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -2153,6 +2266,7 @@
 				506139F21B672C2E00B04E69 /* tabbar_home_highlighted@2x.png in Resources */,
 				506139DF1B672C2E00B04E69 /* qr_btn.png in Resources */,
 				506138E01B672C2E00B04E69 /* 037@2x.png in Resources */,
+				500A23C91B6CC02000F5CB4C /* RegexKitLite.html in Resources */,
 				506139AC1B672C2E00B04E69 /* emoticon_keyboard_magnifier.png in Resources */,
 				50613A1E1B672C2E00B04E69 /* 附近的人.jpg in Resources */,
 				506138F11B672C2E00B04E69 /* 043.png in Resources */,
@@ -2186,6 +2300,7 @@
 				50487AF11B67D5D800C6A8F4 /* theme.plist in Resources */,
 				506139DD1B672C2E00B04E69 /* profile_button3_1.png in Resources */,
 				506138E11B672C2E00B04E69 /* 038.gif in Resources */,
+				500A23DD1B6D0B5900F5CB4C /* blackArrow.png in Resources */,
 				506138611B672C2E00B04E69 /* compose_mentionbutton_background.png in Resources */,
 				506138C61B672C2E00B04E69 /* 029.gif in Resources */,
 				506139711B672C2E00B04E69 /* 086.gif in Resources */,
@@ -2198,6 +2313,7 @@
 				506138E81B672C2E00B04E69 /* 040.png in Resources */,
 				506136601B6726EB00B04E69 /* HomeViewController.xib in Resources */,
 				50613A0F1B672C2E00B04E69 /* timeline_new_status_background.png in Resources */,
+				500A23C71B6CC02000F5CB4C /* 37x-Checkmark.png in Resources */,
 				506139B11B672C2E00B04E69 /* group_btn_write_on@2x.png in Resources */,
 				5061387C1B672C2E00B04E69 /* 003@2x.png in Resources */,
 				5061389E1B672C2E00B04E69 /* 015@2x.png in Resources */,
@@ -2309,6 +2425,7 @@
 				506138921B672C2E00B04E69 /* 011.png in Resources */,
 				506139A11B672C2E00B04E69 /* 102.gif in Resources */,
 				5061393E1B672C2E00B04E69 /* 069.gif in Resources */,
+				500A23DE1B6D0B5900F5CB4C /* blackArrow@2x.png in Resources */,
 				506138B71B672C2E00B04E69 /* 024.gif in Resources */,
 				506139EE1B672C2E00B04E69 /* tabbar_discover_selected@2x.png in Resources */,
 				5061396B1B672C2E00B04E69 /* 084.gif in Resources */,
@@ -2337,6 +2454,7 @@
 				506139D41B672C2E00B04E69 /* newbar_icon_3@2x.png in Resources */,
 				506139E01B672C2E00B04E69 /* qr_btn@2x.png in Resources */,
 				506139501B672C2E00B04E69 /* 075.gif in Resources */,
+				500A23DF1B6D0B5900F5CB4C /* blueArrow.png in Resources */,
 				5061395E1B672C2E00B04E69 /* 079@2x.png in Resources */,
 				5061399F1B672C2E00B04E69 /* 101.png in Resources */,
 				506139291B672C2E00B04E69 /* 062.gif in Resources */,
@@ -2352,9 +2470,11 @@
 				506139541B672C2E00B04E69 /* 076.png in Resources */,
 				506139AA1B672C2E00B04E69 /* emoticon_keyboard_background.png in Resources */,
 				506139E51B672C2E00B04E69 /* statusdetail_header_separator.png in Resources */,
+				500A23E31B6D0B5900F5CB4C /* grayArrow@2x.png in Resources */,
 				506138A01B672C2E00B04E69 /* 016.png in Resources */,
 				5061384F1B672C2E00B04E69 /* compose_camerabutton_background_highlighted.png in Resources */,
 				506139421B672C2E00B04E69 /* 070.png in Resources */,
+				500A23E21B6D0B5900F5CB4C /* grayArrow.png in Resources */,
 				506138DB1B672C2E00B04E69 /* 036.gif in Resources */,
 				506138591B672C2E00B04E69 /* compose_keyboardbutton_background.png in Resources */,
 				506138961B672C2E00B04E69 /* 013.gif in Resources */,
@@ -2409,6 +2529,7 @@
 				506138FB1B672C2E00B04E69 /* 046@2x.png in Resources */,
 				5061393A1B672C2E00B04E69 /* 067@2x.png in Resources */,
 				506139531B672C2E00B04E69 /* 076.gif in Resources */,
+				500A23E01B6D0B5900F5CB4C /* blueArrow@2x.png in Resources */,
 				5061397D1B672C2E00B04E69 /* 090.gif in Resources */,
 				506139761B672C2E00B04E69 /* 087@2x.png in Resources */,
 				506138DF1B672C2E00B04E69 /* 037.png in Resources */,
@@ -2491,26 +2612,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5041FED51B6B6AF100419161 /* WeiboCell.m in Sources */,
 				507ADB2F1B6886CF0059951A /* UIFactory.m in Sources */,
 				506136231B6718B700B04E69 /* UIImageView+WebCache.m in Sources */,
 				506136201B6718B700B04E69 /* SDWebImageDownloader.m in Sources */,
+				500A23D01B6CCB9300F5CB4C /* NSString+URLEncoding.m in Sources */,
 				506136421B671A6400B04E69 /* CustomCatagory.m in Sources */,
+				500A23D31B6D0A2A00F5CB4C /* BaseTableView.m in Sources */,
 				507ADB351B68C3ED0059951A /* ThemeLabel.m in Sources */,
 				507ADB431B6923020059951A /* SinaWeiboAuthorizeView.m in Sources */,
+				500A23E71B6D0B6100F5CB4C /* AnimatedGif.m in Sources */,
 				506136501B67241B00B04E69 /* BaseNavigationViewController.m in Sources */,
 				5061366E1B67272D00B04E69 /* ProfileViewController.m in Sources */,
 				507ADB421B6923020059951A /* SinaWeibo.m in Sources */,
 				50613A271B6779C300B04E69 /* RightViewController.m in Sources */,
+				500A23EA1B6D106600F5CB4C /* WeiboTableView.m in Sources */,
+				500A23E11B6D0B5900F5CB4C /* EGORefreshTableHeaderView.m in Sources */,
+				5041FED81B6B6B0D00419161 /* WeiboView.m in Sources */,
 				5061360B1B6715BD00B04E69 /* WXBaseModel.m in Sources */,
 				506136691B67271700B04E69 /* DiscoverViewController.m in Sources */,
 				5061365F1B6726EB00B04E69 /* HomeViewController.m in Sources */,
 				506136081B6715AE00B04E69 /* UIViewExt.m in Sources */,
 				506136731B67273D00B04E69 /* MoreViewController.m in Sources */,
 				507ADB321B68AFFD0059951A /* ThemeImageView.m in Sources */,
+				500A23CA1B6CC02000F5CB4C /* RegexKitLite.m in Sources */,
 				50487AEF1B67D5A500C6A8F4 /* ThemeManager.m in Sources */,
 				506136211B6718B700B04E69 /* SDWebImageManager.m in Sources */,
 				507ADB271B68650E0059951A /* ThemeButton.m in Sources */,
 				507ADB2B1B6875040059951A /* ThemeViewController.m in Sources */,
+				500A23C81B6CC02000F5CB4C /* MBProgressHUD.m in Sources */,
 				50613A221B6779B300B04E69 /* LeftViewController.m in Sources */,
 				5061360E1B67160700B04E69 /* WXHLGlobalUICommon.m in Sources */,
 				506136391B6719FD00B04E69 /* DDMenuController.m in Sources */,

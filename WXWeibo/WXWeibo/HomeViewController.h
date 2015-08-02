@@ -7,11 +7,16 @@
 //
 
 #import "BaseViewController.h"
-#import "SinaWeibo.h"
+#import "WeiboModel.h"
+#import "WeiboTableView.h"
+#import "Constant.h"
 
+@interface HomeViewController : BaseViewController<SinaWeiboRequestDelegate,UItableviewEventDelegate>
 
-@interface HomeViewController : BaseViewController<SinaWeiboRequestDelegate>
+@property(nonatomic,retain)  WeiboTableView *tableView;
 
+@property(nonatomic,copy) NSString *topWeiboId;
 
+@property(nonatomic,retain)NSMutableArray *weibos;
 
 @end
