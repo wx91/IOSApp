@@ -7,6 +7,8 @@
 //
 
 #import "BaseTableView.h"
+#import "Constant.h"
+#import "UIViewExt.h"
 
 @implementation BaseTableView
 
@@ -36,7 +38,55 @@
     self.dataSource=self;
     self.delegate=self;
     self.refreshHeader=YES;
+    
+    _moreButton=[UIButton buttonWithType:UIButtonTypeCustom];
+    _moreButton.backgroundColor=[UIColor clearColor];
+    _moreButton.frame=CGRectMake(0, 0, ScreenWidth, 40);
+    _moreButton.titleLabel.font=[UIFont systemFontOfSize:16.0f];
+    [_moreButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [_moreButton setTitle:@"上拉加载更多..." forState:UIControlStateNormal];
+    [_moreButton addTarget:self action:@selector(loadMoreAction) forControlEvents:UIControlEventTouchUpInside];
+     UIActivityIndicatorView *activityView=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    activityView.tag=2013;
+    activityView.frame=CGRectMake(100, 10, 20, 20);
+    [activityView stopAnimating];
+    [_moreButton addSubview:activityView];
+    
+    self.tableFooterView=_moreButton;
 }
+
+-(void)startLoadMore{
+    [_moreButton setTitle:@"正在加载..." forState:UIControlStateNormal];
+    _moreButton.enabled=NO;
+    UIActivityIndicatorView *activityView=(UIActivityIndicatorView *)[_moreButton viewWithTag:2013];
+    [activityView startAnimating];
+    
+}
+
+-(void)stopLoadMore{
+    if(self.data.count>0){
+        _moreButton.hidden=NO;
+        [_moreButton setTitle:@"上拉加载更多..." forState:UIControlStateNormal];
+        _moreButton.enabled=YES;
+        UIActivityIndicatorView *activityView=(UIActivityIndicatorView *)[_moreButton viewWithTag:2013];
+        [activityView stopAnimating];
+        if (!self.isMore) {
+            [_moreButton setTitle:@"全部加载完成" forState:UIControlStateNormal];
+            _moreButton.enabled=NO;
+        }
+    }else{
+        _moreButton.hidden=YES;
+    }
+    
+}
+
+-(void)loadMoreAction{
+    if ([self.eventDelegate respondsToSelector:@selector(pullUp:)]) {
+        [self.eventDelegate pullUp:self];
+        [self startLoadMore];
+    }
+}
+
 
 -(void)setRefreshHeader:(BOOL)refreshHeader{
     _refreshHeader=refreshHeader;
@@ -56,15 +106,25 @@
     return cell;
 }
 
+-(void)refreshData{
+    
+//    [_refreshHeaderView refreshLoding:self];
+    [_refreshHeaderView refreshLastUpdatedDate];
+}
+
+-(void)reloadData{
+    [super reloadData];
+    //停止加载更多
+    [self stopLoadMore];
+}
 
 #pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
 
 - (void)reloadTableViewDataSource{
     _reloading = YES;
-    
 }
-
+//停止加载，弹回下拉
 - (void)doneLoadingTableViewData{
     _reloading = NO;
     [_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self];
@@ -73,33 +133,39 @@
 
 #pragma mark -
 #pragma mark UIScrollViewDelegate Methods
-
+//当滑动时，实时调用此方法
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
     [_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
     
 }
-
+//手指停止拖拽的时候调用
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    
     [_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+    if (!self.isMore) {
+        return ;
+    }
+    
+    float offset=scrollView.contentOffset.y;
+    float contentHeight=scrollView.contentSize.height;
+    NSLog(@"偏移量y%f",offset);
+    NSLog(@"content高度%f",contentHeight);
+    //当offset偏移量滑到底部时，差值是scrollview的高度
+    float sub=contentHeight-offset;
+    if (sub-scrollView.height>30) {
+        [self startLoadMore];
+        if ([self.eventDelegate respondsToSelector:@selector(pullDown:)]) {
+            [self.eventDelegate pullUp:self];
+        }
+    }
     
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([self.eventDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
-        [self.eventDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
-    }
-}
-
 
 #pragma mark EGORefreshTableHeaderDelegate Methods
 //下拉到一定距离，手指放开时调用
 - (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view{
     //设置为“正在加载”状态
     [self reloadTableViewDataSource];
-    
     //停止加载，弹回下拉
-//    [self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:3.0];
     if ([self.eventDelegate respondsToSelector:@selector(pullDown:)]) {
         [self.eventDelegate pullDown:self];
     }
@@ -107,16 +173,13 @@
 
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
     
-    return _reloading; // should return if data source model is reloading
+    return _reloading;
     
 }
 
 //取得下拉刷新的时间
 - (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view{
-    
     return [NSDate date];
-    
 }
-
 
 @end

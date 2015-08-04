@@ -10,12 +10,14 @@
 #import "WeiboCell.h"
 #import "WeiboModel.h"
 #import "WeiboView.h"
+#import "UIViewExt.h"
+#import "Constant.h"
 @implementation WeiboTableView
 
 -(instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
     self=[super initWithFrame:frame style:style];
     if (self) {
-        
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(reloadData) name:kReloadWeiboTableNotification object:nil];
     }
     return self;
 }

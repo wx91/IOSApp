@@ -10,13 +10,20 @@
 #import "WeiboModel.h"
 #import "WeiboTableView.h"
 #import "Constant.h"
+#import "ThemeImageView.h"
 
-@interface HomeViewController : BaseViewController<SinaWeiboRequestDelegate,UItableviewEventDelegate>
+@interface HomeViewController : BaseViewController<SinaWeiboRequestDelegate,UITableViewEventDelegate>{
+    ThemeImageView *barView;
+}
 
 @property(nonatomic,retain)  WeiboTableView *tableView;
 
 @property(nonatomic,copy) NSString *topWeiboId;
 
+@property(nonatomic,copy)NSString *lastWeiboId;
+
 @property(nonatomic,retain)NSMutableArray *weibos;
 
+
+-(void)refreshWeibo;
 @end

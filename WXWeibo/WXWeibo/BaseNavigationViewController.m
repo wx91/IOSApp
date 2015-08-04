@@ -26,7 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadThemeImage];
+    UISwipeGestureRecognizer *swipeGesture=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipAction:)];
+    swipeGesture.direction=UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeGesture];
+    
 }
+-(void)swipAction:(UISwipeGestureRecognizer *)gesture{
+    if(self.viewControllers.count>0){
+        if (gesture.direction==UISwipeGestureRecognizerDirectionRight) {
+            [self popViewControllerAnimated:YES];
+        }
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -45,7 +57,6 @@
     [super dealloc];
 //    [[NSNotificationCenter defaultCenter]removeObserver:self];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:kThemeDidChageNotification object:nil];
-    
 }
 
 /*

@@ -54,8 +54,8 @@
     UIImage *backImage=[themeManager getThemeImage:_backgroundImageName];
     UIImage *backHighligtedImage=[themeManager getThemeImage:_backgroundHighligtImageName];
     
-    [self setImage:backImage forState:UIControlStateNormal];
-    [self setImage:backHighligtedImage forState:UIControlStateHighlighted];
+    [self setBackgroundImage:backImage forState:UIControlStateNormal];
+    [self setBackgroundImage:backHighligtedImage forState:UIControlStateHighlighted];
 }
 
 #pragma mark -setter

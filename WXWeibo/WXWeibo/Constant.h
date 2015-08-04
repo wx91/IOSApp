@@ -31,3 +31,17 @@
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 //获取设备的物理宽度
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
+
+//通知
+#define kReloadWeiboTableNotification @"kReloadWeiboTableNotification"
+
+
+//UserDefault Key
+#define kThemeName @"kThemeName"
+#define kBrowMode  @"kBrowMode"
+#define LargeBrowMode 1     //大图浏览模式
+#define SmallBrowMode 2     //小图浏览模式
+
+
+
+

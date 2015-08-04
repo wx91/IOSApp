@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "EGORefreshTableHeaderView.h"
 @class BaseTableView;
-@protocol UItableviewEventDelegate <NSObject>
+@protocol UITableViewEventDelegate <NSObject>
 @optional
 //下拉调用方法
 -(void)pullDown:(BaseTableView *)tableView;
@@ -23,7 +23,8 @@
 @interface BaseTableView : UITableView<EGORefreshTableHeaderDelegate,UITableViewDataSource,UITableViewDelegate>{
     EGORefreshTableHeaderView *_refreshHeaderView;
     BOOL _reloading;
-    
+    UIButton *_moreButton;
+      
 }
 //是否需要下拉效果
 @property(nonatomic,assign)BOOL refreshHeader;
@@ -32,6 +33,12 @@
 
 @property(nonatomic,assign)id<UItableviewEventDelegate> eventDelegate;
 
+@property(nonatomic,assign)BOOL isMore;         //是否还有更多(下一页)
+
+
 
 - (void)doneLoadingTableViewData;
+
+-(void)refreshData;
+
 @end

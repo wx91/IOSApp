@@ -19,4 +19,5 @@
 
 + (NSString *)fomateString:(NSString *)datestring;
 
++(NSString *)parseLink:(NSString *)text;
 @end

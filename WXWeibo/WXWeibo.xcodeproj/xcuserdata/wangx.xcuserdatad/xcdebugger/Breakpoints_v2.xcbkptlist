@@ -30,11 +30,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WXWeibo/HomeViewController.m"
-            timestampString = "460134075.947735"
+            timestampString = "460356749.912076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-bindAction:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WXWeibo/HomeViewController.m"
+            timestampString = "460375688.810081"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "-loadWeiboData"
             landmarkType = "5">
          </BreakpointContent>

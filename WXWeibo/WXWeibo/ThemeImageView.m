@@ -62,12 +62,6 @@
     [super dealloc];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:kThemeDidChageNotification object:nil];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+
 
 @end

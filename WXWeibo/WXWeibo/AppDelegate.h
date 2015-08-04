@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SinaWeibo.h"
 #import "MainViewController.h"
+#import "DDMenuController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -17,6 +18,8 @@
 @property(strong ,nonatomic)SinaWeibo *sinaweibo;
 
 @property(strong,retain) MainViewController *mainCtrl;
+
+@property(nonatomic,retain)DDMenuController *menuCtrl;
 
 @end
 

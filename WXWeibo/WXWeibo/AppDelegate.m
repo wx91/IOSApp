@@ -14,6 +14,7 @@
 #import "Constant.h"
 #import "ThemeManager.h"
 #import "SinaWeibo.h"
+#
 
 @interface AppDelegate ()
 
@@ -50,15 +51,12 @@
      _mainCtrl=[[MainViewController alloc]init];
     LeftViewController *leftCtrl=[[LeftViewController alloc]init];
     RightViewController *rightCtrl=[[RightViewController alloc]init];
-    DDMenuController *menuCtrl=[[DDMenuController alloc]initWithRootViewController:_mainCtrl];
-    menuCtrl.leftViewController=leftCtrl;
-    menuCtrl.rightViewController=rightCtrl;
-    
+    _menuCtrl=[[DDMenuController alloc]initWithRootViewController:_mainCtrl];
+    _menuCtrl.leftViewController=leftCtrl;
+    _menuCtrl.rightViewController=rightCtrl;
     //设置微博信息
     [self _initSinaWeibo];
-    
-    self.window.rootViewController=menuCtrl;
-    
+    self.window.rootViewController=_menuCtrl;
     return YES;
 }
 

@@ -555,6 +555,14 @@
 		50C4C3681B69CFBF00C4149D /* WeiboModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4C3671B69CFBF00C4149D /* WeiboModel.m */; };
 		50C4C36B1B69D2CB00C4149D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4C36A1B69D2CB00C4149D /* UserModel.m */; };
 		50C4C36C1B69D56700C4149D /* WeiboModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4C3671B69CFBF00C4149D /* WeiboModel.m */; };
+		50E926D51B706A1300F6A801 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E926D31B706A1300F6A801 /* DetailViewController.m */; };
+		50E926D61B706A1300F6A801 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E926D41B706A1300F6A801 /* DetailViewController.xib */; };
+		50E926D91B707D7200F6A801 /* CommentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E926D81B707D7200F6A801 /* CommentTableView.m */; };
+		50E926DB1B707E2E00F6A801 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E926DA1B707E2E00F6A801 /* CommentCell.xib */; };
+		50E926DE1B70806400F6A801 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E926DD1B70806400F6A801 /* CommentCell.m */; };
+		50E926E11B7084B100F6A801 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E926E01B7084B100F6A801 /* CommentModel.m */; };
+		50E926E51B70F07200F6A801 /* BrowModeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E926E31B70F07200F6A801 /* BrowModeController.m */; };
+		50E926E61B70F07200F6A801 /* BrowModeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E926E41B70F07200F6A801 /* BrowModeController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1169,6 +1177,19 @@
 		50C4C3671B69CFBF00C4149D /* WeiboModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboModel.m; sourceTree = "<group>"; };
 		50C4C3691B69D2CB00C4149D /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		50C4C36A1B69D2CB00C4149D /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		50E926D21B706A1300F6A801 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		50E926D31B706A1300F6A801 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		50E926D41B706A1300F6A801 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		50E926D71B707D7200F6A801 /* CommentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableView.h; sourceTree = "<group>"; };
+		50E926D81B707D7200F6A801 /* CommentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableView.m; sourceTree = "<group>"; };
+		50E926DA1B707E2E00F6A801 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		50E926DC1B70806400F6A801 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		50E926DD1B70806400F6A801 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		50E926DF1B7084B100F6A801 /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		50E926E01B7084B100F6A801 /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
+		50E926E21B70F07200F6A801 /* BrowModeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowModeController.h; sourceTree = "<group>"; };
+		50E926E31B70F07200F6A801 /* BrowModeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowModeController.m; sourceTree = "<group>"; };
+		50E926E41B70F07200F6A801 /* BrowModeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowModeController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1261,10 +1282,10 @@
 				50487AED1B67D5A500C6A8F4 /* ThemeManager.h */,
 				50487AEE1B67D5A500C6A8F4 /* ThemeManager.m */,
 				50487AF01B67D5D800C6A8F4 /* theme.plist */,
-				507ADB251B68650E0059951A /* ThemeButton.h */,
-				507ADB261B68650E0059951A /* ThemeButton.m */,
 				507ADB2D1B6886CF0059951A /* UIFactory.h */,
 				507ADB2E1B6886CF0059951A /* UIFactory.m */,
+				507ADB251B68650E0059951A /* ThemeButton.h */,
+				507ADB261B68650E0059951A /* ThemeButton.m */,
 				507ADB301B68AFFD0059951A /* ThemeImageView.h */,
 				507ADB311B68AFFD0059951A /* ThemeImageView.m */,
 				507ADB331B68C3ED0059951A /* ThemeLabel.h */,
@@ -1365,6 +1386,8 @@
 				50C4C3671B69CFBF00C4149D /* WeiboModel.m */,
 				50C4C3691B69D2CB00C4149D /* UserModel.h */,
 				50C4C36A1B69D2CB00C4149D /* UserModel.m */,
+				50E926DF1B7084B100F6A801 /* CommentModel.h */,
+				50E926E01B7084B100F6A801 /* CommentModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1473,6 +1496,14 @@
 				5041FED71B6B6B0D00419161 /* WeiboView.m */,
 				500A23E81B6D106600F5CB4C /* WeiboTableView.h */,
 				500A23E91B6D106600F5CB4C /* WeiboTableView.m */,
+				50E926D21B706A1300F6A801 /* DetailViewController.h */,
+				50E926D31B706A1300F6A801 /* DetailViewController.m */,
+				50E926D41B706A1300F6A801 /* DetailViewController.xib */,
+				50E926D71B707D7200F6A801 /* CommentTableView.h */,
+				50E926D81B707D7200F6A801 /* CommentTableView.m */,
+				50E926DC1B70806400F6A801 /* CommentCell.h */,
+				50E926DD1B70806400F6A801 /* CommentCell.m */,
+				50E926DA1B707E2E00F6A801 /* CommentCell.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1516,6 +1547,9 @@
 				507ADB281B6875040059951A /* ThemeViewController.h */,
 				507ADB291B6875040059951A /* ThemeViewController.m */,
 				507ADB2A1B6875040059951A /* ThemeViewController.xib */,
+				50E926E21B70F07200F6A801 /* BrowModeController.h */,
+				50E926E31B70F07200F6A801 /* BrowModeController.m */,
+				50E926E41B70F07200F6A801 /* BrowModeController.xib */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -2199,6 +2233,7 @@
 				506138741B672C2E00B04E69 /* 001.gif in Resources */,
 				506139801B672C2E00B04E69 /* 091.gif in Resources */,
 				506138F51B672C2E00B04E69 /* 044@2x.png in Resources */,
+				50E926E61B70F07200F6A801 /* BrowModeController.xib in Resources */,
 				506138D71B672C2E00B04E69 /* 034@2x.png in Resources */,
 				5061392F1B672C2E00B04E69 /* 064.gif in Resources */,
 				506139181B672C2E00B04E69 /* 056.png in Resources */,
@@ -2321,6 +2356,7 @@
 				506139A81B672C2E00B04E69 /* 104.png in Resources */,
 				506138B61B672C2E00B04E69 /* 023@2x.png in Resources */,
 				506138CC1B672C2E00B04E69 /* 031.gif in Resources */,
+				50E926D61B706A1300F6A801 /* DetailViewController.xib in Resources */,
 				5061384C1B672C2E00B04E69 /* btn_map_location@2x.png in Resources */,
 				5061398B1B672C2E00B04E69 /* 094@2x.png in Resources */,
 				5061390D1B672C2E00B04E69 /* 052@2x.png in Resources */,
@@ -2371,6 +2407,7 @@
 				5061386D1B672C2E00B04E69 /* compose_trendbutton_background_highlighted.png in Resources */,
 				5061395D1B672C2E00B04E69 /* 079.png in Resources */,
 				5061399E1B672C2E00B04E69 /* 101.gif in Resources */,
+				50E926DB1B707E2E00F6A801 /* CommentCell.xib in Resources */,
 				506139121B672C2E00B04E69 /* 054.png in Resources */,
 				506138D21B672C2E00B04E69 /* 033.gif in Resources */,
 				506138BA1B672C2E00B04E69 /* 025.gif in Resources */,
@@ -2637,6 +2674,7 @@
 				507ADB321B68AFFD0059951A /* ThemeImageView.m in Sources */,
 				500A23CA1B6CC02000F5CB4C /* RegexKitLite.m in Sources */,
 				50487AEF1B67D5A500C6A8F4 /* ThemeManager.m in Sources */,
+				50E926D51B706A1300F6A801 /* DetailViewController.m in Sources */,
 				506136211B6718B700B04E69 /* SDWebImageManager.m in Sources */,
 				507ADB271B68650E0059951A /* ThemeButton.m in Sources */,
 				507ADB2B1B6875040059951A /* ThemeViewController.m in Sources */,
@@ -2647,16 +2685,20 @@
 				506136641B67270400B04E69 /* MessageViewController.m in Sources */,
 				506135E71B67126C00B04E69 /* AppDelegate.m in Sources */,
 				507ADB441B6923020059951A /* SinaWeiboRequest.m in Sources */,
+				50E926E51B70F07200F6A801 /* BrowModeController.m in Sources */,
 				50C4C36B1B69D2CB00C4149D /* UserModel.m in Sources */,
 				5061364D1B6723A000B04E69 /* BaseViewController.m in Sources */,
 				5061363A1B6719FD00B04E69 /* RTLabel.m in Sources */,
 				506135E41B67126C00B04E69 /* main.m in Sources */,
 				506136221B6718B700B04E69 /* UIButton+WebCache.m in Sources */,
+				50E926E11B7084B100F6A801 /* CommentModel.m in Sources */,
 				506136071B6715AE00B04E69 /* UIUtils.m in Sources */,
 				50C4C3681B69CFBF00C4149D /* WeiboModel.m in Sources */,
+				50E926DE1B70806400F6A801 /* CommentCell.m in Sources */,
 				506136491B6722D100B04E69 /* MainViewController.m in Sources */,
 				5061361F1B6718B700B04E69 /* SDImageCache.m in Sources */,
 				50613A3B1B6796A700B04E69 /* JSONKit.m in Sources */,
+				50E926D91B707D7200F6A801 /* CommentTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
