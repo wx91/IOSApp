@@ -1,58 +1,27 @@
 //
 //  AppDelegate.m
-//  WXWeibo
+//  WXWeiboTest
 //
-//  Created by wangx on 15/7/28.
+//  Created by wangx on 15/8/7.
 //  Copyright (c) 2015年 wangx. All rights reserved.
 //
-#import "SinaWeibo.h"
-#import "DDMenuController.h"
+
 #import "AppDelegate.h"
-#import "MainViewController.h"
-#import "LeftViewController.h"
-#import "RightViewController.h"
-#import "ThemeManager.h"
-#import "Constant.h"
+
+@interface AppDelegate ()
+
+@end
+
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //设置可见
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    //设置主题
-    [self setTheme];
-    //设置项目中ViewController框架
-    _mainCtrl=[[MainViewController alloc]init];
-    LeftViewController *leftCtrl=[[LeftViewController alloc]init];
-    RightViewController *rightCtrl=[[RightViewController alloc]init];
-    _menuCtrl=[[DDMenuController alloc]initWithRootViewController:_mainCtrl];
-    _menuCtrl.leftViewController=leftCtrl;
-    _menuCtrl.rightViewController=rightCtrl;
-    self.window.rootViewController=_menuCtrl;
-    //初始化微博信息
-    [self initSinaWeibo];
     return YES;
 }
-//获取项目的主题信息
--(void)setTheme{
-    NSString *themeName=[[NSUserDefaults standardUserDefaults]objectForKey:kThemeName];
-    [[ThemeManager shareInstance]setThemeName:themeName];
-}
-//初始化微博信息
--(void)initSinaWeibo{
-    _sinaweibo = [[SinaWeibo alloc] initWithAppKey:kAppKey appSecret:kAppSecret appRedirectURI:kAppRedirectURI andDelegate:_mainCtrl];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *sinaweiboInfo = [defaults objectForKey:@"SinaWeiboAuthData"];
-    if ([sinaweiboInfo objectForKey:@"AccessTokenKey"] && [sinaweiboInfo objectForKey:@"ExpirationDateKey"] && [sinaweiboInfo objectForKey:@"UserIDKey"])
-    {
-        _sinaweibo.accessToken = [sinaweiboInfo objectForKey:@"AccessTokenKey"];
-        _sinaweibo.expirationDate = [sinaweiboInfo objectForKey:@"ExpirationDateKey"];
-        _sinaweibo.userID = [sinaweiboInfo objectForKey:@"UserIDKey"];
-    }
-}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

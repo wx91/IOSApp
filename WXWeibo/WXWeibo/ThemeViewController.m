@@ -8,7 +8,7 @@
 
 #import "ThemeViewController.h"
 #import "ThemeManager.h"
-#import "UIFactory.h"
+#import "UIThemeFactory.h"
 #import "Constant.h"
 
 @interface ThemeViewController ()
@@ -47,7 +47,7 @@
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        UILabel *textLabel =[UIFactory createLabel:kThemeListLabel];
+        UILabel *textLabel =[UIThemeFactory createLabel:kThemeListLabel];
         textLabel.frame=CGRectMake(10, 10, 200, 30);
         textLabel.backgroundColor=[UIColor clearColor];
         textLabel.font=[UIFont boldSystemFontOfSize:16.0f];

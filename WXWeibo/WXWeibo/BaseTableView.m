@@ -15,7 +15,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self=[super initWithFrame:frame];
     if (self) {
-        [self _initView];
+        [self initView];
     }
     return self;
 }
@@ -23,15 +23,16 @@
 -(instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
     self=[super initWithFrame:frame style:style];
     if (self) {
-        [self _initView];
+        [self initView];
     }
     return self;
 }
+//从nib中初始化
 -(void)awakeFromNib{
-    [self _initView];
+    [self initView];
 }
 
--(void)_initView{
+-(void)initView{
     _refreshHeaderView =[[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.bounds.size.height, self.frame.size.width, self.bounds.size.height)];
     _refreshHeaderView.delegate = self;
     _refreshHeaderView.backgroundColor=[UIColor clearColor];
@@ -118,7 +119,6 @@
     [self stopLoadMore];
 }
 
-#pragma mark -
 #pragma mark Data Source Loading / Reloading Methods
 
 - (void)reloadTableViewDataSource{
@@ -172,7 +172,6 @@
 }
 
 - (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view{
-    
     return _reloading;
     
 }

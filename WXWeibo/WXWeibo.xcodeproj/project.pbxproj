@@ -545,7 +545,7 @@
 		507ADB271B68650E0059951A /* ThemeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 507ADB261B68650E0059951A /* ThemeButton.m */; };
 		507ADB2B1B6875040059951A /* ThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507ADB291B6875040059951A /* ThemeViewController.m */; };
 		507ADB2C1B6875040059951A /* ThemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 507ADB2A1B6875040059951A /* ThemeViewController.xib */; };
-		507ADB2F1B6886CF0059951A /* UIFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 507ADB2E1B6886CF0059951A /* UIFactory.m */; };
+		507ADB2F1B6886CF0059951A /* UIThemeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 507ADB2E1B6886CF0059951A /* UIThemeFactory.m */; };
 		507ADB321B68AFFD0059951A /* ThemeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 507ADB311B68AFFD0059951A /* ThemeImageView.m */; };
 		507ADB351B68C3ED0059951A /* ThemeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 507ADB341B68C3ED0059951A /* ThemeLabel.m */; };
 		507ADB411B6923020059951A /* SinaWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 507ADB391B6923020059951A /* SinaWeibo.bundle */; };
@@ -1159,8 +1159,8 @@
 		507ADB281B6875040059951A /* ThemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeViewController.h; sourceTree = "<group>"; };
 		507ADB291B6875040059951A /* ThemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeViewController.m; sourceTree = "<group>"; };
 		507ADB2A1B6875040059951A /* ThemeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemeViewController.xib; sourceTree = "<group>"; };
-		507ADB2D1B6886CF0059951A /* UIFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFactory.h; sourceTree = "<group>"; };
-		507ADB2E1B6886CF0059951A /* UIFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFactory.m; sourceTree = "<group>"; };
+		507ADB2D1B6886CF0059951A /* UIThemeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIThemeFactory.h; sourceTree = "<group>"; };
+		507ADB2E1B6886CF0059951A /* UIThemeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIThemeFactory.m; sourceTree = "<group>"; };
 		507ADB301B68AFFD0059951A /* ThemeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeImageView.h; sourceTree = "<group>"; };
 		507ADB311B68AFFD0059951A /* ThemeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeImageView.m; sourceTree = "<group>"; };
 		507ADB331B68C3ED0059951A /* ThemeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeLabel.h; sourceTree = "<group>"; };
@@ -1282,8 +1282,8 @@
 				50487AED1B67D5A500C6A8F4 /* ThemeManager.h */,
 				50487AEE1B67D5A500C6A8F4 /* ThemeManager.m */,
 				50487AF01B67D5D800C6A8F4 /* theme.plist */,
-				507ADB2D1B6886CF0059951A /* UIFactory.h */,
-				507ADB2E1B6886CF0059951A /* UIFactory.m */,
+				507ADB2D1B6886CF0059951A /* UIThemeFactory.h */,
+				507ADB2E1B6886CF0059951A /* UIThemeFactory.m */,
 				507ADB251B68650E0059951A /* ThemeButton.h */,
 				507ADB261B68650E0059951A /* ThemeButton.m */,
 				507ADB301B68AFFD0059951A /* ThemeImageView.h */,
@@ -1490,12 +1490,12 @@
 				50613A241B6779C300B04E69 /* RightViewController.h */,
 				50613A251B6779C300B04E69 /* RightViewController.m */,
 				50613A261B6779C300B04E69 /* RightViewController.xib */,
+				500A23E81B6D106600F5CB4C /* WeiboTableView.h */,
+				500A23E91B6D106600F5CB4C /* WeiboTableView.m */,
 				5041FED31B6B6AF100419161 /* WeiboCell.h */,
 				5041FED41B6B6AF100419161 /* WeiboCell.m */,
 				5041FED61B6B6B0D00419161 /* WeiboView.h */,
 				5041FED71B6B6B0D00419161 /* WeiboView.m */,
-				500A23E81B6D106600F5CB4C /* WeiboTableView.h */,
-				500A23E91B6D106600F5CB4C /* WeiboTableView.m */,
 				50E926D21B706A1300F6A801 /* DetailViewController.h */,
 				50E926D31B706A1300F6A801 /* DetailViewController.m */,
 				50E926D41B706A1300F6A801 /* DetailViewController.xib */,
@@ -2650,7 +2650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5041FED51B6B6AF100419161 /* WeiboCell.m in Sources */,
-				507ADB2F1B6886CF0059951A /* UIFactory.m in Sources */,
+				507ADB2F1B6886CF0059951A /* UIThemeFactory.m in Sources */,
 				506136231B6718B700B04E69 /* UIImageView+WebCache.m in Sources */,
 				506136201B6718B700B04E69 /* SDWebImageDownloader.m in Sources */,
 				500A23D01B6CCB9300F5CB4C /* NSString+URLEncoding.m in Sources */,

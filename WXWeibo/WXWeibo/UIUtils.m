@@ -42,9 +42,17 @@
 
 //Sat Jan 12 11:50:16 +0800 2013
 + (NSString *)fomateString:(NSString *)datestring {
-    NSString *formate = @"E MMM d HH:mm:ss Z yyyy";
-    NSDate *createDate = [UIUtils dateFromFomate:datestring formate:formate];
+//    NSString *formate = @"EEE MMM d HH:mm:ss Z yyyy";
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:formate];
+////    NSDate *createDate = [UIUtils dateFromFomate:datestring formate:formate];
+//    NSString *text = [UIUtils stringFromFomate:createDate formate:@"MM-dd HH:mm"];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat=@"EEE MMM d HH:mm:ss Z yyyy";
+    formatter.locale=[[NSLocale alloc]initWithLocaleIdentifier:@"en_US"];
+    NSDate *createDate= [formatter dateFromString:datestring];
     NSString *text = [UIUtils stringFromFomate:createDate formate:@"MM-dd HH:mm"];
+    
     return text;
 }
 

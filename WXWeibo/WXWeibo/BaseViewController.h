@@ -10,25 +10,26 @@
 #import "SinaWeibo.h"
 #import "MBProgressHUD.h"
 #import "AppDelegate.h"
+
+
 @interface BaseViewController : UIViewController{
-    UIView *_loadView;
+    UIView *_loadView;          //加载view
 }
-
+//是否需要返回按钮
 @property(nonatomic,assign) BOOL isBackButton;
+//提示框架
 @property(nonatomic,retain) MBProgressHUD *hud;
-
-
+//初始化的Sinaweibo
 -(SinaWeibo *)sinaweibo;
+//初始化的appDelegate
+-(AppDelegate *) appDelegate;
 
--(AppDelegate *)appDelegate;
-
-//提示
--(void)showLoading:(BOOL )show;
-
+-(void)showLoading:(BOOL)show;
+//进行提示
 -(void)showHUD:(NSString *)title isDim:(BOOL)isDim;
-
+//完成提示
 -(void)showHUDComplete:(NSString *)title;
-
+//隐藏提示
 -(void)hideHUD;
 
 @end

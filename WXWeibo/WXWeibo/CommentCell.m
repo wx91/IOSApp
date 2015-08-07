@@ -9,8 +9,9 @@
 #import "CommentCell.h"
 #import "UIViewExt.h"
 #import "UIUtils.h"
-@implementation CommentCell
+#import "NSString+URLEncoding.h"
 
+@implementation CommentCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self=[super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -60,7 +61,16 @@
 
 #pragma mark - RTLabel delegate
 -(void)rtLabel:(id)rtLabel didSelectLinkWithURL:(NSURL *)url{
-    
+    NSString *absoluteString=[url absoluteString];
+    if ([absoluteString hasPrefix:@"user"]) {
+        NSString *urlstring=[url host];
+        urlstring=[urlstring URLDecodedString];
+    }else if ([absoluteString hasPrefix:@"http"]){
+        NSLog(@"%@",absoluteString);
+    }else if ([absoluteString hasPrefix:@"topic"]){
+        NSString *urlstring=[url host];
+        urlstring=[urlstring URLDecodedString];
+    }
 }
 
 @end

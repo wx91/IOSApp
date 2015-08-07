@@ -27,23 +27,23 @@
     return [self.data count];
 }
 
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier=@"Weibo Cell";
     WeiboCell *cell=[tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell==nil) {
-        cell=[[WeiboCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
     WeiboModel *weibo=[self.data objectAtIndex:indexPath.row];
-    cell.weiboModel=weibo;
+    if (cell==nil) {
+        cell=[[WeiboCell alloc]initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:identifier];
+    }
+    cell.weibo=weibo;
+    
     return cell;
 }
-
-
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     WeiboModel *weibo=[self.data objectAtIndex:indexPath.row];
     float height=[WeiboView getWeiboViewHeight:weibo isRepost:NO isDetail:NO];
-    height+=60;
+    height+=80;
     return height;
 }
 

@@ -11,7 +11,7 @@
 #import "ThemeImageView.h"
 #import "ThemeLabel.h"
 
-@interface UIFactory : NSObject
+@interface UIThemeFactory : NSObject
 
 +(ThemeButton *)createButton:(NSString *)imageName highligted:(NSString *)highlightedName;
 

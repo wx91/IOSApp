@@ -865,7 +865,7 @@
 
 - (void)extractTextStyle:(NSString*)data
 {
-	//NSLog(@"%@", data);
+//	NSLog(@"%@", data);
 	
 	NSScanner *scanner = nil; 
 	NSString *text = nil;

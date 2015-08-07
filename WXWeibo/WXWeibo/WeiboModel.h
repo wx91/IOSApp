@@ -51,5 +51,6 @@
 @property(nonatomic,retain)UserModel        *user;              //微博的作者用户
 @property(nonatomic,retain)NSNumber         *repostsCount;      //转发数
 @property(nonatomic,retain)NSNumber         *commentsCount;     //评论数
+@property(nonatomic,retain)NSNumber         *attitudesCount;    //表态数
 
 @end

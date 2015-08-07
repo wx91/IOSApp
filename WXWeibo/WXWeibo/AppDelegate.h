@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SinaWeibo.h"
-#import "MainViewController.h"
 #import "DDMenuController.h"
+#import "MainViewController.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

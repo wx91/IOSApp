@@ -9,15 +9,12 @@
 #import "BaseNavigationViewController.h"
 #import "ThemeManager.h"
 
-@interface BaseNavigationViewController ()
-
-@end
-
 @implementation BaseNavigationViewController
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self=[super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        //添加切换监听
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(themeNotification:) name:kThemeDidChageNotification object:nil];
     }
     return self;
@@ -31,6 +28,7 @@
     [self.view addGestureRecognizer:swipeGesture];
     
 }
+//左扫时，返回上一个页面
 -(void)swipAction:(UISwipeGestureRecognizer *)gesture{
     if(self.viewControllers.count>0){
         if (gesture.direction==UISwipeGestureRecognizerDirectionRight) {
@@ -38,35 +36,24 @@
         }
     }
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
+//监听触发方法
 -(void)themeNotification:(NSNotification *)notification{
     [self loadThemeImage];
 }
+
+//加载导航栏的加载图片方法
 -(void)loadThemeImage{
         UIImage *image=[[ThemeManager shareInstance]getThemeImage:@"navigationbar_background.png"];
     [self.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
 }
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
 
 -(void)dealloc{
     [super dealloc];
-//    [[NSNotificationCenter defaultCenter]removeObserver:self];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:kThemeDidChageNotification object:nil];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -23,7 +23,8 @@
                              @"originalImage":@"original_pic",
                              @"geo":@"geo",
                              @"repostsCount":@"reposts_count",
-                             @"commentsCount":@"comments_count"
+                             @"commentsCount":@"comments_count",
+                             @"attitudesCount":@"attitudes_count"
                              };
     
     return mapAtt;

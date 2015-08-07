@@ -17,7 +17,6 @@
 -(void)pullUp:(BaseTableView *)tableView;
 //选中一个cell
 -(void)tableView:(BaseTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-
 @end
 
 @interface BaseTableView : UITableView<EGORefreshTableHeaderDelegate,UITableViewDataSource,UITableViewDelegate>{
@@ -30,15 +29,13 @@
 @property(nonatomic,assign)BOOL refreshHeader;
 //为tableview提供数据
 @property(nonatomic,retain)NSArray *data;
-
-@property(nonatomic,assign)id<UItableviewEventDelegate> eventDelegate;
-
+//设置UITableViewEventDelegate的代理
+@property(nonatomic,assign)id<UITableViewEventDelegate> eventDelegate;
+//是否还有下一页
 @property(nonatomic,assign)BOOL isMore;         //是否还有更多(下一页)
-
-
-
+//刷新完成
 - (void)doneLoadingTableViewData;
-
+//刷新微博获取数据
 -(void)refreshData;
 
 @end

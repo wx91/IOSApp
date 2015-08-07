@@ -32,12 +32,12 @@
     tableHeaderView.height+=60;
     
     //创建微博视图
-    float h=[WeiboView getWeiboViewHeight:self.weiboModel isRepost:NO isDetail:YES];
-    _weiboView =[[WeiboView alloc]initWithFrame:CGRectMake(10, _userBarView.bottom+10, ScreenWidth-20, h)];
-    _weiboView.isDetail=YES;
-    _weiboView.weiboModel=_weiboModel;
-    [tableHeaderView addSubview:_weiboView];
-    tableHeaderView.height+=(h+10);
+//    float h=[WeiboView getWeiboViewHeight:self.weiboModel isRepost:NO isDetail:YES];
+//    _weiboView =[[WeiboView alloc]initWithFrame:CGRectMake(10, _userBarView.bottom+10, ScreenWidth-20, h)];
+//    _weiboView.isDetail=YES;
+//    _weiboView.weiboModel=_weiboModel;
+//    [tableHeaderView addSubview:_weiboView];
+//    tableHeaderView.height+=(h+10);
     self.tableView.tableHeaderView=tableHeaderView;
     self.tableView.eventDelegate=self;
 }

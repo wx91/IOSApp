@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 wangx. All rights reserved.
 //
 
-#import "UIFactory.h"
+#import "UIThemeFactory.h"
 
-@implementation UIFactory
+@implementation UIThemeFactory
 +(ThemeButton *)createButton:(NSString *)imageName highligted:(NSString *)highlightedName{
     ThemeButton *button=[[ThemeButton alloc]initWithImage:imageName highlighted:highlightedName];
 
