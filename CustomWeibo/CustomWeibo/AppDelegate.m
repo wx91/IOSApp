@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  WXWeiboTest
+//  CustomWeibo
 //
-//  Created by wangx on 15/8/7.
+//  Created by wangx on 15/8/8.
 //  Copyright (c) 2015年 wangx. All rights reserved.
 //
 

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>WXWeiboTest.xcscheme</key>
+		<key>CustomWeibo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>50EA890B1B74D1B7004EA94E</key>
+		<key>50DE626A1B765C2700CAE903</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50EA891E1B74D1B7004EA94E</key>
+		<key>50DE627D1B765C2700CAE903</key>
 		<dict>
 			<key>primary</key>
 			<true/>

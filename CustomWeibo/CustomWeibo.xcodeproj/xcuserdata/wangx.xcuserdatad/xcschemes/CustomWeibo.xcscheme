@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50EA890B1B74D1B7004EA94E"
-               BuildableName = "WXWeiboTest.app"
-               BlueprintName = "WXWeiboTest"
-               ReferencedContainer = "container:WXWeiboTest.xcodeproj">
+               BlueprintIdentifier = "50DE626A1B765C2700CAE903"
+               BuildableName = "CustomWeibo.app"
+               BlueprintName = "CustomWeibo"
+               ReferencedContainer = "container:CustomWeibo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -28,10 +28,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50EA891E1B74D1B7004EA94E"
-               BuildableName = "WXWeiboTestTests.xctest"
-               BlueprintName = "WXWeiboTestTests"
-               ReferencedContainer = "container:WXWeiboTest.xcodeproj">
+               BlueprintIdentifier = "50DE627D1B765C2700CAE903"
+               BuildableName = "CustomWeiboTests.xctest"
+               BlueprintName = "CustomWeiboTests"
+               ReferencedContainer = "container:CustomWeibo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +46,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "50EA891E1B74D1B7004EA94E"
-               BuildableName = "WXWeiboTestTests.xctest"
-               BlueprintName = "WXWeiboTestTests"
-               ReferencedContainer = "container:WXWeiboTest.xcodeproj">
+               BlueprintIdentifier = "50DE627D1B765C2700CAE903"
+               BuildableName = "CustomWeiboTests.xctest"
+               BlueprintName = "CustomWeiboTests"
+               ReferencedContainer = "container:CustomWeibo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "50EA890B1B74D1B7004EA94E"
-            BuildableName = "WXWeiboTest.app"
-            BlueprintName = "WXWeiboTest"
-            ReferencedContainer = "container:WXWeiboTest.xcodeproj">
+            BlueprintIdentifier = "50DE626A1B765C2700CAE903"
+            BuildableName = "CustomWeibo.app"
+            BlueprintName = "CustomWeibo"
+            ReferencedContainer = "container:CustomWeibo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +76,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "50EA890B1B74D1B7004EA94E"
-            BuildableName = "WXWeiboTest.app"
-            BlueprintName = "WXWeiboTest"
-            ReferencedContainer = "container:WXWeiboTest.xcodeproj">
+            BlueprintIdentifier = "50DE626A1B765C2700CAE903"
+            BuildableName = "CustomWeibo.app"
+            BlueprintName = "CustomWeibo"
+            ReferencedContainer = "container:CustomWeibo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,10 +95,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "50EA890B1B74D1B7004EA94E"
-            BuildableName = "WXWeiboTest.app"
-            BlueprintName = "WXWeiboTest"
-            ReferencedContainer = "container:WXWeiboTest.xcodeproj">
+            BlueprintIdentifier = "50DE626A1B765C2700CAE903"
+            BuildableName = "CustomWeibo.app"
+            BlueprintName = "CustomWeibo"
+            ReferencedContainer = "container:CustomWeibo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
