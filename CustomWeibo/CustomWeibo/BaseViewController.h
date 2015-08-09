@@ -19,9 +19,6 @@
 //提示框架
 @property(nonatomic,retain) MBProgressHUD *hud;
 
-//初始化的appDelegate
--(AppDelegate *) appDelegate;
-
 -(void)showLoading:(BOOL)show;
 //进行提示
 -(void)showHUD:(NSString *)title isDim:(BOOL)isDim;

@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DDMenuController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong,nonatomic) UIWindow *window;
+
+@property(strong,retain) MainViewController *mainCtrl;
+
+@property(nonatomic,retain)DDMenuController *menuCtrl;
 
 
 @end

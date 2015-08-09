@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
-
-@end
+#import "ThemeManager.h"
+#import "Constant.h"
+#import "MainViewController.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
 
 @implementation AppDelegate
 
@@ -20,8 +21,28 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    //设置主题
+    [self setTheme];
+    
+    //设置项目中ViewController框架
+    _mainCtrl=[[MainViewController alloc]init];
+//    LeftViewController *leftCtrl=[[LeftViewController alloc]init];
+//    RightViewController *rightCtrl=[[RightViewController alloc]init];
+//    _menuCtrl=[[DDMenuController alloc]initWithRootViewController:_mainCtrl];
+//    _menuCtrl.leftController=leftCtrl;
+//    _menuCtrl.rightController=rightCtrl;
+    self.window.rootViewController=_mainCtrl;
+    
     return YES;
 }
+
+//获取项目的主题信息
+-(void)setTheme{
+    NSString *themeName=[[NSUserDefaults standardUserDefaults]objectForKey:kThemeName];
+    [[ThemeManager shareInstance]setThemeName:themeName];
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

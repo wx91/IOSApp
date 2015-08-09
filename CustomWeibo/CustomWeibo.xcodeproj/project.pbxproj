@@ -502,9 +502,14 @@
 		50DE66791B770EF700CAE903 /* Skins in Resources */ = {isa = PBXBuildFile; fileRef = 50DE66781B770EF700CAE903 /* Skins */; };
 		50DE667D1B770F1900CAE903 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE667B1B770F1900CAE903 /* HomeViewController.m */; };
 		50DE667E1B770F1900CAE903 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DE667C1B770F1900CAE903 /* HomeViewController.xib */; };
-		50DE66811B770F3A00CAE903 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE66801B770F3A00CAE903 /* MainViewController.m */; };
 		50DE66861B770FEC00CAE903 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 50DE66831B770FEC00CAE903 /* 37x-Checkmark.png */; };
 		50DE66871B770FEC00CAE903 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE66851B770FEC00CAE903 /* MBProgressHUD.m */; };
+		50DE668C1B771BAC00CAE903 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE668B1B771BAC00CAE903 /* DDMenuController.m */; };
+		50DE66901B771C0800CAE903 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE668E1B771C0800CAE903 /* RightViewController.m */; };
+		50DE66911B771C0800CAE903 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DE668F1B771C0800CAE903 /* RightViewController.xib */; };
+		50DE66951B771C1000CAE903 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE66931B771C1000CAE903 /* LeftViewController.m */; };
+		50DE66961B771C1000CAE903 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DE66941B771C1000CAE903 /* LeftViewController.xib */; };
+		50DE669C1B771E0400CAE903 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE669B1B771E0400CAE903 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1033,12 +1038,20 @@
 		50DE667A1B770F1900CAE903 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		50DE667B1B770F1900CAE903 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		50DE667C1B770F1900CAE903 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		50DE667F1B770F3A00CAE903 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		50DE66801B770F3A00CAE903 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		50DE66831B770FEC00CAE903 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 		50DE66841B770FEC00CAE903 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		50DE66851B770FEC00CAE903 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		50DE66881B77101100CAE903 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		50DE668A1B771BAC00CAE903 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		50DE668B1B771BAC00CAE903 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
+		50DE668D1B771C0800CAE903 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		50DE668E1B771C0800CAE903 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		50DE668F1B771C0800CAE903 /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
+		50DE66921B771C1000CAE903 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		50DE66931B771C1000CAE903 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		50DE66941B771C1000CAE903 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
+		50DE669A1B771E0400CAE903 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		50DE669B1B771E0400CAE903 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1083,8 +1096,8 @@
 			children = (
 				50DE62721B765C2700CAE903 /* AppDelegate.h */,
 				50DE62731B765C2700CAE903 /* AppDelegate.m */,
-				50DE667F1B770F3A00CAE903 /* MainViewController.h */,
-				50DE66801B770F3A00CAE903 /* MainViewController.m */,
+				50DE669A1B771E0400CAE903 /* MainViewController.h */,
+				50DE669B1B771E0400CAE903 /* MainViewController.m */,
 				50DE628E1B77008600CAE903 /* Home */,
 				50DE628F1B7700A200CAE903 /* Message */,
 				50DE62901B7700A800CAE903 /* Profile */,
@@ -1134,6 +1147,12 @@
 				50DE667A1B770F1900CAE903 /* HomeViewController.h */,
 				50DE667B1B770F1900CAE903 /* HomeViewController.m */,
 				50DE667C1B770F1900CAE903 /* HomeViewController.xib */,
+				50DE66921B771C1000CAE903 /* LeftViewController.h */,
+				50DE66931B771C1000CAE903 /* LeftViewController.m */,
+				50DE66941B771C1000CAE903 /* LeftViewController.xib */,
+				50DE668D1B771C0800CAE903 /* RightViewController.h */,
+				50DE668E1B771C0800CAE903 /* RightViewController.m */,
+				50DE668F1B771C0800CAE903 /* RightViewController.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1232,6 +1251,7 @@
 		50DE62CD1B770E8400CAE903 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				50DE66891B771BAC00CAE903 /* DDMenu */,
 				50DE66821B770FEC00CAE903 /* MBProgressHUD */,
 			);
 			name = lib;
@@ -1731,6 +1751,16 @@
 			path = CustomWeibo/lib/MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		50DE66891B771BAC00CAE903 /* DDMenu */ = {
+			isa = PBXGroup;
+			children = (
+				50DE668A1B771BAC00CAE903 /* DDMenuController.h */,
+				50DE668B1B771BAC00CAE903 /* DDMenuController.m */,
+			);
+			name = DDMenu;
+			path = CustomWeibo/lib/DDMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2148,6 +2178,7 @@
 				50DE65621B770EA100CAE903 /* 051.png in Resources */,
 				50DE65411B770EA100CAE903 /* 040.png in Resources */,
 				50DE65001B770EA100CAE903 /* 018@2x.png in Resources */,
+				50DE66961B771C1000CAE903 /* LeftViewController.xib in Resources */,
 				50DE65031B770EA100CAE903 /* 019@2x.png in Resources */,
 				50DE66751B770EA100CAE903 /* 后退.png in Resources */,
 				50DE65FB1B770EA100CAE903 /* 102.png in Resources */,
@@ -2235,6 +2266,7 @@
 				50DE665A1B770EA100CAE903 /* tabbar_profile.png in Resources */,
 				50DE65B11B770EA100CAE903 /* 077@2x.png in Resources */,
 				50DE661D1B770EA100CAE903 /* navigationbar_comments@2x.png in Resources */,
+				50DE66911B771C0800CAE903 /* RightViewController.xib in Resources */,
 				50DE64C41B770EA100CAE903 /* compose_trendbutton_background.png in Resources */,
 				50DE629B1B770D4C00CAE903 /* MessageViewController.xib in Resources */,
 				50DE663A1B770EA100CAE903 /* queue_statusbar_progress.png in Resources */,
@@ -2312,17 +2344,20 @@
 				50DE62A91B770D6E00CAE903 /* MoreViewController.m in Sources */,
 				50DE62BB1B770DBA00CAE903 /* ThemeImageView.m in Sources */,
 				50DE62C01B770DC200CAE903 /* UIThemeFactory.m in Sources */,
+				50DE668C1B771BAC00CAE903 /* DDMenuController.m in Sources */,
 				50DE62C61B770E2100CAE903 /* BaseViewController.m in Sources */,
 				50DE66871B770FEC00CAE903 /* MBProgressHUD.m in Sources */,
 				50DE629A1B770D4C00CAE903 /* MessageViewController.m in Sources */,
 				50DE667D1B770F1900CAE903 /* HomeViewController.m in Sources */,
+				50DE669C1B771E0400CAE903 /* MainViewController.m in Sources */,
 				50DE62741B765C2700CAE903 /* AppDelegate.m in Sources */,
 				50DE62BC1B770DBA00CAE903 /* ThemeLabel.m in Sources */,
 				50DE629F1B770D5C00CAE903 /* ProfileViewController.m in Sources */,
+				50DE66901B771C0800CAE903 /* RightViewController.m in Sources */,
 				50DE62711B765C2700CAE903 /* main.m in Sources */,
-				50DE66811B770F3A00CAE903 /* MainViewController.m in Sources */,
 				50DE62C51B770E2100CAE903 /* BaseNavigationViewController.m in Sources */,
 				50DE62BD1B770DBA00CAE903 /* ThemeManager.m in Sources */,
+				50DE66951B771C1000CAE903 /* LeftViewController.m in Sources */,
 				50DE62BA1B770DBA00CAE903 /* ThemeButton.m in Sources */,
 				50DE62CB1B770E3500CAE903 /* UIUtils.m in Sources */,
 			);
