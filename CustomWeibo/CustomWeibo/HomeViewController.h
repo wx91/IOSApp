@@ -7,7 +7,16 @@
 //
 
 #import "BaseViewController.h"
+#import "WeiboSDK.h"
 
-@interface HomeViewController : BaseViewController
+@interface HomeViewController : BaseViewController<WBHttpRequestDelegate>
+
+@property (nonatomic ,strong)WBAuthorizeRequest *request;
+
+@property (nonatomic,copy)NSString *topWeiboId;
+
+@property (nonatomic,copy)NSString *lastWeiboId;
+
+@property (nonatomic,retain)NSMutableArray *weibos;
 
 @end

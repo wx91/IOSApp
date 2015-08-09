@@ -13,10 +13,9 @@
 #import "ProfileViewController.h"
 #import "DiscoverViewController.h"
 #import "MoreViewController.h"
+#import "BaseNavigationViewController.h"
 #import "ThemeButton.h"
 #import "UIThemeFactory.h"
-#import "BaseNavigationViewController.h"
-#import "UIViewExt.h"
 #import "UIViewExt.h"
 #import "Constant.h"
 
@@ -50,7 +49,6 @@
 //创建自定义tabBar
 -(void)initTabbaerView{
     _tabbarView=[[UIView alloc]initWithFrame:CGRectMake(0, ScreenHeight-49, ScreenWidth, 49)];
-    //    _tabbarView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background.png"]];
     [self.view addSubview:_tabbarView];
     UIImageView *tabbarGroundImage=[UIThemeFactory createImageView:@"tabbar_background.png"];
     tabbarGroundImage.frame=_tabbarView.bounds;
@@ -86,7 +84,7 @@
 //导航控制器的代理方法
 -(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     //导航控制器的个数
-    int count=navigationController.viewControllers.count;
+    NSUInteger count=navigationController.viewControllers.count;
     if (count==2) {
         [self showTabbar:NO];
     }else if(count==1){
@@ -105,9 +103,6 @@
         }
     }];
 }
-
-
-
 
 -(void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];

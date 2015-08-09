@@ -9,14 +9,23 @@
 #import <UIKit/UIKit.h>
 #import "DDMenuController.h"
 #import "MainViewController.h"
+#import "WeiboSDK.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate>
+
+
+@property (strong, nonatomic) NSString *wbtoken;
+
+@property (strong,nonatomic) NSDate  *wbexpirationDate;
+
+@property (strong,nonatomic) NSString  *HostUserID;
 
 @property (strong,nonatomic) UIWindow *window;
 
 @property(strong,retain) MainViewController *mainCtrl;
 
 @property(nonatomic,retain)DDMenuController *menuCtrl;
+
 
 
 @end

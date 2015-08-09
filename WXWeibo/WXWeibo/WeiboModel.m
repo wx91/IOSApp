@@ -34,7 +34,6 @@
     //将字典数据根据映射关系填充到当前对象的属性上。
     [super setAttributes:dataDic];
     
-    
     NSDictionary *retweetDic = [dataDic objectForKey:@"retweeted_status"];
     if (retweetDic != nil) {
         WeiboModel *relWeibo = [[WeiboModel alloc] initWithDataDic:retweetDic];
@@ -46,7 +45,6 @@
         UserModel *user = [[UserModel alloc] initWithDataDic:userDic];
         self.user = user;
     }
-    
 }
 
 @end
