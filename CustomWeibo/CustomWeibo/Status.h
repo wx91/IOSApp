@@ -41,13 +41,13 @@
 //微博创建时间
 @property (nonatomic, copy  ) NSString     *createDate;
 //微博ID
-@property (nonatomic, assign) NSNumber     * weiboId;
+@property (nonatomic, retain) NSNumber     * weiboId;
 //微博信息内容
 @property (nonatomic, copy  ) NSString     *text;
 //微博来源
 @property (nonatomic, copy  ) NSString     *source;
 //是否已收藏
-@property (nonatomic, assign) NSInteger    *favorited;
+@property (nonatomic, retain) NSNumber    *favorited;
 //缩略图片地址
 @property (nonatomic, copy  ) NSString     *thumbnailImage;
 //中等尺寸图片地址
@@ -57,15 +57,15 @@
 //地理位置
 @property (nonatomic,retain ) NSDictionary *geo;
 //转发数
-@property (nonatomic,assign ) NSNumber     *repostsCount;
+@property (nonatomic,retain ) NSNumber     *repostsCount;
 //评论数
-@property (nonatomic,assign ) NSNumber     *commentsCount;
+@property (nonatomic,retain ) NSNumber     *commentsCount;
 //表态数
-@property (nonatomic,assign ) NSNumber     *attitudesCount;
+@property (nonatomic,retain ) NSNumber     *attitudesCount;
 //被转发的原微博信息字段，当该微博为转发微博时返回
-@property (nonatomic,retain ) Status       *relWeibo;
+@property (nonatomic,strong ) Status       *relWeibo;
 //微博作者的用户信息字段
-@property (nonatomic,retain ) User         *user;
+@property (nonatomic,strong ) User         *user;
 
 @end
 

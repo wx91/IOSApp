@@ -66,14 +66,14 @@
 //性别，m：男、f：女、n：未知
 @property (nonatomic, copy  ) NSString  *gender;
 //粉丝数
-@property (nonatomic, assign) NSNumber *followers_count;
+@property (nonatomic, retain) NSNumber *followers_count;
 //关注数
-@property (nonatomic, assign) NSNumber *friends_count;
+@property (nonatomic, retain) NSNumber *friends_count;
 //微博数
-@property (nonatomic, assign) NSNumber *statuses_count;
+@property (nonatomic, retain) NSNumber *statuses_count;
 //收藏数
-@property (nonatomic, assign) NSNumber *favourites_count;
+@property (nonatomic, retain) NSNumber *favourites_count;
 //是否是微博认证用户，即加V用户，true：是，false：否
-@property (nonatomic, assign) NSNumber  *verified;
+@property (nonatomic, retain) NSNumber  *verified;
 
 @end

@@ -33,11 +33,11 @@
 //评论的来源
 @property (nonatomic,copy  ) NSString *source;
 //评论的微博信息字段
-@property (nonatomic,retain) User     *user;
+@property (nonatomic,strong) User     *user;
 //评论的MID
 @property (nonatomic,copy  ) NSString *mid;
 //字符串型的评论ID
 @property (nonatomic,copy  ) NSString *idstr;
 //评论作者的用户信息字段
-@property (nonatomic,retain) Status   *status;
+@property (nonatomic,strong) Status   *status;
 @end

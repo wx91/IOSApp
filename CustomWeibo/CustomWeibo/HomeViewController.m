@@ -22,7 +22,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //减去状态栏20 49 的toolbar 49 的navigation
+    self.view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-49-49-20)];
     //注销按钮
     UIBarButtonItem *logoutItem=[[UIBarButtonItem alloc]initWithTitle:@"注销" style:UIBarButtonItemStylePlain target:self action:@selector(logouAction:)];
     self.navigationItem.leftBarButtonItem=logoutItem;
@@ -31,8 +32,17 @@
     UIBarButtonItem *bindItem=[[UIBarButtonItem alloc]initWithTitle:@"绑定账号" style:UIBarButtonItemStylePlain target:self action:@selector(bindAction:)];
     self.navigationItem.rightBarButtonItem=bindItem;
     
+    //获取令牌
     [self Get];
     
+    //初始化tableView
+    _tableView = [[WeiboTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.extendedLayoutIncludesOpaqueBars = NO;
+    self.edgesForExtendedLayout = UIRectEdgeBottom | UIRectEdgeLeft | UIRectEdgeRight;
+    _tableView.eventDelegate = self;
+//    _tableView.hidden = YES;
+    [self.view addSubview:_tableView];
+
 }
 
 #pragma mark-actions
@@ -40,10 +50,6 @@
     _request = [WBAuthorizeRequest request];
     _request.redirectURI = kAppRedirectURI;
     _request.scope = @"all";
-//    _request.userInfo = @{@"SSO_From": @"SendMessageToWeiboViewController",
-//                          @"Other_Info_1": [NSNumber numberWithInt:123],
-//                          @"Other_Info_2": @[@"obj1", @"obj2"],
-//                          @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
     [WeiboSDK sendRequest:_request];
 }
 
@@ -79,7 +85,7 @@
 #pragma mark - load Data
 - (void) loadWeiboData {
     [super showHUD:@"卖力加载中..." isDim:NO];
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObject:@"1" forKey:@"count"];
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObject:@"5" forKey:@"count"];
     [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_home  httpMethod:@"GET" params:params delegate:self withTag:@"load"];
 }
 #pragma mark  - WBHttpRequestDelegate
@@ -93,14 +99,22 @@
         NSDictionary *WeiboInfo = [weiboDIC objectForKey:@"statuses"];
         NSMutableArray *weibos = [NSMutableArray arrayWithCapacity:WeiboInfo.count];
         for (NSDictionary *statuesDic in WeiboInfo) {
-//            Status *status=[[Status alloc]initWithDataDic:statuesDic];
-//            NSLog(@"%@",statuesDic);
-            Status *status=[Status objectWithKeyValues:statuesDic];
-            NSLog(@"%@",status.text);
-            NSLog(@"%@",status.user);
-            NSLog(@"%@",status.user.screen_name);
-            [weibos addObject:status];
+            Status *weibo = [Status objectWithKeyValues:statuesDic];
+            NSLog(@"%@",weibo.user.screen_name);
+            [weibos addObject:weibo];
         }
+        self.tableView.data = weibos;
+        self.weibos = weibos;
+        if (weibos.count > 0) {
+            //记下最新的微博ID
+            Status *topWeibo= [weibos objectAtIndex:0];     //取出最新的一条微博
+            self.topWeiboId = [topWeibo.weiboId stringValue];   //把最新的微博ID赋值给我们定义的这个topWeiboId变量
+            //同理，记下最久的微博ID
+            Status *lastWeibo = [weibos lastObject];  //取出最久的一条微博
+            self.lastWeiboId = [lastWeibo.weiboId stringValue];//把最久的微博ID复制给我们定义的这个lastWeiboId变量
+        }
+        //刷新tableView
+        [_tableView reloadData];
     }
     
 }

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DDMenuController.h"
 #import "MainViewController.h"
 #import "WeiboSDK.h"
 
@@ -24,7 +23,6 @@
 
 @property(strong,retain) MainViewController *mainCtrl;
 
-@property(nonatomic,retain)DDMenuController *menuCtrl;
 
 
 

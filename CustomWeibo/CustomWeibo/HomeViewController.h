@@ -8,8 +8,11 @@
 
 #import "BaseViewController.h"
 #import "WeiboSDK.h"
+#import "WeiboTableView.h"
 
-@interface HomeViewController : BaseViewController<WBHttpRequestDelegate>
+@interface HomeViewController : BaseViewController<WBHttpRequestDelegate,UITableViewEventDelegate>
+
+@property (nonatomic,retain)WeiboTableView *tableView;
 
 @property (nonatomic ,strong)WBAuthorizeRequest *request;
 

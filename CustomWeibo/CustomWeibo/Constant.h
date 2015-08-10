@@ -38,13 +38,12 @@
 #define kReloadWeiboTableNotification @"kReloadWeiboTableNotification"
 
 //UserDefault Key
-#define kThemeName                    @"kThemeName"
-#define kBrowMode                     @"kBrowMode"
+#define kThemeName                      @"kThemeName"
+#define kBrowseMode                     @"kBrowseMode"
 
-#define LargeBrowMode                 1                                  //大图浏览模式
-#define SmallBrowMode                 2     //小图浏览模式
-
-
+#define LargeBrowseMode                 1                                  //大图浏览模式
+#define SmallBrowseMode                 2     //小图浏览模式
+//微博API的链接地址
 #define WB_home                  @"https://api.weibo.com/2/statuses/friends_timeline.json"
 #define WB_unRead                @"https://rm.api.weibo.com/2/remind/unread_count.json"
 #define WB_Comments              @"https://api.weibo.com/2/comments/show.json"
@@ -61,3 +60,9 @@
 #define kReloadWeiboNotification @"kReloadWeiboNotification"
 
 #define kReciveAuthorizeResponse @"kReciveAuthorizeResponse"
+
+
+//首页点击链接
+#define kCellContentView         101
+//详细页点击链接
+#define kModalView               100
