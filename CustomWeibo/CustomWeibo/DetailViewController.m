@@ -12,6 +12,7 @@
 #import "UIViewExt.h"
 #import "Comment.h"
 #import "MJExtension.h"
+#import "UIUtils.h"
 
 @implementation DetailViewController
 
@@ -28,27 +29,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initView];
+    [self loadData];
 }
 
 -(void)initView{
+    
+    //初始化tableView
     UIView *tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 0)];
     tableHeaderView.backgroundColor = [UIColor clearColor];
-    tableHeaderView.tag = kModalView;
     
     //---------------用户栏视图---------------
+    self.userImageView=[[UIImageView alloc]init];
     self.userImageView.layer.cornerRadius  = 5;
     self.userImageView.layer.borderWidth   = 0.2;
     self.userImageView.layer.masksToBounds = YES;
     NSString *userImageURL =  _weiboModel.user.profile_image_url;
     [self.userImageView sd_setImageWithURL:[NSURL URLWithString:userImageURL]];
+    self.userImageView.frame=CGRectMake(5, 5, 40, 40);
+    [tableHeaderView addSubview:self.userImageView];
     //昵称
+    self.nickLabel=[[UILabel alloc]init];
+    self.timeLabel.font=[UIFont systemFontOfSize:14.0];
     self.nickLabel.text = _weiboModel.user.screen_name;
-    [tableHeaderView addSubview:_userBarView];
+    self.nickLabel.frame= CGRectMake(50, 5, 160, 20);
+    [tableHeaderView addSubview:self.nickLabel];
+    
+    self.timeLabel=[[UILabel alloc]init];
+    self.timeLabel.font=[UIFont systemFontOfSize:12.0];
+    self.timeLabel.text=[UIUtils fomateString:_weiboModel.createDate];
+    self.timeLabel.frame= CGRectMake(_userImageView.right+5,_nickLabel.bottom, 80, 20);
+    [tableHeaderView addSubview:self.timeLabel];
+    
     tableHeaderView.height += 60;
     
     //-------------创建微博视图--------------
     float h = [WeiboView getWeiboViewHeight:self.weiboModel isDetail:YES isRepost:NO];
-    _weiboView = [[WeiboView alloc]initWithFrame:CGRectMake(10, _userBarView.bottom + 10, ScreenWidth - 20, h)];
+    _weiboView = [[WeiboView alloc]initWithFrame:CGRectMake(10, _timeLabel.bottom + 10, ScreenWidth - 20, h)];
     _weiboView.isDetail = YES;
     _weiboView.weiboModel = _weiboModel;
     [tableHeaderView addSubview:_weiboView];
@@ -68,18 +84,26 @@
     if (weiboID.length == 0) {
         return;
     }
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:weiboID,@"id",@"25",@"count",nil];
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:weiboID,@"id",@"20",@"count",nil];
     [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_Comments httpMethod:@"GET" params:params delegate:self withTag:@"comment"];
 }
-
+#pragma mark UITableViewEventDelegate
 //上拉
 - (void)pullUp:(BaseTableView *)tableView{
     NSString *weiboID = [_weiboModel.weiboId stringValue];
     if (weiboID.length == 0) {
         return;
     }
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:weiboID,@"id",@"25",@"count",self.lastWeiboID,@"max_id",nil];
+    NSDictionary *params=@{@"count":@"5",
+                           @"max_id":self.lastWeiboID
+                           };
+    
+//    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:weiboID,@"id",@"5",@"count",self.lastWeiboID,@"max_id",nil];
     [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_Comments httpMethod:@"GET" params:params delegate:self withTag:@"pullUp"];
+}
+
+-(void)tableView:(BaseTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.tableView tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
 #pragma mark - WBHttpRequest Delegate

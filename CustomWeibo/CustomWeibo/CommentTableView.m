@@ -23,13 +23,35 @@
 }
 
 #pragma mark - TableViewDelegate
+
+//tableView顶部不会滑下去的view
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.width, 40)];
+    view.backgroundColor = [UIColor whiteColor];
+    UILabel *commentCount = [[UILabel alloc]initWithFrame:CGRectMake(10,10, 100, 20)];
+    commentCount.backgroundColor = [UIColor clearColor];
+    commentCount.font = [UIFont boldSystemFontOfSize:16.0f];
+    commentCount.textColor = [UIColor blueColor];
+    commentCount.text = [NSString stringWithFormat:@"评论数:%@",_totalCommentNumber];
+    [view addSubview:commentCount];
+    return view;
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 40.0f;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.data.count;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
     static NSString *identify = @"commentCell";
     CommentCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (cell == nil) {
-        cell = [[[NSBundle mainBundle]loadNibNamed:@"CommentCell" owner:self options:nil]lastObject];
+        //        cell = [[[NSBundle mainBundle]loadNibNamed:@"CommentCell" owner:self options:nil]lastObject];
+        cell=[[CommentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
     Comment *commmentModel = [self.data objectAtIndex:indexPath.row];
     cell.commentModel = commmentModel;
@@ -40,25 +62,8 @@
     Comment *commmentModel = [self.data objectAtIndex:indexPath.row];
     float h = [CommentCell getCommentHeight:commmentModel];
     return h + 42;
-}//tableView顶部不会滑下去的view
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.width, 40)];
-    view.backgroundColor = [UIColor whiteColor];
-    
-    UILabel *commentCount = [[UILabel alloc]initWithFrame:CGRectMake(10,10, 100, 20)];
-    commentCount.backgroundColor = [UIColor clearColor];
-    commentCount.font = [UIFont boldSystemFontOfSize:16.0f];
-    commentCount.textColor = [UIColor blueColor];
-    
-    commentCount.text = [NSString stringWithFormat:@"评论数:%@",_totalCommentNumber];
-    [view addSubview:commentCount];
-    return view;
-    
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40.0f;
-}
 //选中评论cell，出现回复转发等选项
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     

@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="VwH-Iw-lsu" id="hAy-X9-v0f"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -14,10 +15,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VwH-Iw-lsu">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </webView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZDn-Iu-8Po">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <items>
@@ -29,6 +26,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <connections>
+                                <action selector="goBack:" destination="-1" id="4f3-aR-RUr"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem width="59" style="plain" systemItem="fixedSpace" id="yqz-Br-WJL"/>
                         <barButtonItem style="plain" id="oiB-kT-OIZ">
@@ -39,6 +39,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="DnQ-Zi-XiP"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem width="61" style="plain" systemItem="fixedSpace" id="OGB-eK-3J4"/>
                         <barButtonItem style="plain" id="Fkg-aI-Q6R">
@@ -49,9 +52,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <connections>
+                                <action selector="goForward:" destination="-1" id="3JD-B1-Xv1"/>
+                            </connections>
                         </barButtonItem>
                     </items>
                 </toolbar>
+                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VwH-Iw-lsu">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

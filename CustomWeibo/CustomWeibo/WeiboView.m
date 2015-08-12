@@ -16,10 +16,12 @@
 #import "UIThemeFactory.h"
 #import "Constant.h"
 #import "UIViewExt.h"
+#import "WebViewController.h"
+#import "RTLabel.h"
+#import "UIView+Extra.h"
 
 @interface WeiboView ()
 @property (nonatomic, strong) ZFModalTransitionAnimator *animator;
-
 @end
 
 
@@ -29,7 +31,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self _initView];
+        [self initView];
         _parseText = [NSMutableString string];
     }
     return self;
@@ -37,23 +39,15 @@
 
 //初始化子视图,一共四个子视图: *_textLabel;*_image; *_repostBackgroundView;*repostView;
 
-- (void)_initView{
-    
-
-
+- (void)initView{
     _textLabel = [[RTLabel alloc]initWithFrame:CGRectZero];
     _textLabel.delegate = self;
     _textLabel.font  = [UIFont systemFontOfSize:14.0f];
-
-    //超链接颜色
-    _textLabel.linkAttributes = [NSDictionary dictionaryWithObject:@"blue" forKey:@"color"];
-    //用三色值设置，如用r:69  g:119  b:203，但是要转换成16进制
-//    _textLabel.linkAttributes = [NSDictionary dictionaryWithObject:@"#3471BC" forKey:@"color"];
-    
+    //超链接颜色 用三色值设置，如用r:69  g:119  b:203，但是要转换成16进制
+    _textLabel.linkAttributes = [NSDictionary dictionaryWithObject:@"#3471BC" forKey:@"color"];
     //高亮颜色
     _textLabel.selectedLinkAttributes = [NSDictionary dictionaryWithObject:@"darkGray" forKey:@"color"];
     [self addSubview:_textLabel];
-    
     
     //微博图片
     _image = [[UIImageView alloc] initWithFrame:CGRectZero];
@@ -127,7 +121,7 @@
     
     _textLabel.text = _parseText;
     //文本内容的尺寸
-    CGSize textSize = _textLabel.optimumSize;
+    CGSize textSize =_textLabel.optimumSize;
     _textLabel.height = textSize.height;
     
     
@@ -226,6 +220,7 @@
     }else{
         textLabel.width = kWeibo_Width_List;
     }
+
     NSString *weiboText = nil;
     if (isRepost) {
         textLabel.width -= 20;
@@ -235,10 +230,8 @@
     }else{
         weiboText = weiboModel.text;
     }
-    
-    
-    textLabel.text = weiboModel.text;
-    height += textLabel.optimumSize.height;
+    textLabel.text=[UIUtils parseLink:weiboText];
+    height+=textLabel.optimumSize.height;
     
     
     //-------------------------计算微博图片的高度--------------------------
@@ -312,43 +305,14 @@
         NSString *urlString = [url host];
         urlString = [urlString URLDecodedString];
         NSLog(@"%@",urlString);
-//        ProfileModalViewController *modalVC = [[ProfileModalViewController alloc]init]
-//        urlString = [urlString stringByReplacingOccurrencesOfString:@"@" withString:@""];
-//        modalVC.userName = urlString;
-//
-//        if (self.superview.superview.tag == kModalView || self.superview.tag == kModalView) {
-//            //在详细页面点击
-//            modalVC.modalPresentationStyle = UIModalPresentationCustom;
-//            self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:modalVC];
-//            self.animator.dragable = YES;
-//            self.animator.direction = ZFModalTransitonDirectionRight;
-//            modalVC.transitioningDelegate = self.animator;
-//            [self.viewController presentViewController:modalVC animated:YES completion:nil];
-//        }else if(self.superview.superview.tag == kCellContentView || self.superview.tag == kCellContentView){
-//            //在首页点击
-//            [self.viewController.navigationController pushViewController:modalVC animated:YES];
-//        }
-        
     }else if ([absoluteString hasPrefix:@"http"]){
         NSLog(@"%@",absoluteString);
-//        WebModalViewController *webView = [[WebModalViewController alloc]initWithURL:absoluteString];
-//        if (self.superview.superview.tag == kModalView || self.superview.tag == kModalView) {
-//            //在详细页面点击
-//            webView.modalPresentationStyle = UIModalPresentationCustom;
-//            self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:webView];
-//            self.animator.dragable = YES;
-//            self.animator.direction = ZFModalTransitonDirectionLeft;
-//            webView.transitioningDelegate = self.animator;
-//            [self.viewController presentViewController:webView animated:YES completion:nil];
-//        }else if(self.superview.superview.tag == kCellContentView || self.superview.tag == kCellContentView){
-//            //在首页点击
-//            [self.viewController.navigationController pushViewController:webView animated:YES];
-//        }
+        WebViewController *webView=[[WebViewController alloc]initWithURL:absoluteString];
+        
     }else if ([absoluteString hasPrefix:@"topic"]){
         NSString *urlString = [url host];
         urlString = [urlString URLDecodedString];
         NSLog(@"%@",urlString);
-        
     }
 }
 

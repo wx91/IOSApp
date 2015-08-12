@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RTLabel.h"
 #import "Status.h"
 #import "Comment.h"
 #import "ZFModalTransitionAnimator.h"
-
+#import "RTLabel.h"
 
 @interface CommentCell : UITableViewCell<RTLabelDelegate>{
     UIImageView *_userImageView;

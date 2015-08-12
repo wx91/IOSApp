@@ -13,6 +13,15 @@
 #import "User.h"
 #import "UIThemeFactory.h"
 #import "MainViewController.h"
+#import "DetailViewController.h"
+#import "ZFModalTransitionAnimator.h"
+
+@interface HomeViewController ()
+
+@property (nonatomic, strong) ZFModalTransitionAnimator *animator;
+
+@end
+
 
 @implementation HomeViewController
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -114,8 +123,11 @@
 
 #pragma mark - load Data
 - (void) loadWeiboData {
+    //3875046042956596
     [super showHUD:@"卖力加载中..." isDim:NO];
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObject:@"5" forKey:@"count"];
+    NSDictionary *dic=@{@"count":@"5",
+                        @"max_id":@"3875046042956596"};
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:dic];
     [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_home  httpMethod:@"GET" params:params delegate:self withTag:@"load"];
 }
 
@@ -190,7 +202,18 @@
 }
 //点击cell
 - (void)tableView:(BaseTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetailViewController *modalVC = [[DetailViewController alloc]init];
+    modalVC.modalPresentationStyle = UIModalPresentationCustom;
+    Status *model = [self.weibos objectAtIndex:indexPath.row];
+    modalVC.weiboModel = model;
+    self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:modalVC];
+    self.animator.dragable = YES;
+    self.animator.bounces = YES;
+    self.animator.direction = ZFModalTransitonDirectionBottom;
+    [self.animator setContentScrollView:modalVC.tableView];
     
+//    [self.navigationController presentViewController:modalVC animated:YES completion:nil];
+    [self.navigationController pushViewController:modalVC animated:YES];
 }
 
 #pragma mark-actions

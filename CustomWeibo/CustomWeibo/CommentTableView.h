@@ -8,7 +8,7 @@
 
 #import "BaseTableView.h"
 
-@interface CommentTableView : BaseTableView<UITableViewDelegate>
+@interface CommentTableView : BaseTableView
 
 @property(nonatomic,retain)NSNumber *totalCommentNumber;
 

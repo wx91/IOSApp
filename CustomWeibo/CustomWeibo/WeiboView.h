@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RTLabel.h"
 #import "Status.h"
 #import "Constant.h"
-
-
+#import "RTLabel.h"
 
 
 @interface WeiboView : UIView<RTLabelDelegate>{

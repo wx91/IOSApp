@@ -12,11 +12,11 @@
 #import "User.h"
 #import "UIImageView+WebCache.h"
 #import "UIUtils.h"
-#import "RegexKitLite.h"
 
 //#import "ProfileModalViewController.h"
 #import "UIViewExt.h"
 #import "Constant.h"
+#import "RegexKitLite.h"
 
 @implementation WeiboCell
 
@@ -146,10 +146,10 @@
     //E M d HH:mm:ss Z yyyy
     //显示成"01-20 16:20"
     NSString *createDate = _weiboModel.createDate;
-        NSString *dateString = [UIUtils fomateString:createDate];
-        _createLabel.text = dateString;
-        _createLabel.frame = CGRectMake(50,self.height-20, 100, 20);
-        [_createLabel sizeToFit];
+    NSString *dateString = [UIUtils fomateString:createDate];
+    _createLabel.text = dateString;
+    _createLabel.frame = CGRectMake(50,self.height-20, 100, 20);
+    [_createLabel sizeToFit];
     
     
     //--------------------------微博来源--------------------------
@@ -185,8 +185,6 @@
 //    modalVC.userName = self.weiboModel.user.screen_name;
 //    [self.viewController.navigationController pushViewController:modalVC animated:YES];
 }
-
-
 
 #pragma mark -- 系统自带可忽略
 - (void)awakeFromNib

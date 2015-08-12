@@ -16,19 +16,19 @@
     WeiboView *_weiboView;
 }
 
-@property(nonatomic,copy)NSString *lastWeiboID;
+@property (nonatomic,copy   ) NSString                  *lastWeiboID;
 
-@property(nonatomic,retain)NSMutableArray *comments;
+@property (nonatomic,retain ) NSMutableArray            *comments;
 
-@property(nonatomic,retain)Status *weiboModel;
+@property (nonatomic,strong ) IBOutlet CommentTableView *tableView;
 
-@property(nonatomic,strong)IBOutlet CommentTableView *tableView;
+@property (strong, nonatomic) UIImageView               *userImageView;
 
-@property (strong, nonatomic) IBOutlet UIView *userBarView;
+@property (strong, nonatomic) UILabel                   *nickLabel;
 
-@property (strong, nonatomic) IBOutlet UIImageView *userImageView;
+@property (strong,nonatomic ) UILabel                   *timeLabel;
 
-@property (strong, nonatomic) IBOutlet UILabel *nickLabel;
+@property (nonatomic,retain ) Status                    *weiboModel;
 
 @property (nonatomic, strong) ZFModalTransitionAnimator *animator;
 
