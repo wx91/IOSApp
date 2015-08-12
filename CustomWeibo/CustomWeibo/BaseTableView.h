@@ -23,6 +23,7 @@
 
 @property(nonatomic,assign)id<UITableViewEventDelegate> eventDelegate;
 
+
 @end
 
 

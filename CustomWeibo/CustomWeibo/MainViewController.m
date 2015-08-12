@@ -27,7 +27,15 @@
     [self initViewController];
     [self initTabbaerView];
     //每60秒请求未读数接口
-    
+        [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
+}
+
+- (void)timerAction:(NSTimer *)timer{
+    [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_unRead httpMethod:@"GET" params:nil delegate:self withTag:@"unRead"];
+}
+- (NSString *)getToken
+{
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthData"] objectForKey:@"accessToken"];
 }
 
 //初始化自控制器
@@ -104,8 +112,49 @@
     }];
 }
 
+- (void)showBadge:(BOOL)show{
+    _badgeView.hidden = !show;
+}
 -(void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - WBHttpRequest degelate
+- (void)request:(WBHttpRequest *)request didFinishLoadingWithDataResult:(NSData *)data{
+    if ([request.tag isEqual:@"unRead"]) {
+        
+        NSError *error;
+        NSDictionary *weiboDIC = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
+        NSLog(@"%@",weiboDIC);
+        NSNumber *status = [weiboDIC objectForKey:@"status"];  //未读微博
+        
+        
+        if (_badgeView == nil) {
+            _badgeView = [UIThemeFactory createImageView:@"main_badge.png"];
+            _badgeView.frame = CGRectMake(64 - 25, 5, 20, 20);
+            [self.tabBar addSubview:_badgeView];
+            
+            UILabel *badgeLabel = [[UILabel alloc]initWithFrame:_badgeView.bounds];
+            badgeLabel.textAlignment = NSTextAlignmentCenter;
+            badgeLabel.backgroundColor = [UIColor clearColor];
+            badgeLabel.font = [UIFont boldSystemFontOfSize:13.0f];
+            badgeLabel.textColor = [UIColor purpleColor];
+            badgeLabel.tag = 100;
+            [_badgeView addSubview:badgeLabel];
+        }
+        int n = [status intValue];
+        if (n > 0) {
+            UILabel *badgeLabel = (UILabel *)[_badgeView viewWithTag:100];
+            if (n > 99) {
+                n = 99;
+            }
+            badgeLabel.text = [NSString stringWithFormat:@"%d",n];
+            _badgeView.hidden = NO;
+        }else{
+            _badgeView.hidden = YES;
+        }
+        
+    }
 }
 
 

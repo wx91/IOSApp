@@ -27,7 +27,7 @@
 //评论创建时间
 @property (nonatomic,copy  ) NSString *createDate;
 //评论的ID
-@property (nonatomic,assign) NSInteger *commentId;
+@property (nonatomic,assign) NSNumber *commentId;
 //评论的内容
 @property (nonatomic,copy  ) NSString *text;
 //评论的来源

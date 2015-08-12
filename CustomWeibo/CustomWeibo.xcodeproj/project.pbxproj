@@ -18,6 +18,13 @@
 		5082A74A1B7757BF00C28A61 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A7491B7757BF00C28A61 /* CoreTelephony.framework */; };
 		5082A74C1B7758EC00C28A61 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A74B1B7758EC00C28A61 /* libz.dylib */; };
 		5082A74E1B7758F400C28A61 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A74D1B7758F400C28A61 /* libsqlite3.dylib */; };
+		509247641B7A36A400EEE63E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509247621B7A36A400EEE63E /* DetailViewController.m */; };
+		509247651B7A36A400EEE63E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509247631B7A36A400EEE63E /* DetailViewController.xib */; };
+		509247691B7A376B00EEE63E /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 509247671B7A376B00EEE63E /* CommentCell.m */; };
+		5092476A1B7A376B00EEE63E /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509247681B7A376B00EEE63E /* CommentCell.xib */; };
+		5092476D1B7A3D8100EEE63E /* CommentTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092476C1B7A3D8100EEE63E /* CommentTableView.m */; };
+		509247711B7A455200EEE63E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092476F1B7A455200EEE63E /* WebViewController.m */; };
+		509247721B7A455200EEE63E /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509247701B7A455200EEE63E /* WebViewController.xib */; };
 		50ACEB351B77801000985215 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACEB341B77801000985215 /* User.m */; };
 		50ACEB3B1B7789DB00985215 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACEB3A1B7789DB00985215 /* Comment.m */; };
 		50ACEB3E1B778B4600985215 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACEB3D1B778B4600985215 /* Status.m */; };
@@ -602,6 +609,17 @@
 		5082A7491B7757BF00C28A61 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		5082A74B1B7758EC00C28A61 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5082A74D1B7758F400C28A61 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		509247611B7A36A400EEE63E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		509247621B7A36A400EEE63E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		509247631B7A36A400EEE63E /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		509247661B7A376B00EEE63E /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		509247671B7A376B00EEE63E /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
+		509247681B7A376B00EEE63E /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		5092476B1B7A3D8100EEE63E /* CommentTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableView.h; sourceTree = "<group>"; };
+		5092476C1B7A3D8100EEE63E /* CommentTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableView.m; sourceTree = "<group>"; };
+		5092476E1B7A455200EEE63E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5092476F1B7A455200EEE63E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		509247701B7A455200EEE63E /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		50ACEB331B77801000985215 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		50ACEB341B77801000985215 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		50ACEB391B7789DB00985215 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
@@ -1625,6 +1643,17 @@
 				50B36FAB1B78BAD3008ED9BF /* WeiboCell.m */,
 				50B36FAE1B78BAD3008ED9BF /* WeiboView.h */,
 				50B36FAF1B78BAD3008ED9BF /* WeiboView.m */,
+				509247611B7A36A400EEE63E /* DetailViewController.h */,
+				509247621B7A36A400EEE63E /* DetailViewController.m */,
+				509247631B7A36A400EEE63E /* DetailViewController.xib */,
+				5092476B1B7A3D8100EEE63E /* CommentTableView.h */,
+				5092476C1B7A3D8100EEE63E /* CommentTableView.m */,
+				509247661B7A376B00EEE63E /* CommentCell.h */,
+				509247671B7A376B00EEE63E /* CommentCell.m */,
+				509247681B7A376B00EEE63E /* CommentCell.xib */,
+				5092476E1B7A455200EEE63E /* WebViewController.h */,
+				5092476F1B7A455200EEE63E /* WebViewController.m */,
+				509247701B7A455200EEE63E /* WebViewController.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -2624,6 +2653,7 @@
 				50DE65B81B770EA100CAE903 /* 080.gif in Resources */,
 				50DE66581B770EA100CAE903 /* tabbar_more_selected.png in Resources */,
 				50DE64BE1B770EA100CAE903 /* compose_placebutton_background.png in Resources */,
+				509247651B7A36A400EEE63E /* DetailViewController.xib in Resources */,
 				50DE65A41B770EA100CAE903 /* 073.png in Resources */,
 				50DE653B1B770EA100CAE903 /* 038.png in Resources */,
 				50DE64AF1B770EA100CAE903 /* compose_emoticonbutton_background@2x.png in Resources */,
@@ -2663,6 +2693,7 @@
 				50DE64F11B770EA100CAE903 /* 013@2x.png in Resources */,
 				50DE65CE1B770EA100CAE903 /* 087.png in Resources */,
 				50DE66091B770EA100CAE903 /* group_btn_write_on.png in Resources */,
+				5092476A1B7A376B00EEE63E /* CommentCell.xib in Resources */,
 				50DE65481B770EA100CAE903 /* 042@2x.png in Resources */,
 				50DE65171B770EA100CAE903 /* 026.png in Resources */,
 				50DE66531B770EA100CAE903 /* tabbar_message_center_selected@2x.png in Resources */,
@@ -2749,6 +2780,7 @@
 				50DE66571B770EA100CAE903 /* tabbar_more_highlighted@2x.png in Resources */,
 				50DE66561B770EA100CAE903 /* tabbar_more_highlighted.png in Resources */,
 				50DE657D1B770EA100CAE903 /* 060.png in Resources */,
+				509247721B7A455200EEE63E /* WebViewController.xib in Resources */,
 				50DE66651B770EA100CAE903 /* timeline_more_button@2x.png in Resources */,
 				50DE65661B770EA100CAE903 /* 052@2x.png in Resources */,
 				50DE66421B770EA100CAE903 /* tabbar_discover.png in Resources */,
@@ -2835,10 +2867,13 @@
 				50ACEB351B77801000985215 /* User.m in Sources */,
 				50DE62741B765C2700CAE903 /* AppDelegate.m in Sources */,
 				50B3709B1B78C30C008ED9BF /* SDWebImagePrefetcher.m in Sources */,
+				5092476D1B7A3D8100EEE63E /* CommentTableView.m in Sources */,
 				50B3709C1B78C30C008ED9BF /* UIButton+WebCache.m in Sources */,
+				509247691B7A376B00EEE63E /* CommentCell.m in Sources */,
 				50DE62BC1B770DBA00CAE903 /* ThemeLabel.m in Sources */,
 				50DE629F1B770D5C00CAE903 /* ProfileViewController.m in Sources */,
 				50B370911B78C30C008ED9BF /* UIView+MJExtension.m in Sources */,
+				509247641B7A36A400EEE63E /* DetailViewController.m in Sources */,
 				50B370A11B78C30C008ED9BF /* UIImageView+WebCache.m in Sources */,
 				50B370871B78C30C008ED9BF /* MJRefreshBackGifFooter.m in Sources */,
 				50B3709F1B78C30C008ED9BF /* UIImage+WebP.m in Sources */,
@@ -2865,6 +2900,7 @@
 				50B370991B78C30C008ED9BF /* SDWebImageDownloaderOperation.m in Sources */,
 				50DE62BA1B770DBA00CAE903 /* ThemeButton.m in Sources */,
 				50B3707F1B78C30B008ED9BF /* MJRefreshAutoFooter.m in Sources */,
+				509247711B7A455200EEE63E /* WebViewController.m in Sources */,
 				50B370861B78C30C008ED9BF /* MJRefreshAutoStateFooter.m in Sources */,
 				50DE62CB1B770E3500CAE903 /* UIUtils.m in Sources */,
 			);

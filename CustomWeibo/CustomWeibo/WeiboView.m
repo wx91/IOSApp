@@ -306,11 +306,8 @@
 #pragma mark  - RTLabel delegates
 //点击高亮字体后的动作
 - (void)rtLabel:(id)rtLabel didSelectLinkWithURL:(NSURL*)url{
-    
     NSLog(@"%@",self.superview.superview);
-    
     NSString *absoluteString = [url absoluteString];
-    
     if ([absoluteString hasPrefix:@"user"]) {
         NSString *urlString = [url host];
         urlString = [urlString URLDecodedString];

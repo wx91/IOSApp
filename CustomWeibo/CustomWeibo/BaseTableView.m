@@ -28,17 +28,20 @@
 - (void)initView{
     self.dataSource=self;
     self.delegate=self;
-//    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
-//    self.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-//        [self pullDownData];
-//    }];
-//    //// 马上进入刷新状态
-//    [self.header beginRefreshing];
-//    
-//    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
-//    self.footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-//        [self pullUpData];
-//    }];
+    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的pullDownData方法）
+    MJRefreshNormalHeader *header=[MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(pullDownData)];
+    //设置
+//    [header beginRefreshing];
+    //设置刷新空间
+    self.header=header;
+    
+
+     // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的pullUpData方法）
+    MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(pullUpData)];
+    //禁止自动加载
+    footer.automaticallyRefresh=NO;
+    //设置footer
+    self.footer=footer;
 }
 
 
