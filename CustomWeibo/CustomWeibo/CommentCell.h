@@ -24,6 +24,5 @@
 //计算评论单元格的高度
 +(float)getCommentHeight:(Comment *)commentModel;
 
-@property (nonatomic, strong) ZFModalTransitionAnimator *animator;
 
 @end

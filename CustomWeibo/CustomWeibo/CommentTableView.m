@@ -23,7 +23,6 @@
 }
 
 #pragma mark - TableViewDelegate
-
 //tableView顶部不会滑下去的view
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.width, 40)];
@@ -50,7 +49,6 @@
     static NSString *identify = @"commentCell";
     CommentCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if (cell == nil) {
-        //        cell = [[[NSBundle mainBundle]loadNibNamed:@"CommentCell" owner:self options:nil]lastObject];
         cell=[[CommentCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
     Comment *commmentModel = [self.data objectAtIndex:indexPath.row];

@@ -7,7 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "WeiboTableView.h"
 
-@interface MessageViewController : BaseViewController
-
+@interface MessageViewController : BaseViewController<WBHttpRequestDelegate,UITableViewEventDelegate>{
+    WeiboTableView *tableView;
+}
 @end

@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WXBaseModel.h"
 #import "User.h"
 
 /**

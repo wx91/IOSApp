@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WXBaseModel.h"
 
 /**
  返回值字段	字段类型	字段说明

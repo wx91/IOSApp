@@ -5,34 +5,34 @@
 /**
  * Copyright (c) 2010 Muh Hon Cheng
  * Created by honcheng on 1/6/11.
- * 
- * Permission is hereby granted, free of charge, to any person obtaining 
- * a copy of this software and associated documentation files (the 
- * "Software"), to deal in the Software without restriction, including 
- * without limitation the rights to use, copy, modify, merge, publish, 
- * distribute, sublicense, and/or sell copies of the Software, and to 
- * permit persons to whom the Software is furnished to do so, subject 
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject
  * to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be 
+ *
+ * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT 
- * WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR 
- * PURPOSE AND NONINFRINGEMENT. IN NO EVENT 
- * SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE 
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
- * IN CONNECTION WITH THE SOFTWARE OR 
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+ * WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR
+ * PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+ * SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ * IN CONNECTION WITH THE SOFTWARE OR
  * THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * 
+ *
  * @author 		Muh Hon Cheng <honcheng@gmail.com>
  * @copyright	2011	Muh Hon Cheng
  * @version
- * 
+ *
  */
 
 #import <UIKit/UIKit.h>
@@ -40,17 +40,17 @@
 
 typedef enum
 {
-	RTTextAlignmentRight = kCTRightTextAlignment,
-	RTTextAlignmentLeft = kCTLeftTextAlignment,
-	RTTextAlignmentCenter = kCTCenterTextAlignment,
-	RTTextAlignmentJustify = kCTJustifiedTextAlignment
+    RTTextAlignmentRight = kCTRightTextAlignment,
+    RTTextAlignmentLeft = kCTLeftTextAlignment,
+    RTTextAlignmentCenter = kCTCenterTextAlignment,
+    RTTextAlignmentJustify = kCTJustifiedTextAlignment
 } RTTextAlignment;
 
 typedef enum
 {
-	RTTextLineBreakModeWordWrapping = kCTLineBreakByWordWrapping,
-	RTTextLineBreakModeCharWrapping = kCTLineBreakByCharWrapping,
-	RTTextLineBreakModeClip = kCTLineBreakByClipping,
+    RTTextLineBreakModeWordWrapping = kCTLineBreakByWordWrapping,
+    RTTextLineBreakModeCharWrapping = kCTLineBreakByCharWrapping,
+    RTTextLineBreakModeClip = kCTLineBreakByClipping,
 }RTTextLineBreakMode;
 
 @protocol RTLabelDelegate <NSObject>
@@ -60,16 +60,16 @@ typedef enum
 @end
 
 @interface RTLabelComponent : NSObject
-@property (nonatomic, assign) int componentIndex;
+@property (nonatomic, assign) NSInteger componentIndex;
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSString *tagLabel;
 @property (nonatomic) NSMutableDictionary *attributes;
-@property (nonatomic, assign) int position;
+@property (nonatomic, assign) NSInteger position;
 
 - (id)initWithString:(NSString*)aText tag:(NSString*)aTagLabel attributes:(NSMutableDictionary*)theAttributes;
 + (id)componentWithString:(NSString*)aText tag:(NSString*)aTagLabel attributes:(NSMutableDictionary*)theAttributes;
-- (id)initWithTag:(NSString*)aTagLabel position:(int)_position attributes:(NSMutableDictionary*)_attributes;
-+ (id)componentWithTag:(NSString*)aTagLabel position:(int)aPosition attributes:(NSMutableDictionary*)theAttributes;
+- (id)initWithTag:(NSString*)aTagLabel position:(NSInteger)_position attributes:(NSMutableDictionary*)_attributes;
++ (id)componentWithTag:(NSString*)aTagLabel position:(NSInteger)aPosition attributes:(NSMutableDictionary*)theAttributes;
 
 @end
 
@@ -92,7 +92,7 @@ typedef enum
 @property (nonatomic, assign) CGSize optimumSize;
 @property (nonatomic, assign) RTTextLineBreakMode lineBreakMode;
 @property (nonatomic, assign) CGFloat lineSpacing;
-@property (nonatomic, assign) int currentSelectedButtonComponentIndex;
+@property (nonatomic, assign) NSInteger currentSelectedButtonComponentIndex;
 @property (nonatomic, assign) CFRange visibleRange;
 @property (nonatomic, assign) BOOL highlighted;
 

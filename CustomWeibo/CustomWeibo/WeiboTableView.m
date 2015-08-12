@@ -40,6 +40,7 @@
     Status *weibo = [self.data objectAtIndex:indexPath.row];
     cell.weiboModel = weibo;
     return cell;
+
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

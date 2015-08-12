@@ -7,18 +7,23 @@
 //
 
 #import "MessageViewController.h"
-
-@interface MessageViewController ()
-
-@end
+#import "Constant.h"
 
 @implementation MessageViewController
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self=[super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title=@"消息";
+        [self initView];
     }
     return self;
+}
+
+-(void)initView{
+    tableView = [[WeiboTableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStylePlain];
+    tableView.eventDelegate = self;
+    [self.view addSubview:tableView];
+    
 }
 
 - (void)viewDidLoad {

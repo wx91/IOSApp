@@ -33,6 +33,10 @@
 }
 
 -(void)initView{
+    //初始化tableView
+    _tableView = [[CommentTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView.eventDelegate = self;
+    [self.view addSubview:_tableView];
     
     //初始化tableView
     UIView *tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 0)];
@@ -117,9 +121,10 @@
         for (NSDictionary *dic in commentsDic) {
             Comment *commentModel = [Comment objectWithKeyValues:dic];
             [comments addObject:commentModel];
+            NSLog(@"%@",commentModel.text);
         }
-        self.tableView.data = self.comments;
         self.comments = comments;
+        self.tableView.data = self.comments;
         if (commentsDic.count > 0) {
             Comment *commentModel = [comments lastObject];
             self.lastWeiboID = [commentModel.commentId stringValue];
@@ -136,13 +141,15 @@
         for (NSDictionary *dic in commentsDic) {
             Comment *commentModel = [Comment objectWithKeyValues:dic];
             [comments addObject:commentModel];
+            NSLog(@"%@",commentModel.text);
         }
+        self.comments = comments;
+        self.tableView.data = self.comments;
         if (comments.count > 0) {
             Comment *commentModel = [comments lastObject];
             self.lastWeiboID = [commentModel.commentId stringValue];
         }
         [self.comments addObjectsFromArray:comments];
-        NSLog(@"%lu",(unsigned long)self.comments.count);
         self.tableView.data = self.comments;
         [self.tableView reloadData];
     }

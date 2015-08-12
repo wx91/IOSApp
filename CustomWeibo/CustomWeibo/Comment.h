@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "User.h"
 #import "Status.h"
-#import "WXBaseModel.h"
 
 /**
  返回值字段	字段类型	字段说明
@@ -23,7 +22,7 @@
  status	object	评论的微博信息字段 详细
  reply_comment	object	评论来源评论，当本评论属于对另一评论的回复时返回此字段
  **/
-@interface Comment : WXBaseModel
+@interface Comment : NSObject
 //评论创建时间
 @property (nonatomic,copy  ) NSString *createDate;
 //评论的ID

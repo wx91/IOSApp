@@ -269,11 +269,9 @@
         float repostHeight = [WeiboView getWeiboViewHeight:relWeibo isDetail:isDetail isRepost:YES];
         height += (repostHeight);
     }
-    
     if (isRepost == YES){
         height += 32;
     }
-
     return height;
 }
 
@@ -308,7 +306,7 @@
     }else if ([absoluteString hasPrefix:@"http"]){
         NSLog(@"%@",absoluteString);
         WebViewController *webView=[[WebViewController alloc]initWithURL:absoluteString];
-        
+        [self.viewController.navigationController pushViewController:webView animated:YES];
     }else if ([absoluteString hasPrefix:@"topic"]){
         NSString *urlString = [url host];
         urlString = [urlString URLDecodedString];

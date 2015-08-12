@@ -13,6 +13,8 @@
 		5067185B1B7B3FFF001935F6 /* BrowseModeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506718591B7B3FFF001935F6 /* BrowseModeController.xib */; };
 		5074723E1B7B001F00EAE879 /* RegexKitLite.html in Resources */ = {isa = PBXBuildFile; fileRef = 5074723C1B7B001F00EAE879 /* RegexKitLite.html */; };
 		5074723F1B7B001F00EAE879 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5074723D1B7B001F00EAE879 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		50826E391B7B725D00043B4A /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50826E371B7B725D00043B4A /* UserViewController.m */; };
+		50826E3A1B7B725D00043B4A /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50826E381B7B725D00043B4A /* UserViewController.xib */; };
 		5082A73A1B77577600C28A61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A7391B77577600C28A61 /* CoreGraphics.framework */; };
 		5082A73C1B77577D00C28A61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A73B1B77577D00C28A61 /* Foundation.framework */; };
 		5082A73E1B77578400C28A61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A73D1B77578400C28A61 /* UIKit.framework */; };
@@ -33,7 +35,6 @@
 		50ACEB351B77801000985215 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACEB341B77801000985215 /* User.m */; };
 		50ACEB3B1B7789DB00985215 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACEB3A1B7789DB00985215 /* Comment.m */; };
 		50ACEB3E1B778B4600985215 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACEB3D1B778B4600985215 /* Status.m */; };
-		50ACEB5B1B779A7E00985215 /* WXBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 50ACEB5A1B779A7E00985215 /* WXBaseModel.m */; };
 		50B36FB01B78BAD3008ED9BF /* WeiboCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B36FAB1B78BAD3008ED9BF /* WeiboCell.m */; };
 		50B36FB11B78BAD3008ED9BF /* WeiboTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B36FAD1B78BAD3008ED9BF /* WeiboTableView.m */; };
 		50B36FB21B78BAD3008ED9BF /* WeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B36FAF1B78BAD3008ED9BF /* WeiboView.m */; };
@@ -587,6 +588,9 @@
 		50DE66951B771C1000CAE903 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE66931B771C1000CAE903 /* LeftViewController.m */; };
 		50DE66961B771C1000CAE903 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DE66941B771C1000CAE903 /* LeftViewController.xib */; };
 		50DE669C1B771E0400CAE903 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE669B1B771E0400CAE903 /* MainViewController.m */; };
+		50F061041B7B47B00044A49A /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F061021B7B47B00044A49A /* UserInfoView.m */; };
+		50F061051B7B47B00044A49A /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F061031B7B47B00044A49A /* UserInfoView.xib */; };
+		50F061081B7B4B870044A49A /* RectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F061071B7B4B870044A49A /* RectButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -610,6 +614,9 @@
 		5074723B1B7B001F00EAE879 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		5074723C1B7B001F00EAE879 /* RegexKitLite.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RegexKitLite.html; sourceTree = "<group>"; };
 		5074723D1B7B001F00EAE879 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		50826E361B7B725D00043B4A /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		50826E371B7B725D00043B4A /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		50826E381B7B725D00043B4A /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		5082A7391B77577600C28A61 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5082A73B1B77577D00C28A61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5082A73D1B77578400C28A61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -637,8 +644,6 @@
 		50ACEB3A1B7789DB00985215 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		50ACEB3C1B778B4600985215 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
 		50ACEB3D1B778B4600985215 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
-		50ACEB591B779A7E00985215 /* WXBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXBaseModel.h; sourceTree = "<group>"; };
-		50ACEB5A1B779A7E00985215 /* WXBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXBaseModel.m; sourceTree = "<group>"; };
 		50B36FAA1B78BAD3008ED9BF /* WeiboCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboCell.h; sourceTree = "<group>"; };
 		50B36FAB1B78BAD3008ED9BF /* WeiboCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboCell.m; sourceTree = "<group>"; };
 		50B36FAC1B78BAD3008ED9BF /* WeiboTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboTableView.h; sourceTree = "<group>"; };
@@ -1278,6 +1283,11 @@
 		50DE66941B771C1000CAE903 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
 		50DE669A1B771E0400CAE903 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		50DE669B1B771E0400CAE903 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		50F061011B7B47B00044A49A /* UserInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
+		50F061021B7B47B00044A49A /* UserInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
+		50F061031B7B47B00044A49A /* UserInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
+		50F061061B7B4B870044A49A /* RectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectButton.h; sourceTree = "<group>"; };
+		50F061071B7B4B870044A49A /* RectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1676,9 +1686,17 @@
 		50DE62901B7700A800CAE903 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				50F061061B7B4B870044A49A /* RectButton.h */,
+				50F061071B7B4B870044A49A /* RectButton.m */,
 				50DE629C1B770D5C00CAE903 /* ProfileViewController.h */,
 				50DE629D1B770D5C00CAE903 /* ProfileViewController.m */,
 				50DE629E1B770D5C00CAE903 /* ProfileViewController.xib */,
+				50826E361B7B725D00043B4A /* UserViewController.h */,
+				50826E371B7B725D00043B4A /* UserViewController.m */,
+				50826E381B7B725D00043B4A /* UserViewController.xib */,
+				50F061011B7B47B00044A49A /* UserInfoView.h */,
+				50F061021B7B47B00044A49A /* UserInfoView.m */,
+				50F061031B7B47B00044A49A /* UserInfoView.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -1739,8 +1757,6 @@
 		50DE62951B77010200CAE903 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				50ACEB591B779A7E00985215 /* WXBaseModel.h */,
-				50ACEB5A1B779A7E00985215 /* WXBaseModel.m */,
 				50ACEB3C1B778B4600985215 /* Status.h */,
 				50ACEB3D1B778B4600985215 /* Status.m */,
 				50ACEB331B77801000985215 /* User.h */,
@@ -2533,6 +2549,7 @@
 				50DE64A91B770EA100CAE903 /* compose_camerabutton_background_highlighted@2x.png in Resources */,
 				50DE660E1B770EA100CAE903 /* icon_detail@2x.png in Resources */,
 				50DE65981B770EA100CAE903 /* 069.png in Resources */,
+				50F061051B7B47B00044A49A /* UserInfoView.xib in Resources */,
 				50DE667E1B770F1900CAE903 /* HomeViewController.xib in Resources */,
 				50DE64B31B770EA100CAE903 /* compose_keyboardbutton_background@2x.png in Resources */,
 				50DE66641B770EA100CAE903 /* timeline_more_button.png in Resources */,
@@ -2713,6 +2730,7 @@
 				50DE65C61B770EA100CAE903 /* 084@2x.png in Resources */,
 				50DE65BB1B770EA100CAE903 /* 081.gif in Resources */,
 				50DE662C1B770EA100CAE903 /* newbar_icon_3.png in Resources */,
+				50826E3A1B7B725D00043B4A /* UserViewController.xib in Resources */,
 				50DE64F01B770EA100CAE903 /* 013.png in Resources */,
 				50DE65841B770EA100CAE903 /* 062@2x.png in Resources */,
 				50DE66511B770EA100CAE903 /* tabbar_message_center_highlighted@2x.png in Resources */,
@@ -2869,6 +2887,7 @@
 				50B370801B78C30B008ED9BF /* MJRefreshBackFooter.m in Sources */,
 				506718561B7B3EA7001935F6 /* UIView+Extra.m in Sources */,
 				506718531B7B2B41001935F6 /* RTLabel.m in Sources */,
+				50F061041B7B47B00044A49A /* UserInfoView.m in Sources */,
 				50DE669C1B771E0400CAE903 /* MainViewController.m in Sources */,
 				50B370791B78C30B008ED9BF /* MJProperty.m in Sources */,
 				50B3708E1B78C30C008ED9BF /* MJRefreshConst.m in Sources */,
@@ -2877,6 +2896,7 @@
 				50B370841B78C30C008ED9BF /* MJRefreshAutoGifFooter.m in Sources */,
 				50B3709A1B78C30C008ED9BF /* SDWebImageManager.m in Sources */,
 				50ACEB351B77801000985215 /* User.m in Sources */,
+				50826E391B7B725D00043B4A /* UserViewController.m in Sources */,
 				50DE62741B765C2700CAE903 /* AppDelegate.m in Sources */,
 				50B3709B1B78C30C008ED9BF /* SDWebImagePrefetcher.m in Sources */,
 				5092476D1B7A3D8100EEE63E /* CommentTableView.m in Sources */,
@@ -2885,12 +2905,12 @@
 				50DE62BC1B770DBA00CAE903 /* ThemeLabel.m in Sources */,
 				50DE629F1B770D5C00CAE903 /* ProfileViewController.m in Sources */,
 				50B370911B78C30C008ED9BF /* UIView+MJExtension.m in Sources */,
+				50F061081B7B4B870044A49A /* RectButton.m in Sources */,
 				509247641B7A36A400EEE63E /* DetailViewController.m in Sources */,
 				50B370A11B78C30C008ED9BF /* UIImageView+WebCache.m in Sources */,
 				50B370871B78C30C008ED9BF /* MJRefreshBackGifFooter.m in Sources */,
 				50B3709F1B78C30C008ED9BF /* UIImage+WebP.m in Sources */,
 				50B370811B78C30C008ED9BF /* MJRefreshComponent.m in Sources */,
-				50ACEB5B1B779A7E00985215 /* WXBaseModel.m in Sources */,
 				50DE66901B771C0800CAE903 /* RightViewController.m in Sources */,
 				50ACEB3E1B778B4600985215 /* Status.m in Sources */,
 				50DE62711B765C2700CAE903 /* main.m in Sources */,
