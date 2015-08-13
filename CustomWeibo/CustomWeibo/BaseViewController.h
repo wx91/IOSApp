@@ -11,13 +11,15 @@
 #import "AppDelegate.h"
 
 
-@interface BaseViewController : UIViewController{
-    UIView *_loadView;          //加载view
+@interface BaseViewController : UIViewController<MBProgressHUDDelegate>{
+    UIWindow *tipWindow;
 }
 //是否需要返回按钮
 @property(nonatomic,assign) BOOL isBackButton;
 //提示框架
 @property(nonatomic,retain) MBProgressHUD *hud;
+
+-(AppDelegate *)appDelegate;
 
 -(void)showLoading:(BOOL)show;
 //进行提示
@@ -27,4 +29,8 @@
 //隐藏提示
 -(void)hideHUD;
 
+//状态栏上的提示
+-(void)showStatusTip:(BOOL)show title:(NSString *)title;
+
+-(void)multipleValue:(NSArray *)array;
 @end

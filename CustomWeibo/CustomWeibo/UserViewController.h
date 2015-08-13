@@ -8,9 +8,20 @@
 
 #import "BaseViewController.h"
 #import "WeiboTableView.h"
+#import "UserInfoView.h"
 
-@interface UserViewController : BaseViewController
+@interface UserViewController : BaseViewController<WBHttpRequestDelegate,UITableViewEventDelegate>
 
-@property (weak, nonatomic) IBOutlet WeiboTableView *tableView;
+@property (strong, nonatomic) IBOutlet WeiboTableView *tableView;
+
+
+@property (nonatomic,copy)NSString *topWeiboId;
+@property (nonatomic,copy)NSString *lastWeiboId;
+@property (nonatomic,copy)NSString *userName;
+@property (nonatomic,copy)NSString *userid;
+
+@property (nonatomic,assign)BOOL showLoginUser;
+@property (nonatomic,copy)UserInfoView *userInfoView;
+@property (nonatomic,retain)NSMutableArray *weibos;
 
 @end

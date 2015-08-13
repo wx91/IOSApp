@@ -12,11 +12,11 @@
 #import "User.h"
 #import "UIImageView+WebCache.h"
 #import "UIUtils.h"
-
-//#import "ProfileModalViewController.h"
 #import "UIViewExt.h"
 #import "Constant.h"
 #import "RegexKitLite.h"
+#import "UserViewController.h"
+#import "UIView+Extra.h"
 
 @implementation WeiboCell
 
@@ -181,9 +181,9 @@
     //首页点击头像进入用户主页
 #pragma mark -- pushToUser
 - (void) pushToUser{
-//    ProfileModalViewController *modalVC = [[ProfileModalViewController alloc]init];
-//    modalVC.userName = self.weiboModel.user.screen_name;
-//    [self.viewController.navigationController pushViewController:modalVC animated:YES];
+    UserViewController *modalVC = [[UserViewController alloc]init];
+    modalVC.userName = self.weiboModel.user.screen_name;
+    [self.viewController.navigationController pushViewController:modalVC animated:YES];
 }
 
 #pragma mark -- 系统自带可忽略

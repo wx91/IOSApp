@@ -20,7 +20,7 @@
 
 @property (nonatomic,retain ) NSMutableArray            *comments;
 
-@property (nonatomic,strong ) CommentTableView *tableView;
+@property (nonatomic,strong ) IBOutlet CommentTableView *tableView;
 
 @property (strong, nonatomic) UIImageView               *userImageView;
 

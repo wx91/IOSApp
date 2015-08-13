@@ -19,6 +19,7 @@
 #import "WebViewController.h"
 #import "RTLabel.h"
 #import "UIView+Extra.h"
+#import "UserViewController.h"
 
 @interface WeiboView ()
 @property (nonatomic, strong) ZFModalTransitionAnimator *animator;
@@ -303,6 +304,23 @@
         NSString *urlString = [url host];
         urlString = [urlString URLDecodedString];
         NSLog(@"%@",urlString);
+        UserViewController *userCtrl=[[UserViewController alloc]init];
+        urlString=[urlString stringByReplacingOccurrencesOfString:@"@" withString:@""];
+        userCtrl.userName=urlString;
+        if (self.superview.superview.tag == kModalView||self.superview.tag == kModalView) {
+            //在详细页面点击
+            userCtrl.modalPresentationStyle = UIModalPresentationCustom;
+            self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:userCtrl];
+            self.animator.dragable = YES;
+            self.animator.direction = ZFModalTransitonDirectionRight;
+            userCtrl.transitioningDelegate = self.animator;
+//            [self.viewController presentViewController:userCtrl animated:YES completion:nil];
+            [self.viewController.navigationController pushViewController:userCtrl animated:YES];
+        }else if(self.superview.superview.tag == kCellContentView || self.superview.tag == kCellContentView){
+            //在首页点击
+            [self.viewController.navigationController pushViewController:userCtrl animated:YES];
+        }
+        
     }else if ([absoluteString hasPrefix:@"http"]){
         NSLog(@"%@",absoluteString);
         WebViewController *webView=[[WebViewController alloc]initWithURL:absoluteString];

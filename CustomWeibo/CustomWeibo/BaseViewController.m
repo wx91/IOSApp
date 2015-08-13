@@ -38,6 +38,11 @@
 -(void)backAction{
     [self.navigationController popViewControllerAnimated:YES];
 }
+-(AppDelegate *)appDelegate{
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    return appDelegate;
+}
+
 //复父类中的方法
 -(void)setTitle:(NSString *)title{
     [super setTitle:title];
@@ -49,41 +54,6 @@
     self.navigationItem.titleView=titleLabel;
 }
 
-//获取appDelegate
--(AppDelegate *)appDelegate{
-    AppDelegate *appDelegate=(AppDelegate *)[UIApplication sharedApplication].delegate;
-    return appDelegate;
-}
-
-//显示加载view
--(void)showLoading:(BOOL )show{
-    if (_loadView==nil) {
-        _loadView=[[UIView alloc]initWithFrame:CGRectMake(0, ScreenHeight/2-80, ScreenWidth, 20)];
-        //loading视图
-        UIActivityIndicatorView *activityView=[[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        [activityView startAnimating];
-        
-        //正在加载的Label
-        UILabel *loadLabel=[[UILabel alloc]initWithFrame:CGRectZero];
-        loadLabel.backgroundColor=[UIColor clearColor];
-        loadLabel.text=@"正在加载...";
-        loadLabel.font=[UIFont boldSystemFontOfSize:16.0f];
-        loadLabel.textColor=[UIColor blackColor];
-        [loadLabel sizeToFit];
-        
-        loadLabel.left=(320-loadLabel.width)/2;
-        activityView.right=loadLabel.left-5;
-        [_loadView addSubview:loadLabel];
-        [_loadView addSubview:activityView];
-    }
-    if (show) {
-        if (![_loadView superview]) {
-            [self.view addSubview:_loadView];
-        }
-    }else{
-        [_loadView removeFromSuperview];
-    }
-}
 //使用框架进行加载提示
 -(void)showHUD:(NSString *)title isDim:(BOOL)isDim{
     self.hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -103,6 +73,56 @@
 -(void)hideHUD{
     [self.hud hide:YES];
 }
+
+-(void)showStatusTip:(BOOL)show title:(NSString *)title{
+    if (tipWindow == nil) {
+        tipWindow = [[UIWindow alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 20)];
+        tipWindow.windowLevel = UIWindowLevelStatusBar;
+        tipWindow.backgroundColor = [UIColor blackColor];
+        
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 20)];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.textColor = [UIColor whiteColor];
+        label.backgroundColor = [UIColor clearColor];
+        label.tag = 2014;
+        [tipWindow addSubview:label];
+        
+        UIImageView *progress = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"queue_statusbar_progress.png"]];
+        progress.frame = CGRectMake(0, 20-6, 100, 6);
+        progress.tag = 2013;
+        [tipWindow addSubview:progress];
+    }
+    UILabel *label = (UILabel *)[tipWindow viewWithTag:2014];
+    UIImageView *progress = (UIImageView *)[tipWindow viewWithTag:2013];
+    
+    if (show) {
+        label.text = title;
+        tipWindow.hidden = NO;
+        //发送进度的动画
+        progress.left = 0;
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:2];
+        [UIView setAnimationRepeatCount:1000];
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];//匀速移动
+        progress.left = ScreenWidth;
+        [UIView commitAnimations];
+    }else{
+        progress.hidden = YES;
+        label.text = title;
+        [self performSelector:@selector(removeTipWindow) withObject:nil  afterDelay:1.5];
+    }
+}
+
+-(void)multipleValue:(NSArray *)array{
+    [self showStatusTip:[array firstObject] title:[array lastObject]];
+}
+
+-(void) removeTipWindow{
+    tipWindow.hidden = YES;
+    tipWindow = nil;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

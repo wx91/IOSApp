@@ -16,7 +16,10 @@
 +(ThemeButton *)createButton:(NSString *)imageName highligted:(NSString *)highlightedName;
 
 +(ThemeButton *)createButtonWithBackground:(NSString *)backgroundImageName backgroundHighligted:(NSString *)highlightedName;
-
++(UIButton *)createNavigationButton:(CGRect)frame
+                              title:(NSString *)title
+                             target:(id)target
+                             action:(SEL)selector;
 +(ThemeImageView *)createImageView:(NSString *)imageName;
 
 +(ThemeLabel *)createLabel:(NSString *)colorName;

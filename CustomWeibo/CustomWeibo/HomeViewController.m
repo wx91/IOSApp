@@ -128,7 +128,7 @@
     NSDictionary *dic=@{@"count":@"5",
                         @"max_id":@"3875046042956596"};
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:dic];
-    [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_home  httpMethod:@"GET" params:params delegate:self withTag:@"load"];
+    [WBHttpRequest requestWithURL:WB_home  httpMethod:@"GET"  params:params delegate:self withTag:@"load"];
 }
 
 //下拉加载 /*最新微博*/
@@ -143,7 +143,7 @@
      */
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"5",@"count",self.topWeiboId,@"since_id",nil];
-    [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_home  httpMethod:@"GET" params:params delegate:self withTag:@"pullDown"];
+    [WBHttpRequest requestWithURL:WB_home httpMethod:@"GET" params:params delegate:self withTag:@"pullDown"];
 }
 //上拉加载  /*最久微博*/
 - (void)pullupData{
@@ -179,13 +179,13 @@
         NSDate *nowDate = [NSDate date];
         if([nowDate compare:[self getExpirationDate]] == NSOrderedAscending){
             //今天比token失效时间小，令牌有效
-            [self loadWeiboData];
+//            [self loadWeiboData];
         }else{
             //令牌失效，调用登录方法，使客户重新登录
-            _request = [WBAuthorizeRequest request];
-            _request.redirectURI = kAppRedirectURI;
-            _request.scope = @"all";
-            [WeiboSDK sendRequest:_request];
+//            _request = [WBAuthorizeRequest request];
+//            _request.redirectURI = kAppRedirectURI;
+//            _request.scope = @"all";
+//            [WeiboSDK sendRequest:_request];
         }
     }
 }

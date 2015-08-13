@@ -27,7 +27,7 @@
     [self initViewController];
     [self initTabbaerView];
     //每60秒请求未读数接口
-        [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
+//        [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
 }
 
 - (void)timerAction:(NSTimer *)timer{
@@ -56,6 +56,7 @@
 }
 //创建自定义tabBar
 -(void)initTabbaerView{
+    
     _tabbarView=[[UIView alloc]initWithFrame:CGRectMake(0, ScreenHeight-49, ScreenWidth, 49)];
     [self.view addSubview:_tabbarView];
     UIImageView *tabbarGroundImage=[UIThemeFactory createImageView:@"tabbar_background.png"];

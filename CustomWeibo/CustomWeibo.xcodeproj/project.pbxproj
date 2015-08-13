@@ -15,6 +15,9 @@
 		5074723F1B7B001F00EAE879 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5074723D1B7B001F00EAE879 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		50826E391B7B725D00043B4A /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50826E371B7B725D00043B4A /* UserViewController.m */; };
 		50826E3A1B7B725D00043B4A /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50826E381B7B725D00043B4A /* UserViewController.xib */; };
+		50826E3E1B7B8C1E00043B4A /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50826E3C1B7B8C1E00043B4A /* SendViewController.m */; };
+		50826E3F1B7B8C1E00043B4A /* SendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50826E3D1B7B8C1E00043B4A /* SendViewController.xib */; };
+		50826E431B7B900700043B4A /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50826E421B7B900700043B4A /* DDMenuController.m */; };
 		5082A73A1B77577600C28A61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A7391B77577600C28A61 /* CoreGraphics.framework */; };
 		5082A73C1B77577D00C28A61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A73B1B77577D00C28A61 /* Foundation.framework */; };
 		5082A73E1B77578400C28A61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A73D1B77578400C28A61 /* UIKit.framework */; };
@@ -26,6 +29,10 @@
 		5082A74A1B7757BF00C28A61 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A7491B7757BF00C28A61 /* CoreTelephony.framework */; };
 		5082A74C1B7758EC00C28A61 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A74B1B7758EC00C28A61 /* libz.dylib */; };
 		5082A74E1B7758F400C28A61 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A74D1B7758F400C28A61 /* libsqlite3.dylib */; };
+		508991BA1B7C47F5007D2DC7 /* NearByViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508991B81B7C47F5007D2DC7 /* NearByViewController.m */; };
+		508991BB1B7C47F5007D2DC7 /* NearByViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508991B91B7C47F5007D2DC7 /* NearByViewController.xib */; };
+		508991BE1B7C9BE2007D2DC7 /* EmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 508991BD1B7C9BE2007D2DC7 /* EmotionView.m */; };
+		508991C61B7CEA69007D2DC7 /* EmotionScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 508991C51B7CEA69007D2DC7 /* EmotionScrollView.m */; };
 		509247641B7A36A400EEE63E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509247621B7A36A400EEE63E /* DetailViewController.m */; };
 		509247651B7A36A400EEE63E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 509247631B7A36A400EEE63E /* DetailViewController.xib */; };
 		509247691B7A376B00EEE63E /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 509247671B7A376B00EEE63E /* CommentCell.m */; };
@@ -617,6 +624,11 @@
 		50826E361B7B725D00043B4A /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		50826E371B7B725D00043B4A /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		50826E381B7B725D00043B4A /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		50826E3B1B7B8C1E00043B4A /* SendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
+		50826E3C1B7B8C1E00043B4A /* SendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
+		50826E3D1B7B8C1E00043B4A /* SendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendViewController.xib; sourceTree = "<group>"; };
+		50826E411B7B900700043B4A /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		50826E421B7B900700043B4A /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 		5082A7391B77577600C28A61 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5082A73B1B77577D00C28A61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5082A73D1B77578400C28A61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -628,6 +640,13 @@
 		5082A7491B7757BF00C28A61 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		5082A74B1B7758EC00C28A61 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5082A74D1B7758F400C28A61 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		508991B71B7C47F5007D2DC7 /* NearByViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearByViewController.h; sourceTree = "<group>"; };
+		508991B81B7C47F5007D2DC7 /* NearByViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearByViewController.m; sourceTree = "<group>"; };
+		508991B91B7C47F5007D2DC7 /* NearByViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearByViewController.xib; sourceTree = "<group>"; };
+		508991BC1B7C9BE2007D2DC7 /* EmotionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionView.h; sourceTree = "<group>"; };
+		508991BD1B7C9BE2007D2DC7 /* EmotionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionView.m; sourceTree = "<group>"; };
+		508991C41B7CEA69007D2DC7 /* EmotionScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionScrollView.h; sourceTree = "<group>"; };
+		508991C51B7CEA69007D2DC7 /* EmotionScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionScrollView.m; sourceTree = "<group>"; };
 		509247611B7A36A400EEE63E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		509247621B7A36A400EEE63E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		509247631B7A36A400EEE63E /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -1340,9 +1359,49 @@
 			path = RegexKitLite;
 			sourceTree = "<group>";
 		};
+		50826E401B7B900700043B4A /* DDmenu */ = {
+			isa = PBXGroup;
+			children = (
+				50826E411B7B900700043B4A /* DDMenuController.h */,
+				50826E421B7B900700043B4A /* DDMenuController.m */,
+			);
+			path = DDmenu;
+			sourceTree = "<group>";
+		};
+		508991C21B7C9C19007D2DC7 /* SendViewController */ = {
+			isa = PBXGroup;
+			children = (
+				50826E3B1B7B8C1E00043B4A /* SendViewController.h */,
+				50826E3C1B7B8C1E00043B4A /* SendViewController.m */,
+				50826E3D1B7B8C1E00043B4A /* SendViewController.xib */,
+				508991B71B7C47F5007D2DC7 /* NearByViewController.h */,
+				508991B81B7C47F5007D2DC7 /* NearByViewController.m */,
+				508991B91B7C47F5007D2DC7 /* NearByViewController.xib */,
+				508991BC1B7C9BE2007D2DC7 /* EmotionView.h */,
+				508991BD1B7C9BE2007D2DC7 /* EmotionView.m */,
+				508991C41B7CEA69007D2DC7 /* EmotionScrollView.h */,
+				508991C51B7CEA69007D2DC7 /* EmotionScrollView.m */,
+			);
+			name = SendViewController;
+			sourceTree = "<group>";
+		};
+		508991C31B7C9C4A007D2DC7 /* DDmenu */ = {
+			isa = PBXGroup;
+			children = (
+				50DE66921B771C1000CAE903 /* LeftViewController.h */,
+				50DE66931B771C1000CAE903 /* LeftViewController.m */,
+				50DE66941B771C1000CAE903 /* LeftViewController.xib */,
+				50DE668D1B771C0800CAE903 /* RightViewController.h */,
+				50DE668E1B771C0800CAE903 /* RightViewController.m */,
+				50DE668F1B771C0800CAE903 /* RightViewController.xib */,
+			);
+			name = DDmenu;
+			sourceTree = "<group>";
+		};
 		50B36FBC1B78C1ED008ED9BF /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				50826E401B7B900700043B4A /* DDmenu */,
 				506718501B7B2B41001935F6 /* RTLabel */,
 				5074723A1B7B001F00EAE879 /* RegexKitLite */,
 				50B370B11B78DC0E008ED9BF /* MBProgressHUD */,
@@ -1598,6 +1657,8 @@
 				50DE62731B765C2700CAE903 /* AppDelegate.m */,
 				50DE669A1B771E0400CAE903 /* MainViewController.h */,
 				50DE669B1B771E0400CAE903 /* MainViewController.m */,
+				508991C21B7C9C19007D2DC7 /* SendViewController */,
+				508991C31B7C9C4A007D2DC7 /* DDmenu */,
 				50DE628E1B77008600CAE903 /* Home */,
 				50DE628F1B7700A200CAE903 /* Message */,
 				50DE62901B7700A800CAE903 /* Profile */,
@@ -1647,12 +1708,6 @@
 				50DE667A1B770F1900CAE903 /* HomeViewController.h */,
 				50DE667B1B770F1900CAE903 /* HomeViewController.m */,
 				50DE667C1B770F1900CAE903 /* HomeViewController.xib */,
-				50DE66921B771C1000CAE903 /* LeftViewController.h */,
-				50DE66931B771C1000CAE903 /* LeftViewController.m */,
-				50DE66941B771C1000CAE903 /* LeftViewController.xib */,
-				50DE668D1B771C0800CAE903 /* RightViewController.h */,
-				50DE668E1B771C0800CAE903 /* RightViewController.m */,
-				50DE668F1B771C0800CAE903 /* RightViewController.xib */,
 				50B36FAC1B78BAD3008ED9BF /* WeiboTableView.h */,
 				50B36FAD1B78BAD3008ED9BF /* WeiboTableView.m */,
 				50B36FAA1B78BAD3008ED9BF /* WeiboCell.h */,
@@ -1666,9 +1721,6 @@
 				5092476C1B7A3D8100EEE63E /* CommentTableView.m */,
 				509247661B7A376B00EEE63E /* CommentCell.h */,
 				509247671B7A376B00EEE63E /* CommentCell.m */,
-				5092476E1B7A455200EEE63E /* WebViewController.h */,
-				5092476F1B7A455200EEE63E /* WebViewController.m */,
-				509247701B7A455200EEE63E /* WebViewController.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1730,6 +1782,9 @@
 		50DE62931B7700F300CAE903 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				5092476E1B7A455200EEE63E /* WebViewController.h */,
+				5092476F1B7A455200EEE63E /* WebViewController.m */,
+				509247701B7A455200EEE63E /* WebViewController.xib */,
 				50B370AE1B78DBAA008ED9BF /* BaseTableView.h */,
 				50B370AF1B78DBAA008ED9BF /* BaseTableView.m */,
 				50DE62C11B770E2100CAE903 /* BaseNavigationViewController.h */,
@@ -2412,6 +2467,7 @@
 				50DE66451B770EA100CAE903 /* tabbar_discover_highlighted@2x.png in Resources */,
 				50DE652E1B770EA100CAE903 /* 034.gif in Resources */,
 				50DE659F1B770EA100CAE903 /* 071@2x.png in Resources */,
+				508991BB1B7C47F5007D2DC7 /* NearByViewController.xib in Resources */,
 				50DE66141B770EA100CAE903 /* navigationbar_back_highlighted.png in Resources */,
 				50DE660F1B770EA100CAE903 /* main_badge.png in Resources */,
 				50DE64D01B770EA100CAE903 /* 002.gif in Resources */,
@@ -2684,6 +2740,7 @@
 				509247651B7A36A400EEE63E /* DetailViewController.xib in Resources */,
 				50DE65A41B770EA100CAE903 /* 073.png in Resources */,
 				50DE653B1B770EA100CAE903 /* 038.png in Resources */,
+				50826E3F1B7B8C1E00043B4A /* SendViewController.xib in Resources */,
 				50DE64AF1B770EA100CAE903 /* compose_emoticonbutton_background@2x.png in Resources */,
 				50DE64D51B770EA100CAE903 /* 003@2x.png in Resources */,
 				50DE66521B770EA100CAE903 /* tabbar_message_center_selected.png in Resources */,
@@ -2879,6 +2936,7 @@
 				50B370941B78C30C008ED9BF /* NSData+ImageContentType.m in Sources */,
 				50DE62C61B770E2100CAE903 /* BaseViewController.m in Sources */,
 				50B370881B78C30C008ED9BF /* MJRefreshBackNormalFooter.m in Sources */,
+				508991C61B7CEA69007D2DC7 /* EmotionScrollView.m in Sources */,
 				50DE629A1B770D4C00CAE903 /* MessageViewController.m in Sources */,
 				50B3707D1B78C30B008ED9BF /* NSObject+MJProperty.m in Sources */,
 				50DE667D1B770F1900CAE903 /* HomeViewController.m in Sources */,
@@ -2898,11 +2956,14 @@
 				50ACEB351B77801000985215 /* User.m in Sources */,
 				50826E391B7B725D00043B4A /* UserViewController.m in Sources */,
 				50DE62741B765C2700CAE903 /* AppDelegate.m in Sources */,
+				50826E431B7B900700043B4A /* DDMenuController.m in Sources */,
 				50B3709B1B78C30C008ED9BF /* SDWebImagePrefetcher.m in Sources */,
 				5092476D1B7A3D8100EEE63E /* CommentTableView.m in Sources */,
+				50826E3E1B7B8C1E00043B4A /* SendViewController.m in Sources */,
 				50B3709C1B78C30C008ED9BF /* UIButton+WebCache.m in Sources */,
 				509247691B7A376B00EEE63E /* CommentCell.m in Sources */,
 				50DE62BC1B770DBA00CAE903 /* ThemeLabel.m in Sources */,
+				508991BE1B7C9BE2007D2DC7 /* EmotionView.m in Sources */,
 				50DE629F1B770D5C00CAE903 /* ProfileViewController.m in Sources */,
 				50B370911B78C30C008ED9BF /* UIView+MJExtension.m in Sources */,
 				50F061081B7B4B870044A49A /* RectButton.m in Sources */,
@@ -2921,6 +2982,7 @@
 				50B36FB11B78BAD3008ED9BF /* WeiboTableView.m in Sources */,
 				50B370781B78C30B008ED9BF /* MJFoundation.m in Sources */,
 				50B3707B1B78C30B008ED9BF /* NSObject+MJCoding.m in Sources */,
+				508991BA1B7C47F5007D2DC7 /* NearByViewController.m in Sources */,
 				50B370831B78C30C008ED9BF /* MJRefreshHeader.m in Sources */,
 				50B370891B78C30C008ED9BF /* MJRefreshBackStateFooter.m in Sources */,
 				50B3708B1B78C30C008ED9BF /* MJRefreshNormalHeader.m in Sources */,

@@ -33,14 +33,12 @@
 }
 
 -(void)initView{
-    //初始化tableView
-    _tableView = [[CommentTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    _tableView.eventDelegate = self;
-    [self.view addSubview:_tableView];
     
     //初始化tableView
     UIView *tableHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 0)];
     tableHeaderView.backgroundColor = [UIColor clearColor];
+    tableHeaderView.tag = kModalView;
+    
     
     //---------------用户栏视图---------------
     self.userImageView=[[UIImageView alloc]init];

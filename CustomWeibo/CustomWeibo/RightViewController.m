@@ -7,6 +7,8 @@
 //
 
 #import "RightViewController.h"
+#import "BaseNavigationViewController.h"
+#import "SendViewController.h"
 
 @interface RightViewController ()
 
@@ -16,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor orangeColor];
+    self.view.backgroundColor=[UIColor darkGrayColor];
+    
     
 }
 
@@ -24,14 +27,16 @@
     [super didReceiveMemoryWarning];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)sendAction:(UIButton *)sender {
+    if (sender.tag==100) {
+        SendViewController *sendCtrl=[[SendViewController alloc]init];
+        BaseNavigationViewController *sendNav=[[BaseNavigationViewController alloc]initWithRootViewController:sendCtrl];
+//        [self presentViewController:sendNav animated:YES completion:NULL];
+        [self.appDelegate.menuCtrl presentViewController:sendNav animated:YES completion:NULL];
+//        [self.appDelegate.mainCtrl.navigationController pushViewController:sendNav animated:YES];
+        
+        
+    }
 }
-*/
-
 @end

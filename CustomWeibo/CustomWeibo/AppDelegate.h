@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
 #import "WeiboSDK.h"
-
+#import "DDMenuController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate,WeiboSDKDelegate>
 
 
@@ -23,8 +23,7 @@
 
 @property(strong,retain) MainViewController *mainCtrl;
 
-
-
+@property (strong,nonatomic) DDMenuController *menuCtrl;
 
 @end
 
