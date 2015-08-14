@@ -19,11 +19,12 @@
     return self;
 }
 
--(instancetype)initWithImage:(NSString *)imageName highlighted:(NSString *)highigtImageName{
+-(instancetype)initWithImage:(NSString *)imageName highlighted:(NSString *)highigtImageName withSelectedImage:(NSString *)selectedImageName{
     self=[self init];
     if (self) {
         self.imageName=imageName;
         self.highigtImageName=highigtImageName;
+        self.selectedImageName=selectedImageName;
     }
     return self;
 }
@@ -46,15 +47,19 @@
     ThemeManager *themeManager=[ThemeManager shareInstance];
     UIImage *image=[themeManager getThemeImage:_imageName];
     UIImage *highligtedImage=[themeManager getThemeImage:_highigtImageName];
+    UIImage *selectedImage=[themeManager getThemeImage:_selectedImageName];
+    
     image=[image stretchableImageWithLeftCapWidth:self.leftCapWidth topCapHeight:self.topCapHeight];
     [highligtedImage stretchableImageWithLeftCapWidth:self.leftCapWidth topCapHeight:self.topCapHeight];
+    [selectedImage stretchableImageWithLeftCapWidth:self.leftCapWidth topCapHeight:self.topCapHeight];
     
     [self setImage:image forState:UIControlStateNormal];
     [self setImage:highligtedImage forState:UIControlStateHighlighted];
+    [self setImage:selectedImage forState:UIControlStateSelected];
     
     UIImage *backImage=[themeManager getThemeImage:_backgroundImageName];
-
     UIImage *backHighligtedImage=[themeManager getThemeImage:_backgroundHighligtImageName];
+    
     [backImage stretchableImageWithLeftCapWidth:self.leftCapWidth topCapHeight:self.topCapHeight];
     [backHighligtedImage stretchableImageWithLeftCapWidth:self.leftCapWidth topCapHeight:self.topCapHeight];
                                   
@@ -87,6 +92,12 @@
     }
     [self loadThemeImage];
     
+}
+-(void)setSelectedImageName:(NSString *)selectedImageName{
+    if (_selectedImageName!=selectedImageName) {
+        _selectedImageName=[selectedImageName copy];
+    }
+    [self loadThemeImage];
 }
 -(void)setBackgroundImageName:(NSString *)backgroundImageName{
     if (_backgroundImageName!=backgroundImageName) {

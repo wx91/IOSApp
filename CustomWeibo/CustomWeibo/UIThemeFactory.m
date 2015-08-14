@@ -9,9 +9,8 @@
 #import "UIThemeFactory.h"
 
 @implementation UIThemeFactory
-+(ThemeButton *)createButton:(NSString *)imageName highligted:(NSString *)highlightedName{
-    ThemeButton *button=[[ThemeButton alloc]initWithImage:imageName highlighted:highlightedName];
-
++(ThemeButton *)createButton:(NSString *)imageName highligted:(NSString *)highlightedName selected:(NSString *)selectedImageName{
+    ThemeButton *button=[[ThemeButton alloc]initWithImage:imageName highlighted:highlightedName withSelectedImage:selectedImageName];
     return button;
 }
 

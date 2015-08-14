@@ -64,10 +64,14 @@
     [_tabbarView addSubview:tabbarGroundImage];
     NSArray *background=@[@"tabbar_home.png",@"tabbar_message_center.png",@"tabbar_profile.png",@"tabbar_discover.png",@"tabbar_more.png"];
     NSArray *hightbackground=@[@"tabbar_home_highlighted.png",@"tabbar_message_center_highlighted.png",@"tabbar_profile_highlighted.png",@"tabbar_discover_highlighted.png",@"tabbar_more_highlighted.png"];
+    NSArray *selectedTabbarItem = @[@"tabbar_home_selected.png",@"tabbar_message_center_selected.png",@"tabbar_profile_selected.png",@"tabbar_discover_selected.png",@"tabbar_more_selected.png"];
+    
     for (int i=0; i<background.count; i++) {
         NSString *backImage= background[i];
         NSString *highImage=hightbackground[i];
-        UIButton *button=[UIThemeFactory createButtonWithBackground:backImage backgroundHighligted:highImage];
+        NSString * selectedBackImage    = selectedTabbarItem[i];
+        
+        UIButton *button=[UIThemeFactory createButton:backImage highligted:highImage selected:selectedBackImage];
         button.showsTouchWhenHighlighted=YES;
         button.frame=CGRectMake((64-30)/2+(i*64), (49-30)/2, 30, 30);
         button.tag=i;
@@ -85,6 +89,14 @@
     [UIView animateWithDuration:0.2 animations:^{
         _sliderView.left=x;
     }];
+    //点击两次button刷新微博
+    if (button.tag == self.selectedIndex && button.tag == 0) {
+        UINavigationController *homeNav = [self.viewControllers objectAtIndex:0];
+        HomeViewController *homeCtrl = [homeNav.viewControllers objectAtIndex:0];
+        [homeCtrl.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        [homeCtrl refreshWeibo];
+    }
+    
     [button setHighlighted:YES];
     self.selectedIndex=button.tag;
     

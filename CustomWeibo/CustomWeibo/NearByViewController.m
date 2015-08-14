@@ -9,6 +9,7 @@
 #import "NearByViewController.h"
 #import "Constant.h"
 #import "UIImageView+WebCache.h"
+#import "UIThemeFactory.h"
 
 @implementation NearByViewController
 
@@ -26,6 +27,12 @@
     [self.locationManager startUpdatingLocation];
 }
 -(void)initView{
+    
+    UIButton *button=[UIThemeFactory createNavigationButton:CGRectMake(0, 0, 45, 30) title:@"取消" target:self action:@selector(cancelAction)];
+    UIBarButtonItem *cancelButton=[[UIBarButtonItem alloc]initWithCustomView:button];
+    self.navigationItem.leftBarButtonItem=cancelButton;
+    
+    
     headerLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, -80, ScreenWidth, 80)];
     headerLabel.backgroundColor=[UIColor clearColor];
     headerLabel.text=@"继续下拉关闭";
@@ -37,6 +44,10 @@
     UIView *footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
     footerView.backgroundColor=[UIColor clearColor];
     self.tableView.tableFooterView=footerView;
+}
+
+-(void)cancelAction{
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark ClLocationManagerDelegate

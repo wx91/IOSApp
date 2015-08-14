@@ -29,7 +29,6 @@
 -(void)initView{
     emotionView=[[EmotionView alloc]initWithFrame:CGRectZero];
     scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, emotionView.height)];
-    NSLog(@"emotionView.height:%f",emotionView.height);
     scrollView.backgroundColor=[UIColor clearColor];
     scrollView.contentSize=CGSizeMake(emotionView.width, 0);
     scrollView.alwaysBounceVertical=NO;

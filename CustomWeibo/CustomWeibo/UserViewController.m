@@ -141,8 +141,10 @@
         self.tableView.data = self.weibos;
         //判断剩余是否大于一页
         if (statuses.count >= 25) {
+#warning 判断是否有下一页
 //            self.tableView.
         }else {
+#warning 判断是否有下一页
 //            self.tableView.isMore = NO;
         }
         [self.tableView reloadData];

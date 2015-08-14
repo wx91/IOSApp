@@ -13,6 +13,19 @@
 		5067185B1B7B3FFF001935F6 /* BrowseModeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506718591B7B3FFF001935F6 /* BrowseModeController.xib */; };
 		5074723E1B7B001F00EAE879 /* RegexKitLite.html in Resources */ = {isa = PBXBuildFile; fileRef = 5074723C1B7B001F00EAE879 /* RegexKitLite.html */; };
 		5074723F1B7B001F00EAE879 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5074723D1B7B001F00EAE879 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		50818B4E1B7DF14B00318D9E /* NearWeiboMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50818B4C1B7DF14B00318D9E /* NearWeiboMapViewController.m */; };
+		50818B4F1B7DF14B00318D9E /* NearWeiboMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50818B4D1B7DF14B00318D9E /* NearWeiboMapViewController.xib */; };
+		50818B511B7DF1D900318D9E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50818B501B7DF1D900318D9E /* CoreLocation.framework */; };
+		50818B531B7DF20200318D9E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50818B521B7DF20200318D9E /* MapKit.framework */; };
+		50818B561B7DF4E600318D9E /* WeiboAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50818B551B7DF4E600318D9E /* WeiboAnnotation.m */; };
+		50818B5C1B7DF6BE00318D9E /* WeiboAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50818B5B1B7DF6BE00318D9E /* WeiboAnnotationView.m */; };
+		50818B5F1B7E09D600318D9E /* UserGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50818B5E1B7E09D600318D9E /* UserGridView.m */; };
+		50818B611B7E09E400318D9E /* UserGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50818B601B7E09E400318D9E /* UserGridView.xib */; };
+		50818B651B7E0A1500318D9E /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50818B631B7E0A1500318D9E /* FriendsViewController.m */; };
+		50818B661B7E0A1500318D9E /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50818B641B7E0A1500318D9E /* FriendsViewController.xib */; };
+		50818B691B7E0A3200318D9E /* FriendTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50818B681B7E0A3200318D9E /* FriendTableView.m */; };
+		50818B6D1B7E0A4900318D9E /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50818B6B1B7E0A4900318D9E /* FriendTableViewCell.m */; };
+		50818B6E1B7E0A4900318D9E /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50818B6C1B7E0A4900318D9E /* FriendTableViewCell.xib */; };
 		50826E391B7B725D00043B4A /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50826E371B7B725D00043B4A /* UserViewController.m */; };
 		50826E3A1B7B725D00043B4A /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50826E381B7B725D00043B4A /* UserViewController.xib */; };
 		50826E3E1B7B8C1E00043B4A /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50826E3C1B7B8C1E00043B4A /* SendViewController.m */; };
@@ -621,6 +634,26 @@
 		5074723B1B7B001F00EAE879 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		5074723C1B7B001F00EAE879 /* RegexKitLite.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RegexKitLite.html; sourceTree = "<group>"; };
 		5074723D1B7B001F00EAE879 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		50818B4B1B7DF14B00318D9E /* NearWeiboMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearWeiboMapViewController.h; sourceTree = "<group>"; };
+		50818B4C1B7DF14B00318D9E /* NearWeiboMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearWeiboMapViewController.m; sourceTree = "<group>"; };
+		50818B4D1B7DF14B00318D9E /* NearWeiboMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearWeiboMapViewController.xib; sourceTree = "<group>"; };
+		50818B501B7DF1D900318D9E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		50818B521B7DF20200318D9E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		50818B541B7DF4E600318D9E /* WeiboAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAnnotation.h; sourceTree = "<group>"; };
+		50818B551B7DF4E600318D9E /* WeiboAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAnnotation.m; sourceTree = "<group>"; };
+		50818B5A1B7DF6BE00318D9E /* WeiboAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboAnnotationView.h; sourceTree = "<group>"; };
+		50818B5B1B7DF6BE00318D9E /* WeiboAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboAnnotationView.m; sourceTree = "<group>"; };
+		50818B5D1B7E09D600318D9E /* UserGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGridView.h; sourceTree = "<group>"; };
+		50818B5E1B7E09D600318D9E /* UserGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGridView.m; sourceTree = "<group>"; };
+		50818B601B7E09E400318D9E /* UserGridView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserGridView.xib; sourceTree = "<group>"; };
+		50818B621B7E0A1500318D9E /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		50818B631B7E0A1500318D9E /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		50818B641B7E0A1500318D9E /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsViewController.xib; sourceTree = "<group>"; };
+		50818B671B7E0A3200318D9E /* FriendTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableView.h; sourceTree = "<group>"; };
+		50818B681B7E0A3200318D9E /* FriendTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableView.m; sourceTree = "<group>"; };
+		50818B6A1B7E0A4900318D9E /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
+		50818B6B1B7E0A4900318D9E /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
+		50818B6C1B7E0A4900318D9E /* FriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
 		50826E361B7B725D00043B4A /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		50826E371B7B725D00043B4A /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		50826E381B7B725D00043B4A /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
@@ -1314,6 +1347,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50818B531B7DF20200318D9E /* MapKit.framework in Frameworks */,
+				50818B511B7DF1D900318D9E /* CoreLocation.framework in Frameworks */,
 				50B370B61B78DCB0008ED9BF /* libicucore.dylib in Frameworks */,
 				5082A74E1B7758F400C28A61 /* libsqlite3.dylib in Frameworks */,
 				5082A74C1B7758EC00C28A61 /* libz.dylib in Frameworks */,
@@ -1629,6 +1664,8 @@
 				5082A74D1B7758F400C28A61 /* libsqlite3.dylib */,
 				5082A74B1B7758EC00C28A61 /* libz.dylib */,
 				50B370B51B78DCB0008ED9BF /* libicucore.dylib */,
+				50818B501B7DF1D900318D9E /* CoreLocation.framework */,
+				50818B521B7DF20200318D9E /* MapKit.framework */,
 				5082A7491B7757BF00C28A61 /* CoreTelephony.framework */,
 				5082A7471B7757B100C28A61 /* CoreText.framework */,
 				5082A7451B7757AA00C28A61 /* QuartzCore.framework */,
@@ -1749,6 +1786,17 @@
 				50F061011B7B47B00044A49A /* UserInfoView.h */,
 				50F061021B7B47B00044A49A /* UserInfoView.m */,
 				50F061031B7B47B00044A49A /* UserInfoView.xib */,
+				50818B5D1B7E09D600318D9E /* UserGridView.h */,
+				50818B5E1B7E09D600318D9E /* UserGridView.m */,
+				50818B601B7E09E400318D9E /* UserGridView.xib */,
+				50818B6A1B7E0A4900318D9E /* FriendTableViewCell.h */,
+				50818B6B1B7E0A4900318D9E /* FriendTableViewCell.m */,
+				50818B6C1B7E0A4900318D9E /* FriendTableViewCell.xib */,
+				50818B671B7E0A3200318D9E /* FriendTableView.h */,
+				50818B681B7E0A3200318D9E /* FriendTableView.m */,
+				50818B621B7E0A1500318D9E /* FriendsViewController.h */,
+				50818B631B7E0A1500318D9E /* FriendsViewController.m */,
+				50818B641B7E0A1500318D9E /* FriendsViewController.xib */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -1775,6 +1823,13 @@
 				50DE62A11B770D6500CAE903 /* DiscoverViewController.h */,
 				50DE62A21B770D6500CAE903 /* DiscoverViewController.m */,
 				50DE62A31B770D6500CAE903 /* DiscoverViewController.xib */,
+				50818B4B1B7DF14B00318D9E /* NearWeiboMapViewController.h */,
+				50818B4C1B7DF14B00318D9E /* NearWeiboMapViewController.m */,
+				50818B4D1B7DF14B00318D9E /* NearWeiboMapViewController.xib */,
+				50818B541B7DF4E600318D9E /* WeiboAnnotation.h */,
+				50818B551B7DF4E600318D9E /* WeiboAnnotation.m */,
+				50818B5A1B7DF6BE00318D9E /* WeiboAnnotationView.h */,
+				50818B5B1B7DF6BE00318D9E /* WeiboAnnotationView.m */,
 			);
 			name = Discover;
 			sourceTree = "<group>";
@@ -2549,6 +2604,7 @@
 				50DE66361B770EA100CAE903 /* profile_button3_1.png in Resources */,
 				50DE65721B770EA100CAE903 /* 056@2x.png in Resources */,
 				50DE64D91B770EA100CAE903 /* 005.gif in Resources */,
+				50818B4F1B7DF14B00318D9E /* NearWeiboMapViewController.xib in Resources */,
 				50DE65E71B770EA100CAE903 /* 095@2x.png in Resources */,
 				50DE64AA1B770EA100CAE903 /* compose_checkbox.png in Resources */,
 				50DE65CA1B770EA100CAE903 /* 086.gif in Resources */,
@@ -2574,6 +2630,7 @@
 				50DE64B21B770EA100CAE903 /* compose_keyboardbutton_background.png in Resources */,
 				50DE65541B770EA100CAE903 /* 046@2x.png in Resources */,
 				50DE65051B770EA100CAE903 /* 020.png in Resources */,
+				50818B611B7E09E400318D9E /* UserGridView.xib in Resources */,
 				50DE66101B770EA100CAE903 /* main_badge@2x.png in Resources */,
 				50DE65FF1B770EA100CAE903 /* 103@2x.png in Resources */,
 				50DE66381B770EA100CAE903 /* qr_btn.png in Resources */,
@@ -2601,6 +2658,7 @@
 				50DE64BC1B770EA100CAE903 /* compose_mentionbutton_background_highlighted.png in Resources */,
 				50DE65B71B770EA100CAE903 /* 079@2x.png in Resources */,
 				50DE66411B770EA100CAE903 /* tabbar_background@2x.png in Resources */,
+				50818B661B7E0A1500318D9E /* FriendsViewController.xib in Resources */,
 				50DE66061B770EA100CAE903 /* emoticon_keyboard_magnifier@2x.png in Resources */,
 				50DE64A91B770EA100CAE903 /* compose_camerabutton_background_highlighted@2x.png in Resources */,
 				50DE660E1B770EA100CAE903 /* icon_detail@2x.png in Resources */,
@@ -2744,6 +2802,7 @@
 				50DE64AF1B770EA100CAE903 /* compose_emoticonbutton_background@2x.png in Resources */,
 				50DE64D51B770EA100CAE903 /* 003@2x.png in Resources */,
 				50DE66521B770EA100CAE903 /* tabbar_message_center_selected.png in Resources */,
+				50818B6E1B7E0A4900318D9E /* FriendTableViewCell.xib in Resources */,
 				50DE665F1B770EA100CAE903 /* tabbar_profile_selected@2x.png in Resources */,
 				50DE65621B770EA100CAE903 /* 051.png in Resources */,
 				50DE65411B770EA100CAE903 /* 040.png in Resources */,
@@ -2931,10 +2990,12 @@
 				50DE62BB1B770DBA00CAE903 /* ThemeImageView.m in Sources */,
 				50B370971B78C30C008ED9BF /* SDWebImageDecoder.m in Sources */,
 				50B370A31B78C30C008ED9BF /* ZFModalTransitionAnimator.m in Sources */,
+				50818B4E1B7DF14B00318D9E /* NearWeiboMapViewController.m in Sources */,
 				50DE62C01B770DC200CAE903 /* UIThemeFactory.m in Sources */,
 				50B36FB01B78BAD3008ED9BF /* WeiboCell.m in Sources */,
 				50B370941B78C30C008ED9BF /* NSData+ImageContentType.m in Sources */,
 				50DE62C61B770E2100CAE903 /* BaseViewController.m in Sources */,
+				50818B651B7E0A1500318D9E /* FriendsViewController.m in Sources */,
 				50B370881B78C30C008ED9BF /* MJRefreshBackNormalFooter.m in Sources */,
 				508991C61B7CEA69007D2DC7 /* EmotionScrollView.m in Sources */,
 				50DE629A1B770D4C00CAE903 /* MessageViewController.m in Sources */,
@@ -2943,6 +3004,7 @@
 				50B370931B78C30C008ED9BF /* MKAnnotationView+WebCache.m in Sources */,
 				50B370AD1B78D7B0008ED9BF /* NSString+URLEncoding.m in Sources */,
 				50B370801B78C30B008ED9BF /* MJRefreshBackFooter.m in Sources */,
+				50818B561B7DF4E600318D9E /* WeiboAnnotation.m in Sources */,
 				506718561B7B3EA7001935F6 /* UIView+Extra.m in Sources */,
 				506718531B7B2B41001935F6 /* RTLabel.m in Sources */,
 				50F061041B7B47B00044A49A /* UserInfoView.m in Sources */,
@@ -2959,8 +3021,10 @@
 				50826E431B7B900700043B4A /* DDMenuController.m in Sources */,
 				50B3709B1B78C30C008ED9BF /* SDWebImagePrefetcher.m in Sources */,
 				5092476D1B7A3D8100EEE63E /* CommentTableView.m in Sources */,
+				50818B6D1B7E0A4900318D9E /* FriendTableViewCell.m in Sources */,
 				50826E3E1B7B8C1E00043B4A /* SendViewController.m in Sources */,
 				50B3709C1B78C30C008ED9BF /* UIButton+WebCache.m in Sources */,
+				50818B691B7E0A3200318D9E /* FriendTableView.m in Sources */,
 				509247691B7A376B00EEE63E /* CommentCell.m in Sources */,
 				50DE62BC1B770DBA00CAE903 /* ThemeLabel.m in Sources */,
 				508991BE1B7C9BE2007D2DC7 /* EmotionView.m in Sources */,
@@ -2992,10 +3056,12 @@
 				50B370951B78C30C008ED9BF /* SDImageCache.m in Sources */,
 				50B370991B78C30C008ED9BF /* SDWebImageDownloaderOperation.m in Sources */,
 				50DE62BA1B770DBA00CAE903 /* ThemeButton.m in Sources */,
+				50818B5F1B7E09D600318D9E /* UserGridView.m in Sources */,
 				50B3707F1B78C30B008ED9BF /* MJRefreshAutoFooter.m in Sources */,
 				509247711B7A455200EEE63E /* WebViewController.m in Sources */,
 				50B370861B78C30C008ED9BF /* MJRefreshAutoStateFooter.m in Sources */,
 				5067185A1B7B3FFF001935F6 /* BrowseModeController.m in Sources */,
+				50818B5C1B7DF6BE00318D9E /* WeiboAnnotationView.m in Sources */,
 				50DE62CB1B770E3500CAE903 /* UIUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 #import "DiscoverViewController.h"
+#import "NearWeiboMapViewController.h"
 
 @interface DiscoverViewController ()
 
@@ -22,22 +23,29 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    for(int i= 100;i<=101;i++){
+        UIButton *button =  (UIButton *)[self.view viewWithTag:i];
+        button.layer.shadowColor =  [UIColor blackColor].CGColor;
+        button.layer.shadowOffset = CGSizeMake(2, 2); //阴影的大小
+        button.layer.shadowOpacity =  1;  //不透明
+        button.layer.shadowRadius =  3;
+    }
+}
 
+
+#pragma mark action
+
+- (IBAction)nearUser:(id)sender {
+    
+}
+
+- (IBAction)nearWeibo:(id)sender {
+    NearWeiboMapViewController *nearWeibo = [[NearWeiboMapViewController alloc]init];
+    [self.navigationController pushViewController:nearWeibo animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
