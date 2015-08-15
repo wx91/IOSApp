@@ -47,6 +47,7 @@
     [self.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
 }
+#pragma mark - System Method
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

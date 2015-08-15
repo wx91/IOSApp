@@ -13,7 +13,7 @@
 
 @interface UIThemeFactory : NSObject
 
-+(ThemeButton *)createButton:(NSString *)imageName highligted:(NSString *)highlightedName selected:(NSString *)selectedName;
++(ThemeButton *)createButton:(NSString *)imageName highligted:(NSString *)highlightedName;
 
 +(ThemeButton *)createButtonWithBackground:(NSString *)backgroundImageName backgroundHighligted:(NSString *)highlightedName;
 

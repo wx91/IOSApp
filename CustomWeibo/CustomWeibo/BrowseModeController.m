@@ -30,11 +30,7 @@
 
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 
 #pragma mark - UITableView delegate
@@ -42,11 +38,8 @@
     return 2;
 }
 
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    static NSString *identify = @"themeCell";
+    static NSString *identify = @"BrowseCell";
     UITableViewCell *cell = [tableView  dequeueReusableCellWithIdentifier:identify];
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
@@ -58,7 +51,6 @@
         cell.textLabel.text = @"小图";
         cell.detailTextLabel.text = @"所有网络加载小图";
     }
-    
     return cell;
 }
 
@@ -69,16 +61,19 @@
     }else if(indexPath.row == 1){
         mode = SmallBrowseMode;
     }
-    
     //将浏览模式存储到本地
     [[NSUserDefaults standardUserDefaults]setInteger:mode forKey:kBrowseMode];
     [[NSUserDefaults standardUserDefaults]synchronize];
-    
     //发送刷新微博的通知
     [[NSNotificationCenter defaultCenter]postNotificationName:kReloadWeiboNotification object:nil];
-    
+    //返回上一个控制器
     [self.navigationController popViewControllerAnimated:YES];
     
+}
+#pragma System Method
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
 }
 
 

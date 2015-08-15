@@ -36,7 +36,6 @@
     _menuCtrl=[[DDMenuController alloc]initWithRootViewController:_mainCtrl];
 //    _menuCtrl.leftController=leftCtrl;
     _menuCtrl.rightController=rightCtrl;
-    
     self.window.rootViewController=_menuCtrl;
     
     return YES;

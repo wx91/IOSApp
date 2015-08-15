@@ -30,7 +30,7 @@
     UIView *titleView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
     for (int i =0; i < messageButton.count; i++) {
         NSString *imageName = [messageButton objectAtIndex:i];
-        UIButton *button=[UIThemeFactory createButton:imageName highligted:imageName selected:nil];
+        UIButton *button=[UIThemeFactory createButton:imageName highligted:imageName];
         button.showsTouchWhenHighlighted = YES;
         button.frame = CGRectMake(50*i + 20, 10, 22, 22);
         [button addTarget:self action:@selector(messageAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -93,6 +93,7 @@
 - (void)tableView:(BaseTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
+#pragma mark System Method
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

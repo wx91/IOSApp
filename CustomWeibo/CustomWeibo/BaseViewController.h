@@ -21,7 +21,6 @@
 
 -(AppDelegate *)appDelegate;
 
--(void)showLoading:(BOOL)show;
 //进行提示
 -(void)showHUD:(NSString *)title isDim:(BOOL)isDim;
 //完成提示

@@ -24,7 +24,6 @@
 @property (nonatomic,retain)WeiboTableView *tableView;
 //微博发起请求类
 @property (nonatomic ,strong)WBAuthorizeRequest *request;
-
 //刷新微博
 - (void)refreshWeibo;
 //获取weibo的令牌等

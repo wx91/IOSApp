@@ -12,7 +12,6 @@
 
 @property(nonatomic,copy)NSString *imageName;
 @property(nonatomic,copy)NSString *highigtImageName;
-@property (nonatomic,copy)NSString *selectedImageName;
 
 @property(nonatomic,copy)NSString *backgroundImageName;
 @property(nonatomic,copy)NSString *backgroundHighligtImageName;
@@ -20,7 +19,7 @@
 @property (nonatomic,assign)int leftCapWidth;
 @property (nonatomic,assign)int topCapHeight;
 
--(instancetype)initWithImage:(NSString *)imageName highlighted:(NSString *)highigtImageName withSelectedImage:(NSString *)selectedImageName;
+-(instancetype)initWithImage:(NSString *)imageName highlighted:(NSString *)highigtImageName;
 
 -(instancetype)initwithBackground:(NSString *)backgroundImageName highlightedBackground:(NSString *)backgroundHighligtImageName;
 

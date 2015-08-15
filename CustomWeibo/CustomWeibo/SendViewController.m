@@ -93,7 +93,7 @@
 }
 
 -(void)sendAction{
-//    [self doSendData];
+    [self doSendData];
     [self performSelector:@selector(cancelAction) withObject:nil afterDelay:1.0];
 }
 -(void)buttonAction:(UIButton *)button{

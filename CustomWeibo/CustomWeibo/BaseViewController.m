@@ -32,12 +32,14 @@
         [button  addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *backItem=[[UIBarButtonItem alloc]initWithCustomView:button];
         self.navigationItem.leftBarButtonItem=backItem;
+
     }
 }
 //点击方法按钮触发方法
 -(void)backAction{
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 -(AppDelegate *)appDelegate{
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     return appDelegate;
@@ -121,8 +123,6 @@
     tipWindow.hidden = YES;
     tipWindow = nil;
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

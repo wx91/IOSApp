@@ -14,14 +14,6 @@
 #import "UIThemeFactory.h"
 #import "MainViewController.h"
 #import "DetailViewController.h"
-#import "ZFModalTransitionAnimator.h"
-
-@interface HomeViewController ()
-
-@property (nonatomic, strong) ZFModalTransitionAnimator *animator;
-
-@end
-
 
 @implementation HomeViewController
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -35,25 +27,25 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //减去状态栏20 49 的toolbar 49 的navigation
-    self.view=[[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-49-49-20)];
+    self.navigationController.navigationBarHidden=YES;
     //注销按钮
     UIBarButtonItem *logoutItem=[[UIBarButtonItem alloc]initWithTitle:@"注销" style:UIBarButtonItemStylePlain target:self action:@selector(logouAction:)];
+    logoutItem.tintColor=[UIColor blackColor];
     self.navigationItem.leftBarButtonItem=logoutItem;
     
     //绑定按钮
     UIBarButtonItem *bindItem=[[UIBarButtonItem alloc]initWithTitle:@"绑定账号" style:UIBarButtonItemStylePlain target:self action:@selector(bindAction:)];
+    logoutItem.tintColor=[UIColor blackColor];
     self.navigationItem.rightBarButtonItem=bindItem;
     
+    NSLog(@"rws");
     //初始化tableView
-    _tableView = [[WeiboTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    self.extendedLayoutIncludesOpaqueBars = NO;
-    self.edgesForExtendedLayout = UIRectEdgeBottom | UIRectEdgeLeft | UIRectEdgeRight;
-    _tableView.eventDelegate = self;
-    [self.view addSubview:_tableView];
+//    _tableView = [[WeiboTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+//    _tableView.eventDelegate = self;
+//    [self.view addSubview:_tableView];
     
     //获取令牌
-    [self Get];
+//    [self Get];
 }
 
 #pragma mark instance method
@@ -61,8 +53,8 @@
     //使UI显示下拉
     //    [self.tableView baseTableViewRefreshData];
     //取数据
-    [super showHUD:@"卖力加载中..." isDim:NO];
-    [self pullDownData];
+//    [super showHUD:@"卖力加载中..." isDim:NO];
+//    [self pullDownData];
 }
 
 #pragma mark -UI Action
@@ -175,6 +167,11 @@
 - (void)Get{
     if ([self getToken] == nil || [[self getToken] isEqualToString:@""]) {
         NSLog(@"令牌是失效!");
+        //令牌失效，调用登录方法，使客户重新登录
+//        _request = [WBAuthorizeRequest request];
+//        _request.redirectURI = kAppRedirectURI;
+//        _request.scope = @"all";
+//        [WeiboSDK sendRequest:_request];
     }else{
         NSDate *nowDate = [NSDate date];
         if([nowDate compare:[self getExpirationDate]] == NSOrderedAscending){
@@ -206,11 +203,6 @@
     modalVC.modalPresentationStyle = UIModalPresentationCustom;
     Status *model = [self.weibos objectAtIndex:indexPath.row];
     modalVC.weiboModel = model;
-    self.animator = [[ZFModalTransitionAnimator alloc] initWithModalViewController:modalVC];
-    self.animator.dragable = YES;
-    self.animator.bounces = YES;
-    self.animator.direction = ZFModalTransitonDirectionBottom;
-    [self.animator setContentScrollView:modalVC.tableView];
     
 //    [self.navigationController presentViewController:modalVC animated:YES completion:nil];
     [self.navigationController pushViewController:modalVC animated:YES];
@@ -307,7 +299,7 @@
         [self.tableView reloadData];
     }
 }
-
+#pragma mark System Method
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

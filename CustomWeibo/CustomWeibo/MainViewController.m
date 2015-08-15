@@ -56,7 +56,6 @@
 }
 //创建自定义tabBar
 -(void)initTabbaerView{
-    
     _tabbarView=[[UIView alloc]initWithFrame:CGRectMake(0, ScreenHeight-49, ScreenWidth, 49)];
     [self.view addSubview:_tabbarView];
     UIImageView *tabbarGroundImage=[UIThemeFactory createImageView:@"tabbar_background.png"];
@@ -64,14 +63,11 @@
     [_tabbarView addSubview:tabbarGroundImage];
     NSArray *background=@[@"tabbar_home.png",@"tabbar_message_center.png",@"tabbar_profile.png",@"tabbar_discover.png",@"tabbar_more.png"];
     NSArray *hightbackground=@[@"tabbar_home_highlighted.png",@"tabbar_message_center_highlighted.png",@"tabbar_profile_highlighted.png",@"tabbar_discover_highlighted.png",@"tabbar_more_highlighted.png"];
-    NSArray *selectedTabbarItem = @[@"tabbar_home_selected.png",@"tabbar_message_center_selected.png",@"tabbar_profile_selected.png",@"tabbar_discover_selected.png",@"tabbar_more_selected.png"];
-    
     for (int i=0; i<background.count; i++) {
         NSString *backImage= background[i];
         NSString *highImage=hightbackground[i];
-        NSString * selectedBackImage    = selectedTabbarItem[i];
         
-        UIButton *button=[UIThemeFactory createButton:backImage highligted:highImage selected:selectedBackImage];
+        UIButton *button=[UIThemeFactory createButton:backImage highligted:highImage];
         button.showsTouchWhenHighlighted=YES;
         button.frame=CGRectMake((64-30)/2+(i*64), (49-30)/2, 30, 30);
         button.tag=i;
@@ -85,15 +81,16 @@
 
 //点击切换
 -(void)selectedTab:(UIButton *)button{
+    //对选中的按钮增加小的下划线
     float x=button.left+(button.width-_sliderView.width)/2;
     [UIView animateWithDuration:0.2 animations:^{
         _sliderView.left=x;
     }];
+    
     //点击两次button刷新微博
     if (button.tag == self.selectedIndex && button.tag == 0) {
         UINavigationController *homeNav = [self.viewControllers objectAtIndex:0];
         HomeViewController *homeCtrl = [homeNav.viewControllers objectAtIndex:0];
-        [homeCtrl.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
         [homeCtrl refreshWeibo];
     }
     
@@ -102,7 +99,7 @@
     
 }
 
-//导航控制器的代理方法
+#pragma mark UINavigationViewController Delegate;
 -(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     //导航控制器的个数
     NSUInteger count=navigationController.viewControllers.count;
@@ -110,6 +107,20 @@
         [self showTabbar:NO];
     }else if(count==1){
         [self showTabbar:YES];
+    }
+    [self resizeView:shadow];
+}
+
+//导航控制器调用方法
+-(void)resizeView:(BOOL)showTabbar{
+    for (UIView *subView in self.view.subviews) {
+        if ([subView isKindOfClass:NSClassFromString(@"UITransitionView")]) {
+            if (showTabbar) {
+                subView.height=ScreenHeight-49-20;
+            }else{
+                subView.height=ScreenHeight-20;
+            }
+        }
     }
 }
 
@@ -128,20 +139,15 @@
 - (void)showBadge:(BOOL)show{
     _badgeView.hidden = !show;
 }
--(void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-}
+
 
 #pragma mark - WBHttpRequest degelate
 - (void)request:(WBHttpRequest *)request didFinishLoadingWithDataResult:(NSData *)data{
     if ([request.tag isEqual:@"unRead"]) {
-        
         NSError *error;
         NSDictionary *weiboDIC = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
         NSLog(@"%@",weiboDIC);
         NSNumber *status = [weiboDIC objectForKey:@"status"];  //未读微博
-        
-        
         if (_badgeView == nil) {
             _badgeView = [UIThemeFactory createImageView:@"main_badge.png"];
             _badgeView.frame = CGRectMake(64 - 25, 5, 20, 20);
@@ -169,6 +175,9 @@
         
     }
 }
-
+#pragma mark - System Method
+-(void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+}
 
 @end

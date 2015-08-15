@@ -602,7 +602,6 @@
 		50DE66771B770EA100CAE903 /* 附近的人.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50DE64A31B770EA100CAE903 /* 附近的人.jpg */; };
 		50DE66791B770EF700CAE903 /* Skins in Resources */ = {isa = PBXBuildFile; fileRef = 50DE66781B770EF700CAE903 /* Skins */; };
 		50DE667D1B770F1900CAE903 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE667B1B770F1900CAE903 /* HomeViewController.m */; };
-		50DE667E1B770F1900CAE903 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DE667C1B770F1900CAE903 /* HomeViewController.xib */; };
 		50DE66901B771C0800CAE903 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE668E1B771C0800CAE903 /* RightViewController.m */; };
 		50DE66911B771C0800CAE903 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50DE668F1B771C0800CAE903 /* RightViewController.xib */; };
 		50DE66951B771C1000CAE903 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DE66931B771C1000CAE903 /* LeftViewController.m */; };
@@ -1325,7 +1324,6 @@
 		50DE66781B770EF700CAE903 /* Skins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Skins; sourceTree = "<group>"; };
 		50DE667A1B770F1900CAE903 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		50DE667B1B770F1900CAE903 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		50DE667C1B770F1900CAE903 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		50DE66881B77101100CAE903 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		50DE668D1B771C0800CAE903 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		50DE668E1B771C0800CAE903 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
@@ -1744,20 +1742,19 @@
 			children = (
 				50DE667A1B770F1900CAE903 /* HomeViewController.h */,
 				50DE667B1B770F1900CAE903 /* HomeViewController.m */,
-				50DE667C1B770F1900CAE903 /* HomeViewController.xib */,
 				50B36FAC1B78BAD3008ED9BF /* WeiboTableView.h */,
 				50B36FAD1B78BAD3008ED9BF /* WeiboTableView.m */,
 				50B36FAA1B78BAD3008ED9BF /* WeiboCell.h */,
 				50B36FAB1B78BAD3008ED9BF /* WeiboCell.m */,
 				50B36FAE1B78BAD3008ED9BF /* WeiboView.h */,
 				50B36FAF1B78BAD3008ED9BF /* WeiboView.m */,
+				509247661B7A376B00EEE63E /* CommentCell.h */,
+				509247671B7A376B00EEE63E /* CommentCell.m */,
+				5092476B1B7A3D8100EEE63E /* CommentTableView.h */,
+				5092476C1B7A3D8100EEE63E /* CommentTableView.m */,
 				509247611B7A36A400EEE63E /* DetailViewController.h */,
 				509247621B7A36A400EEE63E /* DetailViewController.m */,
 				509247631B7A36A400EEE63E /* DetailViewController.xib */,
-				5092476B1B7A3D8100EEE63E /* CommentTableView.h */,
-				5092476C1B7A3D8100EEE63E /* CommentTableView.m */,
-				509247661B7A376B00EEE63E /* CommentCell.h */,
-				509247671B7A376B00EEE63E /* CommentCell.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -2664,7 +2661,6 @@
 				50DE660E1B770EA100CAE903 /* icon_detail@2x.png in Resources */,
 				50DE65981B770EA100CAE903 /* 069.png in Resources */,
 				50F061051B7B47B00044A49A /* UserInfoView.xib in Resources */,
-				50DE667E1B770F1900CAE903 /* HomeViewController.xib in Resources */,
 				50DE64B31B770EA100CAE903 /* compose_keyboardbutton_background@2x.png in Resources */,
 				50DE66641B770EA100CAE903 /* timeline_more_button.png in Resources */,
 				50DE65C21B770EA100CAE903 /* 083.png in Resources */,

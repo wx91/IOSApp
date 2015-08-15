@@ -11,10 +11,6 @@
 #import "UIThemeFactory.h"
 #import "Constant.h"
 
-@interface ThemeViewController ()
-
-@end
-
 @implementation ThemeViewController
 
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -28,15 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
+#pragma mark UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [themes count];
 }
@@ -65,8 +55,6 @@
     }else{
         cell.accessoryType=UITableViewCellAccessoryNone;
     }
-    
-//    cell.textLabel.text=themes[indexPath.row];
     return cell;
 }
 
@@ -85,6 +73,9 @@
     [tableView reloadData];
 }
 
-
-
+#pragma mark System Method
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 @end

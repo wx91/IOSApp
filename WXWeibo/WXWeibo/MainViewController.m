@@ -96,7 +96,7 @@
 //导航控制器的代理方法
 -(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
     //导航控制器的个数
-    int count=navigationController.viewControllers.count;
+    NSUInteger count=navigationController.viewControllers.count;
     if (count==2) {
         [self showTabbar:NO];
     }else if(count==1){
@@ -182,7 +182,7 @@
 }
 
 //导航控制器调用方法
--(void)resizeView:(BOOL)showTabbar{
+-(void)ƒ:(BOOL)showTabbar{
     for (UIView *subView in self.view.subviews) {
         if ([subView isKindOfClass:NSClassFromString(@"UITransitionView")]) {
             if (showTabbar) {
