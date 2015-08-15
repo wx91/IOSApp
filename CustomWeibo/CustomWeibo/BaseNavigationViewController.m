@@ -43,11 +43,10 @@
 
 //加载导航栏的加载图片方法
 -(void)loadThemeImage{
-        UIImage *image=[[ThemeManager shareInstance]getThemeImage:@"navigationbar_background.png"];
+    UIImage *image=[[ThemeManager shareInstance]getThemeImage:@"navigationbar_background.png"];
     [self.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     
 }
-#pragma mark - System Method
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

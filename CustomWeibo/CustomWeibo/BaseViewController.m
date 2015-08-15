@@ -32,7 +32,6 @@
         [button  addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *backItem=[[UIBarButtonItem alloc]initWithCustomView:button];
         self.navigationItem.leftBarButtonItem=backItem;
-
     }
 }
 //点击方法按钮触发方法
@@ -62,14 +61,19 @@
     self.hud.dimBackground=isDim;
     self.hud.labelText=title;
 }
+
 //使用框架进行完成提示
 -(void)showHUDComplete:(NSString *)title{
-    self.hud.customView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"37x-Checkmark"]];
-    self.hud.mode=MBProgressHUDModeCustomView;
-    if (title.length>0) {
-        self.hud.labelText=title;
+    self.hud = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:self.hud];
+    self.hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+    
+    self.hud.mode = MBProgressHUDModeCustomView;
+    if (title.length > 0) {
+        self.hud.labelText = title;
     }
-    [self.hud hide:YES afterDelay:1];
+    [self.hud show:YES];
+    [self.hud hide:YES afterDelay:2.0];
 }
 //隐藏提示
 -(void)hideHUD{

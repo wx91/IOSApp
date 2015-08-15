@@ -14,7 +14,6 @@
 #import "Constant.h"
 #import "NearByViewController.h"
 #import "BaseNavigationViewController.h"
-
 @interface SendViewController ()
 
 @end
@@ -313,31 +312,38 @@
 //发送微博
 -(void)doSendData{
     [super showStatusTip:YES title:@"发送中..."];
-    NSString *weiboText=self.textView.text;
-    if (weiboText.length==0) {
+    NSString *weiboText = self.textView.text;
+    if (weiboText.length == 0) {
         NSLog(@"微博内容为空");
-        return ;
+        return;
     }
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObject:weiboText forKey:@"status"];
-    if (self.longitude.length>0) {
+    if (self.longitude.length > 0) {
         [params setObject:self.longitude forKey:@"long"];
     }
-    if (self.latitude.length>0) {
+    
+    if (self.latitude.length > 0) {
         [params setObject:self.latitude forKey:@"lat"];
     }
-    if (self.sendImage==nil) {
+    
+    if (self.sendImage == nil) {
         //不带图的微博
-        [WBHttpRequest requestWithURL:WB_postWeibo httpMethod:@"POST" params:params delegate:self withTag:@"postWeibo"];
+        [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_postWeibo httpMethod:@"POST" params:params delegate:self withTag:@"postWeibo"];
     }else{
-        //带图微博
-        NSData *data=UIImageJPEGRepresentation(self.sendImage, 1);
+        //带图的微博
+        NSData *data = UIImageJPEGRepresentation(self.sendImage, 1  );
         [params setObject:data forKey:@"pic"];
-        [WBHttpRequest requestWithURL:WB_postWeiboWithPic httpMethod:@"POST" params:params delegate:self withTag:@"postWeiboWithPic"];
+        [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_postWeiboWithPic httpMethod:@"POST" params:params delegate:self withTag:@"postWeiboWithPic"];
     }
     [super performSelector:@selector(multipleValue:) withObject:[NSArray arrayWithObjects:@"NO",@"发送成功",nil] afterDelay:1.5];
+
 }
 
-
+- (NSString *)getToken
+{
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthData"] objectForKey:@"accessToken"];
+}
 
 
 #pragma mark system method

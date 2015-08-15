@@ -19,6 +19,7 @@
 @property (nonatomic,assign)int leftCapWidth;
 @property (nonatomic,assign)int topCapHeight;
 
+
 -(instancetype)initWithImage:(NSString *)imageName highlighted:(NSString *)highigtImageName;
 
 -(instancetype)initwithBackground:(NSString *)backgroundImageName highlightedBackground:(NSString *)backgroundHighligtImageName;

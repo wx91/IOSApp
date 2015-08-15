@@ -38,7 +38,7 @@ typedef enum {
 } DDMenuPanCompletion;
 
 @protocol DDMenuControllerDelegate;
-@interface DDMenuController : UINavigationController {
+@interface DDMenuController : UIViewController <UIGestureRecognizerDelegate>{
     
     id _tap;
     id _pan;
@@ -57,13 +57,24 @@ typedef enum {
     
 }
 
-@property(nonatomic,assign) id <DDMenuControllerDelegate,UINavigationControllerDelegate> delegate;
+- (id)initWithRootViewController:(UIViewController*)controller;
 
-@property(nonatomic,strong) UIViewController *leftController;
-@property(nonatomic,strong) UIViewController *rightController;
+@property(nonatomic,assign) id <DDMenuControllerDelegate> delegate;
+
+@property(nonatomic,strong) UIViewController *leftViewController;
+@property(nonatomic,strong) UIViewController *rightViewController;
+@property(nonatomic,strong) UIViewController *rootViewController;
 
 @property(nonatomic,readonly) UITapGestureRecognizer *tap;
 @property(nonatomic,readonly) UIPanGestureRecognizer *pan;
+
+- (void)setRootController:(UIViewController *)controller animated:(BOOL)animated; // used to push a new controller on the stack
+- (void)showRootController:(BOOL)animated; // reset to "home" view controller
+- (void)showRightController:(BOOL)animated;  // show right
+- (void)showLeftController:(BOOL)animated;  // show left
+
+//-------------wei.chen----------------
+- (void)setEnableGesture:(BOOL)isEnable;
 
 @end
 

@@ -79,7 +79,7 @@ static ThemeManager *sigleton=nil;
         float r=[rgbs[0] floatValue];
         float g=[rgbs[1] floatValue];
         float b=[rgbs[2] floatValue];
-        UIColor *color=[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
+        UIColor *color=[UIColor colorWithRed:(r/255.0) green:(g/255.0) blue:(b/255.0) alpha:1];
         return color;
     }
     return nil;
@@ -98,5 +98,7 @@ static ThemeManager *sigleton=nil;
 + (id)copyWithZone:(NSZone *)zone {
     return self;
 }
+
+
 
 @end

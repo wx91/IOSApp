@@ -10,7 +10,6 @@
 #import "WeiboCell.h"
 #import "WeiboView.h"
 #import "Status.h"
-//#import "ModalViewController.h"
 
 @implementation WeiboTableView
 

@@ -47,7 +47,7 @@
     MoreViewController *more=[[MoreViewController alloc]init];
     NSMutableArray *viewControllers=[NSMutableArray arrayWithCapacity:5];
     NSArray *views =@[home,message,profile,discover,more];
-    for (BaseViewController *viewController in views) {
+    for (UIViewController *viewController in views) {
         BaseNavigationViewController *nav=[[BaseNavigationViewController alloc]initWithRootViewController:viewController];
         [viewControllers addObject:nav];
         nav.delegate=self;
@@ -93,7 +93,6 @@
         HomeViewController *homeCtrl = [homeNav.viewControllers objectAtIndex:0];
         [homeCtrl refreshWeibo];
     }
-    
     [button setHighlighted:YES];
     self.selectedIndex=button.tag;
     

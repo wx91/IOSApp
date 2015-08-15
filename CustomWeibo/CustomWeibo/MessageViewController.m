@@ -38,7 +38,6 @@
         [titleView addSubview:button];
     }
     self.navigationItem.titleView = titleView;
-    
 }
 
 - (void)viewDidLoad {
@@ -46,9 +45,9 @@
 
 }
 
-- (IBAction)messageAction:(UIButton *)button {
+- (void)messageAction:(UIButton *)button {
     if (button.tag == 2010) {
-        NSLog(@"2010");
+        [self loadAtWeiboData];
     }else if (button.tag == 2011){
         
     }else if (button.tag == 2012){
@@ -57,25 +56,30 @@
         
     }
 }
-
+- (NSString *)getToken
+{   NSString *accessToke=[[[NSUserDefaults standardUserDefaults] objectForKey:@"WeiboAuthData"] objectForKey:@"accessToken"];
+    return accessToke;
+}
 
 -(void)loadAtWeiboData{
     [super showHUD:@"卖力加载中...." isDim:NO];
-    [WBHttpRequest requestWithURL:WB_AtMe httpMethod:@"GET" params:nil delegate:self withTag:@"WB_AtMe"];
+    
+    [WBHttpRequest requestWithAccessToken:[self getToken] url:WB_AtMe httpMethod:@"GET" params:nil delegate:self withTag:@"WB_AtMe"];
 }
 
 #pragma mark  -WBHttpDelegate
 - (void)request:(WBHttpRequest *)request didFinishLoadingWithDataResult:(NSData *)data{
     NSError *error;
     NSDictionary *weiboDIC = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
+    NSLog(@"%@",weiboDIC);
     NSDictionary *WeiboInfo = [weiboDIC objectForKey:@"statuses"];
-    
     NSMutableArray *weibos = [ NSMutableArray arrayWithCapacity:WeiboInfo.count];
     for (NSDictionary *statuesDic in WeiboInfo) {
         Status *weibo=[Status objectWithKeyValues:statuesDic];
+        NSLog(@"%@",weibo.text);
         [weibos addObject:weibo];
     }
-    [super.hud hide:YES afterDelay:0];
+    [super.hud hide:YES];
     tableView.hidden = NO;
     tableView.data = weibos;
     [tableView reloadData];

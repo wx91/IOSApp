@@ -11,6 +11,7 @@
 @implementation UIThemeFactory
 +(ThemeButton *)createButton:(NSString *)imageName highligted:(NSString *)highlightedName{
     ThemeButton *button=[[ThemeButton alloc]initWithImage:imageName highlighted:highlightedName];
+
     return button;
 }
 
@@ -18,18 +19,15 @@
     ThemeButton *button=[[ThemeButton alloc]initwithBackground:backgroundImageName highlightedBackground:highlightedName];
     return button ;
 }
-+(UIButton *)createNavigationButton:(CGRect)frame
-                              title:(NSString *)title
-                             target:(id)target
-                             action:(SEL)selector{
-    ThemeButton *button=[self createButtonWithBackground:@"navigationbar_button_background.png" backgroundHighligted:@"navigationbar_button_delete_background.png"];
-    
+
++(UIButton *)createNavigationButton:(CGRect)frame title:(NSString *)title target:(id)target action:(SEL)selector{
+    ThemeButton *button = [self createButtonWithBackground:@"navigationbar_button_background.png" backgroundHighligted:@"navigationbar_button_delete_background.png"];
     button.frame = frame;
     [button setTitle:title forState:UIControlStateNormal];
     [button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:13.0f];
-    button.leftCapWidth = 5;
+    button.leftCapWidth = 3;
     
     return button;
 }

@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.locationManager=[[CLLocationManager alloc]init];
-    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyHundredMeters];
     self.locationManager.delegate=self;
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];

@@ -14,6 +14,7 @@
 #import "UIThemeFactory.h"
 #import "MainViewController.h"
 #import "DetailViewController.h"
+#import "UIViewExt.h"
 
 @implementation HomeViewController
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -25,9 +26,9 @@
     }
     return self;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBarHidden=YES;
     //注销按钮
     UIBarButtonItem *logoutItem=[[UIBarButtonItem alloc]initWithTitle:@"注销" style:UIBarButtonItemStylePlain target:self action:@selector(logouAction:)];
     logoutItem.tintColor=[UIColor blackColor];
@@ -38,12 +39,10 @@
     logoutItem.tintColor=[UIColor blackColor];
     self.navigationItem.rightBarButtonItem=bindItem;
     
-    NSLog(@"rws");
     //初始化tableView
-//    _tableView = [[WeiboTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
-//    _tableView.eventDelegate = self;
-//    [self.view addSubview:_tableView];
-    
+    _tableView = [[WeiboTableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    _tableView.eventDelegate = self;
+    [self.view addSubview:_tableView];
     //获取令牌
 //    [self Get];
 }
@@ -117,8 +116,7 @@
 - (void) loadWeiboData {
     //3875046042956596
     [super showHUD:@"卖力加载中..." isDim:NO];
-    NSDictionary *dic=@{@"count":@"5",
-                        @"max_id":@"3875046042956596"};
+    NSDictionary *dic=@{@"count":@"5"};
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:dic];
     [WBHttpRequest requestWithURL:WB_home  httpMethod:@"GET"  params:params delegate:self withTag:@"load"];
 }
@@ -168,24 +166,19 @@
     if ([self getToken] == nil || [[self getToken] isEqualToString:@""]) {
         NSLog(@"令牌是失效!");
         //令牌失效，调用登录方法，使客户重新登录
-//        _request = [WBAuthorizeRequest request];
-//        _request.redirectURI = kAppRedirectURI;
-//        _request.scope = @"all";
-//        [WeiboSDK sendRequest:_request];
+        [self bindAction:nil];
     }else{
         NSDate *nowDate = [NSDate date];
         if([nowDate compare:[self getExpirationDate]] == NSOrderedAscending){
             //今天比token失效时间小，令牌有效
-//            [self loadWeiboData];
+            [self loadWeiboData];
         }else{
             //令牌失效，调用登录方法，使客户重新登录
-//            _request = [WBAuthorizeRequest request];
-//            _request.redirectURI = kAppRedirectURI;
-//            _request.scope = @"all";
-//            [WeiboSDK sendRequest:_request];
+            [self bindAction:nil];
         }
     }
 }
+
 
 #pragma mark - BaseTableViewEventDelegate
 //下拉
@@ -225,14 +218,16 @@
 - (void)request:(WBHttpRequest *)request didFinishLoadingWithDataResult:(NSData *)data{
     //--------------------load----------------------------
     if ([request.tag isEqual:@"load"]) {
-        [super.hud hide:YES afterDelay:0];
+        [super.hud hide:YES];
         NSError *error;
         NSDictionary *weiboDIC = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
+        NSLog(@"%@",weiboDIC);
         NSDictionary *WeiboInfo = [weiboDIC objectForKey:@"statuses"];
         NSMutableArray *weibos = [NSMutableArray arrayWithCapacity:WeiboInfo.count];
         for (NSDictionary *statuesDic in WeiboInfo) {
             Status *weibo = [Status objectWithKeyValues:statuesDic];
             [weibos addObject:weibo];
+            NSLog(@"%@",weibo.text);
         }
         self.tableView.data = weibos;
         self.weibos = weibos;

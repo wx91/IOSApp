@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5036B9A91B7F515E00896B5A /* default.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5036B9A81B7F515E00896B5A /* default.gpx */; };
 		506718531B7B2B41001935F6 /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 506718521B7B2B41001935F6 /* RTLabel.m */; };
 		506718561B7B3EA7001935F6 /* UIView+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 506718551B7B3EA7001935F6 /* UIView+Extra.m */; };
 		5067185A1B7B3FFF001935F6 /* BrowseModeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506718581B7B3FFF001935F6 /* BrowseModeController.m */; };
@@ -42,6 +43,7 @@
 		5082A74A1B7757BF00C28A61 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A7491B7757BF00C28A61 /* CoreTelephony.framework */; };
 		5082A74C1B7758EC00C28A61 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A74B1B7758EC00C28A61 /* libz.dylib */; };
 		5082A74E1B7758F400C28A61 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5082A74D1B7758F400C28A61 /* libsqlite3.dylib */; };
+		508502B71B7F69A7009AA028 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508502B61B7F69A7009AA028 /* HomeViewController.xib */; };
 		508991BA1B7C47F5007D2DC7 /* NearByViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508991B81B7C47F5007D2DC7 /* NearByViewController.m */; };
 		508991BB1B7C47F5007D2DC7 /* NearByViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508991B91B7C47F5007D2DC7 /* NearByViewController.xib */; };
 		508991BE1B7C9BE2007D2DC7 /* EmotionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 508991BD1B7C9BE2007D2DC7 /* EmotionView.m */; };
@@ -623,6 +625,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5036B9A81B7F515E00896B5A /* default.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = default.gpx; sourceTree = "<group>"; };
 		506718511B7B2B41001935F6 /* RTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLabel.h; sourceTree = "<group>"; };
 		506718521B7B2B41001935F6 /* RTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLabel.m; sourceTree = "<group>"; };
 		506718541B7B3EA7001935F6 /* UIView+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extra.h"; sourceTree = "<group>"; };
@@ -672,6 +675,7 @@
 		5082A7491B7757BF00C28A61 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		5082A74B1B7758EC00C28A61 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5082A74D1B7758F400C28A61 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		508502B61B7F69A7009AA028 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		508991B71B7C47F5007D2DC7 /* NearByViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearByViewController.h; sourceTree = "<group>"; };
 		508991B81B7C47F5007D2DC7 /* NearByViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearByViewController.m; sourceTree = "<group>"; };
 		508991B91B7C47F5007D2DC7 /* NearByViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearByViewController.xib; sourceTree = "<group>"; };
@@ -1655,6 +1659,7 @@
 		50DE62621B765C2700CAE903 = {
 			isa = PBXGroup;
 			children = (
+				5036B9A81B7F515E00896B5A /* default.gpx */,
 				50DE626D1B765C2700CAE903 /* CustomWeibo */,
 				50DE62811B765C2700CAE903 /* CustomWeiboTests */,
 				50DE626C1B765C2700CAE903 /* Products */,
@@ -1675,6 +1680,7 @@
 				5082A7391B77577600C28A61 /* CoreGraphics.framework */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		50DE626C1B765C2700CAE903 /* Products */ = {
 			isa = PBXGroup;
@@ -1742,6 +1748,7 @@
 			children = (
 				50DE667A1B770F1900CAE903 /* HomeViewController.h */,
 				50DE667B1B770F1900CAE903 /* HomeViewController.m */,
+				508502B61B7F69A7009AA028 /* HomeViewController.xib */,
 				50B36FAC1B78BAD3008ED9BF /* WeiboTableView.h */,
 				50B36FAD1B78BAD3008ED9BF /* WeiboTableView.m */,
 				50B36FAA1B78BAD3008ED9BF /* WeiboCell.h */,
@@ -1837,12 +1844,12 @@
 				5092476E1B7A455200EEE63E /* WebViewController.h */,
 				5092476F1B7A455200EEE63E /* WebViewController.m */,
 				509247701B7A455200EEE63E /* WebViewController.xib */,
-				50B370AE1B78DBAA008ED9BF /* BaseTableView.h */,
-				50B370AF1B78DBAA008ED9BF /* BaseTableView.m */,
-				50DE62C11B770E2100CAE903 /* BaseNavigationViewController.h */,
-				50DE62C21B770E2100CAE903 /* BaseNavigationViewController.m */,
 				50DE62C31B770E2100CAE903 /* BaseViewController.h */,
 				50DE62C41B770E2100CAE903 /* BaseViewController.m */,
+				50DE62C11B770E2100CAE903 /* BaseNavigationViewController.h */,
+				50DE62C21B770E2100CAE903 /* BaseNavigationViewController.m */,
+				50B370AE1B78DBAA008ED9BF /* BaseTableView.h */,
+				50B370AF1B78DBAA008ED9BF /* BaseTableView.m */,
 			);
 			name = BaseView;
 			sourceTree = "<group>";
@@ -2589,6 +2596,7 @@
 				50DE660C1B770EA100CAE903 /* Icon@2x.png in Resources */,
 				50DE65571B770EA100CAE903 /* 047@2x.png in Resources */,
 				50DE65B31B770EA100CAE903 /* 078.png in Resources */,
+				5036B9A91B7F515E00896B5A /* default.gpx in Resources */,
 				50DE65921B770EA100CAE903 /* 067.png in Resources */,
 				50DE64A71B770EA100CAE903 /* compose_camerabutton_background@2x.png in Resources */,
 				50DE64D31B770EA100CAE903 /* 003.gif in Resources */,
@@ -2599,6 +2607,7 @@
 				50DE66181B770EA100CAE903 /* navigationbar_button_background.png in Resources */,
 				50DE66161B770EA100CAE903 /* navigationbar_background.png in Resources */,
 				50DE66361B770EA100CAE903 /* profile_button3_1.png in Resources */,
+				508502B71B7F69A7009AA028 /* HomeViewController.xib in Resources */,
 				50DE65721B770EA100CAE903 /* 056@2x.png in Resources */,
 				50DE64D91B770EA100CAE903 /* 005.gif in Resources */,
 				50818B4F1B7DF14B00318D9E /* NearWeiboMapViewController.xib in Resources */,

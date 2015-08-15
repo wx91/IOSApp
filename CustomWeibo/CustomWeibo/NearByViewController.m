@@ -22,7 +22,7 @@
         self.locationManager=[[CLLocationManager alloc]init];
     }
     self.locationManager.delegate=self;
-    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyHundredMeters];
     [self.locationManager requestWhenInUseAuthorization];
     [self.locationManager startUpdatingLocation];
 }
@@ -139,7 +139,7 @@
     [self.tableView reloadData];
 }
 
-
+#pragma mark System Method
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

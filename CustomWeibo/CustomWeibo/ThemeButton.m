@@ -20,8 +20,7 @@
 }
 
 -(instancetype)initWithImage:(NSString *)imageName highlighted:(NSString *)highigtImageName{
-    self=[self init];
-    if (self) {
+    if ([self init]) {
         self.imageName=imageName;
         self.highigtImageName=highigtImageName;
     }
@@ -47,34 +46,17 @@
     UIImage *image=[themeManager getThemeImage:_imageName];
     UIImage *highligtedImage=[themeManager getThemeImage:_highigtImageName];
     
-    image=[image stretchableImageWithLeftCapWidth:self.leftCapWidth topCapHeight:self.topCapHeight];
-    [highligtedImage stretchableImageWithLeftCapWidth:self.leftCapWidth topCapHeight:self.topCapHeight];
-    
     [self setImage:image forState:UIControlStateNormal];
     [self setImage:highligtedImage forState:UIControlStateHighlighted];
     
     UIImage *backImage=[themeManager getThemeImage:_backgroundImageName];
     UIImage *backHighligtedImage=[themeManager getThemeImage:_backgroundHighligtImageName];
     
-    [backImage stretchableImageWithLeftCapWidth:self.leftCapWidth topCapHeight:self.topCapHeight];
-    [backHighligtedImage stretchableImageWithLeftCapWidth:self.leftCapWidth topCapHeight:self.topCapHeight];
-                                  
     [self setBackgroundImage:backImage forState:UIControlStateNormal];
     [self setBackgroundImage:backHighligtedImage forState:UIControlStateHighlighted];
 }
 
 #pragma mark -setter
-- (void)setLeftCapWidth:(int)leftCapWidth{
-    _leftCapWidth = leftCapWidth;
-    [self loadThemeImage];
-}
-
-- (void)setTopCapHeight:(int)topCapHeight{
-    _topCapHeight = topCapHeight;
-    [self loadThemeImage];
-    
-}
-
 //重写imagename
 -(void)setImageName:(NSString *)imageName{
     if (_imageName!=imageName) {
@@ -89,7 +71,6 @@
     [self loadThemeImage];
     
 }
-
 -(void)setBackgroundImageName:(NSString *)backgroundImageName{
     if (_backgroundImageName!=backgroundImageName) {
         _backgroundImageName=[backgroundImageName copy];
@@ -105,7 +86,25 @@
 
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+    
 }
 
+- (void)setLeftCapWidth:(int)leftCapWidth{
+    _leftCapWidth = leftCapWidth;
+    [self loadThemeImage];
+}
+
+- (void)setTopCapHeight:(int)topCapHeight{
+    _topCapHeight = topCapHeight;
+    [self loadThemeImage];
+}
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
 
 @end
