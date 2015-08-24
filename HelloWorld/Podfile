@@ -1,0 +1,3 @@
+platform :ios, '8.4'
+pod 'MJRefresh', '~> 2.4.7'
+pod 'AFNetworking', '~> 2.5.4'
