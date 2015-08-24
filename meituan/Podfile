@@ -1,0 +1,9 @@
+platform :ios, '8.4'
+pod "AFNetworking"
+pod 'SDWebImage'
+pod 'MBProgressHUD'
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'SVProgressHUD'
+pod 'AMap3DMap'
+pod 'AMapSearch'
