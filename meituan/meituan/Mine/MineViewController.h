@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MineViewController : UITableViewController{
+@interface MineViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     NSMutableArray *data;
 }
+
+@property(nonatomic,strong)UITableView *tableView;
 
 
 @end

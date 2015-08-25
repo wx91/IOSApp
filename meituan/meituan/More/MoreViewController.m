@@ -7,19 +7,30 @@
 //
 
 #import "MoreViewController.h"
-#import "Constant.h"
 #import "HotQueueViewController.h"
+#import "Constant.h"
 
 @implementation MoreViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    [self initData];
+    [self initViews];
+}
+-(void)initData{
     //解析plist文件，获取数据
     NSString *plistPath=[[NSBundle mainBundle]pathForResource:@"MoreData" ofType:@"plist"];
     data=[[NSMutableArray alloc]initWithContentsOfFile:plistPath];
 }
-#pragma mark UITableView Delegate
 
+-(void)initViews{
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height) style:UITableViewStyleGrouped];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+}
+
+#pragma mark UITableView Delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 4;
 }

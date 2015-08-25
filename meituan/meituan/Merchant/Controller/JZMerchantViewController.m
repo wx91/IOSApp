@@ -24,6 +24,9 @@
     self.navigationController.navigationBarHidden=YES;
     self.view.backgroundColor=[UIColor whiteColor];
     [self initData];
+    [self setNav];
+    [self initViews];
+    [self initMaskView];
     
 }
 #pragma mark 初始化数据
@@ -129,29 +132,29 @@
 -(void)setUpTableView{
     //添加下拉的动画图片
     //设置下拉刷新回调
-    [self.tableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(getFirstPageData)];
+//    [self.tableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(getFirstPageData)];
     //设置普通状态下的动画图片
     NSMutableArray *idleImages=[NSMutableArray array];
     for (NSUInteger i=1; i<=60; ++i) {
         UIImage *image=[UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%zd",i]];
         [idleImages addObject:image];
     }
-    [self.tableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
+//    [self.tableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
     //设置即将刷新状态的动画图片
     NSMutableArray *refreshingImages=[NSMutableArray array];
     for (NSInteger i=1; i<=3; i++) {
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_loading_0%zd",i]];
         [refreshingImages addObject:image];
     }
-    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
+//    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
     //设置正在刷新是的动画图片
-    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
+//    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
     //马上进入刷新状态
-    [self.tableView.gifHeader beginRefreshing];
+//    [self.tableView.gifHeader beginRefreshing];
     //上拉刷新
-    [self.tableView addGifFooterWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+//    [self.tableView addGifFooterWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     //设置正在刷新的动画
-    self.tableView.gifFooter.refreshingImages = refreshingImages;
+//    self.tableView.gifFooter.refreshingImages = refreshingImages;
 }
 
 #pragma mark 遮罩页
@@ -165,7 +168,7 @@
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(OnTapMaskView:)];
     tap.delegate=self;
     [_maskView addGestureRecognizer:tap];
-    
+    //点击加载
     _groupView=[[JZMerchantFilterView alloc]initWithFrame:CGRectMake(0, 0, screen_width, _maskView.frame.size.height-90)];
     _groupView.delegate=self;
     [_maskView addSubview:_groupView];
@@ -263,7 +266,7 @@
         }
         [self.tableView.header endRefreshing];
         [self.tableView.footer endRefreshing];
-
+        
     } failureBlock:^(NSString *error) {
         NSLog(@"获取商家列表失败：%@",error);
         [self.tableView.header endRefreshing];
@@ -314,8 +317,6 @@
     return 32;
 }
 
-
-
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screen_width, 30)];
     headerView.backgroundColor = RGB(240, 239, 237);
@@ -355,7 +356,6 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     JZMerchantModel *jzMerM = _MerchantArray[indexPath.row];
     NSLog(@"poiid:%@",jzMerM.poiid);
-    
     JZMerchantDetailViewController *jzMerchantDVC = [[JZMerchantDetailViewController alloc] init];
     jzMerchantDVC.poiid = jzMerM.poiid;
     [self.navigationController pushViewController:jzMerchantDVC animated:YES];
@@ -379,5 +379,44 @@
     
 }
 
+#pragma mark - JZMerchantFilterDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath withId:(NSNumber *)ID withName:(NSString *)name{
+    NSLog(@"ID:%@  name:%@",ID,name);
+    _KindID = [ID integerValue];
+    _maskView.hidden = YES;
+    [self getFirstPageData];
+}
+
+//动画-由大变小
+-(void)zoomOut:(UIView *)view andAnimationDuration:(float)duration andWait:(BOOL)wait{
+    __block BOOL done = wait;
+    view.transform = CGAffineTransformIdentity;
+    [UIView animateWithDuration:duration animations:^{
+        view.transform = CGAffineTransformMakeScale(0, 0);
+    } completion:^(BOOL finished){
+        done = YES;
+    }];
+    
+    while (done == NO) {
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
+    }
+}
+
+//动画-由小变大
+-(void)zoomIn:(UIView *)view andAnimationDuration:(float)duration andWait:(BOOL)wait{
+    __block BOOL done = wait;
+    //    view.transform = CGAffineTransformIdentity;
+    view.transform = CGAffineTransformMakeScale(0, 0);
+    [UIView animateWithDuration:duration animations:^{
+        //        view.transform = CGAffineTransformMakeScale(0, 0);
+        view.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished){
+        done = YES;
+    }];
+    
+    while (done == NO) {
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01]];
+    }
+}
 
 @end

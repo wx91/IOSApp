@@ -15,6 +15,9 @@
     [super viewDidLoad];
     self.hidesBottomBarWhenPushed=YES;
     _isFirstIn=0;
+    [self setNav];
+    [self initViews];
+    
     
 }
 #pragma mark 设置页面的导航栏
@@ -42,7 +45,6 @@
 
 #pragma mark 初始化页面信息
 -(void)initViews{
-    
     self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64)];
     self.webView.delegate = self;
     self.webView.scalesPageToFit = YES;

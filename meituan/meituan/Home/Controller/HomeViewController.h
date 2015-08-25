@@ -11,7 +11,7 @@
 #import "DiscountCell.h"
 #import "RushCell.h"
 
-@interface HomeViewController : UIViewController<DiscountDelegate,RushDelegate,UITableViewDelegate,UITableViewDataSource>{
+@interface HomeViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,DiscountDelegate,RushDelegate,UITableViewDelegate,UITableViewDataSource>{
     NSMutableArray *_menuArray;//
     NSMutableArray *_rushArray;
     HotQueueModel *_hotQueueData;

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DisTopicModel.h"
 
-@interface DiscountOCViewController : UITableViewController{
+@interface DiscountOCViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
     UILabel *_titleLabel;
     
     UIImageView *_topicImage;
@@ -20,5 +20,7 @@
 }
 
 @property(nonatomic, strong) NSString *ID;
+
+@property(nonatomic, strong) UITableView *tableView;
 
 @end

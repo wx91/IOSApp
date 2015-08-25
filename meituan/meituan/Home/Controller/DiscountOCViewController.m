@@ -72,6 +72,8 @@
 
 -(void)initViews{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64) style:UITableViewStyleGrouped];
+    self.tableView.dataSource=self;
+    self.tableView.delegate=self;
     [self.view addSubview:self.tableView];
 }
 -(void)OnBackBtn:(UIButton *)sender{

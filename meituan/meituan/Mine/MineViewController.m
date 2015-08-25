@@ -14,6 +14,7 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self initData];
+    [self initViews];
 }
 
 -(void)initData{
@@ -26,6 +27,12 @@
         [dic setObject:@"icon_mine_onsite" forKey:@"image"];
         [data addObject:dic];
     }
+}
+-(void)initViews{
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height) style:UITableViewStyleGrouped];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
 }
 
 #pragma mark -UITableView Delegate

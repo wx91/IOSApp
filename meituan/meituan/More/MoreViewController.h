@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoreViewController : UITableViewController{
+@interface MoreViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
     NSMutableArray *data;
 }
+
+@property(nonatomic,strong)UITableView *tableView;
 
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ShopInfoModel.h"
 
-@interface ShopViewController : UITableViewController{
+@interface ShopViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
     UILabel *_titleLabel;
     UIActivityIndicatorView *_activityView;
     NSString *_recommendTitle;
@@ -21,5 +21,6 @@
 
 @property(nonatomic, strong) NSString *shopID;
 
+@property(nonatomic, strong) UITableView *tableView;
 
 @end

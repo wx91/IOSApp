@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12205E902BD6FFE894620873 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0950222BB235ACFCB450E029 /* libPods.a */; };
+		12205E902BD6FFE894620873 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0950222BB235ACFCB450E029 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		50578C6C1B8B26C600365FC5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50578C6B1B8B26C600365FC5 /* MainViewController.m */; };
 		50578C6E1B8B271300365FC5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50578C6D1B8B271300365FC5 /* CoreLocation.framework */; };
 		50578C791B8B279100365FC5 /* ImageScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50578C721B8B279100365FC5 /* ImageScrollCell.m */; };
@@ -16,6 +16,16 @@
 		50578C7C1B8B279100365FC5 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 50578C781B8B279100365FC5 /* NSString+Size.m */; };
 		50578C801B8B27D100365FC5 /* menuData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50578C7E1B8B27D100365FC5 /* menuData.plist */; };
 		50578C811B8B27D100365FC5 /* MoreData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50578C7F1B8B27D100365FC5 /* MoreData.plist */; };
+		507BF9B51B8BF66800CF7681 /* libobjc.A.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9B41B8BF66800CF7681 /* libobjc.A.dylib */; };
+		507BF9B71B8BF68E00CF7681 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9B61B8BF68E00CF7681 /* libz.dylib */; };
+		507BF9B91B8BF69800CF7681 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9B81B8BF69800CF7681 /* libstdc++.dylib */; };
+		507BF9BB1B8BF6A300CF7681 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9BA1B8BF6A300CF7681 /* libiconv.dylib */; };
+		507BF9BD1B8BF6A900CF7681 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9BC1B8BF6A900CF7681 /* libsqlite3.dylib */; };
+		507BF9C11B8BF6F700CF7681 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9C01B8BF6F700CF7681 /* CoreGraphics.framework */; };
+		507BF9C31B8BF6FF00CF7681 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9C21B8BF6FF00CF7681 /* CoreTelephony.framework */; };
+		507BF9C51B8BF71100CF7681 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9C41B8BF71100CF7681 /* SystemConfiguration.framework */; };
+		507BF9C71B8BF71800CF7681 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9C61B8BF71800CF7681 /* Security.framework */; };
+		5088280C1B8C9982009E6F23 /* JZOnSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5088280B1B8C9982009E6F23 /* JZOnSiteViewController.m */; };
 		50A87BCE1B8B24C3002B1CC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A87BCD1B8B24C3002B1CC4 /* main.m */; };
 		50A87BD11B8B24C3002B1CC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A87BD01B8B24C3002B1CC4 /* AppDelegate.m */; };
 		50A87BD31B8B24C3002B1CC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A87BD21B8B24C3002B1CC4 /* Images.xcassets */; };
@@ -51,7 +61,6 @@
 		50C4F9B41B8B61FA003129AA /* ShopImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F9981B8B61FA003129AA /* ShopImageCell.m */; };
 		50C4F9B51B8B61FA003129AA /* ShopPriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F99A1B8B61FA003129AA /* ShopPriceCell.m */; };
 		50C4F9B61B8B61FA003129AA /* ShopRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F99C1B8B61FA003129AA /* ShopRecommendCell.m */; };
-		50C4F9BA1B8B6207003129AA /* JZOnSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F9B91B8B6207003129AA /* JZOnSiteViewController.m */; };
 		50C4F9E11B8B6212003129AA /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F9BE1B8B6212003129AA /* InfoViewController.m */; };
 		50C4F9E21B8B6212003129AA /* JZMerchantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F9C01B8B6212003129AA /* JZMerchantDetailViewController.m */; };
 		50C4F9E31B8B6212003129AA /* JZMerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C4F9C21B8B6212003129AA /* JZMerchantViewController.m */; };
@@ -210,6 +219,17 @@
 		50578C781B8B279100365FC5 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		50578C7E1B8B27D100365FC5 /* menuData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menuData.plist; sourceTree = "<group>"; };
 		50578C7F1B8B27D100365FC5 /* MoreData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MoreData.plist; sourceTree = "<group>"; };
+		507BF9B41B8BF66800CF7681 /* libobjc.A.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libobjc.A.dylib; path = usr/lib/libobjc.A.dylib; sourceTree = SDKROOT; };
+		507BF9B61B8BF68E00CF7681 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		507BF9B81B8BF69800CF7681 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		507BF9BA1B8BF6A300CF7681 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		507BF9BC1B8BF6A900CF7681 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		507BF9C01B8BF6F700CF7681 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		507BF9C21B8BF6FF00CF7681 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		507BF9C41B8BF71100CF7681 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		507BF9C61B8BF71800CF7681 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5088280A1B8C9982009E6F23 /* JZOnSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZOnSiteViewController.h; sourceTree = "<group>"; };
+		5088280B1B8C9982009E6F23 /* JZOnSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZOnSiteViewController.m; sourceTree = "<group>"; };
 		50A87BC81B8B24C3002B1CC4 /* meituan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meituan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A87BCC1B8B24C3002B1CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A87BCD1B8B24C3002B1CC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -281,8 +301,6 @@
 		50C4F99A1B8B61FA003129AA /* ShopPriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopPriceCell.m; sourceTree = "<group>"; };
 		50C4F99B1B8B61FA003129AA /* ShopRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopRecommendCell.h; sourceTree = "<group>"; };
 		50C4F99C1B8B61FA003129AA /* ShopRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopRecommendCell.m; sourceTree = "<group>"; };
-		50C4F9B81B8B6207003129AA /* JZOnSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZOnSiteViewController.h; sourceTree = "<group>"; };
-		50C4F9B91B8B6207003129AA /* JZOnSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZOnSiteViewController.m; sourceTree = "<group>"; };
 		50C4F9BD1B8B6212003129AA /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		50C4F9BE1B8B6212003129AA /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		50C4F9BF1B8B6212003129AA /* JZMerchantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZMerchantDetailViewController.h; sourceTree = "<group>"; };
@@ -436,6 +454,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507BF9C71B8BF71800CF7681 /* Security.framework in Frameworks */,
+				507BF9C51B8BF71100CF7681 /* SystemConfiguration.framework in Frameworks */,
+				507BF9C31B8BF6FF00CF7681 /* CoreTelephony.framework in Frameworks */,
+				507BF9C11B8BF6F700CF7681 /* CoreGraphics.framework in Frameworks */,
+				507BF9BD1B8BF6A900CF7681 /* libsqlite3.dylib in Frameworks */,
+				507BF9BB1B8BF6A300CF7681 /* libiconv.dylib in Frameworks */,
+				507BF9B91B8BF69800CF7681 /* libstdc++.dylib in Frameworks */,
+				507BF9B71B8BF68E00CF7681 /* libz.dylib in Frameworks */,
+				507BF9B51B8BF66800CF7681 /* libobjc.A.dylib in Frameworks */,
 				50578C6E1B8B271300365FC5 /* CoreLocation.framework in Frameworks */,
 				12205E902BD6FFE894620873 /* libPods.a in Frameworks */,
 			);
@@ -598,12 +625,12 @@
 		50C4F9661B8B61FA003129AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				50C4F96B1B8B61FA003129AA /* HomeViewController.h */,
+				50C4F96C1B8B61FA003129AA /* HomeViewController.m */,
 				50C4F9671B8B61FA003129AA /* DiscountOCViewController.h */,
 				50C4F9681B8B61FA003129AA /* DiscountOCViewController.m */,
 				50C4F9691B8B61FA003129AA /* DiscountViewController.h */,
 				50C4F96A1B8B61FA003129AA /* DiscountViewController.m */,
-				50C4F96B1B8B61FA003129AA /* HomeViewController.h */,
-				50C4F96C1B8B61FA003129AA /* HomeViewController.m */,
 				50C4F96D1B8B61FA003129AA /* HotQueueViewController.h */,
 				50C4F96E1B8B61FA003129AA /* HotQueueViewController.m */,
 				50C4F96F1B8B61FA003129AA /* RushViewController.h */,
@@ -671,8 +698,8 @@
 		50C4F9B71B8B6207003129AA /* Onsite */ = {
 			isa = PBXGroup;
 			children = (
-				50C4F9B81B8B6207003129AA /* JZOnSiteViewController.h */,
-				50C4F9B91B8B6207003129AA /* JZOnSiteViewController.m */,
+				5088280A1B8C9982009E6F23 /* JZOnSiteViewController.h */,
+				5088280B1B8C9982009E6F23 /* JZOnSiteViewController.m */,
 			);
 			path = Onsite;
 			sourceTree = "<group>";
@@ -692,10 +719,10 @@
 			children = (
 				50C4F9BD1B8B6212003129AA /* InfoViewController.h */,
 				50C4F9BE1B8B6212003129AA /* InfoViewController.m */,
-				50C4F9BF1B8B6212003129AA /* JZMerchantDetailViewController.h */,
-				50C4F9C01B8B6212003129AA /* JZMerchantDetailViewController.m */,
 				50C4F9C11B8B6212003129AA /* JZMerchantViewController.h */,
 				50C4F9C21B8B6212003129AA /* JZMerchantViewController.m */,
+				50C4F9BF1B8B6212003129AA /* JZMerchantDetailViewController.h */,
+				50C4F9C01B8B6212003129AA /* JZMerchantDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -926,6 +953,15 @@
 		89ABDA5F1DB21B2ADBDD0286 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				507BF9C61B8BF71800CF7681 /* Security.framework */,
+				507BF9C41B8BF71100CF7681 /* SystemConfiguration.framework */,
+				507BF9C21B8BF6FF00CF7681 /* CoreTelephony.framework */,
+				507BF9C01B8BF6F700CF7681 /* CoreGraphics.framework */,
+				507BF9BC1B8BF6A900CF7681 /* libsqlite3.dylib */,
+				507BF9BA1B8BF6A300CF7681 /* libiconv.dylib */,
+				507BF9B81B8BF69800CF7681 /* libstdc++.dylib */,
+				507BF9B61B8BF68E00CF7681 /* libz.dylib */,
+				507BF9B41B8BF66800CF7681 /* libobjc.A.dylib */,
 				50578C6D1B8B271300365FC5 /* CoreLocation.framework */,
 				0950222BB235ACFCB450E029 /* libPods.a */,
 			);
@@ -1188,7 +1224,6 @@
 			files = (
 				50C4F9641B8B61E6003129AA /* CustomCalloutView.m in Sources */,
 				50A87BD11B8B24C3002B1CC4 /* AppDelegate.m in Sources */,
-				50C4F9BA1B8B6207003129AA /* JZOnSiteViewController.m in Sources */,
 				50C4F9A51B8B61FA003129AA /* DisLabelModel.m in Sources */,
 				50C4F9F01B8B6212003129AA /* JZMerchantFilterView.m in Sources */,
 				50C4F9F51B8B621A003129AA /* MineViewController.m in Sources */,
@@ -1198,6 +1233,7 @@
 				50578C6C1B8B26C600365FC5 /* MainViewController.m in Sources */,
 				50578C7B1B8B279100365FC5 /* NetworkSingleton.m in Sources */,
 				50578C791B8B279100365FC5 /* ImageScrollCell.m in Sources */,
+				5088280C1B8C9982009E6F23 /* JZOnSiteViewController.m in Sources */,
 				50C4FAEA1B8B6333003129AA /* HomeServiceModel.m in Sources */,
 				50C4F9B21B8B61FA003129AA /* RecommendCell.m in Sources */,
 				50C4F9AD1B8B61FA003129AA /* DiscountCell.m in Sources */,
@@ -1354,6 +1390,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = meituan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1365,6 +1405,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = meituan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

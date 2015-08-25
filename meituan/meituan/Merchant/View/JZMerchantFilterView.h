@@ -13,8 +13,7 @@
 @optional
 
 //点击tableview，过滤id
--(void)tableview:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-          withId:(NSNumber *)ID withName:(NSString *)name;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath withId:(NSNumber *)ID withName:(NSString *)name;
 @end
 
 @interface JZMerchantFilterView : UIView<UITableViewDataSource,UITableViewDelegate>{

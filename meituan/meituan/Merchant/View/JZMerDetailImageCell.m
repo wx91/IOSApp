@@ -54,7 +54,10 @@
 }
 -(void)setBigImgUrl:(NSString *)BigImgUrl{
     [_bigImageView sd_setImageWithURL:[NSURL URLWithString:BigImgUrl] placeholderImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
+    //小图也显示一样的
+    [_smallImageView sd_setImageWithURL:[NSURL URLWithString:BigImgUrl] placeholderImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
 }
+
 
 -(void)setShopName:(NSString *)shopName{
     _shopNameLabel.text = shopName;
@@ -63,6 +66,4 @@
 -(void)setAvgPrice:(NSNumber *)avgPrice{
     _avgPriceLabel.text = [NSString stringWithFormat:@"人均：%@元",avgPrice];
 }
-
-
 @end

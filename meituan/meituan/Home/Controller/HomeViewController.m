@@ -40,7 +40,6 @@
     _recommendArray = [[NSMutableArray alloc] init];
     _discountArray = [[NSMutableArray alloc] init];
     
-    
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"menuData" ofType:@"plist"];
     _menuArray = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
 }
@@ -52,11 +51,10 @@
     //城市
     UIButton *cityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     cityBtn.frame = CGRectMake(10, 30, 40, 25);
-//    cityBtn.font = [UIFont systemFontOfSize:15];
     cityBtn.titleLabel.font=[UIFont systemFontOfSize:15];
     [cityBtn setTitle:@"北京" forState:UIControlStateNormal];
     [backView addSubview:cityBtn];
-    //
+    
     UIImageView *arrowImage = [[UIImageView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(cityBtn.frame), 38, 13, 10)];
     [arrowImage setImage:[UIImage imageNamed:@"icon_homepage_downArrow"]];
     [backView addSubview:arrowImage];
@@ -69,7 +67,7 @@
     
     //搜索框
     UIView *searchView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(arrowImage.frame)+10, 30, 200, 25)];
-    //    searchView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_home_searchBar"]];
+    searchView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background_home_searchBar"]];
     searchView.backgroundColor = RGB(7, 170, 153);
     searchView.layer.masksToBounds = YES;
     searchView.layer.cornerRadius = 12;
@@ -82,8 +80,7 @@
     
     UILabel *placeHolderLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 0, 150, 25)];
     placeHolderLabel.font = [UIFont boldSystemFontOfSize:13];
-    //    placeHolderLabel.text = @"请输入商家、品类、商圈";
-    placeHolderLabel.text = @"鲁总专享版";
+    placeHolderLabel.text = @"请输入商家、品类、商圈";
     placeHolderLabel.textColor = [UIColor whiteColor];
     [searchView addSubview:placeHolderLabel];
 }
@@ -99,7 +96,8 @@
 -(void)setUpTableView{
     //添加下拉的动画图片
     //设置下拉刷新回调
-    [self.tableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+//    [self.tableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+    [self refreshData];
     
     //设置普通状态的动画图片
     NSMutableArray *idleImages = [NSMutableArray array];
@@ -107,7 +105,7 @@
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%zd",i]];
         [idleImages addObject:image];
     }
-    [self.tableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
+//    [self.tableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
     
     //设置即将刷新状态的动画图片
     NSMutableArray *refreshingImages = [NSMutableArray array];
@@ -115,13 +113,13 @@
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_loading_0%zd",i]];
         [refreshingImages addObject:image];
     }
-    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
+//    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
     
     //设置正在刷新是的动画图片
-    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
+//    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
     
     //马上进入刷新状态
-    [self.tableView.gifHeader beginRefreshing];
+//    [self.tableView.gifHeader beginRefreshing];
 }
 -(void)OnMapBtnTap:(UIButton *)sender{
     JZMapViewControlle *JZMapVC = [[JZMapViewControlle alloc] init];
@@ -130,7 +128,7 @@
 
 -(void)refreshData{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
-        //
+        
         [self getRushBuyData];
         [self getHotQueueData];
         [self getRecommendData];

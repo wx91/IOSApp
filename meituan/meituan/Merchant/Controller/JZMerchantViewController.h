@@ -18,6 +18,7 @@
     UIView *_maskView;
     JZMerchantFilterView *_groupView;
 }
+
 @property(nonatomic, strong) UITableView *tableView;
 
 

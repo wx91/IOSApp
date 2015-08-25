@@ -40,6 +40,7 @@
     self.tableViewOfGroup.dataSource=self;
     self.tableViewOfGroup.backgroundColor=[UIColor whiteColor];
     self.tableViewOfGroup.separatorStyle=UITableViewCellSeparatorStyleNone;
+    self.tableViewOfGroup.allowsMultipleSelection=NO;
     [self addSubview:_tableViewOfGroup];
     
     //详细
@@ -48,6 +49,7 @@
     self.tableViewOfDetail.delegate=self;
     self.tableViewOfDetail.backgroundColor = RGB(242, 242, 242);
     self.tableViewOfDetail.separatorStyle=UITableViewCellSeparatorStyleNone;
+    self.tableViewOfDetail.allowsMultipleSelection=NO;
     [self addSubview:self.tableViewOfDetail];
     self.userInteractionEnabled=YES;
 }
@@ -126,17 +128,18 @@
         JZMerCateGroupModel *cateM=(JZMerCateGroupModel *) _bigGroupArray[_bigSelectedIndex];
         if (cateM.list==nil) {
             [self.tableViewOfDetail reloadData];
-            [self.delegate tableview:tableView didSelectRowAtIndexPath:indexPath withId:cateM.id withName:cateM.name];
+//            [self.delegate tableview:tableView didSelectRowAtIndexPath:indexPath withId:cateM.id withName:cateM.name];
         }else{
             [self.tableViewOfDetail reloadData];
         }
     }else{
         _smallSelectedIndex =indexPath.row;
         JZMerCateGroupModel *cateM=(JZMerCateGroupModel *) _bigGroupArray[_bigSelectedIndex];
+        
         NSDictionary *dic=cateM.list[_smallSelectedIndex];
         NSNumber *ID=[dic objectForKey:@"id"];
         NSString *name=[dic objectForKey:@"name"];
-        [self.delegate tableview:tableView didSelectRowAtIndexPath:indexPath withId:ID withName:name];
+        [self.delegate tableView:tableView didSelectRowAtIndexPath:indexPath withId:ID withName:name];
     }
 }
 

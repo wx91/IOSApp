@@ -21,16 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+
+    [self initData];
+    [self setNav];
+    [self initTableView];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self getMerchantDetailData];
+        [self getAroundGroupPurchaseData];
+    });
+}
+-(void)initData{
     _dataSourceArray=[NSMutableArray array];
     _dealsArray=[NSMutableArray array];
-    
-    [self setNav];
-    
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64) style:UITableViewStyleGrouped];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.view addSubview:self.tableView];
-    
 }
 
 #pragma mark 自定义导航栏
@@ -72,6 +74,13 @@
     [backView addSubview:shareBtn];
 }
 
+-(void)initTableView{
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, screen_width, screen_height-64) style:UITableViewStyleGrouped];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.view addSubview:self.tableView];
+}
+
 #pragma mark 响应事件
 -(void)OnBackBtn:(UIButton *)sender{
     [self.navigationController popViewControllerAnimated:YES];
@@ -108,7 +117,6 @@
             JZMerDetailModel *jzMerDetailM = [JZMerDetailModel objectWithKeyValues:dataArray[0]];
             [_dataSourceArray addObject:jzMerDetailM];
         }
-        
         [self.tableView reloadData];
         
     } failureBlock:^(NSString *error){
@@ -121,6 +129,8 @@
     NSString *urlStr = @"http://api.meituan.com/group/v1/poi/4636105/imgs?__skck=40aaaf01c2fc4801b9c059efcd7aa146&__skcy=bxjqBsqhy3J7%2B4OI2YcZVheKu28%3D&__skno=B3D4BFC9-0E7D-4A26-87C4-36AD824F246A&__skts=1437116397.537090&__skua=bd6b6e8eadfad15571a15c3b9ef9199a&__vhost=api.mobile.meituan.com&ci=1&classified=true&client=iphone&limit=3&movieBundleVersion=100&msid=48E2B810-805D-4821-9CDD-D5C9E01BC98A2015-07-17-14-20300&offset=0&userid=10086&utm_campaign=AgroupBgroupD100Fa20141120nanning__m1__leftflow___ab_pindaochangsha__a__leftflow___ab_gxtest__gd__leftflow___ab_gxhceshi__nostrategy__leftflow___ab_i550poi_ktv__d__j___ab_chunceshishuju__a__a___ab_gxh_82__nostrategy__leftflow___ab_i_group_5_3_poidetaildeallist__a__b___b1junglehomepagecatesort__b__leftflow___ab_gxhceshi0202__b__a___ab_pindaoquxincelue0630__b__b1___ab_i550poi_xxyl__b__leftflow___ab_i_group_5_6_searchkuang__a__leftflow___i_group_5_2_deallist_poitype__d__d___ab_pindaoshenyang__a__leftflow___ab_b_food_57_purepoilist_extinfo__a__a___ab_waimaiwending__b__a___ab_waimaizhanshi__b__b1___ab_i550poi_lr__d__leftflow___ab_i_group_5_5_onsite__b__b___ab_xinkeceshi__b__leftflowGmerchant&utm_content=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&utm_medium=iphone&utm_source=AppStore&utm_term=5.7&uuid=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&version_name=5.7";
     [[NetworkSingleton shareManager] getMerchantImagesResult:nil url:urlStr successBlock:^(id responseBody){
         NSLog(@"商家详情请求成功");
+        
+        
     } failureBlock:^(NSString *error){
         NSLog(@"商家详情请求失败：%@",error);
     }];
@@ -190,7 +200,6 @@
         JZMerDetailImageCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIndentifier];
         if (cell == nil) {
             cell = [[JZMerDetailImageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIndentifier];
-            
         }
         if (_dataSourceArray.count > 0) {
             JZMerDetailModel *jzMerDM = _dataSourceArray[0];
@@ -216,7 +225,7 @@
             locationLabel.textColor = [UIColor grayColor];
             locationLabel.numberOfLines = 2;
             [cell addSubview:locationLabel];
-            //
+
             UIImageView *telImgView = [[UIImageView alloc] initWithFrame:CGRectMake(screen_width-35, 15, 19, 25)];
             [telImgView setImage:[UIImage imageNamed:@"icon_deal_phone"]];
             [cell addSubview:telImgView];
