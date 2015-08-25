@@ -20,17 +20,8 @@
 #import "Constant.h"
 #import "MJRefresh.h"
 #import "UIScrollView+MJRefresh.h"
-
-@interface JZOnSiteViewController ()<UITableViewDataSource,UITableViewDelegate,HomeServiceDelegate>
-{
-    NSMutableArray *_advArray;//广告数据源
-    NSMutableArray *_advImageUrlArray;//广告图片数组
-    
-    NSMutableArray *_homeServiceArray;//上门服务数据源
-    
-}
-
-@end
+#import "MJChiBaoZiFooter.h"
+#import "MJChiBaoZiHeader.h"
 
 @implementation JZOnSiteViewController
 
@@ -68,32 +59,8 @@
 -(void)setUpTableView{
     //添加下拉的动画图片
     //设置下拉刷新回调
-//    [self.tableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    
-    //设置普通状态的动画图片
-    NSMutableArray *idleImages = [NSMutableArray array];
-    for (NSUInteger i = 1; i<=60; ++i) {
-        //        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%zd",i]];
-        //        [idleImages addObject:image];
-        UIImage *image = [UIImage imageNamed:@"icon_listheader_animation_1"];
-        [idleImages addObject:image];
-    }
-//    [self.tableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
-    
-    //设置即将刷新状态的动画图片
-    NSMutableArray *refreshingImages = [NSMutableArray array];
-    UIImage *image1 = [UIImage imageNamed:@"icon_listheader_animation_1"];
-    [refreshingImages addObject:image1];
-    UIImage *image2 = [UIImage imageNamed:@"icon_listheader_animation_2"];
-    [refreshingImages addObject:image2];
-//    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
-    
-    //设置正在刷新是的动画图片
-//    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
-    
-    //马上进入刷新状态
-//    [self.tableView.gifHeader beginRefreshing];
-    [self loadNewData];
+    self.tableView.header=[MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    [self.tableView.header beginRefreshing];
 }
 
 -(void)loadNewData{

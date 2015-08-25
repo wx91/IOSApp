@@ -26,6 +26,8 @@
 		507BF9C51B8BF71100CF7681 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9C41B8BF71100CF7681 /* SystemConfiguration.framework */; };
 		507BF9C71B8BF71800CF7681 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507BF9C61B8BF71800CF7681 /* Security.framework */; };
 		5088280C1B8C9982009E6F23 /* JZOnSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5088280B1B8C9982009E6F23 /* JZOnSiteViewController.m */; };
+		509FB0AD1B8CAE1300FE8EFE /* MJChiBaoZiFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 509FB0AA1B8CAE1300FE8EFE /* MJChiBaoZiFooter.m */; };
+		509FB0AE1B8CAE1300FE8EFE /* MJChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 509FB0AC1B8CAE1300FE8EFE /* MJChiBaoZiHeader.m */; };
 		50A87BCE1B8B24C3002B1CC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A87BCD1B8B24C3002B1CC4 /* main.m */; };
 		50A87BD11B8B24C3002B1CC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A87BD01B8B24C3002B1CC4 /* AppDelegate.m */; };
 		50A87BD31B8B24C3002B1CC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A87BD21B8B24C3002B1CC4 /* Images.xcassets */; };
@@ -230,6 +232,10 @@
 		507BF9C61B8BF71800CF7681 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5088280A1B8C9982009E6F23 /* JZOnSiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZOnSiteViewController.h; sourceTree = "<group>"; };
 		5088280B1B8C9982009E6F23 /* JZOnSiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZOnSiteViewController.m; sourceTree = "<group>"; };
+		509FB0A91B8CAE1300FE8EFE /* MJChiBaoZiFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiFooter.h; sourceTree = "<group>"; };
+		509FB0AA1B8CAE1300FE8EFE /* MJChiBaoZiFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiFooter.m; sourceTree = "<group>"; };
+		509FB0AB1B8CAE1300FE8EFE /* MJChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJChiBaoZiHeader.h; sourceTree = "<group>"; };
+		509FB0AC1B8CAE1300FE8EFE /* MJChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJChiBaoZiHeader.m; sourceTree = "<group>"; };
 		50A87BC81B8B24C3002B1CC4 /* meituan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meituan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A87BCC1B8B24C3002B1CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A87BCD1B8B24C3002B1CC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -481,6 +487,10 @@
 		50578C6F1B8B279100365FC5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				509FB0A91B8CAE1300FE8EFE /* MJChiBaoZiFooter.h */,
+				509FB0AA1B8CAE1300FE8EFE /* MJChiBaoZiFooter.m */,
+				509FB0AB1B8CAE1300FE8EFE /* MJChiBaoZiHeader.h */,
+				509FB0AC1B8CAE1300FE8EFE /* MJChiBaoZiHeader.m */,
 				50578C701B8B279100365FC5 /* Constant.h */,
 				50578C711B8B279100365FC5 /* ImageScrollCell.h */,
 				50578C721B8B279100365FC5 /* ImageScrollCell.m */,
@@ -1249,6 +1259,7 @@
 				50C4F9FA1B8B6236003129AA /* MoreViewController.m in Sources */,
 				50C4F9EB1B8B6212003129AA /* HomeServiceCell.m in Sources */,
 				50C4F9E11B8B6212003129AA /* InfoViewController.m in Sources */,
+				509FB0AE1B8CAE1300FE8EFE /* MJChiBaoZiHeader.m in Sources */,
 				50C4F99E1B8B61FA003129AA /* DiscountViewController.m in Sources */,
 				50C4F9E31B8B6212003129AA /* JZMerchantViewController.m in Sources */,
 				50C4FAEB1B8B6333003129AA /* JZMerAroundGroupModel.m in Sources */,
@@ -1270,6 +1281,7 @@
 				50C4F9A71B8B61FA003129AA /* HotQueueModel.m in Sources */,
 				50C4F9B51B8B61FA003129AA /* ShopPriceCell.m in Sources */,
 				50C4F9B01B8B61FA003129AA /* HotQueueCell.m in Sources */,
+				509FB0AD1B8CAE1300FE8EFE /* MJChiBaoZiFooter.m in Sources */,
 				50C4F99D1B8B61FA003129AA /* DiscountOCViewController.m in Sources */,
 				50C4F9EC1B8B6212003129AA /* JZKindFilterCell.m in Sources */,
 				50C4F9621B8B61E6003129AA /* JZMAAroundModel.m in Sources */,

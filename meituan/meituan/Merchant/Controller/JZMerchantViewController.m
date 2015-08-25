@@ -16,6 +16,8 @@
 #import "AppDelegate.h"
 #import "JZMerchantCell.h"
 #import "JZMerchantDetailViewController.h"
+#import "MJChiBaoZiFooter.h"
+#import "MJChiBaoZiHeader.h"
 
 @implementation JZMerchantViewController
 
@@ -130,31 +132,8 @@
 }
 #pragma mark 设置tableview的下拉等
 -(void)setUpTableView{
-    //添加下拉的动画图片
-    //设置下拉刷新回调
-//    [self.tableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(getFirstPageData)];
-    //设置普通状态下的动画图片
-    NSMutableArray *idleImages=[NSMutableArray array];
-    for (NSUInteger i=1; i<=60; ++i) {
-        UIImage *image=[UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%zd",i]];
-        [idleImages addObject:image];
-    }
-//    [self.tableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
-    //设置即将刷新状态的动画图片
-    NSMutableArray *refreshingImages=[NSMutableArray array];
-    for (NSInteger i=1; i<=3; i++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_loading_0%zd",i]];
-        [refreshingImages addObject:image];
-    }
-//    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
-    //设置正在刷新是的动画图片
-//    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
-    //马上进入刷新状态
-//    [self.tableView.gifHeader beginRefreshing];
-    //上拉刷新
-//    [self.tableView addGifFooterWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
-    //设置正在刷新的动画
-//    self.tableView.gifFooter.refreshingImages = refreshingImages;
+    self.tableView.header=[MJChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(getFirstPageData)];
+    self.tableView.footer=[MJChiBaoZiFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
 #pragma mark 遮罩页
