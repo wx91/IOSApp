@@ -23,7 +23,9 @@
 #import "HotQueueViewController.h"
 #import "MJChiBaoZiFooter.h"
 #import "MJChiBaoZiHeader.h"
-
+#import "DiscountViewController.h"
+#import "DiscountOCViewController.h"
+#import "RushViewController.h"
 @implementation HomeViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -405,5 +407,29 @@
             [self.navigationController pushViewController:shopVC animated:YES];
         }
     }
+}
+
+#pragma mark - DiscountDelegate
+-(void)didSelectUrl:(NSString *)urlStr withType:(NSNumber *)type withId:(NSNumber *)ID withTitle:(NSString *)title{
+    NSNumber *num = [[NSNumber alloc] initWithLong:1];
+    if ([type isEqualToValue: num]) {
+        DiscountViewController *discountVC = [[DiscountViewController alloc] init];
+        discountVC.urlStr = urlStr;
+        [self.navigationController pushViewController:discountVC animated:YES];
+    }else{
+        NSLog(@"ID: %@",[ID stringValue]);
+        NSString *IDStr = [ID stringValue];
+        DiscountOCViewController *disOCVC = [[DiscountOCViewController alloc] init];
+        disOCVC.ID = IDStr;
+        disOCVC.title = title;
+        [self.navigationController pushViewController:disOCVC animated:YES];
+    }
+
+}
+
+#pragma mark - RushDelegate
+-(void)didSelectRushIndex:(NSInteger)index{
+    RushViewController *rushVC = [[RushViewController alloc] init];
+    [self.navigationController pushViewController:rushVC animated:YES];
 }
 @end

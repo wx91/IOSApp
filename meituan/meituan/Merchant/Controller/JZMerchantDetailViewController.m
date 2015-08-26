@@ -150,7 +150,6 @@
             [_dealsArray addObject:jzAroundM];
         }
         [self.tableView reloadData];
-        
     } failureBlock:^(NSString *error){
         NSLog(@"附近团购请求失败:%@",error);
     }];
