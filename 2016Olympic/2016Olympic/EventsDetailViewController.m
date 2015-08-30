@@ -21,7 +21,7 @@
     self.txtViewOlympicInfo.text = self.event.OlympicInfo;
     self.scrollView.frame = self.view.frame;
     self.scrollView.contentInset = UIEdgeInsetsMake(-50,0,0,0); //top, left, bottom, right;
-    self.scrollView.contentSize = CGSizeMake(320, 900);
+    self.scrollView.contentSize = CGSizeMake(320, 100);
 }
 
 - (void)didReceiveMemoryWarning {

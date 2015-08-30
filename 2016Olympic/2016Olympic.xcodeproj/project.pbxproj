@@ -344,15 +344,15 @@
 		5015EBA91B80553500A2E7BF /* 2016Olympic */ = {
 			isa = PBXGroup;
 			children = (
-				5015ECD01B80A69600A2E7BF /* home */,
 				5015EBAE1B80553500A2E7BF /* AppDelegate.h */,
 				5015EBAF1B80553500A2E7BF /* AppDelegate.m */,
 				5015ECCD1B80A68F00A2E7BF /* MainViewController.h */,
 				5015ECCE1B80A68F00A2E7BF /* MainViewController.m */,
-				5015EBF11B80602200A2E7BF /* DBFile */,
-				5015EBD91B8057BE00A2E7BF /* DAO */,
-				5015EBD21B8055A200A2E7BF /* entity */,
+				5015ECD01B80A69600A2E7BF /* Controller */,
 				5015EBD01B80556800A2E7BF /* BL */,
+				5015EBD91B8057BE00A2E7BF /* DAO */,
+				5015EBF11B80602200A2E7BF /* DBFile */,
+				5015EBD21B8055A200A2E7BF /* entity */,
 				5015EBB71B80553500A2E7BF /* Images.xcassets */,
 				5015EBAA1B80553500A2E7BF /* Supporting Files */,
 			);
@@ -706,7 +706,7 @@
 			path = tabbar_icon;
 			sourceTree = "<group>";
 		};
-		5015ECD01B80A69600A2E7BF /* home */ = {
+		5015ECD01B80A69600A2E7BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5015ECD11B80AA2500A2E7BF /* HomeViewController.h */,
@@ -728,7 +728,7 @@
 				5015EC061B809F7D00A2E7BF /* AboutViewController.m */,
 				5015EC071B809F7D00A2E7BF /* AboutViewController.xib */,
 			);
-			name = home;
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1036,6 +1036,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = 2016Olympic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1050,6 +1051,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = 2016Olympic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1113,6 +1115,7 @@
 				5015EBCC1B80553500A2E7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5015EBCD1B80553500A2E7BF /* Build configuration list for PBXNativeTarget "2016OlympicTests" */ = {
 			isa = XCConfigurationList;
@@ -1121,6 +1124,7 @@
 				5015EBCF1B80553500A2E7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
