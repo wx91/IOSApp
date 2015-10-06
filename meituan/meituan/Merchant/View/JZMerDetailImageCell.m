@@ -20,11 +20,11 @@
         [self addSubview:_bigImageView];
         
         //小图
-//        _smallImageView = [[UIImageView alloc] initWithFrame:CGRectMake(screen_width-10-80, 85, 80, 80)];
-//        [_smallImageView setImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
-//        _smallImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
-//        _smallImageView.layer.borderWidth = 1;
-//        [self addSubview:_smallImageView];
+        _smallImageView = [[UIImageView alloc] initWithFrame:CGRectMake(screen_width-10-80, 85, 80, 80)];
+        [_smallImageView setImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
+        _smallImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
+        _smallImageView.layer.borderWidth = 1;
+        [self addSubview:_smallImageView];
         
         
         //店名

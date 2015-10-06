@@ -44,7 +44,6 @@
 }
 -(void)setShopRecM:(ShopRecommendModel *)shopRecM{
     _shopRecM = shopRecM;
-    
     NSString *imgUrl = [shopRecM.imgurl stringByReplacingOccurrencesOfString:@"w.h" withString:@"160.0"];
     [_shopImageView sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
     

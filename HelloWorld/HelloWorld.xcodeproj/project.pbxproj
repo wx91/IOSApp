@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500036B21B94751A0075A3E3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500036B11B94751A0075A3E3 /* MainViewController.m */; };
 		504C02DC1B8B0D8500384AFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 504C02DB1B8B0D8500384AFA /* main.m */; };
 		504C02DF1B8B0D8500384AFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 504C02DE1B8B0D8500384AFA /* AppDelegate.m */; };
 		504C02E11B8B0D8500384AFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504C02E01B8B0D8500384AFA /* Images.xcassets */; };
@@ -27,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		39887079FECF36CAB8B118C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		500036AD1B9475050075A3E3 /* HelloWorld-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWorld-Bridging-Header.h"; sourceTree = "<group>"; };
+		500036B01B94751A0075A3E3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		500036B11B94751A0075A3E3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		504C02D61B8B0D8500384AFA /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		504C02DA1B8B0D8500384AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		504C02DB1B8B0D8500384AFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +109,9 @@
 				504C02E01B8B0D8500384AFA /* Images.xcassets */,
 				504C02E21B8B0D8500384AFA /* LaunchScreen.xib */,
 				504C02D91B8B0D8500384AFA /* Supporting Files */,
+				500036AD1B9475050075A3E3 /* HelloWorld-Bridging-Header.h */,
+				500036B01B94751A0075A3E3 /* MainViewController.h */,
+				500036B11B94751A0075A3E3 /* MainViewController.m */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -270,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				504C02DF1B8B0D8500384AFA /* AppDelegate.m in Sources */,
+				500036B21B94751A0075A3E3 /* MainViewController.m in Sources */,
 				504C02DC1B8B0D8500384AFA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,9 +399,12 @@
 			baseConfigurationReference = 518668A672B40EF441D5DB71 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld/HelloWorld-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -402,9 +413,11 @@
 			baseConfigurationReference = C34F1CEFCDDEA3A28CFE1D60 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloWorld/HelloWorld-Bridging-Header.h";
 			};
 			name = Release;
 		};

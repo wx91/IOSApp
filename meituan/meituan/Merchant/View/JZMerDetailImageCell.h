@@ -14,7 +14,6 @@
     UILabel *_avgPriceLabel;
     UILabel *_shopNameLabel;
 }
-
 @property(nonatomic, strong) NSString *BigImgUrl;
 @property(nonatomic, strong) NSString *SmallImgUrl;
 @property(nonatomic, strong) NSNumber *score;

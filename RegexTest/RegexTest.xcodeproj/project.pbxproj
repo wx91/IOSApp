@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500036B81B94A1970075A3E3 /* Father.m in Sources */ = {isa = PBXBuildFile; fileRef = 500036B71B94A1970075A3E3 /* Father.m */; };
+		500036BB1B94A1A70075A3E3 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 500036BA1B94A1A70075A3E3 /* Son.m */; };
 		5073C1D41B78F4D000329E0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5073C1D31B78F4D000329E0D /* main.m */; };
 		5073C1DF1B78F53100329E0D /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5073C1DE1B78F53100329E0D /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5073C1E11B78F5DF00329E0D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5073C1E01B78F5DF00329E0D /* libicucore.dylib */; };
@@ -25,6 +27,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		500036B61B94A1970075A3E3 /* Father.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Father.h; sourceTree = "<group>"; };
+		500036B71B94A1970075A3E3 /* Father.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Father.m; sourceTree = "<group>"; };
+		500036B91B94A1A70075A3E3 /* Son.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		500036BA1B94A1A70075A3E3 /* Son.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		5073C1D01B78F4D000329E0D /* RegexTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RegexTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5073C1D31B78F4D000329E0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5073C1DC1B78F53100329E0D /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
@@ -67,6 +73,10 @@
 			isa = PBXGroup;
 			children = (
 				5073C1D31B78F4D000329E0D /* main.m */,
+				500036B61B94A1970075A3E3 /* Father.h */,
+				500036B71B94A1970075A3E3 /* Father.m */,
+				500036B91B94A1A70075A3E3 /* Son.h */,
+				500036BA1B94A1A70075A3E3 /* Son.m */,
 			);
 			path = RegexTest;
 			sourceTree = "<group>";
@@ -146,7 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500036BB1B94A1A70075A3E3 /* Son.m in Sources */,
 				5073C1DF1B78F53100329E0D /* RegexKitLite.m in Sources */,
+				500036B81B94A1970075A3E3 /* Father.m in Sources */,
 				5073C1D41B78F4D000329E0D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +246,7 @@
 		5073C1D81B78F4D000329E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +254,7 @@
 		5073C1D91B78F4D000329E0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -264,6 +278,7 @@
 				5073C1D91B78F4D000329E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

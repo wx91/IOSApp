@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "77B6C40EFAB42F015153220D250E3961983746E6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "77B6C40EFAB42F015153220D250E3961983746E6" : 0,
+    "191001AC774C8DBAFAAD8CD27B229EB1423F56A0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1EAA3558-B6E6-42C5-8CCD-D8CF6D025BC5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "77B6C40EFAB42F015153220D250E3961983746E6" : "IOSApp",
+    "191001AC774C8DBAFAAD8CD27B229EB1423F56A0" : "IOSStudy"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CrazyDrag",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CrazyDrag\/CrazyDrag.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wx91\/IOSStudy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "191001AC774C8DBAFAAD8CD27B229EB1423F56A0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/wx91\/IOSApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77B6C40EFAB42F015153220D250E3961983746E6"
+    }
+  ]
+}
