@@ -11,11 +11,6 @@
 
 @implementation Checklist
 
-
-//count
-
-
-
 -(id)init{
     if((self = [super init])){
         self.items = [[NSMutableArray alloc]initWithCapacity:20];
@@ -23,7 +18,6 @@
     }
     return self;
 }
-
 
 -(id)initWithCoder:(NSCoder *)aDecoder{
     if((self =[super init])){
@@ -52,7 +46,6 @@
 }
 
 -(NSComparisonResult)compare:(Checklist*)otherChecklist{
-    
     return [self.name localizedStandardCompare:otherChecklist.name];
 }
 
