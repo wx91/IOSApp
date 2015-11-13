@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MJRefresh.h"
-
+#import "MainViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -21,6 +20,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    MainViewController *controller=[[MainViewController alloc]init];
+//    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:controller];
+//    self.window.rootViewController=nav;
+    self.window.rootViewController=controller;
+    
     return YES;
 }
 

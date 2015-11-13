@@ -28,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		39887079FECF36CAB8B118C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		500036AD1B9475050075A3E3 /* HelloWorld-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloWorld-Bridging-Header.h"; sourceTree = "<group>"; };
 		500036B01B94751A0075A3E3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		500036B11B94751A0075A3E3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		504C02D61B8B0D8500384AFA /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +108,6 @@
 				504C02E01B8B0D8500384AFA /* Images.xcassets */,
 				504C02E21B8B0D8500384AFA /* LaunchScreen.xib */,
 				504C02D91B8B0D8500384AFA /* Supporting Files */,
-				500036AD1B9475050075A3E3 /* HelloWorld-Bridging-Header.h */,
 				500036B01B94751A0075A3E3 /* MainViewController.h */,
 				500036B11B94751A0075A3E3 /* MainViewController.m */,
 			);
@@ -154,6 +152,7 @@
 				504C02D31B8B0D8500384AFA /* Frameworks */,
 				504C02D41B8B0D8500384AFA /* Resources */,
 				0D97260FFB9A02A1684E1CA6 /* Copy Pods Resources */,
+				A9C421FC2CDFD7386500816B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,6 +266,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A9C421FC2CDFD7386500816B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
