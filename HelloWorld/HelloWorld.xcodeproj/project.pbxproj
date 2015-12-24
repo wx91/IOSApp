@@ -13,6 +13,8 @@
 		504C02E11B8B0D8500384AFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504C02E01B8B0D8500384AFA /* Images.xcassets */; };
 		504C02E41B8B0D8500384AFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 504C02E21B8B0D8500384AFA /* LaunchScreen.xib */; };
 		504C02F01B8B0D8500384AFA /* HelloWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 504C02EF1B8B0D8500384AFA /* HelloWorldTests.m */; };
+		506FDF8A1C0C517200763F74 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 506FDF881C0C517200763F74 /* TableViewCell.m */; };
+		506FDF8B1C0C517200763F74 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506FDF891C0C517200763F74 /* TableViewCell.xib */; };
 		DC537527FC664C0E558E4B08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39887079FECF36CAB8B118C8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,9 @@
 		504C02E91B8B0D8500384AFA /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		504C02EE1B8B0D8500384AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		504C02EF1B8B0D8500384AFA /* HelloWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldTests.m; sourceTree = "<group>"; };
+		506FDF871C0C517200763F74 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		506FDF881C0C517200763F74 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		506FDF891C0C517200763F74 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		518668A672B40EF441D5DB71 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C34F1CEFCDDEA3A28CFE1D60 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +115,9 @@
 				504C02D91B8B0D8500384AFA /* Supporting Files */,
 				500036B01B94751A0075A3E3 /* MainViewController.h */,
 				500036B11B94751A0075A3E3 /* MainViewController.m */,
+				506FDF871C0C517200763F74 /* TableViewCell.h */,
+				506FDF881C0C517200763F74 /* TableViewCell.m */,
+				506FDF891C0C517200763F74 /* TableViewCell.xib */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				504C02E41B8B0D8500384AFA /* LaunchScreen.xib in Resources */,
+				506FDF8B1C0C517200763F74 /* TableViewCell.xib in Resources */,
 				504C02E11B8B0D8500384AFA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				504C02DF1B8B0D8500384AFA /* AppDelegate.m in Sources */,
+				506FDF8A1C0C517200763F74 /* TableViewCell.m in Sources */,
 				500036B21B94751A0075A3E3 /* MainViewController.m in Sources */,
 				504C02DC1B8B0D8500384AFA /* main.m in Sources */,
 			);
