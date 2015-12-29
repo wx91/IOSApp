@@ -2,13 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Groceries.png"
+      "filename" : "Groceries.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "Groceries@2x.png"
+      "filename" : "Groceries@2x.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",
