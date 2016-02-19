@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "UIImageView+LBBlurredImage.h"
 
-@interface WXController : UIViewController
+
+@interface WXController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 
@@ -18,5 +19,6 @@
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, assign) CGFloat screenHeight;
+
 
 @end
