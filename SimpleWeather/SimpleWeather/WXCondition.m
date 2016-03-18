@@ -2,18 +2,22 @@
 //  WXCondition.m
 //  SimpleWeather
 //
-//  Created by 王享 on 16/2/19.
+//  Created by 王享 on 16/3/18.
 //  Copyright © 2016年 王享. All rights reserved.
 //
 
 #import "WXCondition.h"
+
 #define MPS_TO_MPH 2.23694f
+
 
 @implementation WXCondition
 
 + (NSDictionary *)imageMap {
+    // 1
     static NSDictionary *_imageMap = nil;
     if (! _imageMap) {
+        // 2
         _imageMap = @{
                       @"01d" : @"weather-clear",
                       @"02d" : @"weather-few",
@@ -37,32 +41,13 @@
     }
     return _imageMap;
 }
--(NSString *)imageName{
+
+// 3
+- (NSString *)imageName {
     return [WXCondition imageMap][self.icon];
 }
 
-//{
-//    "dt": 1384279857,
-//    "id": 5391959,
-//    "main": {
-//        "humidity": 69,
-//        "pressure": 1025,
-//        "temp": 62.29,
-//        "temp_max": 69.01,
-//        "temp_min": 57.2
-//    },
-//    "name": "San Francisco",
-//    "weather": [
-//                {
-//                    "description": "haze",
-//                    "icon": "50d",
-//                    "id": 721,
-//                    "main": "Haze"
-//                }
-//                ]
-//}
-
-+ (NSDictionary *)JSONKeyPathsByPropertyKey{
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"date": @"dt",
              @"locationName": @"name",
@@ -79,14 +64,15 @@
              @"windSpeed": @"wind.speed"
              };
 }
-+ (NSValueTransformer *)dateJSONTransformer {
-    
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
+
++(NSValueTransformer *)dateJSONTransformer{
+    return [MTLValueTransformer transformerUsingForwardBlock:^(NSString *str, BOOL *success, NSError *__autoreleasing *error) {
         return [NSDate dateWithTimeIntervalSince1970:str.floatValue];
-    } reverseBlock:^(NSDate *date) {
+    } reverseBlock:^(NSDate *date, BOOL *success, NSError *__autoreleasing *error) {
         return [NSString stringWithFormat:@"%f",[date timeIntervalSince1970]];
     }];
 }
+
 + (NSValueTransformer *)sunriseJSONTransformer {
     return [self dateJSONTransformer];
 }
@@ -95,10 +81,11 @@
     return [self dateJSONTransformer];
 }
 
-+ (NSValueTransformer *)conditionDescriptionJSONTransformer {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSArray *values) {
+
++(NSValueTransformer *)conditionDescriptionJSONTransformer{
+    return [MTLValueTransformer transformerUsingForwardBlock:^(NSArray *values, BOOL *success, NSError *__autoreleasing *error) {
         return [values firstObject];
-    } reverseBlock:^(NSString *str) {
+    } reverseBlock:^(NSString *str, BOOL *success, NSError *__autoreleasing *error) {
         return @[str];
     }];
 }
@@ -111,10 +98,10 @@
     return [self conditionDescriptionJSONTransformer];
 }
 
-+ (NSValueTransformer *)windSpeedJSONTransformer {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSNumber *num) {
+-(NSValueTransformer *)windSpeedJSONTransformer{
+    return [MTLValueTransformer transformerUsingForwardBlock:^(NSNumber *num, BOOL *success, NSError *__autoreleasing *error) {
         return @(num.floatValue*MPS_TO_MPH);
-    } reverseBlock:^(NSNumber *speed) {
+    } reverseBlock:^(NSNumber *speed, BOOL *success, NSError *__autoreleasing *error) {
         return @(speed.floatValue/MPS_TO_MPH);
     }];
 }

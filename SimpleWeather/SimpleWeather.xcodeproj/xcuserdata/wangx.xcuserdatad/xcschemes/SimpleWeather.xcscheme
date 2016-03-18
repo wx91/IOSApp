@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0720"
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "504EF71B1C7707DB0092A60D"
+               BlueprintIdentifier = "50E8847B1C9BABF100600B83"
                BuildableName = "SimpleWeather.app"
                BlueprintName = "SimpleWeather"
                ReferencedContainer = "container:SimpleWeather.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "504EF7341C7707DB0092A60D"
+               BlueprintIdentifier = "50E884941C9BABF100600B83"
                BuildableName = "SimpleWeatherTests.xctest"
                BlueprintName = "SimpleWeatherTests"
                ReferencedContainer = "container:SimpleWeather.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "504EF73F1C7707DB0092A60D"
+               BlueprintIdentifier = "50E8849F1C9BABF100600B83"
                BuildableName = "SimpleWeatherUITests.xctest"
                BlueprintName = "SimpleWeatherUITests"
                ReferencedContainer = "container:SimpleWeather.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "504EF71B1C7707DB0092A60D"
+            BlueprintIdentifier = "50E8847B1C9BABF100600B83"
             BuildableName = "SimpleWeather.app"
             BlueprintName = "SimpleWeather"
             ReferencedContainer = "container:SimpleWeather.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "504EF71B1C7707DB0092A60D"
+            BlueprintIdentifier = "50E8847B1C9BABF100600B83"
             BuildableName = "SimpleWeather.app"
             BlueprintName = "SimpleWeather"
             ReferencedContainer = "container:SimpleWeather.xcodeproj">
@@ -83,6 +83,10 @@
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
+      <LocationScenarioReference
+         identifier = "London, England"
+         referenceType = "1">
+      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -94,7 +98,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "504EF71B1C7707DB0092A60D"
+            BlueprintIdentifier = "50E8847B1C9BABF100600B83"
             BuildableName = "SimpleWeather.app"
             BlueprintName = "SimpleWeather"
             ReferencedContainer = "container:SimpleWeather.xcodeproj">

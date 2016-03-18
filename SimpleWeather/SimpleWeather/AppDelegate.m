@@ -2,13 +2,12 @@
 //  AppDelegate.m
 //  SimpleWeather
 //
-//  Created by 王享 on 16/2/19.
+//  Created by 王享 on 16/3/18.
 //  Copyright © 2016年 王享. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
-#import "WXController.h"
+#import "WXViewController.h"
 #import "TSMessage.h"
 
 @interface AppDelegate ()
@@ -19,13 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor=[UIColor whiteColor];
+    self.window.rootViewController = [[WXViewController alloc] init];
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    WXController *controller = [[WXController alloc]init];
-    self.window.rootViewController=controller;
-    [TSMessage setDefaultViewController:self.window.rootViewController];
+    [TSMessage setDefaultViewController: self.window.rootViewController];
+    
     return YES;
 }
 

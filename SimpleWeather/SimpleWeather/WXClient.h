@@ -2,13 +2,14 @@
 //  WXClient.h
 //  SimpleWeather
 //
-//  Created by 王享 on 16/2/19.
+//  Created by 王享 on 16/3/18.
 //  Copyright © 2016年 王享. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
+
 #import "ReactiveCocoa.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface WXClient : NSObject
 

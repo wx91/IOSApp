@@ -1,6 +1,7 @@
-platform :ios, '9.0'
-pod 'Mantle', '~> 2.0.6'
-pod 'LBBlurredImage', '~> 0.2.2'
-pod 'TSMessages', '~> 0.9.12'
+platform :ios, '9.1'
+pod 'Mantle'
+pod 'LBBlurredImage'
+pod 'TSMessages'
+pod 'SVProgressHUD'
 pod 'ReactiveCocoa', '~> 2.5'
 

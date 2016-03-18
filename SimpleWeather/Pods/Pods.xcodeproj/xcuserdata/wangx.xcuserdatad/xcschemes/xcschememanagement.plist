@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TSMessages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,11 +42,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0D035969D09598D27F8D8A47B647038D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>426BC4549A625B5E1E4200D5261A98BF</key>
 		<dict>
 			<key>primary</key>
@@ -52,12 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BCFA93B37E819844DC3807931233C6F4</key>
+		<key>7AC53433136975E351A4AD6CDEDE4350</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C8AA81F601B11E1B49E2415D83B1461D</key>
+		<key>86B18061E78C9E9BA09A89FAFFEA8FCF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EFCE01CD3DAD2C4B911E7B266CC28A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AFEEFA165C8D5B5AFF13EA7A0E852E3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
