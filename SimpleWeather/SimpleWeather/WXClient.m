@@ -57,14 +57,14 @@
 }
 - (RACSignal *)fetchCurrentConditionsForLocation:(CLLocationCoordinate2D)coordinate {
     // 1
-    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&amp;lon=%f&amp;units=imperial",coordinate.latitude, coordinate.longitude];
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=b1b15e88fa797225412429c1c50c122a",coordinate.latitude, coordinate.longitude];
     NSURL *url = [NSURL URLWithString:urlString];
     return [[self fetchJSONFromURL:url] map:^(NSDictionary *json) {
         return [MTLJSONAdapter modelOfClass:[WXCondition class] fromJSONDictionary:json error:nil];
     }];
 }
 - (RACSignal *)fetchHourlyForecastForLocation:(CLLocationCoordinate2D)coordinate {
-    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast?lat=%f&amp;lon=%f&amp;units=imperial&amp;cnt=12",coordinate.latitude, coordinate.longitude];
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast?lat=%f&amp;lon=%f&appid=b1b15e88fa797225412429c1c50c122a",coordinate.latitude, coordinate.longitude];
     NSURL *url = [NSURL URLWithString:urlString];
     return [[self fetchJSONFromURL:url]map:^(NSDictionary *json) {
         RACSequence *list = [json[@"list"] rac_sequence];
@@ -75,7 +75,7 @@
 }
 
 - (RACSignal *)fetchDailyForecastForLocation:(CLLocationCoordinate2D)coordinate {
-    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&amp;lon=%f&amp;units=imperial&amp;cnt=7",coordinate.latitude, coordinate.longitude];
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&lon=%f&cnt=7&appid=b1b15e88fa797225412429c1c50c122a",coordinate.latitude, coordinate.longitude];
     NSURL *url = [NSURL URLWithString:urlString];
                            
     // Use the generic fetch method and map results to convert into an array of Mantle objects

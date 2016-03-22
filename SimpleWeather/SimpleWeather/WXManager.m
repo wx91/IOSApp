@@ -52,7 +52,7 @@
                                       [self updateHourlyForecast]
                                       ]
                     ];
-        }] deliverOn:RACScheduler.mainThreadScheduler]
+        }] deliverOn:[RACScheduler mainThreadScheduler]]
         subscribeError:^(NSError *error) {
             [TSMessage showNotificationWithTitle:@"Error"
                                         subtitle:@"There was a problem fetching the latest weather"type:TSMessageNotificationTypeError];

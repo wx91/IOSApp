@@ -1,0 +1,7 @@
+platform :ios, '9.1'
+pod 'Mantle'
+pod 'LBBlurredImage'
+pod 'TSMessages'
+pod 'SVProgressHUD'
+pod 'ReactiveCocoa', '~> 2.5'
+
