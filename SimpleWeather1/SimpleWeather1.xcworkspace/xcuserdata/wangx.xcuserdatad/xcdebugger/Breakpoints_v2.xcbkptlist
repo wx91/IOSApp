@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SimpleWeather1/ViewController.m"
-            timestampString = "480323178.243576"
+            filePath = "SimpleWeather1/WXConditionViewModel.m"
+            timestampString = "480393895.594778"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-bindViewModel"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-fetchCurrentConditionCityName:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SimpleWeather1/ViewController.m"
-            timestampString = "480323178.899734"
+            filePath = "SimpleWeather1/WXConditionViewModel.m"
+            timestampString = "480393896.81263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-bindViewModel"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-fetchCurrentConditionCityName:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleWeather1/WXConditionViewModel.m"
+            timestampString = "480393897.878922"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-fetchCurrentConditionCityName:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SimpleWeather1/WXConditionViewModel.m"
+            timestampString = "480393904.280913"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-fetchCurrentConditionCityName:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

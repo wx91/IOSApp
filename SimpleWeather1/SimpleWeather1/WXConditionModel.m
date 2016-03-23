@@ -17,6 +17,7 @@
 
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
+    
     return @{
              @"date": @"dt",
              @"locationName": @"name",
@@ -48,7 +49,7 @@
 }
 
 +(NSValueTransformer *)weatherTransformer{
-    return [NSValueTransformer mtl_validatingTransformerForClass:[WXWeatherModel class]];
+    return [MTLJSONAdapter arrayTransformerWithModelClass:[WXWeatherModel class]];
 }
 
 
