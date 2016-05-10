@@ -6,10 +6,6 @@
 //  Copyright © 2015年 王享. All rights reserved.
 //
 //获取屏幕宽度
-//define KScreenWidth  [UIScreen mainScreen].bounds.size.width
-////获取屏幕高度
-//define KScreenHeight [UIScreen mainScreen].bounds.size.height
-
 import UIKit
 
 protocol ItemDetailViewControllerDelegate{
@@ -43,10 +39,10 @@ class ItemDetailViewController: UITableViewController {
         super.viewDidLoad()
         self.view.exclusiveTouch=true
         _datePickerVisible=false
-        let cancelBarButton:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector.init("cancel"))
+        let cancelBarButton:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(ItemDetailViewController.cancel))
         self.navigationItem.leftBarButtonItem=cancelBarButton;
         
-         self.doneBarButton=UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector.init("done"))
+         self.doneBarButton=UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(ItemDetailViewController.done))
          self.navigationItem.rightBarButtonItem=self.doneBarButton;
         
         if (self.itemToEdit != nil) {
@@ -69,6 +65,7 @@ class ItemDetailViewController: UITableViewController {
         }
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let KScreenWidth = UIScreen.mainScreen().bounds.size.width;
         let identifier:String = "Cell"
         var cell:UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(identifier)
         if(cell == nil){
@@ -100,12 +97,10 @@ class ItemDetailViewController: UITableViewController {
             self.updateDueDateLabel()
         }else{
             cell?.selectionStyle=UITableViewCellSelectionStyle.None
-            let KScreenHeight:CGFloat = UIScreen.mainScreen().bounds.size.height
-            let KScreenWidth:CGFloat = UIScreen.mainScreen().bounds.size.width
             let datePicker = UIDatePicker.init(frame: CGRectMake(0,0,KScreenWidth,216))
             datePicker.tag = 100
             cell?.contentView.addSubview(datePicker)
-            datePicker.addTarget(self, action: Selector.init("dateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+            datePicker.addTarget(self, action: #selector(ItemDetailViewController.dateChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
         }
         return cell!
     }

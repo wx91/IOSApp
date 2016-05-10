@@ -21,10 +21,10 @@ class ChecklistViewController: UITableViewController,ItemDetailViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = self.checklist!.name
-        let backBarButtonItem:UIBarButtonItem = UIBarButtonItem.init(title: "Checklist", style: UIBarButtonItemStyle.Done, target: self, action: Selector.init("BackAlllists"))
+        let backBarButtonItem:UIBarButtonItem = UIBarButtonItem.init(title: "Checklist", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ChecklistViewController.BackAlllists))
         self.navigationItem.leftBarButtonItem=backBarButtonItem
         
-        let addBarButtonItem:UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector.init("AddChecklistItem"))
+        let addBarButtonItem:UIBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(ChecklistViewController.AddChecklistItem))
         self.navigationItem.rightBarButtonItem=addBarButtonItem
     }
     

@@ -32,10 +32,10 @@ class ListDetailViewController: UITableViewController,UITextFieldDelegate,IconPi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cancelBarButtonItem:UIBarButtonItem=UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector.init("cancel"))
+        let cancelBarButtonItem:UIBarButtonItem=UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(ListDetailViewController.cancel))
         self.navigationItem.leftBarButtonItem = cancelBarButtonItem
         
-        self.doneBarButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector.init("done"));
+        self.doneBarButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(ListDetailViewController.done));
         self.navigationItem.rightBarButtonItem = self.doneBarButton
         
         if(self.checklistToEdit != nil){

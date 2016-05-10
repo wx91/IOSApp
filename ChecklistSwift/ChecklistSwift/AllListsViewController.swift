@@ -18,7 +18,7 @@ class AllListsViewController: UITableViewController,ListDetailViewControllerDele
     }
     
     func initSubView(){
-        let addBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.Add, target: self, action: Selector.init("AddChecklist"))
+        let addBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.Add, target: self, action: #selector(AllListsViewController.AddChecklist))
         self.navigationItem.rightBarButtonItem = addBarButtonItem
     }
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
