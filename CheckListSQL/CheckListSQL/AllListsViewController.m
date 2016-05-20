@@ -11,7 +11,6 @@
 #import "ListDetailViewController.h"
 #import "ChecklistViewController.h"
 #import "ChecklistService.h"
-#import "MJRefresh.h"
 
 @interface AllListsViewController()
 
@@ -74,13 +73,11 @@
 //点击加号进入
 -(void)AddChecklist{
     ListDetailViewController *listDetailVC=[[ListDetailViewController alloc]initWithStyle:UITableViewStyleGrouped];
-    listDetailVC.delegate=self;
     [self.navigationController pushViewController:listDetailVC animated:YES];
 }
 //点击tableviewcell中的小详细按钮进行描述方法中
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
     ListDetailViewController *controller = [[ListDetailViewController alloc]initWithStyle:UITableViewStyleGrouped];
-    controller.delegate = self;
     Checklist *checklist=self.dataOfChecklist[indexPath.row];
     controller.checklistToEdit=checklist;
     [self.navigationController pushViewController:controller animated:YES];

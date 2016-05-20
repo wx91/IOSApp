@@ -140,25 +140,22 @@
 }
 
 -(void)cancel{
-    [self.delegate itemDetailViewControllerDidCancel:self];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)done{
     if (self.itemToEdit.context ==nil) {
-//        ChecklistItem *item=[[ChecklistItem alloc]init];
         self.itemToEdit.context=self.textField.text;
         self.itemToEdit.checked=NO;
         self.itemToEdit.shouldRemind=self.switchControl.on;
         self.itemToEdit.dueDate=_dueDate;
-//        [self.delegate itemDetailViewController:self didFinishAddingItem:item];
         [_checklistItemService addChecklistItem:self.itemToEdit];
-        [self.delegate itemDetailViewControllerDidCancel:self];
+        [self.navigationController popViewControllerAnimated:YES];
     }else{
         self.itemToEdit.context = self.textField.text;
         self.itemToEdit.shouldRemind = self.switchControl.on;
         self.itemToEdit.dueDate = _dueDate;
-//        [self.delegate itemDetailViewController:self didFinishEditingItem:self.itemToEdit];
         [_checklistItemService changeChecklistItem:self.itemToEdit];
-        [self.delegate itemDetailViewControllerDidCancel:self];
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

@@ -7,19 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class ItemDetailViewController;
-@class ChecklistItem;
-
-@protocol ItemDetailViewControllerDelegate <NSObject>
-
-- (void)itemDetailViewControllerDidCancel:(ItemDetailViewController *)controller;
-
-//- (void)itemDetailViewController:(ItemDetailViewController *)controller didFinishAddingItem:(ChecklistItem *)item;
-
-//- (void)itemDetailViewController:(ItemDetailViewController *)controller didFinishEditingItem:(ChecklistItem *)item;
-
-@end
+#import "ChecklistItem.h"
 
 
 @interface ItemDetailViewController : UITableViewController
@@ -33,8 +21,5 @@
 @property(nonatomic,strong) UILabel *dueDateLabel;
 
 @property (nonatomic, strong) ChecklistItem *itemToEdit;
-
-@property (nonatomic, weak) id <ItemDetailViewControllerDelegate> delegate;
-
 
 @end

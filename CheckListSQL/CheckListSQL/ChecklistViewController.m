@@ -108,7 +108,6 @@
 
 -(void)AddChecklistItem{
     ItemDetailViewController *controller=[[ItemDetailViewController alloc]initWithStyle:UITableViewStyleGrouped];
-    controller.delegate=self;
     ChecklistItem *item =  [[ChecklistItem alloc]init];
     item.checklistId = _checklist.checklistId;
     controller.itemToEdit =item;
@@ -121,7 +120,6 @@
 //点击tableviewcell中的小详细按钮进行描述方法中
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
     ItemDetailViewController *controller=[[ItemDetailViewController alloc]initWithStyle:UITableViewStyleGrouped];
-    controller.delegate=self;
     controller.itemToEdit=self.dataOfChecklistItem[indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
 }

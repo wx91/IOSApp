@@ -92,8 +92,8 @@
 }
 //点击取消按钮时，触发事件
 -(void)cancel{
-    //调用代理方法，回弹到上一个页面
-    [self.delegate listDetailViewControllerDidCancel:self];
+    //回弹到上一个页面
+    [self.navigationController popViewControllerAnimated:YES];
 }
 //点击done按钮时，触发事件
 -(void)done{
@@ -103,14 +103,12 @@
         checklist.name=[NSString stringWithString:self.textField.text];
         checklist.iconName=_iconName;
         [_checklistService addChecklist:checklist];
-//        [self.delegate listDetailViewController:self didFinishAddingChecklist:checklist];
-        [self.delegate listDetailViewControllerDidCancel:self];
+        [self.navigationController popViewControllerAnimated:YES];
     }else{
         self.checklistToEdit.name=self.textField.text;
         self.checklistToEdit.iconName=_iconName;
-//        [self.delegate listDetailViewController:self didFinishEditingChecklist:self.checklistToEdit];
         [_checklistService changeChecklist:self.checklistToEdit];
-        [self.delegate listDetailViewControllerDidCancel:self];
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
