@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		504FED8B1CEDC81300D58F33 /* ChecklistService.m in Sources */ = {isa = PBXBuildFile; fileRef = 504FED8A1CEDC81300D58F33 /* ChecklistService.m */; };
+		504FED8E1CEDC82700D58F33 /* ChecklistItemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 504FED8D1CEDC82700D58F33 /* ChecklistItemService.m */; };
+		50735FDB1CEC9D2B00984BEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50735FDA1CEC9D2B00984BEB /* main.m */; };
+		50735FDE1CEC9D2B00984BEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50735FDD1CEC9D2B00984BEB /* AppDelegate.m */; };
+		50735FE61CEC9D2B00984BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50735FE51CEC9D2B00984BEB /* Assets.xcassets */; };
+		50735FE91CEC9D2B00984BEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50735FE71CEC9D2B00984BEB /* LaunchScreen.storyboard */; };
+		50735FF41CEC9D2B00984BEB /* CheckListSQLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50735FF31CEC9D2B00984BEB /* CheckListSQLTests.m */; };
+		50735FFF1CEC9D2B00984BEB /* CheckListSQLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50735FFE1CEC9D2B00984BEB /* CheckListSQLUITests.m */; };
+		5073600F1CEC9E4E00984BEB /* Checklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5073600E1CEC9E4E00984BEB /* Checklist.m */; };
+		507360121CEC9E7600984BEB /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 507360111CEC9E7600984BEB /* ChecklistItem.m */; };
+		507360151CEC9EBC00984BEB /* ListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507360141CEC9EBC00984BEB /* ListDetailViewController.m */; };
+		507360181CEC9EC200984BEB /* IconPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507360171CEC9EC200984BEB /* IconPickerViewController.m */; };
+		5073601B1CEC9EC800984BEB /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5073601A1CEC9EC800984BEB /* AllListsViewController.m */; };
+		5073601E1CEC9EDB00984BEB /* ChecklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5073601D1CEC9EDB00984BEB /* ChecklistViewController.m */; };
+		507360211CEC9EE200984BEB /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 507360201CEC9EE200984BEB /* ItemDetailViewController.m */; };
+		507A23121CED4FF10096A7C6 /* create_load.sql in Resources */ = {isa = PBXBuildFile; fileRef = 507A23111CED4FF10096A7C6 /* create_load.sql */; };
+		50EC95331CECA19A00EC16EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50EC95311CECA19A00EC16EB /* Main.storyboard */; };
+		50EC95381CECB58600EC16EB /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EC95371CECB58600EC16EB /* DBHelper.m */; };
+		50EC954C1CECB96800EC16EB /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EC954B1CECB96800EC16EB /* BaseDAO.m */; };
+		50EC954F1CECBA1F00EC16EB /* ChecklistDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EC954E1CECBA1F00EC16EB /* ChecklistDAO.m */; };
+		50EC95521CECBBBA00EC16EB /* ChecklistItemDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EC95511CECBBBA00EC16EB /* ChecklistItemDAO.m */; };
+		FEB093DEDC5DB9DA26C6499A /* libPods-CheckListSQL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E239287ADF8F3EA15A5D44E5 /* libPods-CheckListSQL.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50735FF01CEC9D2B00984BEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50735FCE1CEC9D2B00984BEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50735FD51CEC9D2B00984BEB;
+			remoteInfo = CheckListSQL;
+		};
+		50735FFB1CEC9D2B00984BEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50735FCE1CEC9D2B00984BEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50735FD51CEC9D2B00984BEB;
+			remoteInfo = CheckListSQL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DDED1C69D70F21A9D7B24A1 /* Pods-CheckListSQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckListSQL.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckListSQL/Pods-CheckListSQL.release.xcconfig"; sourceTree = "<group>"; };
+		504FED891CEDC81300D58F33 /* ChecklistService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistService.h; sourceTree = "<group>"; };
+		504FED8A1CEDC81300D58F33 /* ChecklistService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistService.m; sourceTree = "<group>"; };
+		504FED8C1CEDC82700D58F33 /* ChecklistItemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItemService.h; sourceTree = "<group>"; };
+		504FED8D1CEDC82700D58F33 /* ChecklistItemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItemService.m; sourceTree = "<group>"; };
+		50735FD61CEC9D2B00984BEB /* CheckListSQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckListSQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50735FDA1CEC9D2B00984BEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50735FDC1CEC9D2B00984BEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50735FDD1CEC9D2B00984BEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50735FE51CEC9D2B00984BEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50735FE81CEC9D2B00984BEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50735FEA1CEC9D2B00984BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50735FEF1CEC9D2B00984BEB /* CheckListSQLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckListSQLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50735FF31CEC9D2B00984BEB /* CheckListSQLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListSQLTests.m; sourceTree = "<group>"; };
+		50735FF51CEC9D2B00984BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50735FFA1CEC9D2B00984BEB /* CheckListSQLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckListSQLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50735FFE1CEC9D2B00984BEB /* CheckListSQLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListSQLUITests.m; sourceTree = "<group>"; };
+		507360001CEC9D2B00984BEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5073600D1CEC9E4E00984BEB /* Checklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checklist.h; sourceTree = "<group>"; };
+		5073600E1CEC9E4E00984BEB /* Checklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checklist.m; sourceTree = "<group>"; };
+		507360101CEC9E7600984BEB /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItem.h; sourceTree = "<group>"; };
+		507360111CEC9E7600984BEB /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItem.m; sourceTree = "<group>"; };
+		507360131CEC9EBC00984BEB /* ListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailViewController.h; sourceTree = "<group>"; };
+		507360141CEC9EBC00984BEB /* ListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailViewController.m; sourceTree = "<group>"; };
+		507360161CEC9EC200984BEB /* IconPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconPickerViewController.h; sourceTree = "<group>"; };
+		507360171CEC9EC200984BEB /* IconPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconPickerViewController.m; sourceTree = "<group>"; };
+		507360191CEC9EC800984BEB /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllListsViewController.h; sourceTree = "<group>"; };
+		5073601A1CEC9EC800984BEB /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllListsViewController.m; sourceTree = "<group>"; };
+		5073601C1CEC9EDB00984BEB /* ChecklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistViewController.h; sourceTree = "<group>"; };
+		5073601D1CEC9EDB00984BEB /* ChecklistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistViewController.m; sourceTree = "<group>"; };
+		5073601F1CEC9EE200984BEB /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
+		507360201CEC9EE200984BEB /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
+		507A23111CED4FF10096A7C6 /* create_load.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = create_load.sql; sourceTree = "<group>"; };
+		50EC95321CECA19A00EC16EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50EC95361CECB58600EC16EB /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
+		50EC95371CECB58600EC16EB /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		50EC954A1CECB96800EC16EB /* BaseDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDAO.h; sourceTree = "<group>"; };
+		50EC954B1CECB96800EC16EB /* BaseDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDAO.m; sourceTree = "<group>"; };
+		50EC954D1CECBA1F00EC16EB /* ChecklistDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistDAO.h; sourceTree = "<group>"; };
+		50EC954E1CECBA1F00EC16EB /* ChecklistDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistDAO.m; sourceTree = "<group>"; };
+		50EC95501CECBBBA00EC16EB /* ChecklistItemDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItemDAO.h; sourceTree = "<group>"; };
+		50EC95511CECBBBA00EC16EB /* ChecklistItemDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItemDAO.m; sourceTree = "<group>"; };
+		8C087EBA786A8E65A9511E68 /* Pods-CheckListSQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckListSQL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckListSQL/Pods-CheckListSQL.debug.xcconfig"; sourceTree = "<group>"; };
+		E239287ADF8F3EA15A5D44E5 /* libPods-CheckListSQL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CheckListSQL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50735FD31CEC9D2B00984BEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEB093DEDC5DB9DA26C6499A /* libPods-CheckListSQL.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50735FEC1CEC9D2B00984BEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50735FF71CEC9D2B00984BEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F294CEEA779E3F2F7A1D815 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C087EBA786A8E65A9511E68 /* Pods-CheckListSQL.debug.xcconfig */,
+				3DDED1C69D70F21A9D7B24A1 /* Pods-CheckListSQL.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		50735FCD1CEC9D2B00984BEB = {
+			isa = PBXGroup;
+			children = (
+				50735FD81CEC9D2B00984BEB /* CheckListSQL */,
+				50735FF21CEC9D2B00984BEB /* CheckListSQLTests */,
+				50735FFD1CEC9D2B00984BEB /* CheckListSQLUITests */,
+				50735FD71CEC9D2B00984BEB /* Products */,
+				1F294CEEA779E3F2F7A1D815 /* Pods */,
+				702EF3FA5B8621DE80EBCD68 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		50735FD71CEC9D2B00984BEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50735FD61CEC9D2B00984BEB /* CheckListSQL.app */,
+				50735FEF1CEC9D2B00984BEB /* CheckListSQLTests.xctest */,
+				50735FFA1CEC9D2B00984BEB /* CheckListSQLUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50735FD81CEC9D2B00984BEB /* CheckListSQL */ = {
+			isa = PBXGroup;
+			children = (
+				507A23111CED4FF10096A7C6 /* create_load.sql */,
+				5073600C1CEC9E2A00984BEB /* DBUtils */,
+				50735FDC1CEC9D2B00984BEB /* AppDelegate.h */,
+				50735FDD1CEC9D2B00984BEB /* AppDelegate.m */,
+				5073600D1CEC9E4E00984BEB /* Checklist.h */,
+				5073600E1CEC9E4E00984BEB /* Checklist.m */,
+				507360191CEC9EC800984BEB /* AllListsViewController.h */,
+				5073601A1CEC9EC800984BEB /* AllListsViewController.m */,
+				507360131CEC9EBC00984BEB /* ListDetailViewController.h */,
+				507360141CEC9EBC00984BEB /* ListDetailViewController.m */,
+				507360161CEC9EC200984BEB /* IconPickerViewController.h */,
+				507360171CEC9EC200984BEB /* IconPickerViewController.m */,
+				507360101CEC9E7600984BEB /* ChecklistItem.h */,
+				507360111CEC9E7600984BEB /* ChecklistItem.m */,
+				5073601C1CEC9EDB00984BEB /* ChecklistViewController.h */,
+				5073601D1CEC9EDB00984BEB /* ChecklistViewController.m */,
+				5073601F1CEC9EE200984BEB /* ItemDetailViewController.h */,
+				507360201CEC9EE200984BEB /* ItemDetailViewController.m */,
+				50735FE51CEC9D2B00984BEB /* Assets.xcassets */,
+				50EC95311CECA19A00EC16EB /* Main.storyboard */,
+				50735FE71CEC9D2B00984BEB /* LaunchScreen.storyboard */,
+				50735FEA1CEC9D2B00984BEB /* Info.plist */,
+				50735FD91CEC9D2B00984BEB /* Supporting Files */,
+			);
+			path = CheckListSQL;
+			sourceTree = "<group>";
+		};
+		50735FD91CEC9D2B00984BEB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50735FDA1CEC9D2B00984BEB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50735FF21CEC9D2B00984BEB /* CheckListSQLTests */ = {
+			isa = PBXGroup;
+			children = (
+				50735FF31CEC9D2B00984BEB /* CheckListSQLTests.m */,
+				50735FF51CEC9D2B00984BEB /* Info.plist */,
+			);
+			path = CheckListSQLTests;
+			sourceTree = "<group>";
+		};
+		50735FFD1CEC9D2B00984BEB /* CheckListSQLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				50735FFE1CEC9D2B00984BEB /* CheckListSQLUITests.m */,
+				507360001CEC9D2B00984BEB /* Info.plist */,
+			);
+			path = CheckListSQLUITests;
+			sourceTree = "<group>";
+		};
+		5073600C1CEC9E2A00984BEB /* DBUtils */ = {
+			isa = PBXGroup;
+			children = (
+				50EC95351CECB56A00EC16EB /* Service */,
+				50EC95341CECB55F00EC16EB /* DAO */,
+			);
+			path = DBUtils;
+			sourceTree = "<group>";
+		};
+		50EC95341CECB55F00EC16EB /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				50EC954A1CECB96800EC16EB /* BaseDAO.h */,
+				50EC954B1CECB96800EC16EB /* BaseDAO.m */,
+				50EC95361CECB58600EC16EB /* DBHelper.h */,
+				50EC95371CECB58600EC16EB /* DBHelper.m */,
+				50EC954D1CECBA1F00EC16EB /* ChecklistDAO.h */,
+				50EC954E1CECBA1F00EC16EB /* ChecklistDAO.m */,
+				50EC95501CECBBBA00EC16EB /* ChecklistItemDAO.h */,
+				50EC95511CECBBBA00EC16EB /* ChecklistItemDAO.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		50EC95351CECB56A00EC16EB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				504FED891CEDC81300D58F33 /* ChecklistService.h */,
+				504FED8A1CEDC81300D58F33 /* ChecklistService.m */,
+				504FED8C1CEDC82700D58F33 /* ChecklistItemService.h */,
+				504FED8D1CEDC82700D58F33 /* ChecklistItemService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		702EF3FA5B8621DE80EBCD68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E239287ADF8F3EA15A5D44E5 /* libPods-CheckListSQL.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50735FD51CEC9D2B00984BEB /* CheckListSQL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507360031CEC9D2B00984BEB /* Build configuration list for PBXNativeTarget "CheckListSQL" */;
+			buildPhases = (
+				E4F8BF7CB99A399E06F7B0D9 /* 📦 Check Pods Manifest.lock */,
+				50735FD21CEC9D2B00984BEB /* Sources */,
+				50735FD31CEC9D2B00984BEB /* Frameworks */,
+				50735FD41CEC9D2B00984BEB /* Resources */,
+				AD5295CF55D320BEA4CB107B /* 📦 Embed Pods Frameworks */,
+				8C7EF0825997EA320C339335 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CheckListSQL;
+			productName = CheckListSQL;
+			productReference = 50735FD61CEC9D2B00984BEB /* CheckListSQL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50735FEE1CEC9D2B00984BEB /* CheckListSQLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507360061CEC9D2B00984BEB /* Build configuration list for PBXNativeTarget "CheckListSQLTests" */;
+			buildPhases = (
+				50735FEB1CEC9D2B00984BEB /* Sources */,
+				50735FEC1CEC9D2B00984BEB /* Frameworks */,
+				50735FED1CEC9D2B00984BEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50735FF11CEC9D2B00984BEB /* PBXTargetDependency */,
+			);
+			name = CheckListSQLTests;
+			productName = CheckListSQLTests;
+			productReference = 50735FEF1CEC9D2B00984BEB /* CheckListSQLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50735FF91CEC9D2B00984BEB /* CheckListSQLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507360091CEC9D2B00984BEB /* Build configuration list for PBXNativeTarget "CheckListSQLUITests" */;
+			buildPhases = (
+				50735FF61CEC9D2B00984BEB /* Sources */,
+				50735FF71CEC9D2B00984BEB /* Frameworks */,
+				50735FF81CEC9D2B00984BEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50735FFC1CEC9D2B00984BEB /* PBXTargetDependency */,
+			);
+			name = CheckListSQLUITests;
+			productName = CheckListSQLUITests;
+			productReference = 50735FFA1CEC9D2B00984BEB /* CheckListSQLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50735FCE1CEC9D2B00984BEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "王享";
+				TargetAttributes = {
+					50735FD51CEC9D2B00984BEB = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					50735FEE1CEC9D2B00984BEB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 50735FD51CEC9D2B00984BEB;
+					};
+					50735FF91CEC9D2B00984BEB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 50735FD51CEC9D2B00984BEB;
+					};
+				};
+			};
+			buildConfigurationList = 50735FD11CEC9D2B00984BEB /* Build configuration list for PBXProject "CheckListSQL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50735FCD1CEC9D2B00984BEB;
+			productRefGroup = 50735FD71CEC9D2B00984BEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50735FD51CEC9D2B00984BEB /* CheckListSQL */,
+				50735FEE1CEC9D2B00984BEB /* CheckListSQLTests */,
+				50735FF91CEC9D2B00984BEB /* CheckListSQLUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50735FD41CEC9D2B00984BEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50EC95331CECA19A00EC16EB /* Main.storyboard in Resources */,
+				507A23121CED4FF10096A7C6 /* create_load.sql in Resources */,
+				50735FE91CEC9D2B00984BEB /* LaunchScreen.storyboard in Resources */,
+				50735FE61CEC9D2B00984BEB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50735FED1CEC9D2B00984BEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50735FF81CEC9D2B00984BEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C7EF0825997EA320C339335 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckListSQL/Pods-CheckListSQL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD5295CF55D320BEA4CB107B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckListSQL/Pods-CheckListSQL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4F8BF7CB99A399E06F7B0D9 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50735FD21CEC9D2B00984BEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5073600F1CEC9E4E00984BEB /* Checklist.m in Sources */,
+				50EC95381CECB58600EC16EB /* DBHelper.m in Sources */,
+				504FED8E1CEDC82700D58F33 /* ChecklistItemService.m in Sources */,
+				50EC954C1CECB96800EC16EB /* BaseDAO.m in Sources */,
+				507360151CEC9EBC00984BEB /* ListDetailViewController.m in Sources */,
+				5073601B1CEC9EC800984BEB /* AllListsViewController.m in Sources */,
+				507360211CEC9EE200984BEB /* ItemDetailViewController.m in Sources */,
+				507360121CEC9E7600984BEB /* ChecklistItem.m in Sources */,
+				507360181CEC9EC200984BEB /* IconPickerViewController.m in Sources */,
+				50735FDE1CEC9D2B00984BEB /* AppDelegate.m in Sources */,
+				5073601E1CEC9EDB00984BEB /* ChecklistViewController.m in Sources */,
+				50735FDB1CEC9D2B00984BEB /* main.m in Sources */,
+				50EC954F1CECBA1F00EC16EB /* ChecklistDAO.m in Sources */,
+				504FED8B1CEDC81300D58F33 /* ChecklistService.m in Sources */,
+				50EC95521CECBBBA00EC16EB /* ChecklistItemDAO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50735FEB1CEC9D2B00984BEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50735FF41CEC9D2B00984BEB /* CheckListSQLTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50735FF61CEC9D2B00984BEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50735FFF1CEC9D2B00984BEB /* CheckListSQLUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50735FF11CEC9D2B00984BEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50735FD51CEC9D2B00984BEB /* CheckListSQL */;
+			targetProxy = 50735FF01CEC9D2B00984BEB /* PBXContainerItemProxy */;
+		};
+		50735FFC1CEC9D2B00984BEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50735FD51CEC9D2B00984BEB /* CheckListSQL */;
+			targetProxy = 50735FFB1CEC9D2B00984BEB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50735FE71CEC9D2B00984BEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50735FE81CEC9D2B00984BEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		50EC95311CECA19A00EC16EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50EC95321CECA19A00EC16EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		507360011CEC9D2B00984BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		507360021CEC9D2B00984BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		507360041CEC9D2B00984BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C087EBA786A8E65A9511E68 /* Pods-CheckListSQL.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = CheckListSQL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxiang1991.CheckListSQL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		507360051CEC9D2B00984BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DDED1C69D70F21A9D7B24A1 /* Pods-CheckListSQL.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = CheckListSQL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxiang1991.CheckListSQL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		507360071CEC9D2B00984BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CheckListSQLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxiang1991.CheckListSQLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckListSQL.app/CheckListSQL";
+			};
+			name = Debug;
+		};
+		507360081CEC9D2B00984BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CheckListSQLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxiang1991.CheckListSQLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckListSQL.app/CheckListSQL";
+			};
+			name = Release;
+		};
+		5073600A1CEC9D2B00984BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CheckListSQLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxiang1991.CheckListSQLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CheckListSQL;
+			};
+			name = Debug;
+		};
+		5073600B1CEC9D2B00984BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CheckListSQLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxiang1991.CheckListSQLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CheckListSQL;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50735FD11CEC9D2B00984BEB /* Build configuration list for PBXProject "CheckListSQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507360011CEC9D2B00984BEB /* Debug */,
+				507360021CEC9D2B00984BEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507360031CEC9D2B00984BEB /* Build configuration list for PBXNativeTarget "CheckListSQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507360041CEC9D2B00984BEB /* Debug */,
+				507360051CEC9D2B00984BEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507360061CEC9D2B00984BEB /* Build configuration list for PBXNativeTarget "CheckListSQLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507360071CEC9D2B00984BEB /* Debug */,
+				507360081CEC9D2B00984BEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507360091CEC9D2B00984BEB /* Build configuration list for PBXNativeTarget "CheckListSQLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5073600A1CEC9D2B00984BEB /* Debug */,
+				5073600B1CEC9D2B00984BEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50735FCE1CEC9D2B00984BEB /* Project object */;
+}

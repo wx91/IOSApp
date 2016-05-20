@@ -12,6 +12,8 @@ drop table if exists Schedule;
 /* Table: Events                                                */
 /*==============================================================*/
 create table Events
+
+
 (
    EventID            INTEGER   primary key autoincrement     not null,
    EventName          VARCHAR(20),
