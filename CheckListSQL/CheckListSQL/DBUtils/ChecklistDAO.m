@@ -116,10 +116,32 @@ static ChecklistDAO *sharedManager=nil;
             NSString *iconName = [rs stringForColumn:@"iconName"];
             model.iconName = iconName;
         }
-        
     }
     [db close];
     return model;
+}
+//查询所有数据方法
+-(NSMutableArray *)findAllByPage:(NSInteger)currentPage withPageRow:(NSInteger)pageRow{
+    NSMutableArray *listData =[NSMutableArray array];
+    if ([self openDB]) {
+        NSString *sqlStr =[NSString stringWithFormat:@"select * from Checklist order by checklistId asc limit %lu offset %lu",pageRow,(currentPage-1)*pageRow];
+        FMResultSet *rs = [db executeQuery:sqlStr];
+        while (rs.next) {
+            Checklist *model = [[Checklist alloc]init];
+            
+            int checklistId = [rs intForColumn:@"checklistId"];
+            model.checklistId=checklistId;
+            
+            NSString *name =[rs stringForColumn:@"name"];
+            model.name=name;
+            
+            NSString *iconName =[rs stringForColumn:@"iconName"];
+            model.iconName = iconName;
+            [listData addObject:model];
+        }
+    }
+    [db close];
+    return listData;
 }
 
 

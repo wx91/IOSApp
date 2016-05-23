@@ -12,7 +12,11 @@
 #import "ChecklistViewController.h"
 #import "ItemDetailViewController.h"
 #import "ChecklistItemService.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
 @interface  ChecklistViewController()
+
+@property (nonatomic, assign)NSInteger  pageNo;
 
 @property (nonatomic, strong) NSMutableArray *dataOfChecklistItem;
 
@@ -22,12 +26,13 @@
 
 @implementation ChecklistViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=self.checklist.name;
-    //    self.navigationItem.leftItemsSupplementBackButton=YES;
+    self.pageNo = 1;
+    self.dataOfChecklistItem = [NSMutableArray array];
+     self.checklistItemService=[[ChecklistItemService alloc]init];
+    //self.navigationItem.leftItemsSupplementBackButton=YES;
     
     UIBarButtonItem *backBarButtonItem=[[UIBarButtonItem alloc]initWithTitle:@"Checklist" style:UIBarButtonItemStyleDone target:self action:@selector(BackAlllists)];
     self.navigationItem.leftBarButtonItem=backBarButtonItem;
@@ -36,7 +41,18 @@
     UIBarButtonItem *addBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(AddChecklistItem)];
     self.navigationItem.rightBarButtonItem=addBarButtonItem;
     
-    self.checklistItemService=[[ChecklistItemService alloc]init];
+    //下拉刷新
+    self.tableView.mj_header  = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self refreshChecklist];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [self loadMoreChecklist];
+    }];
+    self.tableView.mj_footer.automaticallyHidden = NO;
+    
+   
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -146,32 +162,37 @@
 - (void)itemDetailViewControllerDidCancel:(ItemDetailViewController *)controller{
     [self.navigationController popToViewController:self animated:YES];
 }
-//点击增加触发的方法
-//- (void)itemDetailViewController:(ItemDetailViewController *)controller didFinishAddingItem:(ChecklistItem *)item{
-//    NSInteger newRowIndex=[self.checklist.items count];
-//    [self.checklist.items addObject:item];
-//    NSIndexPath *indexPath=[NSIndexPath indexPathForItem:newRowIndex inSection:0];
-//    NSArray *indexPaths=@[indexPath];
-//    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-//    [self.navigationController popToViewController:self animated:YES];
-//}
-//编辑后返回的方法
-//- (void)itemDetailViewController:(ItemDetailViewController *)controller didFinishEditingItem:(ChecklistItem *)item{
-//    NSInteger index=[self.checklist.items indexOfObject:item];
-//    NSIndexPath *indexPath=[NSIndexPath indexPathForItem:index inSection:0];
-//    UITableViewCell *cell=[self.tableView cellForRowAtIndexPath:indexPath];
-//    [self configureTextForCell:cell withChecklistItem:item];
-//    [self.navigationController popToViewController:self animated:YES];
-//}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark 加载
+-(void)refreshChecklist{
+    [self requestMoreChecklistItem:YES];
 }
-*/
 
+-(void)loadMoreChecklist{
+    [self requestMoreChecklistItem:NO];
+}
+
+-(void)requestMoreChecklistItem:(BOOL)isRefresh{
+    if (isRefresh) {
+        [self.tableView.mj_header endRefreshing];
+        [self.dataOfChecklistItem removeAllObjects];
+    }else{
+        [self.tableView.mj_footer endRefreshing];
+    }
+    NSMutableArray *checklists = [_checklistItemService findAllByPage:self.pageNo withPageRow:10];
+    if(isRefresh){
+        self.pageNo = 2;
+    }else{
+        self.pageNo ++;
+    }
+    [self.dataOfChecklistItem addObjectsFromArray:checklists];
+    if (checklists.count > 0) {
+        [self.tableView.mj_footer resetNoMoreData];
+    }else{
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        [SVProgressHUD showInfoWithStatus:@"没有更多数据了!"];
+    }
+    
+    [self.tableView reloadData];
+}
 @end

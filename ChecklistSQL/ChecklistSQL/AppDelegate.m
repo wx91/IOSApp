@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AllListsViewController.h"
+#import "SVProgressHUD.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +26,10 @@
     AllListsViewController *controller=[[AllListsViewController alloc]init];
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:controller];
     [self.window setRootViewController:nav];
-    
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+    [SVProgressHUD setMinimumDismissTimeInterval:2];
     return YES;
 }
 

@@ -136,6 +136,38 @@ static ChecklistItemDAO *sharedManager=nil;
     [db close];
     return listData;
 }
+//查询分页
+-(NSMutableArray *)findAllByPage:(NSInteger)currentPage withPageRow:(NSInteger)pageRow{
+    NSMutableArray *listData =[NSMutableArray array];
+    if ([self openDB]) {
+        NSString *sqlStr =[NSString stringWithFormat:@"select * from ChecklistItem order by checklistItemID asc limit %lu offset %lu",pageRow,(currentPage-1)*pageRow];
+        FMResultSet *rs = [db executeQuery:sqlStr];
+        while (rs.next) {
+            ChecklistItem *item = [[ChecklistItem alloc]init];
+            
+            int checklistItemID =[rs intForColumn:@"checklistItemID"];
+            item.checklistItemID =checklistItemID;
+            
+            NSString *context = [rs stringForColumn:@"context"];
+            item.context = context;
+            
+            BOOL checked = [rs boolForColumn:@"checked"];
+            item.checked=checked;
+            
+            BOOL shouldRemind =[rs boolForColumn:@"shouldRemind"];
+            item.shouldRemind = shouldRemind;
+            
+            NSDate *dueDate = [rs dateForColumn:@"dueDate"];
+            item.dueDate = dueDate;
+            
+            int checklistId =[rs intForColumn:@"checklistId"];
+            item.checklistId = checklistId;
+            [listData addObject:item];
+        }
+    }
+    [db close];
+    return listData;
+}
 
 //按照主键查询数据方法
 -(ChecklistItem *) findById:(ChecklistItem *)model{

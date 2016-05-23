@@ -12,36 +12,43 @@
 #import "ChecklistItemDAO.h"
 @implementation ChecklistService
 //查询所用数据方法
+-(instancetype)init{
+    self = [super init];
+    if (self) {
+        _checklistDAO = [[ChecklistDAO alloc]init];
+        _checklistItemDAO = [[ChecklistItemDAO alloc]init];
+    }
+    return self;
+}
 -(NSMutableArray*)findAll{
-    ChecklistDAO *dao = [ChecklistDAO sharedManager];
-    NSMutableArray* list  = [dao findAll];
+    NSMutableArray* list  = [_checklistDAO findAll];
     return list;
 }
 
 -(Checklist *)findChecklistById:(Checklist *)model{
-    ChecklistDAO *dao = [ChecklistDAO sharedManager];
-    model  = [dao findById:model];
+    model  = [_checklistDAO findById:model];
     return model;
 }
 
 -(void)addChecklist:(Checklist *)model{
-    ChecklistDAO *dao = [ChecklistDAO sharedManager];
-    [dao create:model];
+    [_checklistDAO create:model];
 }
 
 -(void)changeChecklist:(Checklist *)model{
-    ChecklistDAO *dao = [ChecklistDAO sharedManager];
-    [dao modify:model];
+    [_checklistDAO modify:model];
 }
 
 -(void)deleteChecklist:(Checklist *)model{
-    ChecklistDAO *dao = [ChecklistDAO sharedManager];
-    [dao remove:model];
+    [_checklistDAO remove:model];
+}
+//查询分页
+-(NSMutableArray *)findAllByPage:(NSInteger)currentPage withPageRow:(NSInteger)pageRow{
+    NSMutableArray *list = [_checklistDAO findAllByPage:currentPage withPageRow:pageRow];
+    return list;
 }
 
 -(int)countUncheckedItems:(Checklist *)model{
-    ChecklistItemDAO *dao = [ChecklistItemDAO sharedManager];
-    NSMutableArray *items = [dao findByChecklist:model];
+    NSMutableArray *items = [_checklistItemDAO findByChecklist:model];
     int count = 0;
     for(ChecklistItem *item in items){
         if(!item.checked){

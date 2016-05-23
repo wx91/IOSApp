@@ -84,26 +84,4 @@
     return versionNubmer;
 }
 
-+ (BOOL) isTableOK:(NSString *)tableName withDB:(FMDatabase *)db
-{
-    BOOL isOK = NO;
-    
-    FMResultSet *rs = [db executeQuery:@"select count(*) as 'count' from sqlite_master where type ='table' and name = ?", tableName];
-    while ([rs next])
-    {
-        NSInteger count = [rs intForColumn:@"count"];
-        
-        if (0 == count)
-        {
-            isOK =  NO;
-        }
-        else
-        {
-            isOK = YES;
-        }
-    }
-    [rs close];
-    
-    return isOK;
-}
 @end

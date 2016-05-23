@@ -26,6 +26,7 @@
 
 //按照主键查询数据方法
 -(Checklist *) findById:(Checklist*)model;
-
+//查询分页
+-(NSMutableArray *)findAllByPage:(NSInteger)currentPage withPageRow:(NSInteger)pageRow;
 
 @end

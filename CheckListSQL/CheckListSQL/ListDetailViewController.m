@@ -73,17 +73,16 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     if (indexPath.row==0) {
-        self.textField=[[UITextField alloc]initWithFrame:CGRectMake(10, 7, 300, 30)];
+        self.textField=[[UITextField alloc]initWithFrame:CGRectMake(30, 7, 300, 30)];
         self.textField.placeholder=@"Name of List";
         self.textField.text=_name;
         [cell.contentView addSubview:self.textField];
     }else{
-        self.label=[[UILabel alloc]initWithFrame:CGRectMake(20, 11, 150, 20)];
+        self.label=[[UILabel alloc]initWithFrame:CGRectMake(30, 11, 150, 20)];
         self.label.text=_iconName;
-        self.label.textAlignment=NSTextAlignmentCenter;
         [cell.contentView addSubview:self.label];
         
-        self.iconImageView=[[UIImageView alloc]initWithFrame:CGRectMake(200, 4, 36, 36)];
+        self.iconImageView=[[UIImageView alloc]initWithFrame:CGRectMake(180, 4, 36, 36)];
         self.iconImageView.image=[UIImage imageNamed:_iconName];
         cell.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
         [cell.contentView addSubview:self.iconImageView];
@@ -144,15 +143,5 @@
     [self.navigationController popToViewController:self animated:YES];
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

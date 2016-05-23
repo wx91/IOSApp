@@ -11,12 +11,18 @@
 #import "ListDetailViewController.h"
 #import "ChecklistViewController.h"
 #import "ChecklistService.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
 
 @interface AllListsViewController()
+
+@property (nonatomic, assign)NSInteger  pageNo;
 
 @property (nonatomic, strong) NSMutableArray *dataOfChecklist;
 
 @property (nonatomic, strong) ChecklistService *checklistService;
+
+
 
 @end
 
@@ -24,15 +30,29 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear: animated];
-    self.dataOfChecklist = _checklistService.findAll;
-    [self.tableView reloadData];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //初始化数据
+    self.pageNo =1;
+    self.dataOfChecklist = [NSMutableArray array];
+    //初始化服务
+    _checklistService = [[ChecklistService alloc]init];
+    
     self.title=@"Checklist";
     UIBarButtonItem *addBarButtonItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(AddChecklist)];
     self.navigationItem.rightBarButtonItem=addBarButtonItem;
-    _checklistService = [[ChecklistService alloc]init];
+    //下拉刷新
+    self.tableView.mj_header  = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self refreshChecklist];
+    }];
+    [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        [self loadMoreChecklist];
+    }];
+    self.tableView.mj_footer.automaticallyHidden = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,9 +84,7 @@
     }else{
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Remaining",count];
     }
-    
     cell.imageView.image=[UIImage imageNamed:checklist.iconName];
-    
     return cell;
 }
 
@@ -112,23 +130,43 @@
     [self.navigationController popToViewController:self animated:YES];
 }
 
-//- (void)listDetailViewController:(ListDetailViewController *)controller didFinishAddingChecklist:(Checklist *)checklist
-//{
-//    [self.dataOfChecklist addObject:checklist];
-//    [self.dataOfChecklist sortUsingSelector:@selector(compare:)];
-//    [self.tableView reloadData];
-//    [self.navigationController popToViewController:self animated:YES];
-//}
-
-//- (void)listDetailViewController:(ListDetailViewController *)controller didFinishEditingChecklist:(Checklist *)checklist
-//{
-//    [self.dataOfChecklist sortUsingSelector:@selector(compare:)];
-//    [self.tableView reloadData];
-//    [self.navigationController popToViewController:self animated:YES];
-//}
-
 -(void)ChecklistViewControllerDidBack:(ChecklistViewController *)controller{
     [self.tableView reloadData];
     [self.navigationController popToViewController:self animated:YES];
+}
+
+
+#pragma mark 加载
+-(void)refreshChecklist{
+    [self requestMoreChecklist:YES];
+}
+
+-(void)loadMoreChecklist{
+    [self requestMoreChecklist:NO];
+}
+
+-(void)requestMoreChecklist:(BOOL)isRefresh{
+    if (isRefresh) {
+        self.pageNo =  1;
+        [self.tableView.mj_header endRefreshing];
+        [self.dataOfChecklist removeAllObjects];
+    }else{
+        [self.tableView.mj_footer endRefreshing];
+    }
+    NSMutableArray *checklists = [_checklistService findAllByPage:self.pageNo withPageRow:2];
+    if(isRefresh){
+        self.pageNo = 2;
+    }else{
+        self.pageNo ++;
+    }
+    [self.dataOfChecklist addObjectsFromArray:checklists];
+    if (checklists.count > 0) {
+        [self.tableView.mj_footer resetNoMoreData];
+    }else{
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        [SVProgressHUD showInfoWithStatus:@"没有更多数据了!"];
+    }
+    
+    [self.tableView reloadData];
 }
 @end

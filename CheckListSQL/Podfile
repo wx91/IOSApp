@@ -1,5 +1,6 @@
 platform :ios, '9.1'
 target "CheckListSQL" do
 pod 'FMDB', '~> 2.6.2'
-
+pod 'SVProgressHUD', '~> 2.0.3'
+pod 'MJRefresh', '~> 3.1.0'
 end 

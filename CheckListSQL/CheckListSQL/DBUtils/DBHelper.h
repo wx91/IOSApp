@@ -18,7 +18,5 @@
 -(void)initDB;
 //从数据库获取当前数据库版本号
 -(int)dbVersionNumber;
-//是否存在该表
-+(BOOL) isTableOK:(NSString *)tableName withDB:(FMDatabase *)db;
 
 @end
