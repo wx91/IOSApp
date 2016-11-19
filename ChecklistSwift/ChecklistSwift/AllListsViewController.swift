@@ -18,13 +18,13 @@ class AllListsViewController: UITableViewController,ListDetailViewControllerDele
     }
     
     func initSubView(){
-        let addBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.Add, target: self, action: #selector(AllListsViewController.AddChecklist))
+        let addBarButtonItem:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem:UIBarButtonSystemItem.add, target: self, action: #selector(AllListsViewController.AddChecklist))
         self.navigationItem.rightBarButtonItem = addBarButtonItem
     }
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(self.dataModel!.lists == nil){
             return 0
         }else{
@@ -32,11 +32,11 @@ class AllListsViewController: UITableViewController,ListDetailViewControllerDele
         }
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifer:String? = "Cell"
-        var cell:UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(identifer!)
+        var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: identifer!)
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier:identifer);
+            cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier:identifer);
         }
         cell!.textLabel?.text="测试"
         let checklist:Checklist = self.dataModel!.lists![indexPath.row]
@@ -44,7 +44,7 @@ class AllListsViewController: UITableViewController,ListDetailViewControllerDele
         if checklist.iconName != nil {
             cell!.imageView?.image=UIImage(named: checklist.iconName!)
         }
-        cell!.accessoryType=UITableViewCellAccessoryType.DetailDisclosureButton
+        cell!.accessoryType=UITableViewCellAccessoryType.detailDisclosureButton
         let count:Int = checklist.countUncheckedItems()
         if checklist.items != nil {
             if checklist.items!.count == 0 {
@@ -54,11 +54,11 @@ class AllListsViewController: UITableViewController,ListDetailViewControllerDele
         if count == 0 {
             cell!.detailTextLabel?.text = "全部搞定收工"
         }else{
-            cell!.detailTextLabel?.text = "".stringByAppendingFormat("%d Remaining", count)
+            cell!.detailTextLabel?.text = "".appendingFormat("%d Remaining", count)
         }
         return cell!;
     }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller:ChecklistViewController = ChecklistViewController()
         let checklist:Checklist = self.dataModel!.lists![indexPath.row]
         controller.checklist = checklist
@@ -66,41 +66,41 @@ class AllListsViewController: UITableViewController,ListDetailViewControllerDele
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        let controller:ListDetailViewController = ListDetailViewController.init(style:UITableViewStyle.Grouped);
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let controller:ListDetailViewController = ListDetailViewController.init(style:UITableViewStyle.grouped);
         controller.delegate=self
         let checklist:Checklist = self.dataModel!.lists![indexPath.row]
         controller.checklistToEdit=checklist
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.Delete {
-            self.dataModel!.lists!.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            self.dataModel!.lists!.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
     
     func AddChecklist(){
-        let controller:ListDetailViewController = ListDetailViewController.init(style:UITableViewStyle.Grouped);
+        let controller:ListDetailViewController = ListDetailViewController.init(style:UITableViewStyle.grouped);
         controller.delegate=self
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func ChecklistViewControllerDidBack(controller:ChecklistViewController){
+    func ChecklistViewControllerDidBack(_ controller:ChecklistViewController){
         self.tableView.reloadData()
         self.navigationController?.popToViewController(self, animated: true)
     }
     
-    func listDetailViewControllerDidCancel(controller:ListDetailViewController){
+    func listDetailViewControllerDidCancel(_ controller:ListDetailViewController){
         self.navigationController?.popToViewController(self, animated: true)
     }
     
-    func listDetailViewController(controller:ListDetailViewController,didFinishAddingChecklist checklist:Checklist){
+    func listDetailViewController(_ controller:ListDetailViewController,didFinishAddingChecklist checklist:Checklist){
         if(self.dataModel!.lists == nil){
             self.dataModel!.lists = Array<Checklist>();
         }
@@ -110,7 +110,7 @@ class AllListsViewController: UITableViewController,ListDetailViewControllerDele
         self.navigationController?.popToViewController(self, animated: true)
     }
     
-    func listDetailViewController(controller:ListDetailViewController,didFinishEditingChecklist checklist:Checklist){
+    func listDetailViewController(_ controller:ListDetailViewController,didFinishEditingChecklist checklist:Checklist){
         self.tableView.reloadData()
         self.navigationController?.popToViewController(self, animated: true)
     }

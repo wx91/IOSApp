@@ -21,15 +21,15 @@ class Checklist: NSObject,NSCoding{
     }
     
     required init?(coder aDecoder: NSCoder){
-        self.name = aDecoder.decodeObjectForKey("Name") as? String
-        self.iconName = aDecoder.decodeObjectForKey("IconName") as? String
-        self.items = aDecoder.decodeObjectForKey("Items") as? Array
+        self.name = aDecoder.decodeObject(forKey: "Name") as? String
+        self.iconName = aDecoder.decodeObject(forKey: "IconName") as? String
+        self.items = aDecoder.decodeObject(forKey: "Items") as? Array
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(self.name, forKey: "Name")
-        aCoder.encodeObject(self.iconName, forKey: "IconName")
-        aCoder.encodeObject(self.items, forKey: "Items")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.name, forKey: "Name")
+        aCoder.encode(self.iconName, forKey: "IconName")
+        aCoder.encode(self.items, forKey: "Items")
     }
     
     

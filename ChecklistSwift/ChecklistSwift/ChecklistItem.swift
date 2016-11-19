@@ -13,23 +13,23 @@ class ChecklistItem: NSObject,NSCoding {
     var text:String?
     var checked:Bool?
     var shouldRemind:Bool?
-    var dueDate:NSDate?
+    var dueDate:Date?
     
     override init(){
         super.init();
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(self.text, forKey: "Text")
-        aCoder.encodeBool(self.checked!, forKey: "Checked")
-        aCoder.encodeObject(self.dueDate,forKey: "DueDate")
-        aCoder.encodeBool(self.shouldRemind!, forKey: "ShouldRemind")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.text, forKey: "Text")
+        aCoder.encode(self.checked!, forKey: "Checked")
+        aCoder.encode(self.dueDate,forKey: "DueDate")
+        aCoder.encode(self.shouldRemind!, forKey: "ShouldRemind")
     }
     required init?(coder aDecoder: NSCoder) {
-        self.text = aDecoder.decodeObjectForKey("Text") as? String
-        self.checked = aDecoder.decodeBoolForKey("Checked")
-        self.dueDate = aDecoder.decodeObjectForKey("DueDate") as? NSDate
-        self.shouldRemind = aDecoder.decodeBoolForKey("ShouldRemind")
+        self.text = aDecoder.decodeObject(forKey: "Text") as? String
+        self.checked = aDecoder.decodeBool(forKey: "Checked")
+        self.dueDate = aDecoder.decodeObject(forKey: "DueDate") as? Date
+        self.shouldRemind = aDecoder.decodeBool(forKey: "ShouldRemind")
     }
     
     

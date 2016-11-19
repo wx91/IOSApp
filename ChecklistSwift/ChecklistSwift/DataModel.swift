@@ -18,32 +18,32 @@ class DataModel: NSObject {
     }
     
     func documentsDirectory() -> String{
-        if let dirs:[String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) {
+        if let dirs:[String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true) {
             let dir:String = dirs[0]
             return dir;
         }
     }
     func dataFilePath() -> String{
         let path = self.documentsDirectory()
-        return path.stringByAppendingString("/Checklists.plist");
+        return path + "/Checklists.plist";
     }
     func saveChecklists(){
         let data:NSMutableData = NSMutableData()
-        let archiver:NSKeyedArchiver = NSKeyedArchiver.init(forWritingWithMutableData: data)
+        let archiver:NSKeyedArchiver = NSKeyedArchiver.init(forWritingWith: data)
         archiver.finishEncoding()
-        data.writeToFile(self.dataFilePath(), atomically:true)
+        data.write(toFile: self.dataFilePath(), atomically:true)
     }
     
     func loadChecklists() {
         let path:String = self.dataFilePath()
-        if NSFileManager.defaultManager().fileExistsAtPath(path){
-            let data:NSData = NSData(contentsOfFile: path)!;
-            let unarchiver:NSKeyedUnarchiver = NSKeyedUnarchiver(forReadingWithData: data)
-            self.lists = unarchiver.decodeObjectForKey("Checklists") as? Array<Checklist>
+        if FileManager.default.fileExists(atPath: path){
+            let data:Data = try! Data(contentsOf: URL(fileURLWithPath: path));
+            let unarchiver:NSKeyedUnarchiver = NSKeyedUnarchiver(forReadingWith: data)
+            self.lists = unarchiver.decodeObject(forKey: "Checklists") as? Array<Checklist>
             unarchiver.finishDecoding()
         }else{
             let checklist:Checklist = Checklist();
-            self.lists = Array<Checklist>(count:1,repeatedValue:checklist);
+            self.lists = Array<Checklist>(repeating: checklist,count: 1);
         }
     }
 }
