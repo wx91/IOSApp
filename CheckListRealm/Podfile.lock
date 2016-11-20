@@ -1,0 +1,20 @@
+PODS:
+  - MJRefresh (3.1.12)
+  - Realm (2.1.0):
+    - Realm/Headers (= 2.1.0)
+  - Realm/Headers (2.1.0)
+  - SVProgressHUD (2.0.4)
+
+DEPENDENCIES:
+  - MJRefresh
+  - Realm
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
+  SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
+
+PODFILE CHECKSUM: 521db4525be1b8fdd565a2fdf74990daba1dabec
+
+COCOAPODS: 1.1.1
