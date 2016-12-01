@@ -31,32 +31,26 @@ static ChecklistDAO *sharedManager=nil;
 }
 //删除Checklist方法
 -(int) remove:(Checklist *)model{
-    RLMRealm *realm= [RLMRealm defaultRealm];
-    RLMResults<ChecklistItem *> *checklistitems = [ChecklistItem objectsWhere:@"checklistId = %lu" args:model.checklistId];
-    [realm beginWriteTransaction];
-    //先删除子表（checklistItem）相关数据
-    [realm deleteObjects:checklistitems];
-    [realm deleteObjects:model];
-    [realm commitWriteTransaction];
+    if ([self openRealm]) {
+        NSPredicate *pre = [NSPredicate predicateWithFormat:@"checklistId = %@",model.checklistId];
+        RLMResults<ChecklistItem *> *checklistitems = [ChecklistItem objectsWithPredicate:pre];
+        [realm beginWriteTransaction];
+        //先删除子表（checklistItem）相关数据
+        [realm deleteObjects:checklistitems];
+        [realm deleteObjects:model];
+        [realm commitWriteTransaction];
+    }
+
     return 0;
 }
 
 //修改Checklist方法
 -(int) modify:(Checklist *)model{
-//    if ([self openDB]) {
-//        NSString *sqlStr =@"update Checklist set name=:name,iconName=:iconName where checklistId=:checklistId";
-//        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-//        [params setObject:model.name forKey:@"name"];
-//        [params setObject:model.iconName forKey:@"iconName"];
-//        [params setObject:[NSNumber numberWithInteger:model.checklistId] forKey:@"checklistId"];
-//        if (![db executeUpdate:sqlStr withParameterDictionary:params]) {
-//            NSLog(@"修改数据失败!");
-//        }
-//    }
-//    [db close];
-    RLMRealm *realm= [RLMRealm defaultRealm];
-    [realm addOrUpdateObject:model];
-    [realm commitWriteTransaction];
+    if ([self openRealm]) {
+        [realm beginWriteTransaction];
+        [Checklist createOrUpdateInRealm:realm withValue:model];
+        [realm commitWriteTransaction];
+    }
     return 0;
     
 }
@@ -64,70 +58,32 @@ static ChecklistDAO *sharedManager=nil;
 //查询所有数据方法
 -(NSMutableArray *) findAll{
     NSMutableArray *listData =[NSMutableArray array];
-//    if ([self openDB]) {
-//        NSString *sqlStr = @"select checklistId,name,iconName from Checklist ";
-//        FMResultSet *rs = [db executeQuery:sqlStr];
-//        while (rs.next) {
-//            Checklist *model = [[Checklist alloc]init];
-//            
-//            int checklistId = [rs intForColumn:@"checklistId"];
-//            model.checklistId=checklistId;
-//            
-//            NSString *name =[rs stringForColumn:@"name"];
-//            model.name=name;
-//            
-//            NSString *iconName =[rs stringForColumn:@"iconName"];
-//            model.iconName = iconName;
-//            [listData addObject:model];
-//        }
-//    }
-//    [db close];
-    
+    if ([self openRealm]) {
+        RLMResults<Checklist *> *checklists = [Checklist allObjects];
+        for (Checklist *checklist in checklists) {
+            [listData addObject:checklist];
+        }
+    }
     return listData;
 }
 
 //按照主键查询数据方法
--(Checklist *) findById:(Checklist*)model{
-    if ([self openDB]) {
-        NSString *sqlStr = @"select checklistId,name,iconName from Checklist where checklistId = :checklistId";
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        [params setObject:[NSNumber numberWithInteger:model.checklistId] forKey:@"checklistId"];
-        FMResultSet *rs = [db executeQuery:sqlStr withParameterDictionary:params];
-        while (rs.next) {
-            int checklistId = [rs intForColumn:@"checklistId"];
-            model.checklistId=checklistId;
-            
-            NSString *name = [rs stringForColumn:@"name"];
-            model.name=name;
-            
-            NSString *iconName = [rs stringForColumn:@"iconName"];
-            model.iconName = iconName;
-        }
-    }
-    [db close];
-    return model;
+-(Checklist *) findById:(Checklist *)model{
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"checklistId = %@",model.checklistId];
+    RLMResults<Checklist *> *checklistArray = [Checklist objectsWithPredicate:pre];
+    Checklist *result = (Checklist *)[checklistArray firstObject];
+    return result;
 }
 //查询所有数据方法
 -(NSMutableArray *)findAllByPage:(NSInteger)currentPage withPageRow:(NSInteger)pageRow{
     NSMutableArray *listData =[NSMutableArray array];
-    if ([self openDB]) {
-        NSString *sqlStr =[NSString stringWithFormat:@"select * from Checklist order by checklistId asc limit %lu offset %lu",pageRow,(currentPage-1)*pageRow];
-        FMResultSet *rs = [db executeQuery:sqlStr];
-        while (rs.next) {
-            Checklist *model = [[Checklist alloc]init];
-            
-            int checklistId = [rs intForColumn:@"checklistId"];
-            model.checklistId=checklistId;
-            
-            NSString *name =[rs stringForColumn:@"name"];
-            model.name=name;
-            
-            NSString *iconName =[rs stringForColumn:@"iconName"];
-            model.iconName = iconName;
-            [listData addObject:model];
+    RLMResults<Checklist *> *checklists = [[Checklist allObjects] sortedResultsUsingProperty:@"checklistId" ascending:YES];
+    for (NSInteger i = (currentPage-1)*pageRow; i<currentPage*pageRow; i++) {
+        if (i < checklists.count) {
+            Checklist *checklist = [checklists objectAtIndex:i];
+            [listData addObject:checklist];
         }
     }
-    [db close];
     return listData;
 }
 

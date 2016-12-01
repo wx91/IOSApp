@@ -51,10 +51,10 @@
 		0EC5DD86374C41F4D2930D3A /* Pods-CheckListRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckListRealm.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckListRealm/Pods-CheckListRealm.release.xcconfig"; sourceTree = "<group>"; };
 		506C1CC11DE1B5A80091301A /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllListsViewController.h; sourceTree = "<group>"; };
 		506C1CC21DE1B5A80091301A /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllListsViewController.m; sourceTree = "<group>"; };
-		506C1CC41DE1B5B70091301A /* Checklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checklist.h; sourceTree = "<group>"; };
-		506C1CC51DE1B5B70091301A /* Checklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checklist.m; sourceTree = "<group>"; };
-		506C1CC61DE1B5B70091301A /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItem.h; sourceTree = "<group>"; };
-		506C1CC71DE1B5B70091301A /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItem.m; sourceTree = "<group>"; };
+		506C1CC41DE1B5B70091301A /* Checklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Checklist.h; path = ../Checklist.h; sourceTree = "<group>"; };
+		506C1CC51DE1B5B70091301A /* Checklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Checklist.m; path = ../Checklist.m; sourceTree = "<group>"; };
+		506C1CC61DE1B5B70091301A /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChecklistItem.h; path = ../ChecklistItem.h; sourceTree = "<group>"; };
+		506C1CC71DE1B5B70091301A /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChecklistItem.m; path = ../ChecklistItem.m; sourceTree = "<group>"; };
 		506C1CC81DE1B5B70091301A /* ChecklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistViewController.h; sourceTree = "<group>"; };
 		506C1CC91DE1B5B70091301A /* ChecklistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistViewController.m; sourceTree = "<group>"; };
 		506C1CCD1DE1B5BD0091301A /* IconPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconPickerViewController.h; sourceTree = "<group>"; };
@@ -122,16 +122,9 @@
 		506C1CD61DE1B5D10091301A /* DBUtils */ = {
 			isa = PBXGroup;
 			children = (
-				506C1CD71DE1B5D10091301A /* BaseDAO.h */,
-				506C1CD81DE1B5D10091301A /* BaseDAO.m */,
-				506C1CD91DE1B5D10091301A /* ChecklistDAO.h */,
-				506C1CDA1DE1B5D10091301A /* ChecklistDAO.m */,
-				506C1CDB1DE1B5D10091301A /* ChecklistItemDAO.h */,
-				506C1CDC1DE1B5D10091301A /* ChecklistItemDAO.m */,
-				506C1CDD1DE1B5D10091301A /* ChecklistItemService.h */,
-				506C1CDE1DE1B5D10091301A /* ChecklistItemService.m */,
-				506C1CDF1DE1B5D10091301A /* ChecklistService.h */,
-				506C1CE01DE1B5D10091301A /* ChecklistService.m */,
+				50BB11431DEFC8BD0070AFC4 /* Entity */,
+				50BB11421DEFBDF60070AFC4 /* DAO */,
+				50BB11411DEFBDE80070AFC4 /* Service */,
 			);
 			path = DBUtils;
 			sourceTree = "<group>";
@@ -162,16 +155,12 @@
 			isa = PBXGroup;
 			children = (
 				506C1CD61DE1B5D10091301A /* DBUtils */,
-				506C1CC41DE1B5B70091301A /* Checklist.h */,
-				506C1CC51DE1B5B70091301A /* Checklist.m */,
 				506C1CC11DE1B5A80091301A /* AllListsViewController.h */,
 				506C1CC21DE1B5A80091301A /* AllListsViewController.m */,
 				506C1CD21DE1B5C40091301A /* ListDetailViewController.h */,
 				506C1CD31DE1B5C40091301A /* ListDetailViewController.m */,
 				506C1CCD1DE1B5BD0091301A /* IconPickerViewController.h */,
 				506C1CCE1DE1B5BD0091301A /* IconPickerViewController.m */,
-				506C1CC61DE1B5B70091301A /* ChecklistItem.h */,
-				506C1CC71DE1B5B70091301A /* ChecklistItem.m */,
 				506C1CC81DE1B5B70091301A /* ChecklistViewController.h */,
 				506C1CC91DE1B5B70091301A /* ChecklistViewController.m */,
 				506C1CD01DE1B5C40091301A /* ItemDetailViewController.h */,
@@ -213,6 +202,41 @@
 				50AAC4211DE0A7960008B839 /* Info.plist */,
 			);
 			path = CheckListRealmUITests;
+			sourceTree = "<group>";
+		};
+		50BB11411DEFBDE80070AFC4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				506C1CDD1DE1B5D10091301A /* ChecklistItemService.h */,
+				506C1CDE1DE1B5D10091301A /* ChecklistItemService.m */,
+				506C1CDF1DE1B5D10091301A /* ChecklistService.h */,
+				506C1CE01DE1B5D10091301A /* ChecklistService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		50BB11421DEFBDF60070AFC4 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				506C1CD71DE1B5D10091301A /* BaseDAO.h */,
+				506C1CD81DE1B5D10091301A /* BaseDAO.m */,
+				506C1CD91DE1B5D10091301A /* ChecklistDAO.h */,
+				506C1CDA1DE1B5D10091301A /* ChecklistDAO.m */,
+				506C1CDB1DE1B5D10091301A /* ChecklistItemDAO.h */,
+				506C1CDC1DE1B5D10091301A /* ChecklistItemDAO.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		50BB11431DEFC8BD0070AFC4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				506C1CC41DE1B5B70091301A /* Checklist.h */,
+				506C1CC51DE1B5B70091301A /* Checklist.m */,
+				506C1CC61DE1B5B70091301A /* ChecklistItem.h */,
+				506C1CC71DE1B5B70091301A /* ChecklistItem.m */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		7B58288528F715A86FDEDD45 /* Pods */ = {

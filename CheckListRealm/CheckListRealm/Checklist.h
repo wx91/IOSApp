@@ -9,14 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <Realm/Realm.h>
 #import "ChecklistItem.h"
+
 @interface Checklist : RLMObject
 
-@property (nonatomic, assign) NSInteger checklistId;
+@property NSString* checklistId;
 
-@property (nonatomic,copy) NSString *name;
+@property NSString *name;
 
-@property(nonatomic,copy) NSString *iconName;
-
-//@property(nonatomic,strong)RLMArray<ChecklistItem> *checklistitems;
+@property NSString *iconName;
 
 @end

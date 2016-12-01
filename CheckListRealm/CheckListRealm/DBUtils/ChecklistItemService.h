@@ -28,4 +28,5 @@
 -(void)deleteChecklistItem:(ChecklistItem *)model;
 //查询分页
 -(NSMutableArray *)findAllByPage:(NSInteger)currentPage withPageRow:(NSInteger)pageRow;
+
 @end

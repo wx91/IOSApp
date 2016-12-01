@@ -11,16 +11,16 @@
 
 @interface ChecklistItem : RLMObject
 
-@property (nonatomic, assign) NSInteger checklistItemID;
+@property NSString *checklistItemID;
 
-@property (nonatomic, copy) NSString *context;
+@property NSString *context;
 
-@property (nonatomic, assign) BOOL checked;
+@property BOOL checked;
 
-@property(nonatomic,assign) BOOL shouldRemind;
+@property BOOL shouldRemind;
 
-@property(nonatomic,copy)NSDate *dueDate;
+@property NSDate *dueDate;
 
-@property (nonatomic, assign) NSInteger checklistId;
+@property  NSString *checklistId;
 
 @end

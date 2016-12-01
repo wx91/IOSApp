@@ -149,6 +149,7 @@
 
 -(void)done{
     if (self.itemToEdit.context ==nil) {
+        self.itemToEdit.checklistItemID = [[NSUUID UUID]UUIDString];
         self.itemToEdit.context=self.textField.text;
         self.itemToEdit.checked=NO;
         self.itemToEdit.shouldRemind=self.switchControl.on;

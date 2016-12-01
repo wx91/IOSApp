@@ -99,6 +99,7 @@
     //如果传过来的checklistToEdit==nil 则增加，否则修改
     if (self.checklistToEdit==nil) {
         Checklist *checklist=[[Checklist alloc]init];
+        checklist.checklistId = [[NSUUID UUID]UUIDString];
         checklist.name=[NSString stringWithString:self.textField.text];
         checklist.iconName=_iconName;
         [_checklistService addChecklist:checklist];
