@@ -33,9 +33,11 @@
     self.signInService = [RWDummySignInService new];
     // initially hide the failure message
     self.signInFailureText.hidden = YES;
-    RACSignal *validUsernameSignal = [self.usernameTextField.rac_textSignal map:^id(NSString *text) {
-        return @([self isValidUsername:text]);
-    }];
+    RACSignal *validUsernameSignal =
+    [self.usernameTextField.rac_textSignal
+         map:^id(NSString *text) {
+             return @([self isValidUsername:text]);
+         }];
     RACSignal *validPasswordSignal =
     [self.passwordTextField.rac_textSignal
      map:^id(NSString *text) {
@@ -68,7 +70,8 @@
         }];
     
     //登录
-    [[[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside]doNext:^(id x) {
+    [[[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside]
+       doNext:^(id x) {
         self.signInButton.enabled=NO;
         self.signInFailureText.hidden=YES;
     }]flattenMap:^RACStream *(id value) {
