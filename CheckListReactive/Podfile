@@ -1,0 +1,9 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CheckListReactive' do
+    pod 'ReactiveCocoa', '~> 2.5'
+    pod 'SVProgressHUD', '~> 2.1.1'
+    pod 'MJRefresh', '~> 3.1.12'
+    pod 'FMDB', '~> 2.6.2'
+end

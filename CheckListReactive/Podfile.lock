@@ -1,0 +1,29 @@
+PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - MJRefresh (3.1.12)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - SVProgressHUD (2.1.1)
+
+DEPENDENCIES:
+  - FMDB (~> 2.6.2)
+  - MJRefresh (~> 3.1.12)
+  - ReactiveCocoa (~> 2.5)
+  - SVProgressHUD (~> 2.1.1)
+
+SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SVProgressHUD: 1127180503b9a308ddf7006f3cc58fc05cc1092d
+
+PODFILE CHECKSUM: 28c8f6c4a7f0706dc24cd03e137bd90d946a5dd0
+
+COCOAPODS: 1.1.1

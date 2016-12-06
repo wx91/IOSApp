@@ -1,0 +1,716 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		509A49791DF68DCB0020D1A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49781DF68DCB0020D1A7 /* main.m */; };
+		509A497C1DF68DCB0020D1A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A497B1DF68DCB0020D1A7 /* AppDelegate.m */; };
+		509A49821DF68DCB0020D1A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509A49801DF68DCB0020D1A7 /* Main.storyboard */; };
+		509A49841DF68DCB0020D1A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509A49831DF68DCB0020D1A7 /* Assets.xcassets */; };
+		509A49871DF68DCB0020D1A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509A49851DF68DCB0020D1A7 /* LaunchScreen.storyboard */; };
+		509A49921DF68DCB0020D1A7 /* CheckListReactiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49911DF68DCB0020D1A7 /* CheckListReactiveTests.m */; };
+		509A499D1DF68DCB0020D1A7 /* CheckListReactiveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A499C1DF68DCB0020D1A7 /* CheckListReactiveUITests.m */; };
+		509A49B11DF691120020D1A7 /* create_load.sql in Resources */ = {isa = PBXBuildFile; fileRef = 509A49AE1DF691120020D1A7 /* create_load.sql */; };
+		509A49B21DF691120020D1A7 /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49B01DF691120020D1A7 /* DBHelper.m */; };
+		509A49B81DF6911C0020D1A7 /* Checklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49B51DF6911C0020D1A7 /* Checklist.m */; };
+		509A49B91DF6911C0020D1A7 /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49B71DF6911C0020D1A7 /* ChecklistItem.m */; };
+		509A49C11DF691250020D1A7 /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49BC1DF691250020D1A7 /* BaseDAO.m */; };
+		509A49C21DF691250020D1A7 /* ChecklistDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49BE1DF691250020D1A7 /* ChecklistDAO.m */; };
+		509A49C31DF691250020D1A7 /* ChecklistItemDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49C01DF691250020D1A7 /* ChecklistItemDAO.m */; };
+		509A49C91DF6912B0020D1A7 /* ChecklistItemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49C61DF6912B0020D1A7 /* ChecklistItemService.m */; };
+		509A49CA1DF6912B0020D1A7 /* ChecklistService.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49C81DF6912B0020D1A7 /* ChecklistService.m */; };
+		509A49CD1DF6914A0020D1A7 /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49CC1DF6914A0020D1A7 /* AllListsViewController.m */; };
+		509A49D01DF691500020D1A7 /* ChecklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49CF1DF691500020D1A7 /* ChecklistViewController.m */; };
+		509A49D31DF691550020D1A7 /* IconPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49D21DF691550020D1A7 /* IconPickerViewController.m */; };
+		509A49D81DF6915C0020D1A7 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49D51DF6915C0020D1A7 /* ItemDetailViewController.m */; };
+		509A49D91DF6915C0020D1A7 /* ListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 509A49D71DF6915C0020D1A7 /* ListDetailViewController.m */; };
+		B02D98A62B890434E7DC692E /* libPods-CheckListReactive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC368779B6D161F91DADCE2F /* libPods-CheckListReactive.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		509A498E1DF68DCB0020D1A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 509A496C1DF68DCB0020D1A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 509A49731DF68DCB0020D1A7;
+			remoteInfo = CheckListReactive;
+		};
+		509A49991DF68DCB0020D1A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 509A496C1DF68DCB0020D1A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 509A49731DF68DCB0020D1A7;
+			remoteInfo = CheckListReactive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		509A49741DF68DCB0020D1A7 /* CheckListReactive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckListReactive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		509A49781DF68DCB0020D1A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		509A497A1DF68DCB0020D1A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		509A497B1DF68DCB0020D1A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		509A49811DF68DCB0020D1A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		509A49831DF68DCB0020D1A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		509A49861DF68DCB0020D1A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		509A49881DF68DCB0020D1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		509A498D1DF68DCB0020D1A7 /* CheckListReactiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckListReactiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		509A49911DF68DCB0020D1A7 /* CheckListReactiveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListReactiveTests.m; sourceTree = "<group>"; };
+		509A49931DF68DCB0020D1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		509A49981DF68DCB0020D1A7 /* CheckListReactiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckListReactiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		509A499C1DF68DCB0020D1A7 /* CheckListReactiveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListReactiveUITests.m; sourceTree = "<group>"; };
+		509A499E1DF68DCB0020D1A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		509A49AE1DF691120020D1A7 /* create_load.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = create_load.sql; sourceTree = "<group>"; };
+		509A49AF1DF691120020D1A7 /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
+		509A49B01DF691120020D1A7 /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		509A49B41DF6911C0020D1A7 /* Checklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checklist.h; sourceTree = "<group>"; };
+		509A49B51DF6911C0020D1A7 /* Checklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checklist.m; sourceTree = "<group>"; };
+		509A49B61DF6911C0020D1A7 /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItem.h; sourceTree = "<group>"; };
+		509A49B71DF6911C0020D1A7 /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItem.m; sourceTree = "<group>"; };
+		509A49BB1DF691250020D1A7 /* BaseDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDAO.h; sourceTree = "<group>"; };
+		509A49BC1DF691250020D1A7 /* BaseDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDAO.m; sourceTree = "<group>"; };
+		509A49BD1DF691250020D1A7 /* ChecklistDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistDAO.h; sourceTree = "<group>"; };
+		509A49BE1DF691250020D1A7 /* ChecklistDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistDAO.m; sourceTree = "<group>"; };
+		509A49BF1DF691250020D1A7 /* ChecklistItemDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItemDAO.h; sourceTree = "<group>"; };
+		509A49C01DF691250020D1A7 /* ChecklistItemDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItemDAO.m; sourceTree = "<group>"; };
+		509A49C51DF6912B0020D1A7 /* ChecklistItemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItemService.h; sourceTree = "<group>"; };
+		509A49C61DF6912B0020D1A7 /* ChecklistItemService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItemService.m; sourceTree = "<group>"; };
+		509A49C71DF6912B0020D1A7 /* ChecklistService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistService.h; sourceTree = "<group>"; };
+		509A49C81DF6912B0020D1A7 /* ChecklistService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistService.m; sourceTree = "<group>"; };
+		509A49CB1DF6914A0020D1A7 /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllListsViewController.h; sourceTree = "<group>"; };
+		509A49CC1DF6914A0020D1A7 /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllListsViewController.m; sourceTree = "<group>"; };
+		509A49CE1DF691500020D1A7 /* ChecklistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistViewController.h; sourceTree = "<group>"; };
+		509A49CF1DF691500020D1A7 /* ChecklistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistViewController.m; sourceTree = "<group>"; };
+		509A49D11DF691550020D1A7 /* IconPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconPickerViewController.h; sourceTree = "<group>"; };
+		509A49D21DF691550020D1A7 /* IconPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconPickerViewController.m; sourceTree = "<group>"; };
+		509A49D41DF6915C0020D1A7 /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
+		509A49D51DF6915C0020D1A7 /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
+		509A49D61DF6915C0020D1A7 /* ListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailViewController.h; sourceTree = "<group>"; };
+		509A49D71DF6915C0020D1A7 /* ListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailViewController.m; sourceTree = "<group>"; };
+		6115E7CBAA36F86BA847C1EC /* Pods-CheckListReactive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckListReactive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CheckListReactive/Pods-CheckListReactive.debug.xcconfig"; sourceTree = "<group>"; };
+		CC368779B6D161F91DADCE2F /* libPods-CheckListReactive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CheckListReactive.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD7B31AD07D15893130B48C7 /* Pods-CheckListReactive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheckListReactive.release.xcconfig"; path = "Pods/Target Support Files/Pods-CheckListReactive/Pods-CheckListReactive.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		509A49711DF68DCB0020D1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B02D98A62B890434E7DC692E /* libPods-CheckListReactive.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		509A498A1DF68DCB0020D1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		509A49951DF68DCB0020D1A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4522847F04BC7C41B861649F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC368779B6D161F91DADCE2F /* libPods-CheckListReactive.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		509A496B1DF68DCB0020D1A7 = {
+			isa = PBXGroup;
+			children = (
+				509A49761DF68DCB0020D1A7 /* CheckListReactive */,
+				509A49901DF68DCB0020D1A7 /* CheckListReactiveTests */,
+				509A499B1DF68DCB0020D1A7 /* CheckListReactiveUITests */,
+				509A49751DF68DCB0020D1A7 /* Products */,
+				9B8E4ADAE3D3F91B7859C389 /* Pods */,
+				4522847F04BC7C41B861649F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		509A49751DF68DCB0020D1A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				509A49741DF68DCB0020D1A7 /* CheckListReactive.app */,
+				509A498D1DF68DCB0020D1A7 /* CheckListReactiveTests.xctest */,
+				509A49981DF68DCB0020D1A7 /* CheckListReactiveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		509A49761DF68DCB0020D1A7 /* CheckListReactive */ = {
+			isa = PBXGroup;
+			children = (
+				509A49AD1DF691120020D1A7 /* DBUtils */,
+				509A49B31DF6911C0020D1A7 /* Entity */,
+				509A49BA1DF691250020D1A7 /* DAO */,
+				509A49C41DF6912B0020D1A7 /* Service */,
+				509A49CB1DF6914A0020D1A7 /* AllListsViewController.h */,
+				509A49CC1DF6914A0020D1A7 /* AllListsViewController.m */,
+				509A49D61DF6915C0020D1A7 /* ListDetailViewController.h */,
+				509A49D71DF6915C0020D1A7 /* ListDetailViewController.m */,
+				509A49D11DF691550020D1A7 /* IconPickerViewController.h */,
+				509A49D21DF691550020D1A7 /* IconPickerViewController.m */,
+				509A49CE1DF691500020D1A7 /* ChecklistViewController.h */,
+				509A49CF1DF691500020D1A7 /* ChecklistViewController.m */,
+				509A49D41DF6915C0020D1A7 /* ItemDetailViewController.h */,
+				509A49D51DF6915C0020D1A7 /* ItemDetailViewController.m */,
+				509A497A1DF68DCB0020D1A7 /* AppDelegate.h */,
+				509A497B1DF68DCB0020D1A7 /* AppDelegate.m */,
+				509A49801DF68DCB0020D1A7 /* Main.storyboard */,
+				509A49831DF68DCB0020D1A7 /* Assets.xcassets */,
+				509A49851DF68DCB0020D1A7 /* LaunchScreen.storyboard */,
+				509A49881DF68DCB0020D1A7 /* Info.plist */,
+				509A49771DF68DCB0020D1A7 /* Supporting Files */,
+			);
+			path = CheckListReactive;
+			sourceTree = "<group>";
+		};
+		509A49771DF68DCB0020D1A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				509A49781DF68DCB0020D1A7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		509A49901DF68DCB0020D1A7 /* CheckListReactiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				509A49911DF68DCB0020D1A7 /* CheckListReactiveTests.m */,
+				509A49931DF68DCB0020D1A7 /* Info.plist */,
+			);
+			path = CheckListReactiveTests;
+			sourceTree = "<group>";
+		};
+		509A499B1DF68DCB0020D1A7 /* CheckListReactiveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				509A499C1DF68DCB0020D1A7 /* CheckListReactiveUITests.m */,
+				509A499E1DF68DCB0020D1A7 /* Info.plist */,
+			);
+			path = CheckListReactiveUITests;
+			sourceTree = "<group>";
+		};
+		509A49AD1DF691120020D1A7 /* DBUtils */ = {
+			isa = PBXGroup;
+			children = (
+				509A49AE1DF691120020D1A7 /* create_load.sql */,
+				509A49AF1DF691120020D1A7 /* DBHelper.h */,
+				509A49B01DF691120020D1A7 /* DBHelper.m */,
+			);
+			path = DBUtils;
+			sourceTree = "<group>";
+		};
+		509A49B31DF6911C0020D1A7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				509A49B41DF6911C0020D1A7 /* Checklist.h */,
+				509A49B51DF6911C0020D1A7 /* Checklist.m */,
+				509A49B61DF6911C0020D1A7 /* ChecklistItem.h */,
+				509A49B71DF6911C0020D1A7 /* ChecklistItem.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		509A49BA1DF691250020D1A7 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				509A49BB1DF691250020D1A7 /* BaseDAO.h */,
+				509A49BC1DF691250020D1A7 /* BaseDAO.m */,
+				509A49BD1DF691250020D1A7 /* ChecklistDAO.h */,
+				509A49BE1DF691250020D1A7 /* ChecklistDAO.m */,
+				509A49BF1DF691250020D1A7 /* ChecklistItemDAO.h */,
+				509A49C01DF691250020D1A7 /* ChecklistItemDAO.m */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		509A49C41DF6912B0020D1A7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				509A49C51DF6912B0020D1A7 /* ChecklistItemService.h */,
+				509A49C61DF6912B0020D1A7 /* ChecklistItemService.m */,
+				509A49C71DF6912B0020D1A7 /* ChecklistService.h */,
+				509A49C81DF6912B0020D1A7 /* ChecklistService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9B8E4ADAE3D3F91B7859C389 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6115E7CBAA36F86BA847C1EC /* Pods-CheckListReactive.debug.xcconfig */,
+				FD7B31AD07D15893130B48C7 /* Pods-CheckListReactive.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		509A49731DF68DCB0020D1A7 /* CheckListReactive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 509A49A11DF68DCB0020D1A7 /* Build configuration list for PBXNativeTarget "CheckListReactive" */;
+			buildPhases = (
+				94943095B63005F0E6D74B15 /* [CP] Check Pods Manifest.lock */,
+				509A49701DF68DCB0020D1A7 /* Sources */,
+				509A49711DF68DCB0020D1A7 /* Frameworks */,
+				509A49721DF68DCB0020D1A7 /* Resources */,
+				D02FE79BE9A8AEBD8883ED13 /* [CP] Embed Pods Frameworks */,
+				F0188649828758C1FD0B49B7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CheckListReactive;
+			productName = CheckListReactive;
+			productReference = 509A49741DF68DCB0020D1A7 /* CheckListReactive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		509A498C1DF68DCB0020D1A7 /* CheckListReactiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 509A49A41DF68DCB0020D1A7 /* Build configuration list for PBXNativeTarget "CheckListReactiveTests" */;
+			buildPhases = (
+				509A49891DF68DCB0020D1A7 /* Sources */,
+				509A498A1DF68DCB0020D1A7 /* Frameworks */,
+				509A498B1DF68DCB0020D1A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				509A498F1DF68DCB0020D1A7 /* PBXTargetDependency */,
+			);
+			name = CheckListReactiveTests;
+			productName = CheckListReactiveTests;
+			productReference = 509A498D1DF68DCB0020D1A7 /* CheckListReactiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		509A49971DF68DCB0020D1A7 /* CheckListReactiveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 509A49A71DF68DCB0020D1A7 /* Build configuration list for PBXNativeTarget "CheckListReactiveUITests" */;
+			buildPhases = (
+				509A49941DF68DCB0020D1A7 /* Sources */,
+				509A49951DF68DCB0020D1A7 /* Frameworks */,
+				509A49961DF68DCB0020D1A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				509A499A1DF68DCB0020D1A7 /* PBXTargetDependency */,
+			);
+			name = CheckListReactiveUITests;
+			productName = CheckListReactiveUITests;
+			productReference = 509A49981DF68DCB0020D1A7 /* CheckListReactiveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		509A496C1DF68DCB0020D1A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = wangx;
+				TargetAttributes = {
+					509A49731DF68DCB0020D1A7 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					509A498C1DF68DCB0020D1A7 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 509A49731DF68DCB0020D1A7;
+					};
+					509A49971DF68DCB0020D1A7 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 509A49731DF68DCB0020D1A7;
+					};
+				};
+			};
+			buildConfigurationList = 509A496F1DF68DCB0020D1A7 /* Build configuration list for PBXProject "CheckListReactive" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 509A496B1DF68DCB0020D1A7;
+			productRefGroup = 509A49751DF68DCB0020D1A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				509A49731DF68DCB0020D1A7 /* CheckListReactive */,
+				509A498C1DF68DCB0020D1A7 /* CheckListReactiveTests */,
+				509A49971DF68DCB0020D1A7 /* CheckListReactiveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		509A49721DF68DCB0020D1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				509A49B11DF691120020D1A7 /* create_load.sql in Resources */,
+				509A49871DF68DCB0020D1A7 /* LaunchScreen.storyboard in Resources */,
+				509A49841DF68DCB0020D1A7 /* Assets.xcassets in Resources */,
+				509A49821DF68DCB0020D1A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		509A498B1DF68DCB0020D1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		509A49961DF68DCB0020D1A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		94943095B63005F0E6D74B15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D02FE79BE9A8AEBD8883ED13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckListReactive/Pods-CheckListReactive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0188649828758C1FD0B49B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CheckListReactive/Pods-CheckListReactive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		509A49701DF68DCB0020D1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				509A49B81DF6911C0020D1A7 /* Checklist.m in Sources */,
+				509A49CD1DF6914A0020D1A7 /* AllListsViewController.m in Sources */,
+				509A49D91DF6915C0020D1A7 /* ListDetailViewController.m in Sources */,
+				509A497C1DF68DCB0020D1A7 /* AppDelegate.m in Sources */,
+				509A49D81DF6915C0020D1A7 /* ItemDetailViewController.m in Sources */,
+				509A49791DF68DCB0020D1A7 /* main.m in Sources */,
+				509A49CA1DF6912B0020D1A7 /* ChecklistService.m in Sources */,
+				509A49C11DF691250020D1A7 /* BaseDAO.m in Sources */,
+				509A49B21DF691120020D1A7 /* DBHelper.m in Sources */,
+				509A49B91DF6911C0020D1A7 /* ChecklistItem.m in Sources */,
+				509A49C31DF691250020D1A7 /* ChecklistItemDAO.m in Sources */,
+				509A49C21DF691250020D1A7 /* ChecklistDAO.m in Sources */,
+				509A49D31DF691550020D1A7 /* IconPickerViewController.m in Sources */,
+				509A49C91DF6912B0020D1A7 /* ChecklistItemService.m in Sources */,
+				509A49D01DF691500020D1A7 /* ChecklistViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		509A49891DF68DCB0020D1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				509A49921DF68DCB0020D1A7 /* CheckListReactiveTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		509A49941DF68DCB0020D1A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				509A499D1DF68DCB0020D1A7 /* CheckListReactiveUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		509A498F1DF68DCB0020D1A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 509A49731DF68DCB0020D1A7 /* CheckListReactive */;
+			targetProxy = 509A498E1DF68DCB0020D1A7 /* PBXContainerItemProxy */;
+		};
+		509A499A1DF68DCB0020D1A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 509A49731DF68DCB0020D1A7 /* CheckListReactive */;
+			targetProxy = 509A49991DF68DCB0020D1A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		509A49801DF68DCB0020D1A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				509A49811DF68DCB0020D1A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		509A49851DF68DCB0020D1A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				509A49861DF68DCB0020D1A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		509A499F1DF68DCB0020D1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		509A49A01DF68DCB0020D1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		509A49A21DF68DCB0020D1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6115E7CBAA36F86BA847C1EC /* Pods-CheckListReactive.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CheckListReactive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanx1991.CheckListReactive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		509A49A31DF68DCB0020D1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD7B31AD07D15893130B48C7 /* Pods-CheckListReactive.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CheckListReactive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanx1991.CheckListReactive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		509A49A51DF68DCB0020D1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CheckListReactiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanx1991.CheckListReactiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckListReactive.app/CheckListReactive";
+			};
+			name = Debug;
+		};
+		509A49A61DF68DCB0020D1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CheckListReactiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanx1991.CheckListReactiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CheckListReactive.app/CheckListReactive";
+			};
+			name = Release;
+		};
+		509A49A81DF68DCB0020D1A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CheckListReactiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanx1991.CheckListReactiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CheckListReactive;
+			};
+			name = Debug;
+		};
+		509A49A91DF68DCB0020D1A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CheckListReactiveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanx1991.CheckListReactiveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CheckListReactive;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		509A496F1DF68DCB0020D1A7 /* Build configuration list for PBXProject "CheckListReactive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509A499F1DF68DCB0020D1A7 /* Debug */,
+				509A49A01DF68DCB0020D1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		509A49A11DF68DCB0020D1A7 /* Build configuration list for PBXNativeTarget "CheckListReactive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509A49A21DF68DCB0020D1A7 /* Debug */,
+				509A49A31DF68DCB0020D1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		509A49A41DF68DCB0020D1A7 /* Build configuration list for PBXNativeTarget "CheckListReactiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509A49A51DF68DCB0020D1A7 /* Debug */,
+				509A49A61DF68DCB0020D1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		509A49A71DF68DCB0020D1A7 /* Build configuration list for PBXNativeTarget "CheckListReactiveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509A49A81DF68DCB0020D1A7 /* Debug */,
+				509A49A91DF68DCB0020D1A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 509A496C1DF68DCB0020D1A7 /* Project object */;
+}
